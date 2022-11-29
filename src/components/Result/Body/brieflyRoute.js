@@ -1,103 +1,89 @@
+"use strict";
 import React from 'react';
-import { StyleSheet, Text, View, Dimensions, Button, TouchableOpacity, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, Button, TouchableOpacity, SafeAreaView, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
 const BrieflyRoute = (props) => {
-    /*let Interchange = [
-      {
-        "from": {
-            "key": "1",
-            "station":{
-                "en": "ฺBangkhae",
-                "th": "บางแค"
-            },
-            color: "#325E9A"
-        },
-        "to":{
-            "key": "10",
-            "station":{
-                "en": "Sala Daeng",
-                "th": "ศาลาแดง"
-            },
-            "color": "#76B729"
-        }, 
-        "walk": "7"
-      }
+    let route = [
+        {
+            "from": "50",
+            "to": "20",
+            "fastest": [[50,51,52,53,54,55,56,57,58,59,60]],
+            "chepest": [[50,20,19,18,17,90,91,92,93,94,95,96,97,98,99],[61,60]],
+            "leastInterrchange": [[50,20,19,18,17,90,91,92,93,94,95,96,97,98,99],[61,60]]
+        }
     ]
+
     return( 
-      <View style={Styles.overall_component}>
-        {Interchange.map((item) => (
-          <View>
-            {item.from.key == item.to.key?
-                <View>
-  
-                </View>
-              :
-                <View>
-                    <View style={[Styles.component, {borderLeftColor: item.from.color}]}>
-                        <Icon name="subway" size={screenHeight*0.03} color="black" style={{marginHorizontal:screenWidth*0.02}}/>
-                        <Text style={Styles.text_station_en_name}>
-                            to
-                        </Text>
-                        <View style={Styles.station_name_component}>
-                            <Text style={Styles.text_station_en_name}>
-                                {item.from.station.en}
-                            </Text>
-                            <Text style={Styles.text_station_th_name}>
-                                {item.from.station.th}
-                            </Text>
+        <View style={Styles.overall_component_view}>
+            {
+                route.map((item, index) => (
+                    <View key={index}>
+                        <View style={Styles.path_view}>
+                            <View style={Styles.path_with_image_view}>
+                                <Image source={require('../../../../assets/images/brieflyDarkGreen.png')} style={Styles.briefly_path_image}/>
+                                <Text style={Styles.briefly_path_text}>
+                                    Kasetsart University{"\n"}มหาวิทยาลัยเกษตรศาสตร์
+                                </Text>
+                            </View>
+                            <View style={Styles.path_with_image_view}>
+                                <Image source={require('../../../../assets/images/brieflyDarkGreen.png')} style={[Styles.briefly_path_image,{transform: [{ scaleX: -1 },{ scaleY: -1 }]}]}/>
+                                <Text style={Styles.briefly_path_text}>
+                                    Phahonyothin{"\n"}พหลโยธิน
+                                </Text>
+                            </View>
+                        </View>
+                        <View style={Styles.path_view}>
+                            <View style={Styles.path_with_image_view}>
+                                <Image source={require('../../../../assets/images/brieflyBlue.png')} style={Styles.briefly_path_image}/>
+                                <Text style={Styles.briefly_path_text}>
+                                    Phahonyothin{"\n"}พหลโยธิน
+                                </Text>
+                            </View>
+                            <View style={Styles.path_with_image_view}>
+                                <Image source={require('../../../../assets/images/brieflyBlue.png')} style={[Styles.briefly_path_image,{transform: [{ scaleX: -1 },{ scaleY: -1 }]}]}/>
+                                <Text style={Styles.briefly_path_text}>
+                                    Huai Khwang{"\n"}ห้วยขวาง
+                                </Text>
+                            </View>
                         </View>
                     </View>
-                    <View style={Styles.walk_component}>
-                        <Icon name="walking" size={screenHeight*0.03} color="black" style={{marginHorizontal:screenWidth*0.02}}/>
-                        <Text>
-                            {item.walk} mins to
-                        </Text>
-                        <Text style={Styles.text_station_en_name}>
-                            {item.from.station.en}
-                        </Text>
-                    </View>
-                </View>
-            }
-          </View>
-        ))}
-      </View>
-    );*/
+                    
+                ))
+            } 
+        </View>
+    );
 }
 
 const Styles = StyleSheet.create({
-    overall_component: {
-        margin:screenHeight*0.015
+    overall_component_view: {
+        marginHorizontal :screenHeight*0.025
     },
-    component: {
-        padding: screenHeight*0.02,
-        borderWidth:1,
-        borderLeftWidth: 10,
+    path_view: {
+        paddingVertical: screenHeight*0.015,
+        marginVertical: screenHeight*0.005,
+        borderColor: 'grey',
+        borderWidth: 1,
         borderRadius: 10,
-        flexDirection:'row',
     },
-    text_to:{
-
+    path_with_image_view: {
+        flexDirection: 'row',
+        paddingVertical: screenHeight*0.001,
+        alignItems: 'center'
     },
-    station_name_component: {
-        marginLeft: screenWidth*0.1
+    briefly_path_image: {
+        height: screenHeight*0.06,
+        resizeMode: 'contain'
     },
-    text_station_en_name: {
+    briefly_path_text: {
+        marginLeft: screenWidth*0.05,
         fontSize: screenHeight*0.016,
-        fontWeight: 'bold'
+        fontColor: 'black',
+        fontWeight: 'bold',
     },
-    text_station_th_name: {
-        fontSize: screenHeight*0.014,
-        fontWeight: 'normal'
-    },
-    walk_component: {
-        marginHorizontal: screenHeight*0.015,
-        marginVertical: screenHeight*0.015,
-        flexDirection:'row',
-    }
 });
 
-  export default BrieflyRoute;
+export default BrieflyRoute;
