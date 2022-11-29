@@ -1,3 +1,4 @@
+"use strict";
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
 import BrieflyRoute from './brieflyRoute';
@@ -26,11 +27,11 @@ const Body = () => {
         </Text>
       </View>
 
-      <BrieflyRoute/>
+      <BrieflyRoute moreDetail={true}/>
 
       {/* Button */}
       <View style = {Styles.body_view}>
-        <CustomButton text={'More Detail'} backgroundColor={'white'} borderColor={'black'} textColor={'black'} function={()=>console.log('More Detail')}/>
+        <CustomButton text={'Show More'} backgroundColor={'white'} borderColor={'black'} textColor={'black'} function={()=>console.log('Show More')}/>
         <CustomButton text={'Confirm'} backgroundColor={'black'} borderColor={'black'} textColor={'white'} function={()=>console.log('Confirm')}/>
       </View>
 
