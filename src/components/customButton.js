@@ -1,3 +1,4 @@
+"use strict";
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions, ScrollView, Button, TouchableOpacity, SafeAreaView } from 'react-native';
 

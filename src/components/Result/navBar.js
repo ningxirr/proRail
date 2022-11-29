@@ -1,3 +1,4 @@
+"use strict";
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, Dimensions, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';

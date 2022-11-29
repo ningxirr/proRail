@@ -1,3 +1,4 @@
+"use strict";
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 import firestore from '@react-native-firebase/firestore';

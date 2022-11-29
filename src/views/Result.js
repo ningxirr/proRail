@@ -1,3 +1,4 @@
+"use strict";
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
 import NavBar from '../components/Result/navBar';
