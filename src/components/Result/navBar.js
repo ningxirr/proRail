@@ -11,11 +11,11 @@ const NavBar = () => {
             <TouchableOpacity style = {{alignSelf:'center'}}>
                 <Icon name='angle-left' borderRadius={15} size={25} color={'white'}/>
             </TouchableOpacity>
-            <TouchableOpacity style = {{alignSelf:'center'}}>
+            {/* <TouchableOpacity style = {{alignSelf:'center'}}>
                 <Text style = {{ color: 'white', fontSize: screenHeight * 0.016, fontWeight:'normal', textAlign: 'right'}}>
                     Customized{"\n"}Route
                 </Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
         </View>
     );
 };
@@ -25,8 +25,7 @@ const headerStyles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingVertical: screenHeight*0.01,
-        paddingHorizontal: screenHeight*0.02,
-        backgroundColor: 'black'
+        paddingHorizontal: screenHeight*0.03,
     }
 });
 
