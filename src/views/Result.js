@@ -7,7 +7,6 @@ import Body from '../components/Result/Body/body';
 
 const Result = () => (
   <SafeAreaView style={pageStyles.container}>
-   <NavBar />    
     <ScrollView>
       <Header />
       <Body />

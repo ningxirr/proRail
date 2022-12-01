@@ -3,16 +3,18 @@ import React from 'react';
 import { StyleSheet, Text, View, Dimensions, ImageBackground } from 'react-native';
 import NextStation from '../../nextStation';
 import StartAndEndRoute from './startAndEndRoute';
+import NavBar from '../navBar';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
-const navigate = true;
+const navigate = false;
 
 const Header = () => {
     return (
       <View>
         <ImageBackground  source={require('../../../../assets/images/background.png')}>
           <View style = {{backgroundColor: 'rgba(0,0,0,0.7)'}}>
+            <NavBar /> 
             <View style = {navigate ? Styles.header_view: Styles.header_no_navigate_view}>
               <View style = {Styles.header_body_view}>
                 <NextStation stationName = {'Bang Wa'} stationPlatform = {'MRT'} stationColor = {'#325E9A'} backgroundColor={'#595959'} navigate={navigate}/>
