@@ -2,11 +2,12 @@
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions, Button, TouchableOpacity, SafeAreaView, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import RouteDisplay from './RouteDisplay';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
-const BrieflyRoute = (props) => {
+const Route = (props) => {
     let route = [
         {
             "from": "50",
@@ -22,7 +23,7 @@ const BrieflyRoute = (props) => {
             {
                 route.map((item, index) => (
                     <View key={index}>
-                        <View style={Styles.path_view}>
+                        {/* <View style={Styles.path_view}>
                             <View style={Styles.path_with_image_view}>
                                 <Image source={require('../../../../assets/images/brieflyDarkGreen.png')} style={Styles.briefly_path_image}/>
                                 <Text style={Styles.briefly_path_text}>
@@ -35,23 +36,21 @@ const BrieflyRoute = (props) => {
                                     Phahonyothin{"\n"}พหลโยธิน
                                 </Text>
                             </View>
-                        </View>
-                        <View style={Styles.path_view}>
-                            <View style={Styles.path_with_image_view}>
-                                <Image source={require('../../../../assets/images/brieflyBlue.png')} style={Styles.briefly_path_image}/>
-                                <Text style={Styles.briefly_path_text}>
-                                    Phahonyothin{"\n"}พหลโยธิน
-                                </Text>
-                            </View>
-                            <View style={Styles.path_with_image_view}>
-                                <Image source={require('../../../../assets/images/brieflyBlue.png')} style={[Styles.briefly_path_image,{transform: [{ scaleX: -1 },{ scaleY: -1 }]}]}/>
-                                <Text style={Styles.briefly_path_text}>
-                                    Huai Khwang{"\n"}ห้วยขวาง
-                                </Text>
-                            </View>
-                        </View>
-                    </View>
-                    
+                        </View> */}
+
+                        <RouteDisplay 
+                            image={require('../../../../assets/images/brieflyDarkGreen.png')}
+                            start={'Kasetsart University\nมหาวิทยาลัยเกษตรศาสตร์'}
+                            end={'Phahonyothin\nพหลโยธิน'}
+                            briefly={true}
+                            />
+                        <RouteDisplay 
+                            image={require('../../../../assets/images/brieflyBlue.png')} 
+                            start={'Phahonyothin\nพหลโยธิน'}
+                            end={'Huai Khwang\nห้วยขวาง'}
+                            briefly={true}
+                            />
+                    </View>  
                 ))
             } 
         </View>
@@ -86,4 +85,4 @@ const Styles = StyleSheet.create({
     },
 });
 
-export default BrieflyRoute;
+export default Route;
