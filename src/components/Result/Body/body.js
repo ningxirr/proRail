@@ -1,7 +1,7 @@
 "use strict";
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
-import BrieflyRoute from './brieflyRoute';
+import Route from './Route';
 import RecommendedRoute from './recommendedRoute';
 import Choices from './Choices';
 import CustomButton from '../../customButton';
@@ -27,7 +27,7 @@ const Body = () => {
         </Text>
       </View>
 
-      <BrieflyRoute moreDetail={true}/>
+      <Route moreDetail={true}/>
 
       {/* Button */}
       <View style = {Styles.body_view}>
