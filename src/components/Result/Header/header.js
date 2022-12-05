@@ -22,11 +22,11 @@ const Header = () => {
                   Result
                 </Text>
                 <View style = {Styles.start_and_end_route_view}>
-                  <StartAndEndRoute stationName = {'Bangkhae'} stationPlatform = {'BTS skytrain'} stationColor = {'#325E9A'}/>
+                  <StartAndEndRoute stationName = {'Kasetsart University'} stationPlatform = {'BTS skytrain'} stationColor = {'#76B729'}/>
                   <Text style = {{color:'white', fontSize: screenHeight * 0.020, fontWeight:'normal'}}>
                     to
                   </Text>
-                  <StartAndEndRoute stationName = {'Siam'} stationPlatform = {'MRT'} stationColor = {'#76B729'}/>
+                  <StartAndEndRoute stationName = {'Phahonyothin'} stationPlatform = {'MRT'} stationColor = {'#325E9A'}/>
                 </View>
               </View>
             </View>
