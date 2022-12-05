@@ -1,10 +1,9 @@
 "use strict";
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
-import Route from './Route';
+import Route from './route';
 import RecommendedRoute from './recommendedRoute';
 import Choices from './Choices';
-import CustomButton from '../../customButton';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
@@ -29,12 +28,6 @@ const Body = () => {
 
       <Route moreDetail={true}/>
 
-      {/* Button */}
-      <View style = {Styles.body_view}>
-        <CustomButton text={'Show More'} backgroundColor={'white'} borderColor={'black'} textColor={'black'} function={()=>console.log('Show More')}/>
-        <CustomButton text={'Confirm'} backgroundColor={'black'} borderColor={'black'} textColor={'white'} function={()=>console.log('Confirm')}/>
-      </View>
-
       {/* MoreChoice */}
       <View style={Styles.more_choice_component_view}>
         <Text style={Styles.more_choice_text}>
@@ -42,9 +35,9 @@ const Body = () => {
         </Text>
         <ScrollView horizontal={true} showsVerticalScrollIndicator={false}>
           <View style={{margin:screenWidth*0.02}}/>
-          <Choices number={28} unit={'mins'} choice={'Fastest'} selected={true}/>
-          <Choices number={35} unit={'baht'} choice={'Chepest'} selected={false}/>
-          <Choices number={1} unit={'station(s)'} choice={'Least\nInterchange'} selected={false}/>
+          <Choices number={28} unit={'mins'} choice={'Fastest'} selected={true} function={()=>console.log('Fastest')}/>
+          <Choices number={35} unit={'baht'} choice={'Chepest'} selected={false} function={()=>console.log('Chepest')}/>
+          <Choices number={1} unit={'station(s)'} choice={'Least\nInterchanges'} selected={false} function={()=>console.log('Least Interchanges')}/>
           <View style={{margin:screenWidth*0.02}}/>
         </ScrollView>
       </View>

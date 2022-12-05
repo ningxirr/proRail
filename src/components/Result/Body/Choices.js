@@ -7,7 +7,7 @@ const screenWidth = Dimensions.get('window').width;
 
 const Choices = (props) => {
     return(
-      <TouchableOpacity style={Styles.choice_component_view}>
+      <TouchableOpacity style={Styles.choice_component_view} onPress={props.function}>
         <Text style={Styles.number_text}>{props.number}</Text>
         <Text style={Styles.unit_text}>{props.unit}</Text>
         <View style={{flex: 1, justifyContent: 'flex-end'}}>
