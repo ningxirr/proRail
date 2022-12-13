@@ -1,18 +1,20 @@
 "use strict";
-import React from 'react';
+import React, { useState } from 'react';
 import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
 import NavBar from '../components/Result/navBar';
 import Header from '../components/Result/Header/header';
 import Body from '../components/Result/Body/body';
 
-const Result = () => (
-  <SafeAreaView style={pageStyles.container}>
-    <ScrollView>
-      <Header />
-      <Body />
-    </ScrollView>
-  </SafeAreaView>
-);
+const Result = () => {
+  const [header, setHeader] = useState('Result');
+  return (
+    <SafeAreaView style={pageStyles.container}>
+      <ScrollView>
+        <Header header={header}/>
+        <Body changeHeader={header => setHeader(header)}/>
+      </ScrollView>
+    </SafeAreaView>
+)};
 
 const pageStyles = StyleSheet.create({
   container: {

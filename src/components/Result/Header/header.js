@@ -1,5 +1,5 @@
 "use strict";
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, Dimensions, ImageBackground } from 'react-native';
 import NextStation from '../../nextStation';
 import StartAndEndRoute from './startAndEndRoute';
@@ -9,7 +9,7 @@ const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 const navigate = false;
 
-const Header = () => {
+const Header = (props) => {
     return (
       <View>
         <ImageBackground  source={require('../../../../assets/images/background.png')}>
@@ -19,7 +19,7 @@ const Header = () => {
               <View style = {Styles.header_body_view}>
                 <NextStation stationName = {'Bang Wa'} stationPlatform = {'MRT'} stationColor = {'#325E9A'} backgroundColor={'#595959'} navigate={navigate}/>
                 <Text style = {{color:'white', fontSize: screenHeight * 0.038, fontWeight:'bold'}}>
-                  Result
+                  {props.header}
                 </Text>
                 <View style = {Styles.start_and_end_route_view}>
                   <StartAndEndRoute stationName = {'Kasetsart University'} stationPlatform = {'BTS skytrain'} stationColor = {'#76B729'}/>

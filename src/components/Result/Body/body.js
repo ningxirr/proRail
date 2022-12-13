@@ -1,5 +1,5 @@
 "use strict";
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
 import Route from './route';
 import RecommendedRoute from './recommendedRoute';
@@ -8,7 +8,8 @@ import Choices from './Choices';
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
-const Body = () => {
+const Body = (props) => {
+  const [selectedButton, setSelectedButton] = useState('Fastest');
   return(
     <View>
       {/* RecommendedRoute */}
@@ -35,9 +36,18 @@ const Body = () => {
         </Text>
         <ScrollView horizontal={true} showsVerticalScrollIndicator={false}>
           <View style={{margin:screenWidth*0.02}}/>
-          <Choices number={28} unit={'mins'} choice={'Fastest'} selected={true} function={()=>console.log('Fastest')}/>
-          <Choices number={35} unit={'baht'} choice={'Chepest'} selected={false} function={()=>console.log('Chepest')}/>
-          <Choices number={1} unit={'station(s)'} choice={'Least\nInterchanges'} selected={false} function={()=>console.log('Least Interchanges')}/>
+          <Choices number={28} unit={'mins'} choice={'Fastest'} selected={selectedButton==='Fastest'} function={()=>{
+              props.changeHeader('Fastest')
+              setSelectedButton('Fastest')
+            }}/>
+          <Choices number={35} unit={'baht'} choice={'Chepest'} selected={selectedButton==='Chepest'} function={()=> {
+              props.changeHeader('Chepest')
+              setSelectedButton('Chepest')
+            }}/>
+          <Choices number={1} unit={'station(s)'} choice={'Least\nInterchanges'} selected={selectedButton==='Least Interchanges'} function={()=> {
+              props.changeHeader('Least Interchanges')
+              setSelectedButton('Least Interchanges')
+            }}/>
           <View style={{margin:screenWidth*0.02}}/>
         </ScrollView>
       </View>
