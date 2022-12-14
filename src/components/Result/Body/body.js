@@ -9,7 +9,7 @@ const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
 const Body = (props) => {
-  const [selectedButton, setSelectedButton] = useState('Fastest');
+  const [path, setpath] = useState('Fastest');
   return(
     <View>
       {/* RecommendedRoute */}
@@ -27,7 +27,7 @@ const Body = (props) => {
         </Text>
       </View>
 
-      <Route moreDetail={true}/>
+      <Route moreDetail={true} path={path}/>
 
       {/* MoreChoice */}
       <View style={Styles.more_choice_component_view}>
@@ -36,17 +36,17 @@ const Body = (props) => {
         </Text>
         <ScrollView horizontal={true} showsVerticalScrollIndicator={false}>
           <View style={{margin:screenWidth*0.02}}/>
-          <Choices number={28} unit={'mins'} choice={'Fastest'} selected={selectedButton==='Fastest'} function={()=>{
+          <Choices number={28} unit={'mins'} choice={'Fastest'} selected={path==='Fastest'} function={()=>{
               props.changeHeader('Fastest')
-              setSelectedButton('Fastest')
+              setpath('Fastest')
             }}/>
-          <Choices number={35} unit={'baht'} choice={'Chepest'} selected={selectedButton==='Chepest'} function={()=> {
-              props.changeHeader('Chepest')
-              setSelectedButton('Chepest')
+          <Choices number={35} unit={'baht'} choice={'Cheapest'} selected={path==='Cheapest'} function={()=> {
+              props.changeHeader('Cheapest')
+              setpath('Cheapest')
             }}/>
-          <Choices number={1} unit={'station(s)'} choice={'Least\nInterchanges'} selected={selectedButton==='Least Interchanges'} function={()=> {
+          <Choices number={1} unit={'station(s)'} choice={'Least\nInterchanges'} selected={path==='Least Interchanges'} function={()=> {
               props.changeHeader('Least Interchanges')
-              setSelectedButton('Least Interchanges')
+              setpath('Least Interchanges')
             }}/>
           <View style={{margin:screenWidth*0.02}}/>
         </ScrollView>
