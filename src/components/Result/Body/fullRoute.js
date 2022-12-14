@@ -9,21 +9,21 @@ const screenWidth = Dimensions.get('window').width;
 const FullRoute = (props) => {
     
     return(   
-        <Animated.View style={Styles.container_view} entering={FadeIn} exiting={FadeOut}>
+        <Animated.View style={Styles.container_view} entering={FadeIn}>
             {
                 props.route_en.map((route, index) => (
                     <View key={index} style={Styles.path_with_image_view}>
                         {
                             index === 0 || index === props.route_en.length-1 ? 
-                            <Animated.View entering={index===0 ? null: FadeInUp} exiting={index===0 ? null: FadeOutUp}>
+                            <Animated.View entering={index===0 ? null: FadeInUp} >
                                 <Image source={getHeaderAndFooterImage(props.path)} style={[Styles.briefly_path_image, index === props.route_en.length-1 ? {transform: [{ scaleX: -1 },{ scaleY: -1 }]}: null]} />
                             </Animated.View>
                             :
-                            <Animated.View entering={FadeInUp} exiting={FadeOutUp}>
+                            <Animated.View entering={FadeInUp}>
                                 <Image source={getImage(props.path)} style={Styles.briefly_path_image} entering={FadeInUp.duration(500)}/>
                             </Animated.View>
                         }
-                        <Animated.View entering={index===0 ? null: FadeInUp} exiting={index===0 ? null: FadeOutUp}>
+                        <Animated.View entering={index===0 ? null: FadeInUp} >
                             <Text style={Styles.briefly_path_text}>
                                 {route}
                             </Text>
