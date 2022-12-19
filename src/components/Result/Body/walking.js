@@ -14,7 +14,7 @@ const Walking = (props) => {
                 <Text style={Styles.briefly_path_text}>
                     {props.time} mins to {'\t'}
                 </Text>
-                <Text style={[Styles.briefly_path_text, {fontWeight: 'bold'}]}>
+                <Text style={[Styles.briefly_path_text, {fontFamily: 'LINESeedSans_A_Bd'}]}>
                     {props.station}
                 </Text>
             </View>
@@ -41,7 +41,8 @@ const Styles = StyleSheet.create({
     },  
     briefly_path_text: {
         fontSize: screenHeight*0.016,
-        fontColor: 'black'
+        fontColor: 'black',
+        fontFamily: 'LINESeedSans_A_Rg',
     },
 });
 

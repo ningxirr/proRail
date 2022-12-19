@@ -25,21 +25,21 @@ const Styles = StyleSheet.create({
         width:screenWidth*0.33
     },
     route_component_view: {
-        borderRadius:5, 
-        marginBottom:screenHeight*0.02, 
+        borderRadius: 100, 
+        marginBottom: screenHeight*0.02, 
         padding: screenHeight*0.01
     },
     route_component_text: {
         textAlign:'center', 
         color:'white', 
         fontSize: screenHeight * 0.018, 
-        fontWeight:'normal'
+        fontFamily: 'LINESeedSans_A_Rg'
     },
     station_name_text: {
         textAlign:'center', 
         color:'white', 
         fontSize: screenHeight * 0.017, 
-        fontWeight:'700'
+        fontFamily: 'LINESeedSans_A_Bd'
     }
 });
 

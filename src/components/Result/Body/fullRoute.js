@@ -24,10 +24,10 @@ const FullRoute = (props) => {
                             </Animated.View>
                         }
                         <Animated.View entering={index===0 ? null: FadeInUp} >
-                            <Text style={Styles.briefly_path_text}>
+                            <Text style={Styles.briefly_path_en_text}>
                                 {route}
                             </Text>
-                            <Text style={Styles.briefly_path_text}>
+                            <Text style={Styles.briefly_path_th_text}>
                                 {props.route_th[index]}
                             </Text>
                         </Animated.View>
@@ -102,11 +102,17 @@ const Styles = StyleSheet.create({
         resizeMode: 'contain',
         marginLeft: screenWidth*0.07,
     },
-    briefly_path_text: {
+    briefly_path_en_text: {
         marginLeft: screenWidth*0.1,
         fontSize: screenHeight*0.016,
         fontColor: 'black',
-        fontWeight: 'bold',
+        fontFamily: 'LINESeedSans_A_Bd',
+    },
+    briefly_path_th_text: {
+        marginLeft: screenWidth*0.1,
+        fontSize: screenHeight*0.016,
+        fontColor: 'black',
+        fontFamily: 'LINESeedSansTH_A_Rg',
     },
 });
 

@@ -23,18 +23,21 @@ const RecommendedRoute = (props) => {
 
 const Styles = StyleSheet.create({
     title_text: {
-        fontSize: screenHeight*0.025, 
+        fontSize: screenHeight*0.02, 
+        fontFamily: 'LINESeedSans_A_Rg',        
         color:'white', 
         textAlign:'center'
     },
     number_text: {
         fontSize: screenHeight*0.048, 
+        fontFamily: 'LINESeedSans_A_Bd', 
         color:'white', 
-        fontWeight:'bold', 
-        textAlign:'center'
+        textAlign:'center',
+        paddingVertical: screenHeight*0.01
     },
     unit_text: {
         fontSize: screenHeight*0.018, 
+        fontFamily: 'LINESeedSans_A_Rg', 
         color:'white', 
         marginRight:'5%', 
         textAlign:'center'

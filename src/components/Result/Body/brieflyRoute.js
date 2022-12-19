@@ -12,10 +12,10 @@ const BrieflyRoute = (props) => {
             <View style={Styles.path_with_image_view}>
                 <Image source={getImage(props.path)} style={[Styles.briefly_path_image, {transform: [{ scaleX: 1 },{ scaleY: 1 }]}]}/>
                 <View>
-                    <Text style={Styles.briefly_path_text}>
+                    <Text style={Styles.briefly_path_en_text}>
                         {props.start_station_en}
                     </Text>
-                    <Text style={Styles.briefly_path_text}>
+                    <Text style={Styles.briefly_path_th_text}>
                         {props.start_station_th}
                     </Text>
                 </View>
@@ -23,10 +23,10 @@ const BrieflyRoute = (props) => {
             <Animated.View style={Styles.path_with_image_view} entering={FadeInDown} exiting={FadeOutDown}>
                 <Image source={getImage(props.path)} style={[Styles.briefly_path_image, {transform: [{ scaleX: -1 },{ scaleY: -1 }]}]}/>
                 <View>
-                    <Text style={Styles.briefly_path_text}>
+                    <Text style={Styles.briefly_path_en_text}>
                         {props.stop_station_en}
                     </Text>
-                    <Text style={Styles.briefly_path_text}>
+                    <Text style={Styles.briefly_path_th_text}>
                         {props.stop_station_th}
                     </Text>
                 </View>
@@ -77,11 +77,17 @@ const Styles = StyleSheet.create({
         marginLeft: screenWidth*0.07,
         marginVertical: screenHeight*0.002,
     },
-    briefly_path_text: {
+    briefly_path_en_text: {
         marginLeft: screenWidth*0.1,
         fontSize: screenHeight*0.016,
         fontColor: 'black',
-        fontWeight: 'bold',
+        fontFamily: 'LINESeedSans_A_Bd',
+    },
+    briefly_path_th_text: {
+        marginLeft: screenWidth*0.1,
+        fontSize: screenHeight*0.016,
+        fontColor: 'black',
+        fontFamily: 'LINESeedSansTH_A_Rg',
     },
 });
 
