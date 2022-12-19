@@ -14,6 +14,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-ProRail-ProRailTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ProRail-ProRailTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		FB341F0D74AC4D3B8A3D4CBD /* LINESeedSansTH_A_Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = D5426B1A6099459AAEB69E78 /* LINESeedSansTH_A_Bd.otf */; };
+		2ED6644E61A945CF9EE21722 /* LINESeedSansTH_A_Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 155010E5D37A4C1CAAF73884 /* LINESeedSansTH_A_Rg.otf */; };
+		3AB700A06B8F4D3195151EBE /* LINESeedSans_A_Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 25332FCE0C36448D9AD6973E /* LINESeedSans_A_Bd.otf */; };
+		F046FB99053C4DCA94D02BFB /* LINESeedSans_A_Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = D44879E50D9747D2B7770911 /* LINESeedSans_A_Rg.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ProRail/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ProRail-ProRailTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProRail-ProRailTests.release.xcconfig"; path = "Target Support Files/Pods-ProRail-ProRailTests/Pods-ProRail-ProRailTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		D5426B1A6099459AAEB69E78 /* LINESeedSansTH_A_Bd.otf */ = {isa = PBXFileReference; name = "LINESeedSansTH_A_Bd.otf"; path = "../assets/fonts/LINESeedSansTH_A_Bd.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		155010E5D37A4C1CAAF73884 /* LINESeedSansTH_A_Rg.otf */ = {isa = PBXFileReference; name = "LINESeedSansTH_A_Rg.otf"; path = "../assets/fonts/LINESeedSansTH_A_Rg.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		25332FCE0C36448D9AD6973E /* LINESeedSans_A_Bd.otf */ = {isa = PBXFileReference; name = "LINESeedSans_A_Bd.otf"; path = "../assets/fonts/LINESeedSans_A_Bd.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D44879E50D9747D2B7770911 /* LINESeedSans_A_Rg.otf */ = {isa = PBXFileReference; name = "LINESeedSans_A_Rg.otf"; path = "../assets/fonts/LINESeedSans_A_Rg.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				28FBD909FC114A1FAB3E34B6 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +156,18 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		28FBD909FC114A1FAB3E34B6 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				D5426B1A6099459AAEB69E78 /* LINESeedSansTH_A_Bd.otf */,
+				155010E5D37A4C1CAAF73884 /* LINESeedSansTH_A_Rg.otf */,
+				25332FCE0C36448D9AD6973E /* LINESeedSans_A_Bd.otf */,
+				D44879E50D9747D2B7770911 /* LINESeedSans_A_Rg.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -244,6 +265,10 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				FB341F0D74AC4D3B8A3D4CBD /* LINESeedSansTH_A_Bd.otf in Resources */,
+				2ED6644E61A945CF9EE21722 /* LINESeedSansTH_A_Rg.otf in Resources */,
+				3AB700A06B8F4D3195151EBE /* LINESeedSans_A_Bd.otf in Resources */,
+				F046FB99053C4DCA94D02BFB /* LINESeedSans_A_Rg.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
