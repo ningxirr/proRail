@@ -1,7 +1,8 @@
 "use strict";
 import React, { useState } from 'react';
 import { StyleSheet, View, Dimensions } from 'react-native';
-import Animated, { FadeIn } from 'react-native-reanimated';
+import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import BrieflyRoute from './brieflyRoute';
 import Walking from './walking';
 import FullRoute from './fullRoute';
@@ -81,6 +82,12 @@ const Route = (props) => {
                                 props.path === 'Fastest' ?
                                 route.fastest.map((item, index) => (
                                     <View key={index}>
+                                        {
+                                            item.walk !== null ? 
+                                            <Animated.View style={Styles.path_with_icon_view} entering={FadeIn} exiting={FadeOut}>
+                                                <Icon name='walking' color={'black'} width={screenWidth*0.05} size={20} style={Styles.walking_icon}/>
+                                            </Animated.View> : null
+                                        }
                                         <BrieflyRoute 
                                             stop={false} 
                                             path={item.path} 
@@ -93,6 +100,12 @@ const Route = (props) => {
                                 props.path === 'Cheapest' ?
                                 route.chepest.map((item, index) => (
                                     <View key={index}>
+                                        {
+                                            item.walk !== null ? 
+                                            <Animated.View style={Styles.path_with_icon_view} entering={FadeIn} exiting={FadeOut}>
+                                                <Icon name='walking' color={'black'} width={screenWidth*0.05} size={20} style={Styles.walking_icon}/>
+                                            </Animated.View> : null
+                                        }
                                         <BrieflyRoute 
                                             stop={false} 
                                             path={item.path} 
@@ -104,6 +117,12 @@ const Route = (props) => {
                                 )):
                                 route.leastInterchanges.map((item, index) => (
                                     <View key={index}>
+                                        {
+                                            item.walk !== null ? 
+                                            <Animated.View style={Styles.path_with_icon_view} entering={FadeIn} exiting={FadeOut}>
+                                                <Icon name='walking' color={'black'} width={screenWidth*0.05} size={20} style={Styles.walking_icon}/>
+                                            </Animated.View> : null
+                                        }
                                         <BrieflyRoute 
                                             stop={false} 
                                             path={item.path} 
@@ -159,6 +178,7 @@ const Route = (props) => {
                         backgroundColor={'white'} 
                         borderColor={'black'} 
                         textColor={'black'} 
+                        width = {'100%'}
                         function={()=> {
                             setBriefly(!briefly);
                         }}/>
@@ -167,6 +187,7 @@ const Route = (props) => {
                         backgroundColor={'black'} 
                         borderColor={'black'} 
                         textColor={'white'} 
+                        width = {'100%'}
                         function={()=>{
                             console.log('Confirm');
                         }}/>
@@ -179,7 +200,17 @@ const Route = (props) => {
 const Styles = StyleSheet.create({
     overall_component_view: {
         marginHorizontal :screenHeight*0.025,
-    }
+    },
+    path_with_icon_view: {
+        borderColor: 'grey',
+        borderWidth: 1,
+        borderRadius: 10,
+        flexDirection: 'row',
+        paddingVertical: screenHeight*0.01,
+        marginVertical: screenHeight*0.005,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 });
 
 export default Route;
