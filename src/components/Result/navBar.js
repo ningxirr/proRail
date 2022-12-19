@@ -25,7 +25,7 @@ const headerStyles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingVertical: screenHeight*0.01,
-        paddingHorizontal: screenHeight*0.03,
+        paddingHorizontal: screenHeight*0.03
     }
 });
 
