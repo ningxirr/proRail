@@ -16,23 +16,7 @@ const Body = (props) => {
     <View>
       {/* RecommendedRoute */}
       <View style ={[{ marginTop: -screenHeight*0.08 }, Styles.recommended_route_with_summary_view]}>
-        <View style={Styles.recommended_route_view}>
-          <RecommendedRoute topic = {'TIME'} number = {'18'} unit = {'mins'} />
-          <RecommendedRoute topic = {'INTERCHANGE'} number = {'1'} unit = {'station(s)'}/>
-          <RecommendedRoute topic = {'PRICE'} number = {'24'} unit = {'THB'}/>
-        </View>
-        <View style={Styles.all_route_summary_view}>
-          <View style={[{width:'50%'}, {borderRightWidth: 1}]}>
-            <Text style ={Styles.summary_text}>
-              Travel time: 36 mins
-            </Text>
-          </View>
-          <View style={{width:'50%'}}>
-            <Text style ={Styles.summary_text}>
-              Total price: 48 THB
-            </Text>
-          </View>
-        </View>
+        <RecommendedRoute/>
       </View>
 
       <View style = {Styles.select_choice_view}>
