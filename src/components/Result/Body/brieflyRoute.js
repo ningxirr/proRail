@@ -2,36 +2,50 @@
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions, Image } from 'react-native';
 import Animated, { FadeIn, FadeOut, FadeInDown, FadeOutDown } from 'react-native-reanimated';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import Walking from './walking';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
 const BrieflyRoute = (props) => {
     return(   
-        <Animated.View style={Styles.path_view} entering={FadeIn} exiting={FadeOut}>
-            <View style={Styles.path_with_image_view}>
-                <Image source={getImage(props.path)} style={[Styles.briefly_path_image, {transform: [{ scaleX: 1 },{ scaleY: 1 }]}]}/>
+        <View>
+            {
+                props.walk !== null ? 
                 <View>
-                    <Text style={Styles.briefly_path_en_text}>
-                        {props.start_station_en}
-                    </Text>
-                    <Text style={Styles.briefly_path_th_text}>
-                        {props.start_station_th}
-                    </Text>
+                    <Animated.View entering={FadeIn.duration(600)}>
+                        {
+                            props.walk !== null ? <Walking time={props.walk} station={props.start_station_en}/> : null
+                        }
+                    </Animated.View> 
+                </View> : null
+            }
+            <Animated.View style={Styles.path_view} entering={FadeIn} exiting={FadeOut}>
+                <View style={Styles.path_with_image_view}>
+                    <Image source={getImage(props.path)} style={[Styles.briefly_path_image, {transform: [{ scaleX: 1 },{ scaleY: 1 }]}]}/>
+                    <View>
+                        <Text style={Styles.briefly_path_en_text}>
+                            {props.start_station_en}
+                        </Text>
+                        <Text style={Styles.briefly_path_th_text}>
+                            {props.start_station_th}
+                        </Text>
+                    </View>
                 </View>
-            </View>
-            <Animated.View style={Styles.path_with_image_view} entering={FadeInDown} exiting={FadeOutDown}>
-                <Image source={getImage(props.path)} style={[Styles.briefly_path_image, {transform: [{ scaleX: -1 },{ scaleY: -1 }]}]}/>
-                <View>
-                    <Text style={Styles.briefly_path_en_text}>
-                        {props.stop_station_en}
-                    </Text>
-                    <Text style={Styles.briefly_path_th_text}>
-                        {props.stop_station_th}
-                    </Text>
-                </View>
-            </Animated.View>   
-        </Animated.View>  
+                <Animated.View style={Styles.path_with_image_view} entering={FadeInDown} exiting={FadeOutDown}>
+                    <Image source={getImage(props.path)} style={[Styles.briefly_path_image, {transform: [{ scaleX: -1 },{ scaleY: -1 }]}]}/>
+                    <View>
+                        <Text style={Styles.briefly_path_en_text}>
+                            {props.stop_station_en}
+                        </Text>
+                        <Text style={Styles.briefly_path_th_text}>
+                            {props.stop_station_th}
+                        </Text>
+                    </View>
+                </Animated.View>   
+            </Animated.View>  
+        </View>
     );
 }
 
@@ -88,6 +102,16 @@ const Styles = StyleSheet.create({
         fontSize: screenHeight*0.016,
         fontColor: 'black',
         fontFamily: 'LINESeedSansTH_A_Rg',
+    },
+    path_with_icon_view: {
+        borderColor: 'grey',
+        borderWidth: 1,
+        borderRadius: 10,
+        flexDirection: 'row',
+        paddingVertical: screenHeight*0.01,
+        marginVertical: screenHeight*0.005,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
 });
 

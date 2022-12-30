@@ -2,6 +2,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions, Image } from 'react-native';
 import Animated, { FadeIn, FadeOut, FadeInUp, FadeOutUp } from 'react-native-reanimated';
+import Walking from './walking';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
@@ -9,32 +10,39 @@ const screenWidth = Dimensions.get('window').width;
 const FullRoute = (props) => {
     
     return(   
-        <Animated.View style={Styles.container_view} entering={FadeIn}>
-            {
-                props.route_en.map((route, index) => (
-                    <View key={index} style={Styles.path_with_image_view}>
-                        {
-                            index === 0 || index === props.route_en.length-1 ? 
+        <View>
+            <Animated.View entering={FadeIn.duration(600)}>
+                {
+                    props.walk !== null ? <Walking time={props.walk} station={props.route_en[0]}/> : null
+                }
+            </Animated.View> 
+            <Animated.View style={Styles.container_view} entering={FadeIn}>
+                {
+                    props.route_en.map((route, index) => (
+                        <View key={index} style={Styles.path_with_image_view}>
+                            {
+                                index === 0 || index === props.route_en.length-1 ? 
+                                <Animated.View entering={index===0 ? null: FadeInUp} >
+                                    <Image source={getHeaderAndFooterImage(props.path)} style={[Styles.briefly_path_image, index === props.route_en.length-1 ? {transform: [{ scaleX: -1 },{ scaleY: -1 }]}: null]} />
+                                </Animated.View>
+                                :
+                                <Animated.View entering={FadeInUp}>
+                                    <Image source={getImage(props.path)} style={Styles.briefly_path_image} entering={FadeInUp.duration(500)}/>
+                                </Animated.View>
+                            }
                             <Animated.View entering={index===0 ? null: FadeInUp} >
-                                <Image source={getHeaderAndFooterImage(props.path)} style={[Styles.briefly_path_image, index === props.route_en.length-1 ? {transform: [{ scaleX: -1 },{ scaleY: -1 }]}: null]} />
+                                <Text style={Styles.briefly_path_en_text}>
+                                    {route}
+                                </Text>
+                                <Text style={Styles.briefly_path_th_text}>
+                                    {props.route_th[index]}
+                                </Text>
                             </Animated.View>
-                            :
-                            <Animated.View entering={FadeInUp}>
-                                <Image source={getImage(props.path)} style={Styles.briefly_path_image} entering={FadeInUp.duration(500)}/>
-                            </Animated.View>
-                        }
-                        <Animated.View entering={index===0 ? null: FadeInUp} >
-                            <Text style={Styles.briefly_path_en_text}>
-                                {route}
-                            </Text>
-                            <Text style={Styles.briefly_path_th_text}>
-                                {props.route_th[index]}
-                            </Text>
-                        </Animated.View>
-                    </View>
-                ))
-            }
-        </Animated.View>     
+                        </View>
+                    ))
+                }
+            </Animated.View>     
+        </View>
     );
 }
 

@@ -72,7 +72,6 @@ let routes = [
 const Route = (props) => {
     const [briefly, setBriefly] = useState(true);
     return( 
-        <View>
             <View style = {Styles.overall_component_view}>
                 {
                     briefly ?
@@ -81,56 +80,38 @@ const Route = (props) => {
                             {
                                 props.path === 'Fastest' ?
                                 route.fastest.map((item, index) => (
-                                    <View key={index}>
-                                        {
-                                            item.walk !== null ? 
-                                            <Animated.View style={Styles.path_with_icon_view} entering={FadeIn} exiting={FadeOut}>
-                                                <Icon name='walking' color={'black'} width={screenWidth*0.05} size={20} style={Styles.walking_icon}/>
-                                            </Animated.View> : null
-                                        }
-                                        <BrieflyRoute 
-                                            stop={false} 
-                                            path={item.path} 
-                                            start_station_en={item.station.en[0]} 
-                                            start_station_th={item.station.th[0]} 
-                                            stop_station_en={item.station.en[item.station.en.length-1]}
-                                            stop_station_th={item.station.th[item.station.th.length-1]}/>
-                                    </View>
+                                    <BrieflyRoute 
+                                        key={index}
+                                        stop={false} 
+                                        walk={item.walk}
+                                        path={item.path} 
+                                        start_station_en={item.station.en[0]} 
+                                        start_station_th={item.station.th[0]} 
+                                        stop_station_en={item.station.en[item.station.en.length-1]}
+                                        stop_station_th={item.station.th[item.station.th.length-1]}/>
                                 )):
                                 props.path === 'Cheapest' ?
                                 route.chepest.map((item, index) => (
-                                    <View key={index}>
-                                        {
-                                            item.walk !== null ? 
-                                            <Animated.View style={Styles.path_with_icon_view} entering={FadeIn} exiting={FadeOut}>
-                                                <Icon name='walking' color={'black'} width={screenWidth*0.05} size={20} style={Styles.walking_icon}/>
-                                            </Animated.View> : null
-                                        }
-                                        <BrieflyRoute 
-                                            stop={false} 
-                                            path={item.path} 
-                                            start_station_en={item.station.en[0]} 
-                                            start_station_th={item.station.th[0]} 
-                                            stop_station_en={item.station.en[item.station.en.length-1]}
-                                            stop_station_th={item.station.th[item.station.th.length-1]}/>
-                                    </View>
+                                    <BrieflyRoute 
+                                        key={index}
+                                        stop={false} 
+                                        walk={item.walk}
+                                        path={item.path} 
+                                        start_station_en={item.station.en[0]} 
+                                        start_station_th={item.station.th[0]} 
+                                        stop_station_en={item.station.en[item.station.en.length-1]}
+                                        stop_station_th={item.station.th[item.station.th.length-1]}/>
                                 )):
                                 route.leastInterchanges.map((item, index) => (
-                                    <View key={index}>
-                                        {
-                                            item.walk !== null ? 
-                                            <Animated.View style={Styles.path_with_icon_view} entering={FadeIn} exiting={FadeOut}>
-                                                <Icon name='walking' color={'black'} width={screenWidth*0.05} size={20} style={Styles.walking_icon}/>
-                                            </Animated.View> : null
-                                        }
-                                        <BrieflyRoute 
-                                            stop={false} 
-                                            path={item.path} 
-                                            start_station_en={item.station.en[0]} 
-                                            start_station_th={item.station.th[0]} 
-                                            stop_station_en={item.station.en[item.station.en.length-1]}
-                                            stop_station_th={item.station.th[item.station.th.length-1]}/>
-                                    </View>
+                                    <BrieflyRoute 
+                                        key={index}
+                                        stop={false} 
+                                        walk={item.walk}
+                                        path={item.path} 
+                                        start_station_en={item.station.en[0]} 
+                                        start_station_th={item.station.th[0]} 
+                                        stop_station_en={item.station.en[item.station.en.length-1]}
+                                        stop_station_th={item.station.th[item.station.th.length-1]}/>
                                 ))
                             }
                         </View>  
@@ -138,62 +119,36 @@ const Route = (props) => {
                     routes.map((route) => (
                         props.path === 'Fastest' ?
                         route.fastest.map((item, index) => (
-                            <View key={index}>
-                                <Animated.View entering={FadeIn.duration(600)}>
-                                    {
-                                        item.walk !== null ? <Walking time={item.walk} station={item.station.en[0]}/> : null
-                                    }
-                                </Animated.View> 
-                                <FullRoute path={item.path} route_en={item.station.en} route_th={item.station.th}/>
-                            </View>
+                            <FullRoute 
+                                key={index}
+                                item={item.walk}
+                                path={item.path} 
+                                walk={item.walk}
+                                route_en={item.station.en} 
+                                route_th={item.station.th}/>
                         )):
                         props.path === 'Cheapest' ?
                         route.chepest.map((item, index) => (
-                            <View key={index}>
-                                <Animated.View entering={FadeIn.duration(600)}>
-                                    {
-                                        item.walk !== null ? <Walking time={item.walk} station={item.station.en[0]}/> : null
-                                    }
-                                </Animated.View> 
-                                <FullRoute path={item.path} route_en={item.station.en} route_th={item.station.th}/>
-                            </View>
+                            <FullRoute 
+                                key={index}
+                                item={item.walk}
+                                path={item.path} 
+                                walk={item.walk}
+                                route_en={item.station.en} 
+                                route_th={item.station.th}/>
                         )):
                         route.leastInterchanges.map((item, index) => (
-                            <View key={index}>
-                                <Animated.View entering={FadeIn.duration(600)}>
-                                    {
-                                        item.walk !== null ? <Walking time={item.walk} station={item.station.en[0]}/> : null
-                                    }
-                                </Animated.View> 
-                                <FullRoute path={item.path} route_en={item.station.en} route_th={item.station.th}/>
-                            </View>
+                            <FullRoute 
+                                key={index}
+                                item={item.walk}
+                                path={item.path} 
+                                walk={item.walk}
+                                route_en={item.station.en} 
+                                route_th={item.station.th}/>
                         ))
                     ))
                 } 
             </View>
-            <View style = {Styles.overall_component_view}>
-                <View style = {Styles.body_view}>
-                    <CustomButton 
-                        text={briefly? 'Show More' : 'Show Less'} 
-                        backgroundColor={'white'} 
-                        borderColor={'black'} 
-                        textColor={'black'} 
-                        width = {'100%'}
-                        function={()=> {
-                            setBriefly(!briefly);
-                        }}/>
-                    <CustomButton 
-                        text={'Confirm'} 
-                        backgroundColor={'black'} 
-                        borderColor={'black'} 
-                        textColor={'white'} 
-                        width = {'100%'}
-                        function={()=>{
-                            console.log('Confirm');
-                        }}/>
-                </View>
-            </View>
-        </View>
     );
 }
 

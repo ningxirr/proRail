@@ -60,16 +60,37 @@ const Body = (props) => {
           </ScrollView>
         </View>
       }
-
-      <View>
-        <Route moreDetail={true} path={path}/>
-      </View>
+      <Route moreDetail={true} path={path}/>
+      <View style = {Styles.overall_component_view}>
+        <View style = {Styles.body_view}>
+            {/* <CustomButton 
+                text={briefly? 'Show More' : 'Show Less'} 
+                backgroundColor={'white'} 
+                borderColor={'black'} 
+                textColor={'black'} 
+                width = {'100%'}
+                function={()=> {
+                    setBriefly(!briefly);
+                }}/> */}
+            <CustomButton 
+                text={'Confirm'} 
+                backgroundColor={'black'} 
+                borderColor={'black'} 
+                textColor={'white'} 
+                width = {'100%'}
+                function={()=>{
+                    console.log('Confirm');
+                }}/>
+        </View>
+        </View>
     </View>
-    
   );
 };
 
 const Styles = StyleSheet.create({
+  overall_component_view: {
+    marginHorizontal :screenHeight*0.025,
+  },
   select_choice_view: {
     paddingVertical: '2%',
     paddingHorizontal: '5%',
