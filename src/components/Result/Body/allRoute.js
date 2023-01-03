@@ -82,7 +82,8 @@ let routes = [
                 }  
             ]
         }
-    },{
+    },
+    {
         "fastest":{
             "time": 18,
             "interchange": 1,
@@ -169,11 +170,14 @@ const AllRoute = (props) => {
                         {
                             props.path === 'Fastest' ?
                             <View>
-                                <RouteDescription 
+                                {
+                                    routes.length !== 1 ?
+                                    <RouteDescription 
                                         index={index} 
                                         time={route.fastest.time} 
                                         interchange={route.fastest.interchange}
-                                        price={route.fastest.price}/>
+                                        price={route.fastest.price}/> : null
+                                }
                                 {
                                     route.fastest.route.map((item, index) => (
                                         <Route 
