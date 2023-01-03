@@ -41,7 +41,7 @@ const Styles = StyleSheet.create({
     },  
     briefly_path_text: {
         fontSize: screenHeight*0.016,
-        fontColor: 'black',
+        color: 'black',
         fontFamily: 'LINESeedSans_A_Rg',
     },
 });
