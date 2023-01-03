@@ -16,10 +16,4 @@ const App = () => (
     <Result /> 
 );
 
-const pageStyles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-});
-
 export default App;
