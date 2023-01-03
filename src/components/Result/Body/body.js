@@ -1,7 +1,7 @@
 "use strict";
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
-import Route from './route';
+import AllRoute from './allRoute';
 import RecommendedRoute from './recommendedRoute';
 import Choices from './Choices';
 import CustomButton from '../../customButton';
@@ -20,26 +20,28 @@ const Body = (props) => {
       </View>
 
       <View style = {Styles.select_choice_view}>
-        <CustomButton   text={'Recommended'}
-                        backgroundColor={choice? 'black': 'white'} 
-                        borderColor={choice? 'white': 'black'} 
-                        textColor={choice? 'white': 'black'} 
-                        width = {'49%'}
-                        function={()=> {
-                          props.changeHeader('Fastest')
-                          setMoreChoice(true)
-                          setPath('Fastest')
-                        }}/>
-        <CustomButton  text={'More Choices'} 
-                        backgroundColor={choice? 'white': 'black'} 
-                        borderColor={choice? 'black': 'white'} 
-                        textColor={choice? 'black': 'white'} 
-                        width = {'49%'}
-                        function={()=> {
-                          props.changeHeader('Cheapest')
-                          setMoreChoice(false)
-                          setPath('Cheapest')
-                        }}/>
+        <CustomButton   
+          text={'Recommended'}
+          backgroundColor={choice? 'black': 'white'} 
+          borderColor={choice? 'white': 'black'} 
+          textColor={choice? 'white': 'black'} 
+          width = {'49%'}
+          function={()=> {
+            props.changeHeader('Fastest')
+            setMoreChoice(true)
+            setPath('Fastest')
+          }}/>
+        <CustomButton  
+          text={'More Choices'} 
+          backgroundColor={choice? 'white': 'black'} 
+          borderColor={choice? 'black': 'white'} 
+          textColor={choice? 'black': 'white'} 
+          width = {'49%'}
+          function={()=> {
+            props.changeHeader('Cheapest')
+            setMoreChoice(false)
+            setPath('Cheapest')
+          }}/>
       </View>
 
       {/* MoreChoice */}
@@ -60,18 +62,9 @@ const Body = (props) => {
           </ScrollView>
         </View>
       }
-      <Route moreDetail={true} path={path}/>
+      <AllRoute moreDetail={true} path={path}/>
       <View style = {Styles.overall_component_view}>
         <View style = {Styles.body_view}>
-            {/* <CustomButton 
-                text={briefly? 'Show More' : 'Show Less'} 
-                backgroundColor={'white'} 
-                borderColor={'black'} 
-                textColor={'black'} 
-                width = {'100%'}
-                function={()=> {
-                    setBriefly(!briefly);
-                }}/> */}
             <CustomButton 
                 text={'Confirm'} 
                 backgroundColor={'black'} 
@@ -82,7 +75,7 @@ const Body = (props) => {
                     console.log('Confirm');
                 }}/>
         </View>
-        </View>
+      </View>
     </View>
   );
 };
@@ -136,6 +129,9 @@ const Styles = StyleSheet.create({
     fontFamily: 'LINESeedSans_A_Bd',
     paddingTop: '5%',
     paddingHorizontal: '5%'
+  },
+  body_view: {
+    paddingVertical: '2%'
   },
 });
 

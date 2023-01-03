@@ -10,7 +10,7 @@ const Result = () => {
   return (
     <SafeAreaView style={pageStyles.container}>
       <ScrollView>
-        <Header header={header}/>
+        <Header header={header} />
         <Body changeHeader={header => setHeader(header)}/>
       </ScrollView>
     </SafeAreaView>
