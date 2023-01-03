@@ -1,160 +1,199 @@
 "use strict";
-import React, { useState } from 'react';
-import { StyleSheet, View, Dimensions } from 'react-native';
-import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
-import Icon from 'react-native-vector-icons/FontAwesome5';
-import BrieflyRoute from './brieflyRoute';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, View, Dimensions, Image, TouchableOpacity } from 'react-native';
+import Animated, { FadeIn, FadeOut, FadeInDown, FadeOutDown, FadeInUp } from 'react-native-reanimated';
 import Walking from './walking';
-import FullRoute from './fullRoute';
-import CustomButton from '../../customButton';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
-let routes = [
-    {
-        "fastest":[
-            {
-                "path": "Green",
-                "walk": null,
-                "station": {
-                    "en": ['Kasetsart University(F)', 'Sena Nikhom', 'Ratchayothin', 'Phahonyothin'],
-                    "th": ['มหาวิทยาลัยเกษตรศาสตร์', 'สนามนิคม', 'ราชโยธิน', 'พหลโยธิน']
-                }
-            },
-            {
-                "path": "Blue",
-                "walk": 4,
-                "station": {
-                    "en": ['Phahonyothin', 'Ratchadaphisek', 'Sutthisan', 'Huai Kwang'],
-                    "th": ['พหลโยธิน', 'ราชดำเนิน', 'สุทธิสาร', 'ห้วยขวาง']
-                }
-            }  
-        ],
-        "chepest":[
-            {
-                "path": "Green",
-                "walk": null,
-                "station": {
-                    "en": ['Kasetsart University(C)', 'Sena Nikhom', 'Ratchayothin', 'Phahonyothin'],
-                    "th": ['มหาวิทยาลัยเกษตรศาสตร์', 'สนามนิคม', 'ราชโยธิน', 'พหลโยธิน']
-                }
-            },
-            {
-                "path": "Blue",
-                "walk": 4,
-                "station": {
-                    "en": ['Phahonyothin', 'Ratchadaphisek', 'Sutthisan', 'Huai Kwang'],
-                    "th": ['พหลโยธิน', 'ราชดำเนิน', 'สุทธิสาร', 'ห้วยขวาง']
-                }
-            }  
-        ],
-        "leastInterchanges":[
-            {
-                "path": "Green",
-                "walk": null,
-                "station": {
-                    "en": ['Kasetsart University(L)', 'Sena Nikhom', 'Ratchayothin', 'Phahonyothin'],
-                    "th": ['มหาวิทยาลัยเกษตรศาสตร์', 'สนามนิคม', 'ราชโยธิน', 'พหลโยธิน']
-                }
-            },
-            {
-                "path": "Blue",
-                "walk": 4,
-                "station": {
-                    "en": ['Phahonyothin', 'Ratchadaphisek', 'Sutthisan', 'Huai Kwang'],
-                    "th": ['พหลโยธิน', 'ราชดำเนิน', 'สุทธิสาร', 'ห้วยขวาง']
-                }
-            }  
-        ]
-    }
-]
 
-const Route = (props) => {
+const BrieflyRoute = (props) => {
     const [briefly, setBriefly] = useState(true);
-    return( 
-            <View style = {Styles.overall_component_view}>
+    useEffect(() => {
+        setBriefly(props.route_en)
+    }, [props.route_en])
+    return(   
+        <View>
+            {
+                props.walk !== null ? 
+                <View>
+                    <Animated.View entering={FadeIn.duration(600)}>
+                        {
+                            props.walk !== null ? <Walking time={props.walk} station={props.route_en[0]}/> : null
+                        }
+                    </Animated.View> 
+                </View> : null
+            }
+            <TouchableOpacity onPress={() => setBriefly(!briefly)}>
                 {
                     briefly ?
-                    routes.map((route, index) => (
-                        <View key={index}>
+                    <Animated.View style={Styles.path_view} entering={FadeIn} exiting={FadeOut}>
+                        <View style={Styles.path_with_image_view}>
+                            <Image source={getImage(props.path)} style={[Styles.briefly_path_image, {transform: [{ scaleX: 1 },{ scaleY: 1 }]}]}/>
+                            <View>
+                                <Text style={Styles.briefly_path_en_text}>
+                                    {props.route_en[0]}
+                                </Text>
+                                <Text style={Styles.briefly_path_th_text}>
+                                    {props.route_th[0]}
+                                </Text>
+                            </View>
+                            <View style={Styles.price_component_view}>
+                                <Text style={Styles.price_text}>
+                                    {props.price}{'\n'}THB
+                                </Text>
+                            </View>
+                        </View>
+                        <Animated.View style={Styles.path_with_image_view} entering={FadeInDown} exiting={FadeOutDown}>
+                            <Image source={getImage(props.path)} style={[Styles.briefly_path_image, {marginVertical: screenHeight*0.002, transform: [{ scaleX: -1 },{ scaleY: -1 }]}]}/>
+                            <View>
+                                <Text style={Styles.briefly_path_en_text}>
+                                    {props.route_en[props.route_en.length-1]}
+                                </Text>
+                                <Text style={Styles.briefly_path_th_text}>
+                                    {props.route_th[props.route_th.length-1]}
+                                </Text>
+                            </View>
+                        </Animated.View>   
+                    </Animated.View> :
+                    <Animated.View style={Styles.container_view} entering={FadeIn}>
+                        <View>
                             {
-                                props.path === 'Fastest' ?
-                                route.fastest.map((item, index) => (
-                                    <BrieflyRoute 
-                                        key={index}
-                                        stop={false} 
-                                        walk={item.walk}
-                                        path={item.path} 
-                                        start_station_en={item.station.en[0]} 
-                                        start_station_th={item.station.th[0]} 
-                                        stop_station_en={item.station.en[item.station.en.length-1]}
-                                        stop_station_th={item.station.th[item.station.th.length-1]}/>
-                                )):
-                                props.path === 'Cheapest' ?
-                                route.chepest.map((item, index) => (
-                                    <BrieflyRoute 
-                                        key={index}
-                                        stop={false} 
-                                        walk={item.walk}
-                                        path={item.path} 
-                                        start_station_en={item.station.en[0]} 
-                                        start_station_th={item.station.th[0]} 
-                                        stop_station_en={item.station.en[item.station.en.length-1]}
-                                        stop_station_th={item.station.th[item.station.th.length-1]}/>
-                                )):
-                                route.leastInterchanges.map((item, index) => (
-                                    <BrieflyRoute 
-                                        key={index}
-                                        stop={false} 
-                                        walk={item.walk}
-                                        path={item.path} 
-                                        start_station_en={item.station.en[0]} 
-                                        start_station_th={item.station.th[0]} 
-                                        stop_station_en={item.station.en[item.station.en.length-1]}
-                                        stop_station_th={item.station.th[item.station.th.length-1]}/>
+                                props.route_en.map((route, index) => (
+                                    <View key={index} style={Styles.path_with_image_view}>
+                                        {
+                                            index === 0 || index === props.route_en.length-1 ? 
+                                            <Animated.View entering={index===0 ? null: FadeInUp} >
+                                                <Image source={getHeaderAndFooterImage(props.path)} style={[Styles.briefly_path_image, index === props.route_en.length-1 ? {transform: [{ scaleX: -1 },{ scaleY: -1 }]}: null]} />
+                                            </Animated.View>
+                                            :
+                                            <Animated.View entering={FadeInUp}>
+                                                <Image source={getPathImage(props.path)} style={Styles.briefly_path_image} entering={FadeInUp.duration(500)}/>
+                                            </Animated.View>
+                                        }
+                                        <Animated.View entering={index===0 ? null: FadeInUp} >
+                                            <Text style={Styles.briefly_path_en_text}>
+                                                {route}
+                                            </Text>
+                                            <Text style={Styles.briefly_path_th_text}>
+                                                {props.route_th[index]}
+                                            </Text>
+                                        </Animated.View>
+                                    </View>
                                 ))
                             }
-                        </View>  
-                    )):
-                    routes.map((route) => (
-                        props.path === 'Fastest' ?
-                        route.fastest.map((item, index) => (
-                            <FullRoute 
-                                key={index}
-                                item={item.walk}
-                                path={item.path} 
-                                walk={item.walk}
-                                route_en={item.station.en} 
-                                route_th={item.station.th}/>
-                        )):
-                        props.path === 'Cheapest' ?
-                        route.chepest.map((item, index) => (
-                            <FullRoute 
-                                key={index}
-                                item={item.walk}
-                                path={item.path} 
-                                walk={item.walk}
-                                route_en={item.station.en} 
-                                route_th={item.station.th}/>
-                        )):
-                        route.leastInterchanges.map((item, index) => (
-                            <FullRoute 
-                                key={index}
-                                item={item.walk}
-                                path={item.path} 
-                                walk={item.walk}
-                                route_en={item.station.en} 
-                                route_th={item.station.th}/>
-                        ))
-                    ))
-                } 
-            </View>
+                            <View style={Styles.price_component_view}>
+                                <Text style={Styles.price_text}>
+                                    {props.price}{'\n'}THB
+                                </Text>
+                            </View>
+                        </View>
+                    
+                    </Animated.View>
+                }
+            </TouchableOpacity>
+        </View>
     );
 }
 
+function getImage(path){
+    switch(path){
+        case 'Green':
+            return require('../../../../assets/images/BrieflyRoute/green.png');
+        case 'DarkGreen':
+            return require('../../../../assets/images/BrieflyRoute/darkGreen.png');
+        case 'Blue':
+            return require('../../../../assets/images/BrieflyRoute/blue.png');
+        case 'Purple':
+            return require('../../../../assets/images/BrieflyRoute/purple.png');
+        case 'Pink':
+            return require('../../../../assets/images/BrieflyRoute/pink.png');
+        case 'Gold':
+            return require('../../../../assets/images/BrieflyRoute/gold.png');
+        case 'Red':
+            return require('../../../../assets/images/BrieflyRoute/red.png');
+        case 'LightRed':
+            return require('../../../../assets/images/BrieflyRoute/lightRed.png');
+        default:
+            return require('../../../../assets/images/BrieflyRoute/default.png');
+    }
+}
+
+function getPathImage(path){
+    switch(path){
+        case 'Green':
+            return require('../../../../assets/images/FullRoute/Body/green.png');
+        case 'DarkGreen':
+            return require('../../../../assets/images/FullRoute/Body/darkGreen.png');
+        case 'Blue':
+            return require('../../../../assets/images/FullRoute/Body/blue.png');
+        case 'Purple':
+            return require('../../../../assets/images/FullRoute/Body/purple.png');
+        case 'Pink':
+            return require('../../../../assets/images/FullRoute/Body/pink.png');
+        case 'Gold':
+            return require('../../../../assets/images/FullRoute/Body/gold.png');
+        case 'Red':
+            return require('../../../../assets/images/FullRoute/Body/red.png');
+        case 'LightRed':
+            return require('../../../../assets/images/FullRoute/Body/lightRed.png');
+        default:
+            return require('../../../../assets/images/FullRoute/Body/default.png');
+    }
+}
+
+function getHeaderAndFooterImage(path){
+    switch(path){
+        case 'Green':
+            return require('../../../../assets/images/FullRoute/HeaderAndFooter/green.png');
+        case 'DarkGreen':
+            return require('../../../../assets/images/FullRoute/HeaderAndFooter/darkGreen.png');
+        case 'Blue':
+            return require('../../../../assets/images/FullRoute/HeaderAndFooter/blue.png');
+        case 'Purple':
+            return require('../../../../assets/images/FullRoute/HeaderAndFooter/purple.png');
+        case 'Pink':
+            return require('../../../../assets/images/FullRoute/HeaderAndFooter/pink.png');
+        case 'Gold':
+            return require('../../../../assets/images/FullRoute/HeaderAndFooter/gold.png');
+        case 'Red':
+            return require('../../../../assets/images/FullRoute/HeaderAndFooter/red.png');
+        case 'LightRed':
+            return require('../../../../assets/images/FullRoute/HeaderAndFooter/lightRed.png');
+        default:
+            return require('../../../../assets/images/FullRoute/HeaderAndFooter/default.png');
+    }
+}
+
 const Styles = StyleSheet.create({
-    overall_component_view: {
-        marginHorizontal :screenHeight*0.025,
+    path_view: {
+        paddingVertical: screenHeight*0.01,
+        marginVertical: screenHeight*0.005,
+        borderColor: 'grey',
+        borderWidth: 1,
+        borderRadius: 10,
+    },
+    path_with_image_view: {
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    briefly_path_image: {
+        height: screenHeight*0.06,
+        width: screenWidth*0.06,
+        resizeMode: 'contain',
+        marginLeft: screenWidth*0.07,
+    },
+    briefly_path_en_text: {
+        marginLeft: screenWidth*0.1,
+        fontSize: screenHeight*0.016,
+        color: 'black',
+        fontFamily: 'LINESeedSans_A_Bd',
+    },
+    briefly_path_th_text: {
+        marginLeft: screenWidth*0.1,
+        fontSize: screenHeight*0.016,
+        color: 'black',
+        fontFamily: 'LINESeedSansTH_A_Rg',
     },
     path_with_icon_view: {
         borderColor: 'grey',
@@ -166,6 +205,24 @@ const Styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    container_view: {
+        paddingVertical: screenHeight*0.01,
+        marginVertical: screenHeight*0.005,
+        borderWidth: 1,
+        borderColor: 'grey',
+        borderRadius: 10,
+    },
+    price_text:{
+        textAlign: 'center',
+        fontSize: screenHeight*0.016,
+        fontFamily: 'LINESeedSans_A_Rg',
+        color: 'black',
+    },
+    price_component_view: {
+        position: 'absolute',
+        right: 10,
+        top: 5
+    }
 });
 
-export default Route;
+export default BrieflyRoute;
