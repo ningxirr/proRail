@@ -72,6 +72,7 @@ const Body = (props) => {
                 textColor={'white'} 
                 width = {'100%'}
                 function={()=>{
+                    props.navigate.navigate('Navigate')
                     console.log('Confirm');
                 }}/>
         </View>

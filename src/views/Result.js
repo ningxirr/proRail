@@ -5,13 +5,13 @@ import NavBar from '../components/Result/navBar';
 import Header from '../components/Result/Header/header';
 import Body from '../components/Result/Body/body';
 
-const Result = () => {
+const Result = ({navigation}) => {
   const [header, setHeader] = useState('Result');
   return (
     <SafeAreaView style={pageStyles.container}>
       <ScrollView>
         <Header header={header} />
-        <Body changeHeader={header => setHeader(header)}/>
+        <Body changeHeader={header => setHeader(header)} navigate={navigation}/>
       </ScrollView>
     </SafeAreaView>
 )};
