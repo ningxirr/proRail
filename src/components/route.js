@@ -99,69 +99,69 @@ const BrieflyRoute = (props) => {
 function getImage(path){
     switch(path){
         case 'Green':
-            return require('../../../../assets/images/BrieflyRoute/green.png');
+            return require('../../assets/images/BrieflyRoute/green.png');
         case 'DarkGreen':
-            return require('../../../../assets/images/BrieflyRoute/darkGreen.png');
+            return require('../../assets/images/BrieflyRoute/darkGreen.png');
         case 'Blue':
-            return require('../../../../assets/images/BrieflyRoute/blue.png');
+            return require('../../assets/images/BrieflyRoute/blue.png');
         case 'Purple':
-            return require('../../../../assets/images/BrieflyRoute/purple.png');
+            return require('../../assets/images/BrieflyRoute/purple.png');
         case 'Pink':
-            return require('../../../../assets/images/BrieflyRoute/pink.png');
+            return require('../../assets/images/BrieflyRoute/pink.png');
         case 'Gold':
-            return require('../../../../assets/images/BrieflyRoute/gold.png');
+            return require('../../assets/images/BrieflyRoute/gold.png');
         case 'Red':
-            return require('../../../../assets/images/BrieflyRoute/red.png');
+            return require('../../assets/images/BrieflyRoute/red.png');
         case 'LightRed':
-            return require('../../../../assets/images/BrieflyRoute/lightRed.png');
+            return require('../../assets/images/BrieflyRoute/lightRed.png');
         default:
-            return require('../../../../assets/images/BrieflyRoute/default.png');
+            return require('../../assets/images/BrieflyRoute/default.png');
     }
 }
 
 function getPathImage(path){
     switch(path){
         case 'Green':
-            return require('../../../../assets/images/FullRoute/Body/green.png');
+            return require('../../assets/images/FullRoute/Body/green.png');
         case 'DarkGreen':
-            return require('../../../../assets/images/FullRoute/Body/darkGreen.png');
+            return require('../../assets/images/FullRoute/Body/darkGreen.png');
         case 'Blue':
-            return require('../../../../assets/images/FullRoute/Body/blue.png');
+            return require('../../assets/images/FullRoute/Body/blue.png');
         case 'Purple':
-            return require('../../../../assets/images/FullRoute/Body/purple.png');
+            return require('../../assets/images/FullRoute/Body/purple.png');
         case 'Pink':
-            return require('../../../../assets/images/FullRoute/Body/pink.png');
+            return require('../../assets/images/FullRoute/Body/pink.png');
         case 'Gold':
-            return require('../../../../assets/images/FullRoute/Body/gold.png');
+            return require('../../assets/images/FullRoute/Body/gold.png');
         case 'Red':
-            return require('../../../../assets/images/FullRoute/Body/red.png');
+            return require('../../assets/images/FullRoute/Body/red.png');
         case 'LightRed':
-            return require('../../../../assets/images/FullRoute/Body/lightRed.png');
+            return require('../../assets/images/FullRoute/Body/lightRed.png');
         default:
-            return require('../../../../assets/images/FullRoute/Body/default.png');
+            return require('../../assets/images/FullRoute/Body/default.png');
     }
 }
 
 function getHeaderAndFooterImage(path){
     switch(path){
         case 'Green':
-            return require('../../../../assets/images/FullRoute/HeaderAndFooter/green.png');
+            return require('../../assets/images/FullRoute/HeaderAndFooter/green.png');
         case 'DarkGreen':
-            return require('../../../../assets/images/FullRoute/HeaderAndFooter/darkGreen.png');
+            return require('../../assets/images/FullRoute/HeaderAndFooter/darkGreen.png');
         case 'Blue':
-            return require('../../../../assets/images/FullRoute/HeaderAndFooter/blue.png');
+            return require('../../assets/images/FullRoute/HeaderAndFooter/blue.png');
         case 'Purple':
-            return require('../../../../assets/images/FullRoute/HeaderAndFooter/purple.png');
+            return require('../../assets/images/FullRoute/HeaderAndFooter/purple.png');
         case 'Pink':
-            return require('../../../../assets/images/FullRoute/HeaderAndFooter/pink.png');
+            return require('../../assets/images/FullRoute/HeaderAndFooter/pink.png');
         case 'Gold':
-            return require('../../../../assets/images/FullRoute/HeaderAndFooter/gold.png');
+            return require('../../assets/images/FullRoute/HeaderAndFooter/gold.png');
         case 'Red':
-            return require('../../../../assets/images/FullRoute/HeaderAndFooter/red.png');
+            return require('../../assets/images/FullRoute/HeaderAndFooter/red.png');
         case 'LightRed':
-            return require('../../../../assets/images/FullRoute/HeaderAndFooter/lightRed.png');
+            return require('../../assets/images/FullRoute/HeaderAndFooter/lightRed.png');
         default:
-            return require('../../../../assets/images/FullRoute/HeaderAndFooter/default.png');
+            return require('../../assets/images/FullRoute/HeaderAndFooter/default.png');
     }
 }
 

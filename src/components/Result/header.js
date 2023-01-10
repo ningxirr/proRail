@@ -1,8 +1,8 @@
 "use strict";
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Dimensions, ImageBackground } from 'react-native';
-import NextStation from '../../nextStation';
-import StartAndEndRoute from './startAndEndRoute';
+import NextStation from '../nextStation';
+import StartAndEndRoute from '../startAndEndRoute';
 import NavBar from '../navBar';
 
 const screenHeight = Dimensions.get('window').height;
@@ -12,8 +12,8 @@ const navigate = false;
 const Header = (props) => {
     return (
       <View>
-        <ImageBackground source={require('../../../../assets/images/background.png')} style={{height:screenHeight*0.35}}> 
-            <NavBar /> 
+        <ImageBackground source={require('../../../assets/images/background.png')} style={{height:screenHeight*0.35}}> 
+            {/* <NavBar />  */}
             <View style = {navigate ? Styles.header_view: Styles.header_no_navigate_view}>
               <View style = {Styles.header_body_view}>
                 <View style = {Styles.main_header_view}>
@@ -56,6 +56,7 @@ const Header = (props) => {
       height: screenHeight*0.35,
       paddingHorizontal: screenWidth*0.005,
       paddingVertical: screenHeight*0.01,
+      marginTop: screenHeight*0.05
     },
     header_body_view:{
       paddingHorizontal: '5%'

@@ -1,9 +1,9 @@
 "use strict";
 import React, { useState } from 'react';
 import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
-import NavBar from '../components/Result/navBar';
-import Header from '../components/Result/Header/header';
-import Body from '../components/Result/Body/body';
+import NavBar from '../components/navBar';
+import Header from '../components/Result/header';
+import Body from '../components/Result/body';
 
 const Result = ({navigation}) => {
   const [header, setHeader] = useState('Result');

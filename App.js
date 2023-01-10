@@ -1,9 +1,10 @@
 "use strict";
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import firestore from '@react-native-firebase/firestore';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import Result from './src/views/Result';
 import Navigate from './src/views/Navigate';
 /*const getData = async () => {
@@ -23,7 +24,16 @@ const App = () => (
             <Stack.Screen 
               name="Result" 
               component={Result} 
-              // options={{title: 'Welcome'}}
+              header
+              options={{
+                headerTransparent: true,
+                headerTitle: '',
+                headerLeft: () => (
+                  <TouchableOpacity>
+                    <Icon name='angle-left' borderRadius={15} size={25} color={'white'}/>
+                  </TouchableOpacity>
+                )
+              }}
               />
             <Stack.Screen
               name='Navigate'

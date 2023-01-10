@@ -1,10 +1,10 @@
 "use strict";
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
-import AllRoute from './allRoute';
-import RecommendedRoute from './recommendedRoute';
-import Choices from './Choices';
-import CustomButton from '../../customButton';
+import AllRoute from '../allRoute';
+import RecommendedRoute from '../recommendedRoute';
+import Choices from '../Choices';
+import CustomButton from '../customButton';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
