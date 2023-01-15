@@ -21,7 +21,7 @@ const App = () => (
     // <Result /> 
     <NavigationContainer>
         <Stack.Navigator>
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="Result" 
               component={Result} 
               header
@@ -34,10 +34,14 @@ const App = () => (
                   </TouchableOpacity>
                 )
               }}
-              />
+              /> */}
             <Stack.Screen
               name='Navigate'
               component={Navigate}
+              options={{ 
+                headerTransparent: true,
+                headerTitle: '',
+              }}
               />
         </Stack.Navigator>
     </NavigationContainer>
