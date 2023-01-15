@@ -9,13 +9,13 @@ const NextStation = (props) => {
     return (
         <View>
             {props.navigate && (
-                <View style = {[Styles.container, {backgroundColor: 'rgba(0,0,0,0.7)'}]}>
+                <View style = {[Styles.container, {backgroundColor: 'white'}]}>
                     <View style = {Styles.next_station_view}>
                         <Text style = {Styles.next_station_text}>
-                            {start==0? "Nearest": "Next"}
+                            Take the
                         </Text>
                         <Text style = {Styles.next_station_text}>
-                            Station
+                            train to
                         </Text>
                     </View>
                     <View style = {Styles.station_name_view}>
@@ -40,33 +40,46 @@ const Styles = StyleSheet.create({
         borderRadius: 20,
         flexDirection:'row',
         justifyContent: 'space-between',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
     },
     next_station_view: {
-        margin:'5%'
+        margin:'5%',
+        alignSelf: 'center',
     },
     next_station_text: {
-        color:'white', 
+        color:'black', 
         fontSize: screenHeight * 0.024, 
-        fontWeight:'normal'
+        fontFamily: 'LINESeedSans_A_Bd',
     },
     station_name_view: {
         margin:'5%', 
-        width:'43%'
+        width:'43%',
+        alignSelf: 'center',
     },
     station_name_text: {
-        color:'white', 
+        color:'black', 
         fontSize: screenHeight * 0.028, 
-        textAlign:'right'
+        textAlign:'right',
+        fontFamily: 'LINESeedSans_A_Rg',
     },
     station_route_view: {
-        borderRadius:10,
+        borderRadius:100,
         width:'100%', 
-        marginTop:'2%'
+        marginTop:'2%',
+        paddingVertical: '2%',
     },
     station_route_text:{
         color:'white', 
         fontSize: screenHeight * 0.020, 
-        textAlign:'center'
+        textAlign:'center',
+        fontFamily: 'LINESeedSans_A_Bd',
     }
 });
 
