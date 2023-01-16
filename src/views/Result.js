@@ -5,13 +5,14 @@ import NavBar from '../components/navBar';
 import Header from '../components/Result/header';
 import Body from '../components/Result/body';
 
-const Result = ({navigation}) => {
+const Result = (props) => {
   const [header, setHeader] = useState('Result');
   return (
     <SafeAreaView style={pageStyles.container}>
+      {console.log(props.route.params === undefined)}
       <ScrollView>
-        <Header header={header} />
-        <Body changeHeader={header => setHeader(header)} navigate={navigation}/>
+        <Header header={props.route.params === undefined ? header : 'Favorite Route'} />
+        <Body changeHeader={header => setHeader(header)} favRoute={props.route.params} navigate={props.navigation}/>
       </ScrollView>
     </SafeAreaView>
 )};
