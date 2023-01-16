@@ -4,9 +4,11 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import firestore from '@react-native-firebase/firestore';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import TochableIcon from './src/components/tochableIcon';
 import Result from './src/views/Result';
 import Navigate from './src/views/Navigate';
+import FavoriteRoute from './src/views/FavoriteRoute';
+
 /*const getData = async () => {
   const usersCollection = await firestore()
     .collection('facility')
@@ -21,7 +23,7 @@ const App = () => (
     // <Result /> 
     <NavigationContainer>
         <Stack.Navigator>
-            {/* <Stack.Screen 
+            <Stack.Screen 
               name="Result" 
               component={Result} 
               header
@@ -29,20 +31,24 @@ const App = () => (
                 headerTransparent: true,
                 headerTitle: '',
                 headerLeft: () => (
-                  <TouchableOpacity>
-                    <Icon name='angle-left' borderRadius={15} size={25} color={'white'}/>
-                  </TouchableOpacity>
+                  <TochableIcon name='angle-left' size={25} color={'white'} function={()=>console.log('back')}/>
                 )
               }}
-              /> */}
+              />
             <Stack.Screen
               name='Navigate'
               component={Navigate}
               options={{ 
-                headerTransparent: true,
-                headerTitle: '',
+                headerShown: false,
               }}
               />
+            <Stack.Screen
+              name='FavoriteRoute'
+              component={FavoriteRoute}
+              options={{ 
+                headerShown: false,
+              }}
+            />
         </Stack.Navigator>
     </NavigationContainer>
 );
