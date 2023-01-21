@@ -107,7 +107,6 @@ const FavoriteRoute = (props) => {
                         
                     ))
                 }
-
             </BottomSheetScrollView>
           </BottomSheet> 
         </GestureHandlerRootView>

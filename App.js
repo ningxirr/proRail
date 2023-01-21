@@ -8,6 +8,8 @@ import TochableIcon from './src/components/tochableIcon';
 import Result from './src/views/Result';
 import Navigate from './src/views/Navigate';
 import FavoriteRoute from './src/views/FavoriteRoute';
+import StationInfo from './src/views/StationInfo';
+import Header from './src/components/header';
 
 /*const getData = async () => {
   const usersCollection = await firestore()
@@ -23,7 +25,7 @@ const App = () => (
     // <Result /> 
     <NavigationContainer>
         <Stack.Navigator>
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="Result" 
               component={Result} 
               header
@@ -48,7 +50,14 @@ const App = () => (
               options={{ 
                 headerShown: false,
               }}
-            />
+            /> */}
+            <Stack.Screen
+              name='StationInfo'
+              component={StationInfo}
+              options={{
+                header: () => (<Header title={'Station Info'}/>),
+                headerTransparent: true,
+              }}/>
         </Stack.Navigator>
     </NavigationContainer>
 );
