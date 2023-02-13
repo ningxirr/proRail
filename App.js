@@ -25,19 +25,19 @@ const App = () => (
     // <Result /> 
     <NavigationContainer>
         <Stack.Navigator>
-            {/* <Stack.Screen 
+            {/*<Stack.Screen 
               name="Result" 
               component={Result} 
               header
               options={{
                 headerTransparent: true,
                 headerTitle: '',
-                headerLeft: () => (
+                headerLeft: (navigation) => (
                   <TochableIcon name='angle-left' size={25} color={'white'} function={()=>console.log('back')}/>
                 )
               }}
               />
-            <Stack.Screen
+             <Stack.Screen
               name='Navigate'
               component={Navigate}
               options={{ 
@@ -55,7 +55,7 @@ const App = () => (
               name='StationInfo'
               component={StationInfo}
               options={{
-                header: () => (<Header title={'Station Info'}/>),
+                header: (props) => (<Header title={'Station Info'} station={props}/>),
                 headerTransparent: true,
               }}/>
         </Stack.Navigator>
