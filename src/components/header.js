@@ -3,25 +3,30 @@
 import React from 'react';
 import { StyleSheet, Text, View,  Dimensions } from 'react-native';
 import NavBar from '../components/navBar';
+import stationInfo from '../../data/station_info.json';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
+const getColor = require('../function/getColor');
 
 const Header = (props) => {
   return (
-    
-        <View style={Styles.container}>
-        <NavBar/>
-        <View style={Styles.header_view}>
-            <Text style={Styles.header_text}>
-                {props.title}
-            </Text>
-            <View style = {[Styles.station_route_view, { backgroundColor: '#4CAF1D' }]}>
-                <Text style = {Styles.station_route_text}>
-                    BTS skytrain
-                </Text>
-            </View>
-        </View>
+    <View style={Styles.container}>
+      
+      <NavBar/>
+      <View style={Styles.header_view}>
+          <Text style={Styles.header_text}>
+              {props.title}
+          </Text>
+          {/* {console.log(props.station.route.params.station)}
+          {console.log(stationInfo[props.station.route.params.station])} 
+          getColor(stationInfo[props.station.route.params.station].p) */}
+          <View style = {[Styles.station_route_view, { backgroundColor: '#f5f367' }]}>
+              <Text style = {Styles.station_route_text}>
+                  BTS skytrain
+              </Text>
+          </View>
+      </View>
     </View>  
    
     
@@ -44,7 +49,7 @@ const Styles = StyleSheet.create({
   },
   header_text:{
     color: 'white',
-    fontSize: screenHeight*0.03,
+    fontSize: 24,
     fontFamily: 'LINESeedSans_A_Bd',
   },
   station_route_view: {
@@ -54,7 +59,7 @@ const Styles = StyleSheet.create({
   },
   station_route_text:{
     color:'white', 
-    fontSize: screenHeight * 0.017, 
+    fontSize: 15, 
     textAlign:'center',
     fontFamily: 'LINESeedSans_A_Rg',
   },
