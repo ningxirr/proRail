@@ -8,6 +8,7 @@ import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommun
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
+
 const exitList = [
     {
         number: 1,
@@ -25,22 +26,24 @@ const exitList = [
 ]
 
 const ExitList = (props) => {
+  let exitList = props.exit;
+  {console.log(exitList)}
   return (
     <View style={Styles.component}>
         <Text style={Styles.title_text}>
-            Exit
+            Exits
         </Text>
         <View style={Styles.exit_list_view}>
             {
                 exitList.map((item, index) => (
                     <View key={index} style={Styles.exit_view}>
-                        <View style={[Styles.exit_number_view , {backgroundColor:'#4CAF1D'}]}>
+                        <View style={[Styles.exit_number_view , {backgroundColor:props.color}]}>
                             <Text style={Styles.exit_number_text}>
-                                {item.number}
+                                {item.no}
                             </Text>
                         </View>
-                        <Text style={Styles.exit_description_text}>
-                            {item.name}
+                        <Text style={[Styles.exit_description_text, {fontFamily : props.language === 'en' ? 'LINESeedSans_A_Rg' : 'LINESeedSansTH_A_Rg'}]}>
+                            {props.language === 'en' ? item.val_en: item.val_th}
                         </Text>
                     </View>
                 ))

@@ -1,31 +1,54 @@
 "use strict";
 
-import React from 'react';
-import { SafeAreaView, StyleSheet, Text, View,  Dimensions, Image, ScrollView } from 'react-native';
+import React, {useState} from 'react';
+import { SafeAreaView, StyleSheet, Text, View,  Dimensions, Image, ScrollView, TouchableOpacity } from 'react-native';
+import ImageView from "react-native-image-viewing";
+import stationInfo from '../../data/station_info.json';
 import NavBar from '../components/navBar';
 import TimingInfo from '../components/timingInfo';
 import FacilityList from '../components/facilityList';
 import ExitList from '../components/exitList';
+import Header from '../components/header';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
+const getColor = require('../function/getColor');
 
-const StationInfo = (props) => {
+const StationInfo = () => {
+  const [visible, setIsVisible] = useState(false);
+  const code = 'BL37'
+  let images = [{uri:'https://drive.google.com/uc?export=view&id='.concat(stationInfo[code].img_id)}];
   return (
     <SafeAreaView style={Styles.container}>
+      {/* <Header title={'Station Info'} color={getColor(stationInfo[code].p)}/> */}
       <ScrollView>
       <View style={Styles.image_view}>
-        <Image source={require('../../assets/images/MockStationInfo.png')} style={Styles.map_image} resizeMode='contain'/>
+        <TouchableOpacity onPress={() => {
+          setIsVisible(true)
+          console.log(visible)}}>
+          <Image 
+            source={{uri:'https://drive.google.com/uc?export=view&id='.concat(stationInfo[code].img_id)}} 
+            style={Styles.map_image} 
+            resizeMode='cover'/>
+          <ImageView 
+            images={images}
+            imageIndex={0}
+            visible={visible}
+            onRequestClose={() => setIsVisible(false)}
+          />
+        </TouchableOpacity>
+        
+       
       </View>
       
       <View style={Styles.description_view}>
           <TimingInfo 
-            frequency={'6.00'} 
+            frequency={stationInfo[code].freq} 
             function={() => {
               console.log('View Time Table')}
             }/>
-          <FacilityList/>
-          <ExitList/>
+          <FacilityList facility={stationInfo[code].fac} language={'th'}/>
+          <ExitList exit={stationInfo[code].exit} language={'th'} color={getColor(stationInfo[code].p)}/>
       </View>
     </ScrollView>
   </SafeAreaView>
@@ -35,49 +58,17 @@ const StationInfo = (props) => {
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#00528C',
   },
   image_view: {
-    backgroundColor: '#00528C', 
-    paddingVertical: screenHeight*0.15,
-    paddingBottom: screenHeight*0.1
-  },
-  header_view: {
-    backgroundColor: 'black',
-    borderBottomEndRadius: 20,
-    borderBottomStartRadius: 20,
-    paddingVertical: screenHeight*0.01,
-  },
-  header_station_view: {
-    paddingVertical: screenHeight*0.02,
-    paddingHorizontal: screenWidth*0.05,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  header_text:{
-    color: 'white',
-    fontSize: screenHeight*0.03,
-    fontFamily: 'LINESeedSans_A_Bd',
-  },
-  station_route_view: {
-    paddingVertical: '2%',
-    paddingHorizontal: '5%',
-    borderRadius:100,
-  },
-  station_route_text:{
-    color:'white', 
-    fontSize: screenHeight * 0.017, 
-    textAlign:'center',
-    fontFamily: 'LINESeedSans_A_Rg',
-  },
-  add_favorite_route_text: {
-    textAlign: 'center',
+    paddingTop: screenHeight*0.16,
+    paddingBottom: screenHeight*0.02,
   },
   map_image: {
     height: screenHeight*0.35,
     width: screenWidth,
   },
   description_view: {
-    marginTop: -screenHeight*0.05,
     backgroundColor: 'white',
     borderTopStartRadius: 20,
     borderTopEndRadius: 20,
@@ -85,7 +76,5 @@ const Styles = StyleSheet.create({
     paddingVertical: screenHeight*0.02,
   }
 });
-
-
 
 export default StationInfo;
