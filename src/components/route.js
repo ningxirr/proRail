@@ -2,90 +2,106 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Dimensions, Image, TouchableOpacity } from 'react-native';
 import Animated, { FadeIn, FadeOut, FadeInDown, FadeOutDown, FadeInUp } from 'react-native-reanimated';
+import stationInfo from '../../data/station_info.json';
 import Walking from './walking';
+import PathIcon from './pathIcon'
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
 const BrieflyRoute = (props) => {
     const [briefly, setBriefly] = useState(true);
-    useEffect(() => {
-        setBriefly(props.route_en)
-    }, [props.route_en])
     return(   
         <View>
             {
                 props.walk !== null ? 
                 <View>
+                    {console.log(props.walk)}
                     <Animated.View entering={FadeIn.duration(600)}>
                         {
-                            props.walk !== null ? <Walking time={props.walk} station={props.route_en[0]}/> : null
+                             props.haveToWalk ? <Walking time={props.walk} station={stationInfo[props.route[0]].station_name.en}/> : null
                         }
                     </Animated.View> 
                 </View> : null
             }
-            <TouchableOpacity onPress={() => setBriefly(!briefly)}>
+            <TouchableOpacity onPress={() => {setBriefly(!briefly)}}>
                 {
                     briefly ?
                     <Animated.View style={Styles.path_view} entering={FadeIn} exiting={FadeOut}>
                         <View style={Styles.path_with_image_view}>
-                            <Image source={getImage(props.path)} style={[Styles.briefly_path_image, {transform: [{ scaleX: 1 },{ scaleY: 1 }]}]}/>
+                            <PathIcon color={stationInfo[props.route[0]].platform.color} lightColor={'#859CBA'}/>
+                            {/* <Image source={getImage(stationInfo[props.route[0]].platform.color)} style={[Styles.briefly_path_image, {transform: [{ scaleX: 1 },{ scaleY: 1 }]}]}/> */}
                             <View>
                                 <Text style={Styles.briefly_path_en_text}>
-                                    {props.route_en[0]}
+                                    {stationInfo[props.route[0]].station_name.en}
                                 </Text>
                                 <Text style={Styles.briefly_path_th_text}>
-                                    {props.route_th[0]}
+                                    {stationInfo[props.route[0]].station_name.th}
                                 </Text>
                             </View>
                             <View style={Styles.price_component_view}>
-                                <Text style={Styles.price_text}>
-                                    {props.price}{'\n'}THB
-                                </Text>
+                                {
+                                    props.price === null ?
+                                    null:
+                                    <Text style={Styles.price_text}>
+                                        {props.price}{'\n'}THB
+                                    </Text>
+                                }
+                                
                             </View>
                         </View>
-                        <Animated.View style={Styles.path_with_image_view} entering={FadeInDown} exiting={FadeOutDown}>
-                            <Image source={getImage(props.path)} style={[Styles.briefly_path_image, {marginVertical: screenHeight*0.002, transform: [{ scaleX: -1 },{ scaleY: -1 }]}]}/>
+                        <Animated.View style={Styles.path_with_image_view} entering={props.route.length === 2 ? FadeIn:FadeInDown} exiting={props.route.length === 2 ? FadeOut : FadeOutDown}>
+                            <Image source={getImage(stationInfo[props.route[0]].platform.color)} style={[Styles.briefly_path_image, {marginVertical: screenHeight*0.002, transform: [{ scaleX: -1 },{ scaleY: -1 }]}]}/>
                             <View>
                                 <Text style={Styles.briefly_path_en_text}>
-                                    {props.route_en[props.route_en.length-1]}
+                                    {stationInfo[props.route[props.route.length-1]].station_name.en}
                                 </Text>
                                 <Text style={Styles.briefly_path_th_text}>
-                                    {props.route_th[props.route_th.length-1]}
+                                    {stationInfo[props.route[props.route.length-1]].station_name.th}
                                 </Text>
                             </View>
                         </Animated.View>   
-                    </Animated.View> :
+                    </Animated.View> : 
                     <Animated.View style={Styles.container_view} entering={FadeIn}>
                         <View>
                             {
-                                props.route_en.map((route, index) => (
+                                props.route.map((station, index) => (
                                     <View key={index} style={Styles.path_with_image_view}>
                                         {
-                                            index === 0 || index === props.route_en.length-1 ? 
-                                            <Animated.View entering={index===0 ? null: FadeInUp} >
-                                                <Image source={getHeaderAndFooterImage(props.path)} style={[Styles.briefly_path_image, index === props.route_en.length-1 ? {transform: [{ scaleX: -1 },{ scaleY: -1 }]}: null]} />
+                                            index === 0 || index === props.route.length-1 ? 
+                                            <Animated.View entering={index===0 ? null: props.route.length === 2 ? FadeIn: FadeInUp} >
+                                                <Image 
+                                                    source={getHeaderAndFooterImage(stationInfo[props.route[0]].platform.color)} 
+                                                    style={[Styles.briefly_path_image, index === props.route.length-1 ? {transform: [{ scaleX: -1 },{ scaleY: -1 }]}: null]} 
+                                                    />
                                             </Animated.View>
                                             :
-                                            <Animated.View entering={FadeInUp}>
-                                                <Image source={getPathImage(props.path)} style={Styles.briefly_path_image} entering={FadeInUp.duration(500)}/>
+                                            <Animated.View entering={props.route.length === 2 ? FadeIn: FadeInUp}>
+                                                <Image source={getPathImage(stationInfo[props.route[0]].platform.color)} 
+                                                    style={Styles.briefly_path_image} 
+                                                    entering={props.route.length === 2 ? FadeIn: FadeInUp.duration(500)}
+                                                />
                                             </Animated.View>
                                         }
-                                        <Animated.View entering={index===0 ? null: FadeInUp} >
+                                        <Animated.View entering={index===0 ? null: props.route.length === 2 ? FadeIn: FadeInUp} >
                                             <Text style={Styles.briefly_path_en_text}>
-                                                {route}
+                                                {stationInfo[station].station_name.en}
                                             </Text>
                                             <Text style={Styles.briefly_path_th_text}>
-                                                {props.route_th[index]}
+                                                {stationInfo[station].station_name.th}
                                             </Text>
                                         </Animated.View>
                                     </View>
                                 ))
                             }
                             <View style={Styles.price_component_view}>
-                                <Text style={Styles.price_text}>
-                                    {props.price}{'\n'}THB
-                                </Text>
+                                {
+                                    props.price === null ?
+                                    null:
+                                    <Text style={Styles.price_text}>
+                                        {props.price}{'\n'}THB
+                                    </Text>
+                                }
                             </View>
                         </View>
                     
@@ -98,21 +114,21 @@ const BrieflyRoute = (props) => {
 
 function getImage(path){
     switch(path){
-        case 'Green':
+        case '#71B047':
             return require('../../assets/images/BrieflyRoute/green.png');
-        case 'DarkGreen':
+        case '#315d36':
             return require('../../assets/images/BrieflyRoute/darkGreen.png');
-        case 'Blue':
+        case '#31609e':
             return require('../../assets/images/BrieflyRoute/blue.png');
-        case 'Purple':
+        case '#683279':
             return require('../../assets/images/BrieflyRoute/purple.png');
-        case 'Pink':
+        case '#d96a6a':
             return require('../../assets/images/BrieflyRoute/pink.png');
-        case 'Gold':
+        case '#cc9933':
             return require('../../assets/images/BrieflyRoute/gold.png');
-        case 'Red':
+        case '#f01818':
             return require('../../assets/images/BrieflyRoute/red.png');
-        case 'LightRed':
+        case '#e85658':
             return require('../../assets/images/BrieflyRoute/lightRed.png');
         default:
             return require('../../assets/images/BrieflyRoute/default.png');
@@ -121,21 +137,21 @@ function getImage(path){
 
 function getPathImage(path){
     switch(path){
-        case 'Green':
+        case '#71B047':
             return require('../../assets/images/FullRoute/Body/green.png');
-        case 'DarkGreen':
+        case '#315d36':
             return require('../../assets/images/FullRoute/Body/darkGreen.png');
-        case 'Blue':
+        case '#31609e':
             return require('../../assets/images/FullRoute/Body/blue.png');
-        case 'Purple':
+        case '#683279':
             return require('../../assets/images/FullRoute/Body/purple.png');
-        case 'Pink':
+        case '#d96a6a':
             return require('../../assets/images/FullRoute/Body/pink.png');
-        case 'Gold':
+        case '#cc9933':
             return require('../../assets/images/FullRoute/Body/gold.png');
-        case 'Red':
+        case '#f01818':
             return require('../../assets/images/FullRoute/Body/red.png');
-        case 'LightRed':
+        case '#e85658':
             return require('../../assets/images/FullRoute/Body/lightRed.png');
         default:
             return require('../../assets/images/FullRoute/Body/default.png');
@@ -144,21 +160,21 @@ function getPathImage(path){
 
 function getHeaderAndFooterImage(path){
     switch(path){
-        case 'Green':
+        case '#71B047':
             return require('../../assets/images/FullRoute/HeaderAndFooter/green.png');
-        case 'DarkGreen':
+        case '#315d36':
             return require('../../assets/images/FullRoute/HeaderAndFooter/darkGreen.png');
-        case 'Blue':
+        case '#31609e':
             return require('../../assets/images/FullRoute/HeaderAndFooter/blue.png');
-        case 'Purple':
+        case '#683279':
             return require('../../assets/images/FullRoute/HeaderAndFooter/purple.png');
-        case 'Pink':
+        case '#d96a6a':
             return require('../../assets/images/FullRoute/HeaderAndFooter/pink.png');
-        case 'Gold':
+        case '#cc9933':
             return require('../../assets/images/FullRoute/HeaderAndFooter/gold.png');
-        case 'Red':
+        case '#f01818':
             return require('../../assets/images/FullRoute/HeaderAndFooter/red.png');
-        case 'LightRed':
+        case '#e85658':
             return require('../../assets/images/FullRoute/HeaderAndFooter/lightRed.png');
         default:
             return require('../../assets/images/FullRoute/HeaderAndFooter/default.png');
@@ -179,7 +195,7 @@ const Styles = StyleSheet.create({
     },
     briefly_path_image: {
         height: screenHeight*0.06,
-        width: screenWidth*0.06,
+        width: screenWidth*0.07,
         resizeMode: 'contain',
         marginLeft: screenWidth*0.07,
     },

@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Dimensions, ImageBackground } from 'react-nativ
 import NextStation from '../nextStation';
 import StartAndEndRoute from '../startAndEndRoute';
 import NavBar from '../navBar';
+import stationInfo from '../../../data/station_info.json';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
@@ -27,11 +28,11 @@ const Header = (props) => {
                   </View>
                 </View>
                 <View style = {Styles.start_and_end_route_view}>
-                  <StartAndEndRoute stationName = {'Kasetsart University'} stationPlatform = {'BTS skytrain'} stationColor = {'#4CAF1D'}/>
+                  <StartAndEndRoute stationName = {stationInfo[props.startStation].station_name.en} stationPlatform = {stationInfo[props.startStation].platform.platform} stationColor = {stationInfo[props.startStation].platform.color}/>
                   <Text style = {{color:'white', fontSize: screenHeight * 0.020, fontFamily: 'LINESeedSans_A_Rg'}}>
                     to
                   </Text>
-                  <StartAndEndRoute stationName = {'Huai Khwang'} stationPlatform = {'MRT'} stationColor = {'#325E9A'}/>
+                  <StartAndEndRoute stationName = {stationInfo[props.stopStation].station_name.en} stationPlatform = {stationInfo[props.stopStation].platform.platform} stationColor = {stationInfo[props.stopStation].platform.color}/>
                 </View>
               </View>
             </View>

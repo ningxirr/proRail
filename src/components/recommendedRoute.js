@@ -8,9 +8,9 @@ const screenWidth = Dimensions.get('window').width;
 const RecommendedRoute = (props) => {
     return(
       <View style={Styles.recommended_route_view}>
-        <RouteDetail topic = {'TIME'} number = {'36'} unit = {'mins'} />
-        <RouteDetail topic = {'INTERCHANGE'} number = {'2'} unit = {'station(s)'}/>
-        <RouteDetail topic = {'PRICE'} number = {'48'} unit = {'THB'}/>
+        <RouteDetail topic = {'TIME'} number = {props.time} unit = {'mins'} />
+        <RouteDetail topic = {'INTERCHANGE'} number = {props.interchange} unit = {'station(s)'}/>
+        <RouteDetail topic = {'PRICE'} number = {props.price} unit = {'THB'}/>
       </View>
     );
 }

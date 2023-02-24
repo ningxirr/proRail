@@ -27,7 +27,7 @@ const exitList = [
 
 const ExitList = (props) => {
   let exitList = props.exit;
-  {console.log(exitList)}
+
   return (
     <View style={Styles.component}>
         <Text style={Styles.title_text}>
@@ -39,12 +39,14 @@ const ExitList = (props) => {
                     <View key={index} style={Styles.exit_view}>
                         <View style={[Styles.exit_number_view , {backgroundColor:props.color}]}>
                             <Text style={Styles.exit_number_text}>
-                                {item.no}
+                                {item.number}
                             </Text>
                         </View>
-                        <Text style={[Styles.exit_description_text, {fontFamily : props.language === 'en' ? 'LINESeedSans_A_Rg' : 'LINESeedSansTH_A_Rg'}]}>
-                            {props.language === 'en' ? item.val_en: item.val_th}
-                        </Text>
+                        {
+                            props.language === 'th' ? 
+                                <Text style={[Styles.exit_description_text, {fontFamily:'LINESeedSansTH_A_Rg'}]}>{item.th}</Text> : 
+                                <Text style={[Styles.exit_description_text, {fontFamily:'LINESeedSans_A_Rg'}]}>{item.en}</Text>
+                        }
                     </View>
                 ))
             }

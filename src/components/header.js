@@ -21,7 +21,7 @@ const Header = (props) => {
           {/* {console.log(props.station.route.params.station)}
           {console.log(stationInfo[props.station.route.params.station])} 
           getColor(stationInfo[props.station.route.params.station].p) */}
-          <View style = {[Styles.station_route_view, { backgroundColor: '#f5f367' }]}>
+          <View style = {[Styles.station_route_view, { backgroundColor: '#31609e' }]}>
               <Text style = {Styles.station_route_text}>
                   BTS skytrain
               </Text>

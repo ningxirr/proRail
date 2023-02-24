@@ -21,11 +21,14 @@ const FacilityList = (props) => {
                     facilityList.map((item, index) => (
                         <View key={index} style={[index !== 0 ? {borderTopColor: '#CCCCCC', borderTopWidth: 1} : null, Styles.facility_view]}>
                             <View>
-                                {getIcon(item)}
+                                {/* {getIcon(item)} */}
+                                <IconMaterialCommunityIcons name={item.icon} size={25} color={'black'}/>
                             </View>
-                            <Text style={[Styles.facility_text,{fontFamily: props.language === 'th' ? 'LINESeedSansTH_A_Rg':'LINESeedSans_A_Rg'}]}>
-                                {getFacility(item, props.language)} 
-                            </Text>
+                            {
+                                props.language === 'th' ? 
+                                    <Text style={[Styles.facility_text, {fontFamily:'LINESeedSansTH_A_Rg'}]}>{item.th}</Text> : 
+                                    <Text style={[Styles.facility_text, {fontFamily:'LINESeedSans_A_Rg'}]}>{item.en}</Text>
+                            }
                         </View>
                     ))
                 }
