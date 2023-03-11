@@ -10,6 +10,9 @@ import Navigate from './src/views/Navigate';
 import FavoriteRoute from './src/views/FavoriteRoute';
 import StationInfo from './src/views/StationInfo';
 import Header from './src/components/header';
+import Welcome from './src/views/Welcome';
+import Regist from './src/views/Regist';
+import Choose from './src/views/Choose';
 
 /*const getData = async () => {
   const usersCollection = await firestore()
@@ -22,22 +25,38 @@ import Header from './src/components/header';
 const Stack = createNativeStackNavigator();
 
 const App = () => (
-    // <Result /> 
     <NavigationContainer>
         <Stack.Navigator>
+            {/* <Stack.Screen 
+                name="Welcome" 
+                component={Welcome} 
+                header
+                options={{
+                  headerShown: false
+                }}
+                />
+             <Stack.Screen 
+              name="Regist" 
+              component={Regist} 
+              header
+              options={{
+                headerShown: false
+              }}
+              />
             <Stack.Screen 
+              name="Choose" 
+              component={Choose} 
+              header
+              options={{
+                headerShown: false
+              }}
+              /> */}
+            {/* <Stack.Screen 
               name="Result" 
               component={Result} 
               header
               options={{
-                headerTransparent: true,
-                headerTitle: '',
-                headerLeft: (navigation) => (
-                  <TochableIcon name='angle-left' size={25} color={'white'} function={()=>console.log('back')}/>
-                ),
-                headerRight: (navigation) => (
-                  <TochableIcon name='star-o' size={20} color={'white'} function={()=>console.log('star')}/>
-                ),
+                headerShown: false
               }}
               />
              <Stack.Screen
@@ -46,7 +65,7 @@ const App = () => (
               options={{ 
                 headerShown: false,
               }}
-              />
+              /> */}
             <Stack.Screen
               name='FavoriteRoute'
               component={FavoriteRoute}
@@ -54,14 +73,14 @@ const App = () => (
                 headerShown: false,
               }}
             /> 
-            <Stack.Screen
+            {/* <Stack.Screen
               name='StationInfo'
               component={StationInfo}
               options={{
-                header: (props) => (<Header title={'Station Info'} station={props}/>),
+                // header: (props) => (<Header title={'Station Info'} station={props}/>),
                 // headerTitle: '',
-                headerTransparent: true,
-              }}/>
+                headerShown: false
+              }}/> */}
         </Stack.Navigator>
     </NavigationContainer>
 );
