@@ -22,7 +22,7 @@ const Result = (props) => {
 
   return (
     <SafeAreaView style={Styles.container}>
-      <ImageBackground source={require('../../assets/images/Map.png')} resizemode='contain' style={{height:screenHeight*0.7}} >
+      <ImageBackground source={require('../../assets/images/Map.jpg')} resizemode='contain' style={{height:screenHeight*0.7}} >
         <View style={Styles.header_view}>
         <Text style={Styles.header_text}>
           Navigate
@@ -47,7 +47,6 @@ const Result = (props) => {
             >
             <BottomSheetScrollView contentContainerStyle={Styles.content_bottom_sheet_scroll_view}>
               <AllRoute moreDetail={true} path={props.route.params.path} routes={props.route.params.routes}/>
-              {console.log(props.route.params.path)}
             </BottomSheetScrollView>
           </BottomSheet> 
         </GestureHandlerRootView>
@@ -85,7 +84,7 @@ const Styles = StyleSheet.create({
   },
   content_bottom_sheet_scroll_view: {
     backgroundColor: "white",
-    paddingTop: '2%',
+    paddingTop: '5%',
     paddingBottom: '5%'
   },
   bottom_sheet: {
