@@ -1,54 +1,32 @@
 "use strict";
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Dimensions, } from 'react-native';
-
-const screenHeight = Dimensions.get('window').height;
-
+import stationInfo from '../../data/station_info.json';
 
 const FavoriteRouteList = (props) => {
+    const stationList = props.route.split('-');
     return (
         <TouchableOpacity 
             style = {Styles.container} 
-            onPress={()=>props.navigation.navigate('Result', props.route)}>
+            onPress={()=>props.navigation.navigate('Result', stationList)}>
             <View style = {Styles.next_station_view}>
-                {console.log(props.route[0].route[0].station.en[0])}
                 <Text style = {Styles.next_station_text}>
-                    {props.route[0].route[0].station.en[0]}
+                    {stationInfo[stationList[0]].station_name.en}
                 </Text>
                 <Text style = {Styles.next_station_text}>
-                    To {props.route[props.route.length-1].route[props.route[props.route.length-1].route.length-1].station.en[props.route[props.route.length-1].route[props.route[props.route.length-1].route.length-1].station.en.length-1]}
+                    To {stationInfo[stationList[stationList.length-1]].station_name.en}
+                </Text>
+                <Text style = {Styles.route_text}>
+                    {props.route}
                 </Text>
             </View>
-            <View style = {[Styles.station_route_view, {backgroundColor: getStationColor(props.route[0].route[0].path)}]}>
+            <View style = {Styles.station_route_view}>
                 <Text style = {Styles.station_route_text}>
-                    { props.route[0].price } THB
+                    { props.favoriteRoutePrice } THB
                 </Text>
             </View>
         </TouchableOpacity>
     );
-}
-
-function getStationColor(color){
-    switch(color){
-        case 'Green':
-            return '#4CAF1D';
-        case 'DarkGreen':
-            return '#0A8B86';
-        case 'Blue':
-            return '#325E9A';
-        case 'Purple':
-            return '#800080';
-        case 'Pink':
-            return '#FA5558';
-        case 'Gold':
-            return '#FFC433';
-        case 'Red':
-            return '#761F21';
-        case 'LightRed':
-            return '#DE0F19';
-        default:
-            return 'grey';
-    }
 }
 
 const Styles = StyleSheet.create({
@@ -73,20 +51,27 @@ const Styles = StyleSheet.create({
     },
     next_station_text: {
         color:'black', 
-        fontSize: screenHeight * 0.016, 
+        fontSize: 14, 
         fontFamily: 'LINESeedSans_A_Bd',
-        marginVertical: '1%',
+        marginVertical: 2,
+    },
+    route_text: {
+        color:'#9E9A9A',
+        fontSize: 12,
+        marginVertical: 2,
+        fontFamily: 'LINESeedSans_A_Rg',
     },
     station_route_view: {
-        margin:'5%', 
-        paddingVertical: '1%',
-        paddingHorizontal: '7%',
+        backgroundColor: 'black',
+        margin:10, 
+        paddingVertical: 5,
+        paddingHorizontal: 30,
         alignSelf: 'center',
         borderRadius:100,
     },
     station_route_text:{
         color:'white', 
-        fontSize: screenHeight * 0.017, 
+        fontSize: 15, 
         textAlign:'center',
         fontFamily: 'LINESeedSans_A_Rg',
     }

@@ -1,11 +1,16 @@
 "use strict";
 
-import React, { useCallback, useMemo, useRef } from 'react';
+import React, { useCallback, useMemo, useRef, useState, useEffect } from 'react';
 import { SafeAreaView, StyleSheet, Text, View,  Dimensions, ImageBackground } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import TotalFavorite from '../components/totalFavorite';
 import FavoriteRouteList from '../components/favoriteRouteList';
+import stationInfo from '../../data/station_info.json';
+import getDataFromAsyncStorage from '../function/getDataFromAsyncStorage';
+import storeDataToAsyncStorage from '../function/storeDataToAsyncStorage';
+import removeDataFromAsyncStorage from '../function/removeDataFromAsyncStorage';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
@@ -66,13 +71,58 @@ const favoriteRoute = [
   ] 
 ]
 
+const storeData = async () => {
+  try {
+    await AsyncStorage.setItem('@favorite', JSON.stringify([['RW06', 'BL37']]))
+  } catch (e) {
+    
+  }
+}
+
+const getData = async () => {
+  try {
+    const jsonValue = await AsyncStorage.getItem('@favorite');
+    return jsonValue != null ? JSON.parse(jsonValue) : null;
+  } catch(e) {
+    console.error('Error getting recommended data:', e);
+  }
+}
+
+const getRecommendedData = async () => {
+  try {
+    const jsonValue = await AsyncStorage.getItem('@recommended');
+    return jsonValue != null ? JSON.parse(jsonValue) : null;
+  } catch(e) {
+    console.error('Error getting recommended data:', e);
+  }
+}
+
 const FavoriteRoute = (props) => {
+  const [favoriteRoute, setFavaoriteRoute] = useState([]);
+  const [recommended, setRecommended] = useState('');
+  const [favoriteRoutePrice, setFavoriteRoutePrice] = useState([]);
   const sheetRef = useRef(null);
   const snapPoints = useMemo(() => ["40%", "100%"], []);
 
   const handleSheetChange = useCallback((index) => {
     console.log("handleSheetChange", index);
   }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const favoriteRouteData = await getDataFromAsyncStorage('@favorite');
+      const favoriteRoutePriceData = await getDataFromAsyncStorage('@favoriteRoutePrice');
+      const recommendedData = await getDataFromAsyncStorage('@recommended')
+      setFavoriteRoutePrice(favoriteRoutePriceData);
+      setFavaoriteRoute(favoriteRouteData);
+      setRecommended(recommendedData[0]);
+    };
+    fetchData();
+  }, []);
+
+  if(!recommended){
+    return (<View/>)
+  }
 
   return (
     <SafeAreaView style={Styles.container}>
@@ -83,7 +133,7 @@ const FavoriteRoute = (props) => {
             </Text>
         </View>
         <View style={Styles.navigation_view}>
-          <TotalFavorite favCount={2}/>
+          <TotalFavorite favCount={1}/>
         </View>
       </ImageBackground>
       <Text style={{textAlign:'center', fontFamily: 'LINESeedSans_A_Bd', marginTop: '2%'}}>IG: new_norawich</Text>
@@ -99,12 +149,16 @@ const FavoriteRoute = (props) => {
             // enableOverDrag={false}
             >
             <BottomSheetScrollView contentContainerStyle={Styles.content_bottom_sheet_scroll_view}>
-                {
+              { 
+                  !recommended ? null:
                     favoriteRoute.map((route, index) => (
                         <View key={index} style={Styles.all_favorite_route}>
-                            <FavoriteRouteList route={route} navigation={props.navigation}/>
+                            <FavoriteRouteList 
+                              route={route} 
+                              navigation={props.navigation} 
+                              recommended={recommended}
+                              favoriteRoutePrice={favoriteRoutePrice[index]}/>
                         </View>
-                        
                     ))
                 }
             </BottomSheetScrollView>
