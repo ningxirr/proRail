@@ -1,29 +1,22 @@
 "use strict";
 
 import React from 'react';
-import { StyleSheet, Text, View,  Dimensions } from 'react-native';
-import NavBar from '../components/navBar';
-import stationInfo from '../../data/station_info.json';
-
-const screenHeight = Dimensions.get('window').height;
-const screenWidth = Dimensions.get('window').width;
-const getColor = require('../function/getColor');
+import { StyleSheet, Text, View,  Dimensions, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const Header = (props) => {
   return (
     <View style={Styles.container}>
-      
-      <NavBar/>
+      <TouchableOpacity style={Styles.header_view}>
+        <Icon name='angle-left' borderRadius={15} size={25} color={'white'}/>
+      </TouchableOpacity>
       <View style={Styles.header_view}>
           <Text style={Styles.header_text}>
               {props.title}
           </Text>
-          {/* {console.log(props.station.route.params.station)}
-          {console.log(stationInfo[props.station.route.params.station])} 
-          getColor(stationInfo[props.station.route.params.station].p) */}
-          <View style = {[Styles.station_route_view, { backgroundColor: '#31609e' }]}>
+          <View style = {[Styles.station_route_view, { backgroundColor: props.color }]}>
               <Text style = {Styles.station_route_text}>
-                  BTS skytrain
+                  {props.platform}
               </Text>
           </View>
       </View>
@@ -34,16 +27,16 @@ const Header = (props) => {
 };
 
 const Styles = StyleSheet.create({
-    container: {
-    paddingVertical: screenHeight*0.01,
+  container: {
+    paddingVertical: 10,
     backgroundColor: 'black',
     borderBottomEndRadius: 20,
     borderBottomStartRadius: 20,
-    height: screenHeight*0.15,
+    height: 110,
   },
   header_view:{
-    paddingVertical: screenHeight*0.01,
-    paddingHorizontal: screenWidth*0.06,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -53,16 +46,16 @@ const Styles = StyleSheet.create({
     fontFamily: 'LINESeedSans_A_Bd',
   },
   station_route_view: {
-    paddingVertical: '2%',
-    paddingHorizontal: '5%',
-    borderRadius:100,
+    paddingVertical: 5,
+    paddingHorizontal: 30,
+    borderRadius:15,
   },
   station_route_text:{
     color:'white', 
     fontSize: 15, 
     textAlign:'center',
     fontFamily: 'LINESeedSans_A_Rg',
-  },
+  }
 });
 
 export default Header;

@@ -30,10 +30,8 @@ const Choices = (props) => {
 
 const Styles = StyleSheet.create({
   choice_component_view: {
-      width: screenHeight*0.17,
-      height: screenHeight*0.17,
-      marginHorizontal:screenWidth*0.01, 
-      marginTop:screenHeight*0.02,
+      width: 150,
+      height: 150,
       backgroundColor: '#D7D6D6',
       borderRadius:10, 
       padding: screenHeight*0.015

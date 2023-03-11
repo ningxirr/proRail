@@ -3,8 +3,6 @@ import React from 'react';
 import { StyleSheet, View, Dimensions, Text } from 'react-native';
 
 const screenHeight = Dimensions.get('window').height;
-const screenWidth = Dimensions.get('window').width;
-
 
 const RouteDescription = (props) => {
     return (
@@ -54,7 +52,7 @@ const Styles = StyleSheet.create({
     route_text: {
         textAlign: 'center',
         fontFamily: 'LINESeedSans_A_Rg',
-        fontSize: screenHeight*0.018,
+        fontSize: 13,
         fontWeight: 'bold',
         color: '#CCCCCC'
     },
@@ -64,13 +62,13 @@ const Styles = StyleSheet.create({
         alignItems: 'center',
     },
     label_text: {
-        fontSize: screenHeight*0.014,
+        fontSize: 10,
         fontFamily: 'LINESeedSans_A_Rg',
         color: 'black',
         marginHorizontal: '0.5%'
     },
     value_text: {
-        fontSize: screenHeight*0.028,
+        fontSize: 24,
         fontFamily: 'LINESeedSans_A_Bd',
         color: 'black',
         marginHorizontal: '0.5%'

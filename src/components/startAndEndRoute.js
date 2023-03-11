@@ -2,9 +2,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 
-const screenHeight = Dimensions.get('window').height;
-const screenWidth = Dimensions.get('window').width;
-
 const StartAndEndRoute = (props) => {
     return (
       <View style = {Styles.main_component_view}>
@@ -22,24 +19,25 @@ const StartAndEndRoute = (props) => {
 
 const Styles = StyleSheet.create({
     main_component_view: {
-        width:screenWidth*0.33
+      width: 130,
+      height: 200
     },
     route_component_view: {
-        borderRadius: 100, 
-        marginBottom: screenHeight*0.02, 
-        padding: screenHeight*0.01
+      borderRadius: 20, 
+      marginBottom: 15, 
+      padding: 10
     },
     route_component_text: {
-        textAlign:'center', 
-        color:'white', 
-        fontSize: screenHeight * 0.018, 
-        fontFamily: 'LINESeedSans_A_Rg'
+      textAlign:'center', 
+      color:'white', 
+      fontSize: 15, 
+      fontFamily: 'LINESeedSans_A_Rg'
     },
     station_name_text: {
-        textAlign:'center', 
-        color:'white', 
-        fontSize: screenHeight * 0.017, 
-        fontFamily: 'LINESeedSans_A_Bd'
+      textAlign:'center', 
+      color:'white', 
+      fontSize: 14, 
+      fontFamily: 'LINESeedSans_A_Bd'
     }
 });
 

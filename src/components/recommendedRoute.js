@@ -2,9 +2,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 
-const screenHeight = Dimensions.get('window').height;
-const screenWidth = Dimensions.get('window').width;
-
 const RecommendedRoute = (props) => {
     return(
       <View style={Styles.recommended_route_view}>
@@ -36,28 +33,27 @@ const Styles = StyleSheet.create({
       flexDirection: 'row',
       backgroundColor: 'black',
       paddingHorizontal: '10%', 
-      paddingVertical: screenHeight*0.019,
+      paddingVertical: 20,
       borderRadius: 10,
       justifyContent: 'space-between',
     },
     title_text: {
-        fontSize: screenHeight*0.02, 
+        fontSize: 14, 
         fontFamily: 'LINESeedSans_A_Rg',        
         color:'white', 
         textAlign:'center'
     },
     number_text: {
-        fontSize: screenHeight*0.048, 
+        fontSize: 36, 
         fontFamily: 'LINESeedSans_A_Bd', 
         color:'white', 
         textAlign:'center',
-        paddingVertical: screenHeight*0.01
+        paddingVertical: 10
     },
     unit_text: {
-        fontSize: screenHeight*0.018, 
+        fontSize: 12, 
         fontFamily: 'LINESeedSans_A_Rg', 
         color:'white', 
-        marginRight:'5%', 
         textAlign:'center'
     }
 });

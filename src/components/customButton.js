@@ -17,18 +17,17 @@ const CustomButton = (props) => {
 
 const Styles = StyleSheet.create({  
     button: {
-        height: screenHeight*0.05,
+        paddingVertical: 12,
         alignSelf: 'center', 
         borderColor:'black', 
         borderWidth:1,
-        marginVertical:'1%',
         borderRadius: 10,
         justifyContent: 'center',
     },
     button_text: {
         textAlign:'center', 
         alignContent:'center', 
-        fontSize: screenHeight*0.017,
+        fontSize: 14,
         fontFamily: 'LINESeedSans_A_Rg',
     }
 });

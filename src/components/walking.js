@@ -1,15 +1,12 @@
 "use strict";
 import React from 'react';
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-
-const screenHeight = Dimensions.get('window').height;
-const screenWidth = Dimensions.get('window').width;
 
 const Walking = (props) => {
     return(   
         <View style={Styles.path_with_icon_view}>
-            <Icon name='walking' color={'black'} width={screenWidth*0.05} size={20} style={Styles.walking_icon}/>
+            <Icon name='walking' color={'black'} size={20} style={Styles.walking_icon}/>
             <View style={Styles.description_text_view}>
                 <Text style={Styles.briefly_path_text}>
                     {props.time} mins to {'\t'}
@@ -24,23 +21,23 @@ const Walking = (props) => {
 
 const Styles = StyleSheet.create({
     path_with_icon_view: {
-        borderColor: 'grey',
+        borderColor: '#CCCCCC',
         borderWidth: 1,
         borderRadius: 10,
         flexDirection: 'row',
-        paddingVertical: screenHeight*0.02,
-        marginVertical: screenHeight*0.005,
+        paddingVertical: 10,
+        marginVertical: 5,
         alignItems: 'center'
     },
     walking_icon: {
-        marginLeft: screenWidth*0.08,
+        marginLeft: 30,
     },
     description_text_view:{
-        marginLeft: screenWidth*0.12,
+        marginLeft: 40,
         flexDirection: 'row'
     },  
     briefly_path_text: {
-        fontSize: screenHeight*0.016,
+        fontSize: 15,
         color: 'black',
         fontFamily: 'LINESeedSans_A_Rg',
     },

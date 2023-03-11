@@ -3,36 +3,40 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 const PathIcon = (props) => {
+    if (props.isHeader){
+        return (
+            <View>
+                <View style={[Styles.header_line, {backgroundColor: props.color}]}>
+                    <View style={[Styles.circle, {backgroundColor:  props.lightColor}]}/>
+                </View>
+            </View>
+        )
+    }
     return(
         <View>
-            <View style={[Styles.line, {backgroundColor: props.color}]}>
-                <View style={[Styles.big_circle, {backgroundColor:  props.lightColor}]}/>
+            <View style={[Styles.path_line, {backgroundColor: props.color}]}>
+                <View style={[Styles.circle, {backgroundColor:  props.lightColor}]}/>
             </View>
-            <View style={[Styles.small_circle, {backgroundColor: props.color}]}/>
         </View>
     );
 }
 const Styles = StyleSheet.create({
-    line:{
-        borderRadius : 50, 
-        height:42, 
+    header_line:{
+        borderTopStartRadius: 50, 
+        borderTopEndRadius: 50,
+        height:55, 
         width:9, 
-        alignSelf: 'center'
     },
-    big_circle:{ 
+    path_line:{
+        height:55, 
+        width:9, 
+    },
+    circle:{ 
         borderRadius : 25, 
         height:25, 
         width:25, 
         alignSelf: 'center', 
-        top: 8
-    },
-    small_circle:{
-        backgroundColor: 'red',
-        borderRadius : 100, 
-        height:9, 
-        width:9, 
-        alignSelf: 'center', 
-        marginTop: 2
+        top: 10
     }
 });
 

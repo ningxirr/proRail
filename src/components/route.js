@@ -1,22 +1,22 @@
 "use strict";
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, Dimensions, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import Animated, { FadeIn, FadeOut, FadeInDown, FadeOutDown, FadeInUp } from 'react-native-reanimated';
 import stationInfo from '../../data/station_info.json';
 import Walking from './walking';
+import BrieflyPathIcon from './brieflyPathIcon';
 import PathIcon from './pathIcon'
 
-const screenHeight = Dimensions.get('window').height;
-const screenWidth = Dimensions.get('window').width;
-
-const BrieflyRoute = (props) => {
+const Route = (props) => {
     const [briefly, setBriefly] = useState(true);
+    useEffect(() => {
+        setBriefly(true);
+      }, [props]);
     return(   
         <View>
             {
                 props.walk !== null ? 
                 <View>
-                    {console.log(props.walk)}
                     <Animated.View entering={FadeIn.duration(600)}>
                         {
                              props.haveToWalk ? <Walking time={props.walk} station={stationInfo[props.route[0]].station_name.en}/> : null
@@ -29,7 +29,12 @@ const BrieflyRoute = (props) => {
                     briefly ?
                     <Animated.View style={Styles.path_view} entering={FadeIn} exiting={FadeOut}>
                         <View style={Styles.path_with_image_view}>
-                            <PathIcon color={stationInfo[props.route[0]].platform.color} lightColor={'#859CBA'}/>
+                            <View style={[Styles.path_image_view, {marginVertical: 1}]}>
+                                <BrieflyPathIcon
+                                    color={stationInfo[props.route[0]].platform.color.path_color} 
+                                    lightColor={stationInfo[props.route[0]].platform.color.path_light_color}
+                                />
+                            </View>
                             {/* <Image source={getImage(stationInfo[props.route[0]].platform.color)} style={[Styles.briefly_path_image, {transform: [{ scaleX: 1 },{ scaleY: 1 }]}]}/> */}
                             <View>
                                 <Text style={Styles.briefly_path_en_text}>
@@ -43,15 +48,26 @@ const BrieflyRoute = (props) => {
                                 {
                                     props.price === null ?
                                     null:
-                                    <Text style={Styles.price_text}>
-                                        {props.price}{'\n'}THB
-                                    </Text>
+                                    <View>
+                                        <Text style={Styles.price_text}>
+                                            {props.price}
+                                        </Text>
+                                        <Text style={Styles.price_unit_text}>
+                                            THB
+                                        </Text>
+                                    </View>
                                 }
                                 
                             </View>
                         </View>
                         <Animated.View style={Styles.path_with_image_view} entering={props.route.length === 2 ? FadeIn:FadeInDown} exiting={props.route.length === 2 ? FadeOut : FadeOutDown}>
-                            <Image source={getImage(stationInfo[props.route[0]].platform.color)} style={[Styles.briefly_path_image, {marginVertical: screenHeight*0.002, transform: [{ scaleX: -1 },{ scaleY: -1 }]}]}/>
+                            {/* <Image source={getImage(stationInfo[props.route[0]].platform.color.color)} style={[Styles.briefly_path_image, {marginVertical: screenHeight*0.002, transform: [{ scaleX: -1 },{ scaleY: -1 }]}]}/> */}
+                            <View style={[Styles.path_image_view, {marginVertical: 1, transform:[{rotateX: '180deg'}]}]}>
+                                <BrieflyPathIcon 
+                                    color={stationInfo[props.route[0]].platform.color.path_color} 
+                                    lightColor={stationInfo[props.route[0]].platform.color.path_light_color}
+                                />
+                            </View>
                             <View>
                                 <Text style={Styles.briefly_path_en_text}>
                                     {stationInfo[props.route[props.route.length-1]].station_name.en}
@@ -70,17 +86,32 @@ const BrieflyRoute = (props) => {
                                         {
                                             index === 0 || index === props.route.length-1 ? 
                                             <Animated.View entering={index===0 ? null: props.route.length === 2 ? FadeIn: FadeInUp} >
-                                                <Image 
+                                                {/* <Image 
                                                     source={getHeaderAndFooterImage(stationInfo[props.route[0]].platform.color)} 
                                                     style={[Styles.briefly_path_image, index === props.route.length-1 ? {transform: [{ scaleX: -1 },{ scaleY: -1 }]}: null]} 
+                                                    /> */}
+                                                <View style={[Styles.path_image_view, {marginTop: 0}, index === props.route.length-1 ? {transform:[{rotateX: '180deg'}]}: null]}>
+                                                    <PathIcon
+                                                        isHeader={true}
+                                                        color={stationInfo[props.route[0]].platform.color.path_color} 
+                                                        lightColor={stationInfo[props.route[0]].platform.color.path_light_color}
                                                     />
+                                                </View>
+                                                
                                             </Animated.View>
                                             :
                                             <Animated.View entering={props.route.length === 2 ? FadeIn: FadeInUp}>
-                                                <Image source={getPathImage(stationInfo[props.route[0]].platform.color)} 
+                                                {/* <Image source={getPathImage(stationInfo[props.route[0]].platform.color)} 
                                                     style={Styles.briefly_path_image} 
                                                     entering={props.route.length === 2 ? FadeIn: FadeInUp.duration(500)}
-                                                />
+                                                /> */}
+                                                <View style={Styles.path_image_view} >
+                                                    <PathIcon
+                                                        isHeader={false}
+                                                        color={stationInfo[props.route[0]].platform.color.path_color} 
+                                                        lightColor={stationInfo[props.route[0]].platform.color.path_light_color}
+                                                    />
+                                                </View>
                                             </Animated.View>
                                         }
                                         <Animated.View entering={index===0 ? null: props.route.length === 2 ? FadeIn: FadeInUp} >
@@ -98,9 +129,14 @@ const BrieflyRoute = (props) => {
                                 {
                                     props.price === null ?
                                     null:
-                                    <Text style={Styles.price_text}>
-                                        {props.price}{'\n'}THB
-                                    </Text>
+                                    <View>
+                                        <Text style={Styles.price_text}>
+                                            {props.price}
+                                        </Text>
+                                        <Text style={Styles.price_unit_text}>
+                                            THB
+                                        </Text>
+                                    </View>
                                 }
                             </View>
                         </View>
@@ -183,9 +219,9 @@ function getHeaderAndFooterImage(path){
 
 const Styles = StyleSheet.create({
     path_view: {
-        paddingVertical: screenHeight*0.01,
-        marginVertical: screenHeight*0.005,
-        borderColor: 'grey',
+        paddingVertical: 10,
+        marginVertical: 5,
+        borderColor: '#CCCCCC',
         borderWidth: 1,
         borderRadius: 10,
     },
@@ -193,44 +229,43 @@ const Styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center'
     },
-    briefly_path_image: {
-        height: screenHeight*0.06,
-        width: screenWidth*0.07,
-        resizeMode: 'contain',
-        marginLeft: screenWidth*0.07,
+    path_image_view:{
+        marginLeft: 30
     },
+    // briefly_path_image: {
+    //     height: 60,
+    //     width: screenWidth*0.07,
+    //     resizeMode: 'contain',
+    //     marginLeft: screenWidth*0.07,
+    // },
     briefly_path_en_text: {
-        marginLeft: screenWidth*0.1,
-        fontSize: screenHeight*0.016,
+        marginLeft: 40,
+        fontSize: 14,
         color: 'black',
         fontFamily: 'LINESeedSans_A_Bd',
     },
     briefly_path_th_text: {
-        marginLeft: screenWidth*0.1,
-        fontSize: screenHeight*0.016,
+        marginLeft: 40,
+        fontSize: 12,
         color: 'black',
         fontFamily: 'LINESeedSansTH_A_Rg',
     },
-    path_with_icon_view: {
-        borderColor: 'grey',
-        borderWidth: 1,
-        borderRadius: 10,
-        flexDirection: 'row',
-        paddingVertical: screenHeight*0.01,
-        marginVertical: screenHeight*0.005,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
     container_view: {
-        paddingVertical: screenHeight*0.01,
-        marginVertical: screenHeight*0.005,
+        paddingVertical: 10,
+        marginVertical: 5,
         borderWidth: 1,
         borderColor: 'grey',
         borderRadius: 10,
     },
     price_text:{
         textAlign: 'center',
-        fontSize: screenHeight*0.016,
+        fontSize: 16,
+        fontFamily: 'LINESeedSans_A_Rg',
+        color: 'black',
+    },
+    price_unit_text:{
+        textAlign: 'center',
+        fontSize: 10,
         fontFamily: 'LINESeedSans_A_Rg',
         color: 'black',
     },
@@ -241,4 +276,4 @@ const Styles = StyleSheet.create({
     }
 });
 
-export default BrieflyRoute;
+export default Route;
