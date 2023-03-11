@@ -27,6 +27,42 @@
         "leastInterchanges":{
             "path":
                 [
+                    ["BL37", "BL36", "BL35", "BL34", "BL33", "BL01", "BL32", "BL31", "BL30", "BL29", "BL28", "BL27", "BL26", "BL25", "BL24", "BL23", "BL22", "BL21", "BL20", "BL19", "BL18", "BL17", "BL16", "BL15", "BL14", "BL13", "BL12", "BL11"],
+                    ["RW01", "RW05", "RW06"]
+                ],
+            "walk": ["8"],
+            "price": [42, 35],
+            "time": "59"
+        }
+    },
+    "RW06-BL37":{
+        "fastest":{
+            "path":
+                [
+                    ["BL37", "BL36", "BL35", "BL34", "BL33", "BL01"],
+                    ["BL01", "BL02", "BL03", "BL04", "BL05", "BL06", "BL07", "BL08", "BL09", "BL10"],
+                    ["PP16", "PP15"],
+                    ["RW02", "RW06"]
+                ],
+            "walk": ["2", "2", "6"],
+            "price": [46, null, null, 29],
+            "time": "50"
+        },
+        "cheapest":{
+            "path":
+                [
+                    ["BL37", "BL36", "BL35", "BL34", "BL33", "BL01"],
+                    ["BL01", "BL02", "BL03", "BL04", "BL05", "BL06", "BL07", "BL08", "BL09", "BL10"],
+                    ["PP16", "PP15"],
+                    ["RW02", "RW06"]
+                ],
+            "walk": ["2", "2", "6"],
+            "price": [46, null, null, 29],
+            "time": "50"
+        },
+        "leastInterchanges":{
+            "path":
+                [
                     ["BL37", "BL36", "BL35", "BL34", "BL33", "BL01", "BL32", "BL31", "BL30", "BL29", "BL28", "BL27", "BL26", "BL25", "BL24", "BL23", "BL22", "BL21", "BL20", "BL19", "BL18", "BL17", "BL16", "BL15", "BL14", "BL13", "BL12", "BL11", "BL10", "BL09", "BL08", "BL07", "BL06", "BL05", "BL04", "BL03", "BL02", "BL01", "BL32", "BL31", "BL30", "BL29", "BL28", "BL27", "BL26", "BL25", "BL24", "BL23", "BL22", "BL21", "BL20", "BL19", "BL18", "BL17", "BL16", "BL15", "BL14", "BL13", "BL12", "BL11"],
                     ["RW01", "RW05", "RW06"]
                 ],

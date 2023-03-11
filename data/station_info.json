@@ -6,7 +6,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -102,7 +106,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -153,7 +161,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -204,7 +216,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -260,7 +276,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -311,7 +331,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -387,7 +411,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -438,7 +466,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -489,7 +521,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -555,7 +591,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -631,7 +671,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -677,7 +721,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -733,7 +781,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -794,7 +846,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -860,7 +916,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -921,7 +981,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -982,7 +1046,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1038,7 +1106,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1094,7 +1166,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1155,7 +1231,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1216,7 +1296,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1277,7 +1361,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1333,7 +1421,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1394,7 +1486,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1445,7 +1541,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1496,7 +1596,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1542,7 +1646,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1588,7 +1696,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1644,7 +1756,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1685,7 +1801,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1726,7 +1846,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1782,7 +1906,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1823,7 +1951,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1874,7 +2006,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1925,7 +2061,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -1976,7 +2116,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -2027,7 +2171,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -2078,7 +2226,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#31609e"
+      "color": {
+        "color": "#31609e",
+        "path_color": "#325E9A",
+        "path_light_color": "#859CBA"
+      }
     },
     "frequency": "< 5.00",
     "facility": [
@@ -2129,7 +2281,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#315d36"
+      "color": {
+        "color": "#315d36",
+        "path_color": "#0A8B86",
+        "path_light_color": "#84C5C2"
+      }
     },
     "frequency": "6.00",
     "facility": [
@@ -2200,7 +2356,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#315d36"
+      "color": {
+        "color": "#315d36",
+        "path_color": "#0A8B86",
+        "path_light_color": "#84C5C2"
+      }
     },
     "frequency": "6.00",
     "facility": [
@@ -2281,7 +2441,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#315d36"
+      "color": {
+        "color": "#315d36",
+        "path_color": "#0A8B86",
+        "path_light_color": "#84C5C2"
+      }
     },
     "frequency": "6.00",
     "facility": [
@@ -2352,7 +2516,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#315d36"
+      "color": {
+        "color": "#315d36",
+        "path_color": "#0A8B86",
+        "path_light_color": "#84C5C2"
+      }
     },
     "frequency": "6.00",
     "facility": [
@@ -2413,7 +2581,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#315d36"
+      "color": {
+        "color": "#315d36",
+        "path_color": "#0A8B86",
+        "path_light_color": "#84C5C2"
+      }
     },
     "frequency": "6.00",
     "facility": [
@@ -2489,7 +2661,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#315d36"
+      "color": {
+        "color": "#315d36",
+        "path_color": "#0A8B86",
+        "path_light_color": "#84C5C2"
+      }
     },
     "frequency": "6.00",
     "facility": [
@@ -2550,7 +2726,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#315d36"
+      "color": {
+        "color": "#315d36",
+        "path_color": "#0A8B86",
+        "path_light_color": "#84C5C2"
+      }
     },
     "frequency": "6.00",
     "facility": [
@@ -2626,7 +2806,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#315d36"
+      "color": {
+        "color": "#315d36",
+        "path_color": "#0A8B86",
+        "path_light_color": "#84C5C2"
+      }
     },
     "frequency": "6.00",
     "facility": [
@@ -2732,7 +2916,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#315d36"
+      "color": {
+        "color": "#315d36",
+        "path_color": "#0A8B86",
+        "path_light_color": "#84C5C2"
+      }
     },
     "frequency": "6.00",
     "facility": [
@@ -2793,7 +2981,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#315d36"
+      "color": {
+        "color": "#315d36",
+        "path_color": "#0A8B86",
+        "path_light_color": "#84C5C2"
+      }
     },
     "frequency": "6.00",
     "facility": [
@@ -2859,7 +3051,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#315d36"
+      "color": {
+        "color": "#315d36",
+        "path_color": "#0A8B86",
+        "path_light_color": "#84C5C2"
+      }
     },
     "frequency": "6.00",
     "facility": [
@@ -2930,7 +3126,11 @@
     },
     "platform": {
       "platform": "ARL",
-      "color": "#e85658"
+      "color": {
+        "color": "#e85658",
+        "path_color": "#761F21",
+        "path_light_color": "#B73538"
+      }
     },
     "frequency": "10-15",
     "facility": [
@@ -2991,7 +3191,11 @@
     },
     "platform": {
       "platform": "ARL",
-      "color": "#e85658"
+      "color": {
+        "color": "#e85658",
+        "path_color": "#761F21",
+        "path_light_color": "#B73538"
+      }
     },
     "frequency": "10-15",
     "facility": [],
@@ -3011,7 +3215,11 @@
     },
     "platform": {
       "platform": "ARL",
-      "color": "#e85658"
+      "color": {
+        "color": "#e85658",
+        "path_color": "#761F21",
+        "path_light_color": "#B73538"
+      }
     },
     "frequency": "10-15",
     "facility": [],
@@ -3031,7 +3239,11 @@
     },
     "platform": {
       "platform": "ARL",
-      "color": "#e85658"
+      "color": {
+        "color": "#e85658",
+        "path_color": "#761F21",
+        "path_light_color": "#B73538"
+      }
     },
     "frequency": "10-15",
     "facility": [],
@@ -3051,7 +3263,11 @@
     },
     "platform": {
       "platform": "ARL",
-      "color": "#e85658"
+      "color": {
+        "color": "#e85658",
+        "path_color": "#761F21",
+        "path_light_color": "#B73538"
+      }
     },
     "frequency": "10-15",
     "facility": [],
@@ -3071,7 +3287,11 @@
     },
     "platform": {
       "platform": "ARL",
-      "color": "#e85658"
+      "color": {
+        "color": "#e85658",
+        "path_color": "#761F21",
+        "path_light_color": "#B73538"
+      }
     },
     "frequency": "10-15",
     "facility": [
@@ -3112,7 +3332,11 @@
     },
     "platform": {
       "platform": "ARL",
-      "color": "#e85658"
+      "color": {
+        "color": "#e85658",
+        "path_color": "#761F21",
+        "path_light_color": "#B73538"
+      }
     },
     "frequency": "10-15",
     "facility": [],
@@ -3132,7 +3356,11 @@
     },
     "platform": {
       "platform": "ARL",
-      "color": "#e85658"
+      "color": {
+        "color": "#e85658",
+        "path_color": "#761F21",
+        "path_light_color": "#B73538"
+      }
     },
     "frequency": "10-15",
     "facility": [
@@ -3178,7 +3406,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#315d36"
+      "color": {
+        "color": "#315d36",
+        "path_color": "#0A8B86",
+        "path_light_color": "#84C5C2"
+      }
     },
     "frequency": "6.00",
     "facility": [
@@ -3249,7 +3481,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -3340,7 +3576,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -3416,7 +3656,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -3487,7 +3731,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -3578,7 +3826,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -3664,7 +3916,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -3735,7 +3991,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -3806,7 +4066,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -3872,7 +4136,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -3948,7 +4216,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -4014,7 +4286,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -4100,7 +4376,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -4176,7 +4456,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -4242,7 +4526,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -4303,7 +4591,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -4369,7 +4661,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -4455,7 +4751,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -4521,7 +4821,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -4592,7 +4896,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -4668,7 +4976,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -4749,7 +5061,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -4830,7 +5146,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -4901,7 +5221,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -4977,7 +5301,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5038,7 +5366,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5089,7 +5421,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5150,7 +5486,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5216,7 +5556,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5272,7 +5616,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5323,7 +5671,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5384,7 +5736,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5440,7 +5796,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5496,7 +5856,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5552,7 +5916,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5603,7 +5971,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5659,7 +6031,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5720,7 +6096,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5781,7 +6161,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5832,7 +6216,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5893,7 +6281,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -5939,7 +6331,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#683279"
+      "color": {
+        "color": "#683279",
+        "path_color": "#800080",
+        "path_light_color": "#DA5BDA"
+      }
     },
     "frequency": "9.33",
     "facility": [
@@ -5995,7 +6391,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#683279"
+      "color": {
+        "color": "#683279",
+        "path_color": "#800080",
+        "path_light_color": "#DA5BDA"
+      }
     },
     "frequency": "9.33",
     "facility": [
@@ -6051,7 +6451,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#683279"
+      "color": {
+        "color": "#683279",
+        "path_color": "#800080",
+        "path_light_color": "#DA5BDA"
+      }
     },
     "frequency": "9.33",
     "facility": [
@@ -6107,7 +6511,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#683279"
+      "color": {
+        "color": "#683279",
+        "path_color": "#800080",
+        "path_light_color": "#DA5BDA"
+      }
     },
     "frequency": "9.33",
     "facility": [
@@ -6163,7 +6571,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#683279"
+      "color": {
+        "color": "#683279",
+        "path_color": "#800080",
+        "path_light_color": "#DA5BDA"
+      }
     },
     "frequency": "9.33",
     "facility": [
@@ -6219,7 +6631,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#683279"
+      "color": {
+        "color": "#683279",
+        "path_color": "#800080",
+        "path_light_color": "#DA5BDA"
+      }
     },
     "frequency": "9.33",
     "facility": [
@@ -6275,7 +6691,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#683279"
+      "color": {
+        "color": "#683279",
+        "path_color": "#800080",
+        "path_light_color": "#DA5BDA"
+      }
     },
     "frequency": "9.33",
     "facility": [
@@ -6336,7 +6756,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#683279"
+      "color": {
+        "color": "#683279",
+        "path_color": "#800080",
+        "path_light_color": "#DA5BDA"
+      }
     },
     "frequency": "9.33",
     "facility": [
@@ -6387,7 +6811,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#683279"
+      "color": {
+        "color": "#683279",
+        "path_color": "#800080",
+        "path_light_color": "#DA5BDA"
+      }
     },
     "frequency": "9.33",
     "facility": [
@@ -6443,7 +6871,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#683279"
+      "color": {
+        "color": "#683279",
+        "path_color": "#800080",
+        "path_light_color": "#DA5BDA"
+      }
     },
     "frequency": "9.33",
     "facility": [
@@ -6499,7 +6931,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#683279"
+      "color": {
+        "color": "#683279",
+        "path_color": "#800080",
+        "path_light_color": "#DA5BDA"
+      }
     },
     "frequency": "9.33",
     "facility": [
@@ -6555,7 +6991,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#683279"
+      "color": {
+        "color": "#683279",
+        "path_color": "#800080",
+        "path_light_color": "#DA5BDA"
+      }
     },
     "frequency": "9.33",
     "facility": [
@@ -6616,7 +7056,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#683279"
+      "color": {
+        "color": "#683279",
+        "path_color": "#800080",
+        "path_light_color": "#DA5BDA"
+      }
     },
     "frequency": "9.33",
     "facility": [
@@ -6672,7 +7116,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#683279"
+      "color": {
+        "color": "#683279",
+        "path_color": "#800080",
+        "path_light_color": "#DA5BDA"
+      }
     },
     "frequency": "9.33",
     "facility": [
@@ -6728,7 +7176,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#683279"
+      "color": {
+        "color": "#683279",
+        "path_color": "#800080",
+        "path_light_color": "#DA5BDA"
+      }
     },
     "frequency": "9.33",
     "facility": [
@@ -6789,7 +7241,11 @@
     },
     "platform": {
       "platform": "MRT",
-      "color": "#683279"
+      "color": {
+        "color": "#683279",
+        "path_color": "#800080",
+        "path_light_color": "#DA5BDA"
+      }
     },
     "frequency": "9.33",
     "facility": [
@@ -6845,7 +7301,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#315d36"
+      "color": {
+        "color": "#315d36",
+        "path_color": "#0A8B86",
+        "path_light_color": "#84C5C2"
+      }
     },
     "frequency": "6.00",
     "facility": [
@@ -6916,7 +7376,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -6967,7 +7431,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -7018,7 +7486,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -7069,7 +7541,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -7115,7 +7591,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -7161,7 +7641,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#71B047"
+      "color": {
+        "color": "#71B047",
+        "path_color": "#4CAF1D",
+        "path_light_color": "#B3EE78"
+      }
     },
     "frequency": "5.00",
     "facility": [
@@ -7212,7 +7696,11 @@
     },
     "platform": {
       "platform": "BTS",
-      "color": "#315d36"
+      "color": {
+        "color": "#315d36",
+        "path_color": "#0A8B86",
+        "path_light_color": "#84C5C2"
+      }
     },
     "frequency": "6.00",
     "facility": [
@@ -7273,7 +7761,11 @@
     },
     "platform": {
       "platform": "BTS-G",
-      "color": "#cc9933"
+      "color": {
+        "color": "#cc9933",
+        "path_color": "#FFC433",
+        "path_light_color": "#FFDB82"
+      }
     },
     "frequency": "5:00",
     "facility": [
@@ -7324,7 +7816,11 @@
     },
     "platform": {
       "platform": "BTS-G",
-      "color": "#cc9933"
+      "color": {
+        "color": "#cc9933",
+        "path_color": "#FFC433",
+        "path_light_color": "#FFDB82"
+      }
     },
     "frequency": "5:00",
     "facility": [
@@ -7375,7 +7871,11 @@
     },
     "platform": {
       "platform": "BTS-G",
-      "color": "#cc9933"
+      "color": {
+        "color": "#cc9933",
+        "path_color": "#FFC433",
+        "path_light_color": "#FFDB82"
+      }
     },
     "frequency": "5:00",
     "facility": [
@@ -7421,7 +7921,11 @@
     },
     "platform": {
       "platform": "SRTET",
-      "color": "#d96a6a"
+      "color": {
+        "color": "#d96a6a",
+        "path_color": "#FA5558",
+        "path_light_color": "#FF9B9D"
+      }
     },
     "frequency": "15:00",
     "facility": [
@@ -7471,7 +7975,11 @@
     },
     "platform": {
       "platform": "SRTET",
-      "color": "#d96a6a"
+      "color": {
+        "color": "#d96a6a",
+        "path_color": "#FA5558",
+        "path_light_color": "#FF9B9D"
+      }
     },
     "frequency": "15:00",
     "facility": [
@@ -7526,7 +8034,11 @@
     },
     "platform": {
       "platform": "SRTET",
-      "color": "#d96a6a"
+      "color": {
+        "color": "#d96a6a",
+        "path_color": "#FA5558",
+        "path_light_color": "#FF9B9D"
+      }
     },
     "frequency": "15:00",
     "facility": [
@@ -7586,7 +8098,11 @@
     },
     "platform": {
       "platform": "SRTET",
-      "color": "#d96a6a"
+      "color": {
+        "color": "#d96a6a",
+        "path_color": "#FA5558",
+        "path_light_color": "#FF9B9D"
+      }
     },
     "frequency": "15:00",
     "facility": [
@@ -7646,7 +8162,11 @@
     },
     "platform": {
       "platform": "SRTET",
-      "color": "#f01818"
+      "color": {
+        "color": "#f01818",
+        "path_color": "#DE0F19",
+        "path_light_color": "#FF7D84"
+      }
     },
     "frequency": "15:00",
     "facility": [
@@ -7717,7 +8237,11 @@
     },
     "platform": {
       "platform": "SRTET",
-      "color": "#f01818"
+      "color": {
+        "color": "#f01818",
+        "path_color": "#DE0F19",
+        "path_light_color": "#FF7D84"
+      }
     },
     "frequency": "15:00",
     "facility": [
@@ -7767,7 +8291,11 @@
     },
     "platform": {
       "platform": "SRTET",
-      "color": "#f01818"
+      "color": {
+        "color": "#f01818",
+        "path_color": "#DE0F19",
+        "path_light_color": "#FF7D84"
+      }
     },
     "frequency": "15:00",
     "facility": [
@@ -7817,7 +8345,11 @@
     },
     "platform": {
       "platform": "SRTET",
-      "color": "#f01818"
+      "color": {
+        "color": "#f01818",
+        "path_color": "#DE0F19",
+        "path_light_color": "#FF7D84"
+      }
     },
     "frequency": "15:00",
     "facility": [
@@ -7867,7 +8399,11 @@
     },
     "platform": {
       "platform": "SRTET",
-      "color": "#f01818"
+      "color": {
+        "color": "#f01818",
+        "path_color": "#DE0F19",
+        "path_light_color": "#FF7D84"
+      }
     },
     "frequency": "15:00",
     "facility": [
@@ -7922,7 +8458,11 @@
     },
     "platform": {
       "platform": "SRTET",
-      "color": "#f01818"
+      "color": {
+        "color": "#f01818",
+        "path_color": "#DE0F19",
+        "path_light_color": "#FF7D84"
+      }
     },
     "frequency": "15:00",
     "facility": [
@@ -7972,7 +8512,11 @@
     },
     "platform": {
       "platform": "SRTET",
-      "color": "#f01818"
+      "color": {
+        "color": "#f01818",
+        "path_color": "#DE0F19",
+        "path_light_color": "#FF7D84"
+      }
     },
     "frequency": "15:00",
     "facility": [
@@ -8022,7 +8566,11 @@
     },
     "platform": {
       "platform": "SRTET",
-      "color": "#f01818"
+      "color": {
+        "color": "#f01818",
+        "path_color": "#DE0F19",
+        "path_light_color": "#FF7D84"
+      }
     },
     "frequency": "15:00",
     "facility": [
@@ -8072,7 +8620,11 @@
     },
     "platform": {
       "platform": "SRTET",
-      "color": "#f01818"
+      "color": {
+        "color": "#f01818",
+        "path_color": "#DE0F19",
+        "path_light_color": "#FF7D84"
+      }
     },
     "frequency": "15:00",
     "facility": [
@@ -8122,7 +8674,11 @@
     },
     "platform": {
       "platform": "SRTET",
-      "color": "#f01818"
+      "color": {
+        "color": "#f01818",
+        "path_color": "#DE0F19",
+        "path_light_color": "#FF7D84"
+      }
     },
     "frequency": "15:00",
     "facility": [
