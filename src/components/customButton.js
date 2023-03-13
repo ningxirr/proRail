@@ -1,9 +1,6 @@
 "use strict";
 import React from 'react';
-import { StyleSheet, Text, View, Dimensions, ScrollView, Button, TouchableOpacity, SafeAreaView } from 'react-native';
-
-const screenHeight = Dimensions.get('window').height;
-const screenWidth = Dimensions.get('window').width;
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 const CustomButton = (props) => {
     return(

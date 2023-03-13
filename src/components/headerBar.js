@@ -26,7 +26,6 @@ const HeaderBar = (props) => {
                       </Text>
                     </View>
                 }
-                
             </View>
         </View>
     );

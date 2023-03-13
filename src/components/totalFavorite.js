@@ -1,10 +1,7 @@
 "use strict";
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions, } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-
-const screenHeight = Dimensions.get('window').height;
-const start = 1;
 
 const TotalFavorite = (props) => {
     return (
@@ -54,28 +51,28 @@ const Styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     star_icon_view:{
-        marginRight: '3%',
+        marginRight: 10,
         alignItems: 'center',
     },
     total_fav_text: {
         color:'black', 
-        fontSize: screenHeight * 0.024, 
+        fontSize: 20, 
         fontFamily: 'LINESeedSans_A_Rg',
     },
     fav_num_view: {
-        marginVertical:'5%',
+        marginVertical: 20,
         alignSelf: 'center',
         alignContent: 'center',
     },
     fav_num_text: {
         color:'black', 
-        fontSize: screenHeight * 0.028, 
+        fontSize: 20, 
         textAlign:'right',
         fontFamily: 'LINESeedSans_A_Bd',
     },
     route_text:{
         color:'black', 
-        fontSize: screenHeight * 0.020, 
+        fontSize: 13, 
         textAlign:'right',
         fontFamily: 'LINESeedSans_A_Rg',
     }

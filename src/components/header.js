@@ -15,9 +15,9 @@ const Header = (props) => {
               {props.title}
           </Text>
           <View style = {[Styles.station_route_view, { backgroundColor: props.color }]}>
-              <Text style = {Styles.station_route_text}>
-                  {props.platform}
-              </Text>
+            <Text style = {Styles.station_route_text}>
+                {props.platform}
+            </Text>
           </View>
       </View>
     </View>  

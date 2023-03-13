@@ -1,29 +1,7 @@
 "use strict";
 
 import React from 'react';
-import {  StyleSheet, Text, View, TouchableOpacity, Dimensions} from 'react-native';
-import IconFontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
-
-const screenHeight = Dimensions.get('window').height;
-const screenWidth = Dimensions.get('window').width;
-
-const exitList = [
-    {
-        number: 1,
-        color: '',
-        name: 'Khu Khot Police Station, Park&Ride Khu Khot, Bus Stop'
-    },
-    {
-        number: 2,
-        name: 'Esso Gas Station, PTT Gas Station, Bus Stope'
-    },
-    {
-        number: 3,
-        name: 'Shell Gas Station'
-    }
-]
+import {  StyleSheet, Text, View, Dimensions} from 'react-native';
 
 const ExitList = (props) => {
   let exitList = props.exit;
@@ -33,7 +11,7 @@ const ExitList = (props) => {
         <Text style={Styles.title_text}>
             Exits
         </Text>
-        <View style={Styles.exit_list_view}>
+        <View>
             {
                 exitList.map((item, index) => (
                     <View key={index} style={Styles.exit_view}>
@@ -57,24 +35,21 @@ const ExitList = (props) => {
 
 const Styles = StyleSheet.create({
     component:{
-        paddingVertical: screenHeight*0.03,
+        paddingVertical: 30,
     },
     title_text:{
-        fontSize: screenHeight*0.02,
+        fontSize: 20,
         fontFamily: 'LINESeedSans_A_Bd',
         color: 'black',
-        paddingVertical: screenHeight*0.01,
-    },
-    exit_list_view:{
-        paddingHorizontal: screenWidth*0.02,
+        paddingVertical: 10,
     },
     exit_view:{
         flexDirection: 'row',
-        paddingVertical: screenHeight*0.02,
-        paddingHorizontal: screenWidth*0.03,
+        paddingVertical: 15,
+        paddingHorizontal: 15,
         backgroundColor: 'white',
         borderRadius: 10,
-        marginVertical: screenHeight*0.007,
+        marginVertical: 7,
         backgroundColor: 'white',
         flexDirection:'row',
         shadowColor: "#000",
@@ -87,28 +62,27 @@ const Styles = StyleSheet.create({
         elevation: 5,
     },
     exit_number_view:{
-        paddingVertical: screenHeight*0.007,
-        paddingHorizontal: screenWidth*0.04,
+        paddingVertical: 7,
+        paddingHorizontal: 20,
         borderRadius: 5,
         alignSelf: 'center',
     },
     exit_number_text:{
-        fontSize: screenHeight*0.018,
+        fontSize: 16,
         fontFamily: 'LINESeedSans_A_Rg',
         color: 'white',
         textAlignVertical: 'center',
         textAlign: 'center',
-        width: screenWidth*0.02,
     },
     exit_description_text: {
-        fontSize: screenHeight*0.016,
+        fontSize: 14,
         fontFamily: 'LINESeedSans_A_Rg',
         textAlignVertical: 'center',
         textAlign: 'left',
         flex: 1, 
         flexWrap: 'wrap',
         color: 'black',
-        marginLeft: screenWidth*0.07,
+        marginLeft: 30,
     },
 });
 

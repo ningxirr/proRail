@@ -65,22 +65,22 @@ const App = () => (
               options={{ 
                 headerShown: false,
               }}
-              /> */}
+              />
             <Stack.Screen
               name='FavoriteRoute'
               component={FavoriteRoute}
               options={{ 
                 headerShown: false,
               }}
-            /> 
-            {/* <Stack.Screen
+            />  */}
+            <Stack.Screen
               name='StationInfo'
               component={StationInfo}
               options={{
                 // header: (props) => (<Header title={'Station Info'} station={props}/>),
                 // headerTitle: '',
                 headerShown: false
-              }}/> */}
+              }}/>
         </Stack.Navigator>
     </NavigationContainer>
 );

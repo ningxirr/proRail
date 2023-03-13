@@ -35,7 +35,6 @@ const Route = (props) => {
                                     lightColor={stationInfo[props.route[0]].platform.color.path_light_color}
                                 />
                             </View>
-                            {/* <Image source={getImage(stationInfo[props.route[0]].platform.color)} style={[Styles.briefly_path_image, {transform: [{ scaleX: 1 },{ scaleY: 1 }]}]}/> */}
                             <View>
                                 <Text style={Styles.briefly_path_en_text}>
                                     {stationInfo[props.route[0]].station_name.en}
@@ -61,7 +60,6 @@ const Route = (props) => {
                             </View>
                         </View>
                         <Animated.View style={Styles.path_with_image_view} entering={props.route.length === 2 ? FadeIn:FadeInDown} exiting={props.route.length === 2 ? FadeOut : FadeOutDown}>
-                            {/* <Image source={getImage(stationInfo[props.route[0]].platform.color.color)} style={[Styles.briefly_path_image, {marginVertical: screenHeight*0.002, transform: [{ scaleX: -1 },{ scaleY: -1 }]}]}/> */}
                             <View style={[Styles.path_image_view, {marginVertical: 1, transform:[{rotateX: '180deg'}]}]}>
                                 <BrieflyPathIcon 
                                     color={stationInfo[props.route[0]].platform.color.path_color} 
@@ -86,10 +84,6 @@ const Route = (props) => {
                                         {
                                             index === 0 || index === props.route.length-1 ? 
                                             <Animated.View entering={index===0 ? null: props.route.length === 2 ? FadeIn: FadeInUp} >
-                                                {/* <Image 
-                                                    source={getHeaderAndFooterImage(stationInfo[props.route[0]].platform.color)} 
-                                                    style={[Styles.briefly_path_image, index === props.route.length-1 ? {transform: [{ scaleX: -1 },{ scaleY: -1 }]}: null]} 
-                                                    /> */}
                                                 <View style={[Styles.path_image_view, {marginTop: 0}, index === props.route.length-1 ? {transform:[{rotateX: '180deg'}]}: null]}>
                                                     <PathIcon
                                                         isHeader={true}
@@ -101,10 +95,6 @@ const Route = (props) => {
                                             </Animated.View>
                                             :
                                             <Animated.View entering={props.route.length === 2 ? FadeIn: FadeInUp}>
-                                                {/* <Image source={getPathImage(stationInfo[props.route[0]].platform.color)} 
-                                                    style={Styles.briefly_path_image} 
-                                                    entering={props.route.length === 2 ? FadeIn: FadeInUp.duration(500)}
-                                                /> */}
                                                 <View style={Styles.path_image_view} >
                                                     <PathIcon
                                                         isHeader={false}
@@ -148,75 +138,6 @@ const Route = (props) => {
     );
 }
 
-function getImage(path){
-    switch(path){
-        case '#71B047':
-            return require('../../assets/images/BrieflyRoute/green.png');
-        case '#315d36':
-            return require('../../assets/images/BrieflyRoute/darkGreen.png');
-        case '#31609e':
-            return require('../../assets/images/BrieflyRoute/blue.png');
-        case '#683279':
-            return require('../../assets/images/BrieflyRoute/purple.png');
-        case '#d96a6a':
-            return require('../../assets/images/BrieflyRoute/pink.png');
-        case '#cc9933':
-            return require('../../assets/images/BrieflyRoute/gold.png');
-        case '#f01818':
-            return require('../../assets/images/BrieflyRoute/red.png');
-        case '#e85658':
-            return require('../../assets/images/BrieflyRoute/lightRed.png');
-        default:
-            return require('../../assets/images/BrieflyRoute/default.png');
-    }
-}
-
-function getPathImage(path){
-    switch(path){
-        case '#71B047':
-            return require('../../assets/images/FullRoute/Body/green.png');
-        case '#315d36':
-            return require('../../assets/images/FullRoute/Body/darkGreen.png');
-        case '#31609e':
-            return require('../../assets/images/FullRoute/Body/blue.png');
-        case '#683279':
-            return require('../../assets/images/FullRoute/Body/purple.png');
-        case '#d96a6a':
-            return require('../../assets/images/FullRoute/Body/pink.png');
-        case '#cc9933':
-            return require('../../assets/images/FullRoute/Body/gold.png');
-        case '#f01818':
-            return require('../../assets/images/FullRoute/Body/red.png');
-        case '#e85658':
-            return require('../../assets/images/FullRoute/Body/lightRed.png');
-        default:
-            return require('../../assets/images/FullRoute/Body/default.png');
-    }
-}
-
-function getHeaderAndFooterImage(path){
-    switch(path){
-        case '#71B047':
-            return require('../../assets/images/FullRoute/HeaderAndFooter/green.png');
-        case '#315d36':
-            return require('../../assets/images/FullRoute/HeaderAndFooter/darkGreen.png');
-        case '#31609e':
-            return require('../../assets/images/FullRoute/HeaderAndFooter/blue.png');
-        case '#683279':
-            return require('../../assets/images/FullRoute/HeaderAndFooter/purple.png');
-        case '#d96a6a':
-            return require('../../assets/images/FullRoute/HeaderAndFooter/pink.png');
-        case '#cc9933':
-            return require('../../assets/images/FullRoute/HeaderAndFooter/gold.png');
-        case '#f01818':
-            return require('../../assets/images/FullRoute/HeaderAndFooter/red.png');
-        case '#e85658':
-            return require('../../assets/images/FullRoute/HeaderAndFooter/lightRed.png');
-        default:
-            return require('../../assets/images/FullRoute/HeaderAndFooter/default.png');
-    }
-}
-
 const Styles = StyleSheet.create({
     path_view: {
         paddingVertical: 10,
@@ -232,12 +153,6 @@ const Styles = StyleSheet.create({
     path_image_view:{
         marginLeft: 30
     },
-    // briefly_path_image: {
-    //     height: 60,
-    //     width: screenWidth*0.07,
-    //     resizeMode: 'contain',
-    //     marginLeft: screenWidth*0.07,
-    // },
     briefly_path_en_text: {
         marginLeft: 40,
         fontSize: 14,
@@ -254,7 +169,7 @@ const Styles = StyleSheet.create({
         paddingVertical: 10,
         marginVertical: 5,
         borderWidth: 1,
-        borderColor: 'grey',
+        borderColor: '#CCCCCC',
         borderRadius: 10,
     },
     price_text:{

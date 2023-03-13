@@ -202,12 +202,22 @@ const Body = (props) => {
             choice? null:
               <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={Styles.more_choice_scroll_view}>
                 <View style={Styles.choice_view}>
-                  <Choices number={35} unit={'baht'} choice={props.recommended[1] === 'fastest' ? 'Fastest' : props.recommended[1] === 'cheapest' ? 'Cheapest' : 'Least Interchanges' } selected={props.path===props.recommended[1]} recommended={false} function={()=> {
+                  <Choices 
+                    number={35} 
+                    unit={'baht'} 
+                    choice={props.recommended[1] === 'fastest' ? 'Fastest' : props.recommended[1] === 'cheapest' ? 'Cheapest' : 'Least Interchanges' } 
+                    selected={props.path===props.recommended[1]} 
+                    function={()=> {
                         props.setSelectedPath(props.recommended[1])
                       }}/>
                 </View>
                 <View style={Styles.choice_view}>
-                  <Choices number={1} unit={'station(s)'} choice={props.recommended[2] === 'fastest' ? 'Fastest' : props.recommended[2] === 'cheapest' ? 'Cheapest' : 'Least Interchanges' } selected={props.path===props.recommended[2]} recommended={false} function={()=> {
+                  <Choices 
+                    number={1} 
+                    unit={'station(s)'} 
+                    choice={props.recommended[2] === 'fastest' ? 'Fastest' : props.recommended[2] === 'cheapest' ? 'Cheapest' : 'Least Interchanges' } 
+                    selected={props.path===props.recommended[2]} 
+                    function={()=> {
                         props.setSelectedPath(props.recommended[2])
                       }}/>
                 </View>

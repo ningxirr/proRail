@@ -1,10 +1,7 @@
 "use strict";
 
 import React from 'react';
-import {  StyleSheet, Text, View, TouchableOpacity, Dimensions} from 'react-native';
-
-const screenHeight = Dimensions.get('window').height;
-const screenWidth = Dimensions.get('window').width;
+import {  StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 const TimingInfo = (props) => {
   return (
@@ -37,8 +34,8 @@ const TimingInfo = (props) => {
 
 const Styles = StyleSheet.create({
   timing_view: {
-    paddingVertical: screenHeight*0.02,
-    paddingHorizontal: screenHeight*0.03,
+    paddingVertical: 20,
+    paddingHorizontal: 20,
     marginTop: '-15%',
     borderRadius: 10,
     flexDirection: 'row',
@@ -55,19 +52,19 @@ const Styles = StyleSheet.create({
     elevation: 10,
   },
   frequency_text: {
-    fontSize: 16,
+    fontSize: 14,
     fontFamily: 'LINESeedSans_A_Rg',
-    marginBottom: screenHeight*0.005,
+    marginBottom: 5,
     color: 'black'
   },
   frequency_num_text: {
-    fontSize: 18,
+    fontSize: 20,
     fontFamily: 'LINESeedSans_A_Rg',
     color: 'black'
   },
   frequency_mins_text: {
     paddingLeft: 5,
-    fontSize: 14,
+    fontSize: 12,
     fontFamily: 'LINESeedSans_A_Rg',
     textAlignVertical: 'bottom',
     color: 'black'
@@ -78,8 +75,8 @@ const Styles = StyleSheet.create({
   },
   time_table_botton_view:{
     backgroundColor: '#1C1C1C',
-    paddingVertical: screenHeight*0.005,
-    paddingHorizontal: screenHeight*0.015,
+    paddingVertical: 5,
+    paddingHorizontal: 15,
     borderRadius: 5,
   },
   time_table_botton_text:{
