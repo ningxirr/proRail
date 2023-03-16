@@ -1,7 +1,6 @@
 "use strict";
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
-import firestore from '@react-native-firebase/firestore';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import TochableIcon from './src/components/tochableIcon';
@@ -13,6 +12,7 @@ import Header from './src/components/header';
 import Welcome from './src/views/Welcome';
 import Regist from './src/views/Regist';
 import Choose from './src/views/Choose';
+import UserPreference from './src/views/UserPreference';
 
 /*const getData = async () => {
   const usersCollection = await firestore()
@@ -73,14 +73,21 @@ const App = () => (
                 headerShown: false,
               }}
             />  */}
-            <Stack.Screen
+            {/* <Stack.Screen
               name='StationInfo'
               component={StationInfo}
               options={{
                 // header: (props) => (<Header title={'Station Info'} station={props}/>),
                 // headerTitle: '',
                 headerShown: false
-              }}/>
+              }}/> */}
+            <Stack.Screen
+            name='UserPreference'
+            component={UserPreference}
+            options={{
+              header: (props) => (<Header title={'Preference'} station={props}/>),
+              headerTransparent: true
+            }}/>
         </Stack.Navigator>
     </NavigationContainer>
 );
