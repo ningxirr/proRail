@@ -1,7 +1,7 @@
 "use strict";
 
-import React, { useState } from 'react';
-import { SafeAreaView, StyleSheet, View,  Dimensions, Image, ScrollView, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { SafeAreaView, StyleSheet, View,  Dimensions, Image, ScrollView, TouchableOpacity  } from 'react-native';
 import ImageView from "react-native-image-viewing";
 import stationInfo from '../../data/station_info.json';
 import TimingInfo from '../components/timingInfo';
@@ -15,13 +15,11 @@ const screenWidth = Dimensions.get('window').width;
 const StationInfo = () => {
   const [visible, setIsVisible] = useState(false);
   const code = 'E5'
-
   return (
     <SafeAreaView style={Styles.container}>
       <View style = {Styles.header_navbar_view}>
-        <Header title={stationInfo[code].station_name.en} platform={stationInfo[code].platform.platform} color={stationInfo[code].platform.color.color}/>
+        <Header title={stationInfo[code].station_name.en} platform={stationInfo[code].platform.platform} color={stationInfo[code].platform.color.color} haveBackIcon={true}/>
       </View>
-      
       <ScrollView>
       <View style={Styles.image_view}>
         <TouchableOpacity onPress={() => setIsVisible(true)}>
@@ -92,3 +90,41 @@ const Styles = StyleSheet.create({
 });
 
 export default StationInfo;
+
+// import React from 'react';
+// import { View, Button } from 'react-native';
+// import notifee from '@notifee/react-native';
+
+// function StationInfo() {
+//   async function onDisplayNotification() {
+//     // Request permissions (required for iOS)
+//     await notifee.requestPermission()
+
+//     // Create a channel (required for Android)
+//     const channelId = await notifee.createChannel({
+//       id: 'default',
+//       name: 'Default Channel',
+//     });
+
+//     // Display a notification
+//     await notifee.displayNotification({
+//       title: 'Notification Title',
+//       body: 'Main body content of the notification',
+//       android: {
+//         channelId,
+//         pressAction: {
+//           id: 'default',
+//         },
+//       },
+//     });
+//   }
+
+//   return (
+//     <View>
+//       <Button title="Display Notification" onPress={() => onDisplayNotification()} />
+//     </View>
+//   );
+// }
+
+
+// export default StationInfo;

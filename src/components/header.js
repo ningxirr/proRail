@@ -3,13 +3,18 @@
 import React from 'react';
 import { StyleSheet, Text, View,  Dimensions, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import TochableIcon from './tochableIcon';
 
 const Header = (props) => {
   return (
     <View style={Styles.container}>
-      <TouchableOpacity style={Styles.header_view}>
-        <Icon name='angle-left' borderRadius={15} size={25} color={'white'}/>
-      </TouchableOpacity>
+      {
+        props.haveBackIcon ? 
+        <View style={Styles.header_view}>
+          <TochableIcon name={'angle-left'} size={25} color={'white'} function={()=>console.log('back')}/>
+        </View>:
+        null
+      }
       <View style={Styles.header_view}>
           <Text style={Styles.header_text}>
               {props.title}
@@ -28,11 +33,11 @@ const Header = (props) => {
 
 const Styles = StyleSheet.create({
   container: {
-    paddingVertical: 10,
+    paddingVertical: 15,
     backgroundColor: 'black',
     borderBottomEndRadius: 20,
     borderBottomStartRadius: 20,
-    height: 110,
+    // height: 110,
   },
   header_view:{
     paddingVertical: 10,
