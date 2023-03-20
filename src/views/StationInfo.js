@@ -12,9 +12,9 @@ import Header from '../components/header';
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
-const StationInfo = () => {
+const StationInfo = ({navigation}) => {
   const [visible, setIsVisible] = useState(false);
-  const code = 'E5'
+  const code = 'CEN'
   return (
     <SafeAreaView style={Styles.container}>
       <View style = {Styles.header_navbar_view}>
@@ -45,7 +45,11 @@ const StationInfo = () => {
         <TimingInfo 
           frequency={stationInfo[code].frequency} 
           function={() => {
-            console.log('View Time Table')}
+            navigation.navigate('TimeTable',{
+              route: { code: code }
+            })
+            console.log('View Time Table')
+          }
           }/>
           {
             stationInfo[code].facility.length > 0 ?
