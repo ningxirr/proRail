@@ -1,0 +1,4159 @@
+{
+  "N8": [
+    [
+      {
+        "id": "1775",
+        "platform_line_id": "1",
+        "station_id": "1",
+        "stname_th": "หมอชิต",
+        "stname_en": "Mo Chit",
+        "code": "N8",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:15",
+        "last": "00:44",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1774",
+        "platform_line_id": "1",
+        "station_id": "1",
+        "stname_th": "หมอชิต",
+        "stname_en": "Mo Chit",
+        "code": "N8",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:15",
+        "last": "23:44"
+      },
+      {
+        "id": "1776",
+        "platform_line_id": "1",
+        "station_id": "1",
+        "stname_th": "หมอชิต",
+        "stname_en": "Mo Chit",
+        "code": "N8",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:14",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "N7": [
+    [
+      {
+        "id": "1772",
+        "platform_line_id": "1",
+        "station_id": "2",
+        "stname_th": "สะพานควาย",
+        "stname_en": "Saphan Khwai",
+        "code": "N7",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:56",
+        "last": "00:42",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1771",
+        "platform_line_id": "1",
+        "station_id": "2",
+        "stname_th": "สะพานควาย",
+        "stname_en": "Saphan Khwai",
+        "code": "N7",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:16",
+        "last": "23:46",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1773",
+        "platform_line_id": "1",
+        "station_id": "2",
+        "stname_th": "สะพานควาย",
+        "stname_en": "Saphan Khwai",
+        "code": "N7",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:16",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "N5": [
+    [
+      {
+        "id": "1769",
+        "platform_line_id": "1",
+        "station_id": "3",
+        "stname_th": "อารีย์",
+        "stname_en": "Ari",
+        "code": "N5",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:54",
+        "last": "00:40",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1768",
+        "platform_line_id": "1",
+        "station_id": "3",
+        "stname_th": "อารีย์",
+        "stname_en": "Ari",
+        "code": "N5",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:19",
+        "last": "23:48",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1770",
+        "platform_line_id": "1",
+        "station_id": "3",
+        "stname_th": "อารีย์",
+        "stname_en": "Ari",
+        "code": "N5",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:18",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "N4": [
+    [
+      {
+        "id": "1766",
+        "platform_line_id": "1",
+        "station_id": "4",
+        "stname_th": "สนามเป้า",
+        "stname_en": "Sanam Pao",
+        "code": "N4",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:52",
+        "last": "00:38",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1765",
+        "platform_line_id": "1",
+        "station_id": "4",
+        "stname_th": "สนามเป้า",
+        "stname_en": "Sanam Pao",
+        "code": "N4",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:20",
+        "last": "23:50",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1767",
+        "platform_line_id": "1",
+        "station_id": "4",
+        "stname_th": "สนามเป้า",
+        "stname_en": "Sanam Pao",
+        "code": "N4",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:20",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "N3": [
+    [
+      {
+        "id": "1763",
+        "platform_line_id": "1",
+        "station_id": "5",
+        "stname_th": "อนุสาวรีย์ชัยสมรภูมิ",
+        "stname_en": "Victory Monument",
+        "code": "N3",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:49",
+        "last": "00:35",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1762",
+        "platform_line_id": "1",
+        "station_id": "5",
+        "stname_th": "อนุสาวรีย์ชัยสมรภูมิ",
+        "stname_en": "Victory Monument",
+        "code": "N3",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:23",
+        "last": "23:53",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1764",
+        "platform_line_id": "1",
+        "station_id": "5",
+        "stname_th": "อนุสาวรีย์ชัยสมรภูมิ",
+        "stname_en": "Victory Monument",
+        "code": "N3",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:23",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "N2": [
+    [
+      {
+        "id": "1760",
+        "platform_line_id": "1",
+        "station_id": "6",
+        "stname_th": "พญาไท",
+        "stname_en": "Phaya Thai",
+        "code": "N2",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:48",
+        "last": "00:33",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1759",
+        "platform_line_id": "1",
+        "station_id": "6",
+        "stname_th": "พญาไท",
+        "stname_en": "Phaya Thai",
+        "code": "N2",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:25",
+        "last": "23:54",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1761",
+        "platform_line_id": "1",
+        "station_id": "6",
+        "stname_th": "พญาไท",
+        "stname_en": "Phaya Thai",
+        "code": "N2",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:24",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "N1": [
+    [
+      {
+        "id": "1757",
+        "platform_line_id": "1",
+        "station_id": "7",
+        "stname_th": "ราชเทวี",
+        "stname_en": "Ratchathewi",
+        "code": "N1",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:46",
+        "last": "00:32",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1756",
+        "platform_line_id": "1",
+        "station_id": "7",
+        "stname_th": "ราชเทวี",
+        "stname_en": "Ratchathewi",
+        "code": "N1",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:26",
+        "last": "23:56",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1758",
+        "platform_line_id": "1",
+        "station_id": "7",
+        "stname_th": "ราชเทวี",
+        "stname_en": "Ratchathewi",
+        "code": "N1",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:26",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "CEN": [
+    [
+      {
+        "id": "1918",
+        "platform_line_id": "2",
+        "station_id": "8",
+        "stname_th": "สยาม",
+        "stname_en": "Siam",
+        "code": "CEN",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:53",
+        "last": "00:00",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1919",
+        "platform_line_id": "2",
+        "station_id": "8",
+        "stname_th": "สยาม",
+        "stname_en": "Siam",
+        "code": "CEN",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทาง สนามกีฬาแห่งชาติ/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to National Stadium/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:30",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1916",
+        "platform_line_id": "2",
+        "station_id": "8",
+        "stname_th": "สยาม",
+        "stname_en": "Siam",
+        "code": "CEN",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:31",
+        "last": "00:00",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1917",
+        "platform_line_id": "2",
+        "station_id": "8",
+        "stname_th": "สยาม",
+        "stname_en": "Siam",
+        "code": "CEN",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางบางหว้า/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to Bang Wa/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:30",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E1": [
+    [
+      {
+        "id": "1730",
+        "platform_line_id": "1",
+        "station_id": "9",
+        "stname_th": "ชิดลม",
+        "stname_en": "Chit Lom",
+        "code": "E1",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:41",
+        "last": "00:27",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1729",
+        "platform_line_id": "1",
+        "station_id": "9",
+        "stname_th": "ชิดลม",
+        "stname_en": "Chit Lom",
+        "code": "E1",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:31",
+        "last": "00:01",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1731",
+        "platform_line_id": "1",
+        "station_id": "9",
+        "stname_th": "ชิดลม",
+        "stname_en": "Chit Lom",
+        "code": "E1",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:31",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E2": [
+    [
+      {
+        "id": "1733",
+        "platform_line_id": "1",
+        "station_id": "10",
+        "stname_th": "เพลินจิต",
+        "stname_en": "Phloen Chit",
+        "code": "E2",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:40",
+        "last": "00:25",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1732",
+        "platform_line_id": "1",
+        "station_id": "10",
+        "stname_th": "เพลินจิต",
+        "stname_en": "Phloen Chit",
+        "code": "E2",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:33",
+        "last": "00:33",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1734",
+        "platform_line_id": "1",
+        "station_id": "10",
+        "stname_th": "เพลินจิต",
+        "stname_en": "Phloen Chit",
+        "code": "E2",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:33",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E3": [
+    [
+      {
+        "id": "1736",
+        "platform_line_id": "1",
+        "station_id": "11",
+        "stname_th": "นานา",
+        "stname_en": "Nana",
+        "code": "E3",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:38",
+        "last": "00:23",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1735",
+        "platform_line_id": "1",
+        "station_id": "11",
+        "stname_th": "นานา",
+        "stname_en": "Nana",
+        "code": "E3",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:35",
+        "last": "00:35",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1737",
+        "platform_line_id": "1",
+        "station_id": "11",
+        "stname_th": "นานา",
+        "stname_en": "Nana",
+        "code": "E3",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:35",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E4": [
+    [
+      {
+        "id": "1739",
+        "platform_line_id": "1",
+        "station_id": "12",
+        "stname_th": "อโศก",
+        "stname_en": "Asok",
+        "code": "E4",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:36",
+        "last": "00:22",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1738",
+        "platform_line_id": "1",
+        "station_id": "12",
+        "stname_th": "อโศก",
+        "stname_en": "Asok",
+        "code": "E4",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:36",
+        "last": "00:07",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1740",
+        "platform_line_id": "1",
+        "station_id": "12",
+        "stname_th": "อโศก",
+        "stname_en": "Asok",
+        "code": "E4",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:37",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E5": [
+    [
+      {
+        "id": "1742",
+        "platform_line_id": "1",
+        "station_id": "13",
+        "stname_th": "พร้อมพงษ์",
+        "stname_en": "Phrom Phong",
+        "code": "E5",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:34",
+        "last": "00:19",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1743",
+        "platform_line_id": "1",
+        "station_id": "13",
+        "stname_th": "พร้อมพงษ์",
+        "stname_en": "Phrom Phong",
+        "code": "E5",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:39",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1741",
+        "platform_line_id": "1",
+        "station_id": "13",
+        "stname_th": "พร้อมพงษ์",
+        "stname_en": "Phrom Phong",
+        "code": "E5",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:38",
+        "last": "00:09",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E6": [
+    [
+      {
+        "id": "1745",
+        "platform_line_id": "1",
+        "station_id": "14",
+        "stname_th": "ทองหล่อ",
+        "stname_en": "Thong Lo",
+        "code": "E6",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:32",
+        "last": "00:17",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1744",
+        "platform_line_id": "1",
+        "station_id": "14",
+        "stname_th": "ทองหล่อ",
+        "stname_en": "Thong Lo",
+        "code": "E6",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:40",
+        "last": "00:11",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1746",
+        "platform_line_id": "1",
+        "station_id": "14",
+        "stname_th": "ทองหล่อ",
+        "stname_en": "Thong Lo",
+        "code": "E6",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:41",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E7": [
+    [
+      {
+        "id": "1748",
+        "platform_line_id": "1",
+        "station_id": "15",
+        "stname_th": "เอกมัย",
+        "stname_en": "Ekkamai",
+        "code": "E7",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:30",
+        "last": "00:16",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1747",
+        "platform_line_id": "1",
+        "station_id": "15",
+        "stname_th": "เอกมัย",
+        "stname_en": "Ekkamai",
+        "code": "E7",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:42",
+        "last": "00:12",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1749",
+        "platform_line_id": "1",
+        "station_id": "15",
+        "stname_th": "เอกมัย",
+        "stname_en": "Ekkamai",
+        "code": "E7",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:42",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E8": [
+    [
+      {
+        "id": "1751",
+        "platform_line_id": "1",
+        "station_id": "16",
+        "stname_th": "พระโขนง",
+        "stname_en": "Phra Khanong",
+        "code": "E8",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:29",
+        "last": "00:14",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1750",
+        "platform_line_id": "1",
+        "station_id": "16",
+        "stname_th": "พระโขนง",
+        "stname_en": "Phra Khanong",
+        "code": "E8",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:44",
+        "last": "00:14",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1752",
+        "platform_line_id": "1",
+        "station_id": "16",
+        "stname_th": "พระโขนง",
+        "stname_en": "Phra Khanong",
+        "code": "E8",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:44",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E9": [
+    [
+      {
+        "id": "1754",
+        "platform_line_id": "1",
+        "station_id": "17",
+        "stname_th": "อ่อนนุช",
+        "stname_en": "On Nut",
+        "code": "E9",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:26",
+        "last": "00:12",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1753",
+        "platform_line_id": "1",
+        "station_id": "17",
+        "stname_th": "อ่อนนุช",
+        "stname_en": "On Nut",
+        "code": "E9",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:46",
+        "last": "00:16",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1755",
+        "platform_line_id": "1",
+        "station_id": "17",
+        "stname_th": "อ่อนนุช",
+        "stname_en": "On Nut",
+        "code": "E9",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:46",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E10": [
+    [
+      {
+        "id": "1784",
+        "platform_line_id": "1",
+        "station_id": "18",
+        "stname_th": "บางจาก",
+        "stname_en": "Bang Chak",
+        "code": "E10",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:24",
+        "last": "00:10",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1783",
+        "platform_line_id": "1",
+        "station_id": "18",
+        "stname_th": "บางจาก",
+        "stname_en": "Bang Chak",
+        "code": "E10",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:48",
+        "last": "00:18",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1785",
+        "platform_line_id": "1",
+        "station_id": "18",
+        "stname_th": "บางจาก",
+        "stname_en": "Bang Chak",
+        "code": "E10",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:48",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E11": [
+    [
+      {
+        "id": "1787",
+        "platform_line_id": "1",
+        "station_id": "19",
+        "stname_th": "ปุณณวิถี",
+        "stname_en": "Punnawithi",
+        "code": "E11",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:23",
+        "last": "00:08",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1786",
+        "platform_line_id": "1",
+        "station_id": "19",
+        "stname_th": "ปุณณวิถี",
+        "stname_en": "Punnawithi",
+        "code": "E11",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:50",
+        "last": "00:20",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1788",
+        "platform_line_id": "1",
+        "station_id": "19",
+        "stname_th": "ปุณณวิถี",
+        "stname_en": "Punnawithi",
+        "code": "E11",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:50",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E12": [
+    [
+      {
+        "id": "1790",
+        "platform_line_id": "1",
+        "station_id": "20",
+        "stname_th": "อุดมสุข",
+        "stname_en": "Udom Suk",
+        "code": "E12",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:21",
+        "last": "00:06",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1789",
+        "platform_line_id": "1",
+        "station_id": "20",
+        "stname_th": "อุดมสุข",
+        "stname_en": "Udom Suk",
+        "code": "E12",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:51",
+        "last": "00:22",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1791",
+        "platform_line_id": "1",
+        "station_id": "20",
+        "stname_th": "อุดมสุข",
+        "stname_en": "Udom Suk",
+        "code": "E12",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:52",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E13": [
+    [
+      {
+        "id": "1793",
+        "platform_line_id": "1",
+        "station_id": "21",
+        "stname_th": "บางนา",
+        "stname_en": "Bang Na",
+        "code": "E13",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:19",
+        "last": "00:04",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1792",
+        "platform_line_id": "1",
+        "station_id": "21",
+        "stname_th": "บางนา",
+        "stname_en": "Bang Na",
+        "code": "E13",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:54",
+        "last": "00:24",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1794",
+        "platform_line_id": "1",
+        "station_id": "21",
+        "stname_th": "บางนา",
+        "stname_en": "Bang Na",
+        "code": "E13",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:54",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E14": [
+    [
+      {
+        "id": "1796",
+        "platform_line_id": "1",
+        "station_id": "22",
+        "stname_th": "แบริ่ง",
+        "stname_en": "Bearing",
+        "code": "E14",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:17",
+        "last": "00:02",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1795",
+        "platform_line_id": "1",
+        "station_id": "22",
+        "stname_th": "แบริ่ง",
+        "stname_en": "Bearing",
+        "code": "E14",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:55",
+        "last": "00:26",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1797",
+        "platform_line_id": "1",
+        "station_id": "22",
+        "stname_th": "แบริ่ง",
+        "stname_en": "Bearing",
+        "code": "E14",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:56",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E15": [
+    [
+      {
+        "id": "1799",
+        "platform_line_id": "1",
+        "station_id": "23",
+        "stname_th": "สำโรง",
+        "stname_en": "Samrong",
+        "code": "E15",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:15",
+        "last": "00:00",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1798",
+        "platform_line_id": "1",
+        "station_id": "23",
+        "stname_th": "สำโรง",
+        "stname_en": "Samrong",
+        "code": "E15",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "5:15",
+        "last": "00:28",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "BL10": [
+    [
+      {
+        "id": "158",
+        "platform_line_id": "3",
+        "station_id": "33",
+        "stname_th": "เตาปูน",
+        "stname_en": "Tao Poon",
+        "code": "BL10",
+        "direction": "1",
+        "dirname": "Tha Phra",
+        "to_station_id": "0",
+        "name_th": "เสาร์",
+        "name_en": "Saturday",
+        "first": "6:00",
+        "last": "23:30",
+        "created_time": "2019-01-08 07:36:27",
+        "deleted_time": null
+      },
+      {
+        "id": "159",
+        "platform_line_id": "3",
+        "station_id": "33",
+        "stname_th": "เตาปูน",
+        "stname_en": "Tao Poon",
+        "code": "BL10",
+        "direction": "1",
+        "dirname": "Tha Phra",
+        "to_station_id": "0",
+        "name_th": "อาทิตย์ และ วันหยุดนักขัตฤกษ์",
+        "name_en": "Sunday and Public Holidays",
+        "first": "6:00",
+        "last": "23:31",
+        "created_time": "2019-01-08 07:36:27",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "157",
+        "platform_line_id": "3",
+        "station_id": "33",
+        "stname_th": "เตาปูน",
+        "stname_en": "Tao Poon",
+        "code": "BL10",
+        "direction": "2",
+        "dirname": "Lak Song",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "6:03",
+        "last": "23:30",
+        "created_time": "2019-01-08 07:36:27",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "BL13": [
+    [
+      {
+        "id": "160",
+        "platform_line_id": "3",
+        "station_id": "36",
+        "stname_th": "สวนจตุจักร",
+        "stname_en": "Chatuchak Park",
+        "code": "BL13",
+        "direction": "1",
+        "dirname": "Tha Phra",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "6:02",
+        "last": "23:32",
+        "created_time": "2019-01-08 07:36:27",
+        "deleted_time": null
+      },
+      {
+        "id": "161",
+        "platform_line_id": "3",
+        "station_id": "36",
+        "stname_th": "สวนจตุจักร",
+        "stname_en": "Chatuchak Park",
+        "code": "BL13",
+        "direction": "1",
+        "dirname": "Tha Phra",
+        "to_station_id": "0",
+        "name_th": "เสาร์",
+        "name_en": "Saturday",
+        "first": "6:00",
+        "last": "23:30",
+        "created_time": "2019-01-08 07:36:27",
+        "deleted_time": null
+      },
+      {
+        "id": "162",
+        "platform_line_id": "3",
+        "station_id": "36",
+        "stname_th": "สวนจตุจักร",
+        "stname_en": "Chatuchak Park",
+        "code": "BL13",
+        "direction": "1",
+        "dirname": "Tha Phra",
+        "to_station_id": "0",
+        "name_th": "อาทิตย์ และ วันหยุดนขัตฤกษ์",
+        "name_en": "Sunday and Public Holidays",
+        "first": "6:00",
+        "last": "23:31",
+        "created_time": "2019-01-08 07:36:27",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "BL28": [
+    [
+      {
+        "id": "163",
+        "platform_line_id": "3",
+        "station_id": "51",
+        "stname_th": "หัวลำโพง",
+        "stname_en": "Hua Lamphong",
+        "code": "BL28",
+        "direction": "1",
+        "dirname": "Tha Phra",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "6:02",
+        "last": "23:32",
+        "created_time": "2019-01-08 07:36:27",
+        "deleted_time": null
+      },
+      {
+        "id": "164",
+        "platform_line_id": "3",
+        "station_id": "51",
+        "stname_th": "หัวลำโพง",
+        "stname_en": "Hua Lamphong",
+        "code": "BL28",
+        "direction": "1",
+        "dirname": "Tha Phra",
+        "to_station_id": "0",
+        "name_th": "เสาร์",
+        "name_en": "Saturday",
+        "first": "6:00",
+        "last": "23:30",
+        "created_time": "2019-01-08 07:36:27",
+        "deleted_time": null
+      },
+      {
+        "id": "165",
+        "platform_line_id": "3",
+        "station_id": "51",
+        "stname_th": "หัวลำโพง",
+        "stname_en": "Hua Lamphong",
+        "code": "BL28",
+        "direction": "1",
+        "dirname": "Tha Phra",
+        "to_station_id": "0",
+        "name_th": "อาทิตย์ และ วันหยุดนักขัตฤกษ์",
+        "name_en": "Sunday and Public Holidays",
+        "first": "6:00",
+        "last": "23:31",
+        "created_time": "2019-01-08 07:36:27",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "PP01": [
+    [
+      {
+        "id": "363",
+        "platform_line_id": "4",
+        "station_id": "66",
+        "stname_th": "คลองบางไผ่",
+        "stname_en": "Khlong Bang Phai",
+        "code": "PP01",
+        "direction": "2",
+        "dirname": "Tao Poon",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "5:30",
+        "last": "22:47",
+        "created_time": "2019-12-22 13:45:53",
+        "deleted_time": null
+      },
+      {
+        "id": "364",
+        "platform_line_id": "4",
+        "station_id": "66",
+        "stname_th": "คลองบางไผ่",
+        "stname_en": "Khlong Bang Phai",
+        "code": "PP01",
+        "direction": "2",
+        "dirname": "Tao Poon",
+        "to_station_id": "0",
+        "name_th": "เสาร์ - อาทิตย์",
+        "name_en": "Saturday - Sunday",
+        "first": "6:00",
+        "last": "22:47",
+        "created_time": "2019-12-22 13:45:53",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "PP16": [
+    [
+      {
+        "id": "365",
+        "platform_line_id": "4",
+        "station_id": "81",
+        "stname_th": "เตาปูน",
+        "stname_en": "Tao Poon",
+        "code": "PP16",
+        "direction": "1",
+        "dirname": "Khlong Bang Phai",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "6:00",
+        "last": "23:24",
+        "created_time": "2019-12-22 13:45:53",
+        "deleted_time": null
+      },
+      {
+        "id": "366",
+        "platform_line_id": "4",
+        "station_id": "81",
+        "stname_th": "เตาปูน",
+        "stname_en": "Tao Poon",
+        "code": "PP16",
+        "direction": "1",
+        "dirname": "Khlong Bang Phai",
+        "to_station_id": "0",
+        "name_th": "เสาร์ - อาทิตย์",
+        "name_en": "Saturday - Sunday",
+        "first": "6:18",
+        "last": "23:24",
+        "created_time": "2019-12-22 13:45:53",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "A3": [
+    [
+      {
+        "id": "1947",
+        "platform_line_id": "5",
+        "station_id": "101",
+        "stname_th": "บ้านทับช้าง",
+        "stname_en": "Ban Thap Chang",
+        "code": "A3",
+        "direction": "1",
+        "dirname": "Suvarnabhumi",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "05:47",
+        "last": "00:16",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      },
+      {
+        "id": "1949",
+        "platform_line_id": "5",
+        "station_id": "101",
+        "stname_th": "บ้านทับช้าง",
+        "stname_en": "Ban Thap Chang",
+        "code": "A3",
+        "direction": "1",
+        "dirname": "Suvarnabhumi",
+        "to_station_id": "0",
+        "name_th": "เสาร์ - อาทิตย์ และ วันหยุด นักขัตฤกษ์",
+        "name_en": "Saturday - Sunday and Public Holidays",
+        "first": "05:45",
+        "last": "00:16",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1946",
+        "platform_line_id": "5",
+        "station_id": "101",
+        "stname_th": "บ้านทับช้าง",
+        "stname_en": "Ban Thap Chang",
+        "code": "A3",
+        "direction": "2",
+        "dirname": "Phaya Thai",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "05:44",
+        "last": "00:09",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      },
+      {
+        "id": "1948",
+        "platform_line_id": "5",
+        "station_id": "101",
+        "stname_th": "บ้านทับช้าง",
+        "stname_en": "Ban Thap Chang",
+        "code": "A3",
+        "direction": "2",
+        "dirname": "Phaya Thai",
+        "to_station_id": "0",
+        "name_th": "เสาร์ - อาทิตย์ และ วันหยุด นักขัตฤกษ์",
+        "name_en": "Saturday - Sunday and Public Holidays",
+        "first": "05:40",
+        "last": "00:09",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "A1": [
+    [
+      {
+        "id": "1940",
+        "platform_line_id": "5",
+        "station_id": "99",
+        "stname_th": "สุวรรณภูมิ",
+        "stname_en": "Suvarnabhumi",
+        "code": "A1",
+        "direction": "2",
+        "dirname": "Phaya Thai",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "05:33",
+        "last": "00:00",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      },
+      {
+        "id": "1941",
+        "platform_line_id": "5",
+        "station_id": "99",
+        "stname_th": "สุวรรณภูมิ",
+        "stname_en": "Suvarnabhumi",
+        "code": "A1",
+        "direction": "2",
+        "dirname": "Phaya Thai",
+        "to_station_id": "0",
+        "name_th": "เสาร์ อาทิตย์ และวันหยุดนักขัตฤกษ์",
+        "name_en": "Weekend and Public Holidays",
+        "first": "05:30",
+        "last": "00:00",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "A2": [
+    [
+      {
+        "id": "1943",
+        "platform_line_id": "5",
+        "station_id": "100",
+        "stname_th": "ลาดกระบัง",
+        "stname_en": "Lat Krabang",
+        "code": "A2",
+        "direction": "1",
+        "dirname": "Suvarnabhumi",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "05:52",
+        "last": "00:21",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      },
+      {
+        "id": "1945",
+        "platform_line_id": "5",
+        "station_id": "100",
+        "stname_th": "ลาดกระบัง",
+        "stname_en": "Lat Krabang",
+        "code": "A2",
+        "direction": "1",
+        "dirname": "Suvarnabhumi",
+        "to_station_id": "0",
+        "name_th": "เสาร์ - อาทิตย์ และ วันหยุด นักขัตฤกษ์",
+        "name_en": "Saturday - Sunday and Public Holidays",
+        "first": "05:50",
+        "last": "00:21",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1942",
+        "platform_line_id": "5",
+        "station_id": "100",
+        "stname_th": "ลาดกระบัง",
+        "stname_en": "Lat Krabang",
+        "code": "A2",
+        "direction": "2",
+        "dirname": "Phaya Thai",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "05:38",
+        "last": "00:04",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      },
+      {
+        "id": "1944",
+        "platform_line_id": "5",
+        "station_id": "100",
+        "stname_th": "ลาดกระบัง",
+        "stname_en": "Lat Krabang",
+        "code": "A2",
+        "direction": "2",
+        "dirname": "Phaya Thai",
+        "to_station_id": "0",
+        "name_th": "เสาร์ - อาทิตย์ และ วันหยุด นักขัตฤกษ์",
+        "name_en": "Saturday - Sunday and Public Holidays",
+        "first": "05:35",
+        "last": "00:04",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "A4": [
+    [
+      {
+        "id": "1951",
+        "platform_line_id": "5",
+        "station_id": "102",
+        "stname_th": "หัวหมาก",
+        "stname_en": "Hua Mak",
+        "code": "A4",
+        "direction": "1",
+        "dirname": "Suvarnabhumi",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "05:42",
+        "last": "00:12",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      },
+      {
+        "id": "1953",
+        "platform_line_id": "5",
+        "station_id": "102",
+        "stname_th": "หัวหมาก",
+        "stname_en": "Hua Mak",
+        "code": "A4",
+        "direction": "1",
+        "dirname": "Suvarnabhumi",
+        "to_station_id": "0",
+        "name_th": "เสาร์ - อาทิตย์ และ วันหยุด นักขัตฤกษ์",
+        "name_en": "Saturday - Sunday and Public Holidays",
+        "first": "05:41",
+        "last": "00:12",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1950",
+        "platform_line_id": "5",
+        "station_id": "102",
+        "stname_th": "หัวหมาก",
+        "stname_en": "Hua Mak",
+        "code": "A4",
+        "direction": "2",
+        "dirname": "Phaya Thai",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "05:49",
+        "last": "00:13",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      },
+      {
+        "id": "1952",
+        "platform_line_id": "5",
+        "station_id": "102",
+        "stname_th": "หัวหมาก",
+        "stname_en": "Hua Mak",
+        "code": "A4",
+        "direction": "2",
+        "dirname": "Phaya Thai",
+        "to_station_id": "0",
+        "name_th": "เสาร์ - อาทิตย์ และ วันหยุด นักขัตฤกษ์",
+        "name_en": "Saturday - Sunday and Public Holidays",
+        "first": "05:44",
+        "last": "00:13",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "A5": [
+    [
+      {
+        "id": "1955",
+        "platform_line_id": "5",
+        "station_id": "103",
+        "stname_th": "รามคำแหง",
+        "stname_en": "Ramkhamhaeng",
+        "code": "A5",
+        "direction": "1",
+        "dirname": "Suvarnabhumi",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "05:38",
+        "last": "00:07",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      },
+      {
+        "id": "1957",
+        "platform_line_id": "5",
+        "station_id": "103",
+        "stname_th": "รามคำแหง",
+        "stname_en": "Ramkhamhaeng",
+        "code": "A5",
+        "direction": "1",
+        "dirname": "Suvarnabhumi",
+        "to_station_id": "0",
+        "name_th": "เสาร์ - อาทิตย์ และ วันหยุด นักขัตฤกษ์",
+        "name_en": "Saturday - Sunday and Public Holidays",
+        "first": "05:37",
+        "last": "00:07",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1954",
+        "platform_line_id": "5",
+        "station_id": "103",
+        "stname_th": "รามคำแหง",
+        "stname_en": "Ramkhamhaeng",
+        "code": "A5",
+        "direction": "2",
+        "dirname": "Phaya Thai",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "05:54",
+        "last": "00:18",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      },
+      {
+        "id": "1956",
+        "platform_line_id": "5",
+        "station_id": "103",
+        "stname_th": "รามคำแหง",
+        "stname_en": "Ramkhamhaeng",
+        "code": "A5",
+        "direction": "2",
+        "dirname": "Phaya Thai",
+        "to_station_id": "0",
+        "name_th": "เสาร์ - อาทิตย์ และ วันหยุด นักขัตฤกษ์",
+        "name_en": "Saturday - Sunday and Public Holidays",
+        "first": "05:48",
+        "last": "00:18",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "A6": [
+    [
+      {
+        "id": "1959",
+        "platform_line_id": "5",
+        "station_id": "104",
+        "stname_th": "มักกะสัน",
+        "stname_en": "Makkasan",
+        "code": "A6",
+        "direction": "1",
+        "dirname": "Suvarnabhumi",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "05:34",
+        "last": "00:03",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      },
+      {
+        "id": "1961",
+        "platform_line_id": "5",
+        "station_id": "104",
+        "stname_th": "มักกะสัน",
+        "stname_en": "Makkasan",
+        "code": "A6",
+        "direction": "1",
+        "dirname": "Suvarnabhumi",
+        "to_station_id": "0",
+        "name_th": "เสาร์ - อาทิตย์ และ วันหยุด นักขัตฤกษ์",
+        "name_en": "Saturday - Sunday and Public Holidays",
+        "first": "05:33",
+        "last": "00:03",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1958",
+        "platform_line_id": "5",
+        "station_id": "104",
+        "stname_th": "มักกะสัน",
+        "stname_en": "Makkasan",
+        "code": "A6",
+        "direction": "2",
+        "dirname": "Phaya Thai",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "05:58",
+        "last": "00:21",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      },
+      {
+        "id": "1960",
+        "platform_line_id": "5",
+        "station_id": "104",
+        "stname_th": "มักกะสัน",
+        "stname_en": "Makkasan",
+        "code": "A6",
+        "direction": "2",
+        "dirname": "Phaya Thai",
+        "to_station_id": "0",
+        "name_th": "เสาร์ - อาทิตย์ และ วันหยุด นักขัตฤกษ์",
+        "name_en": "Saturday - Sunday and Public Holidays",
+        "first": "05:52",
+        "last": "00:21",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "A7": [
+    [
+      {
+        "id": "1963",
+        "platform_line_id": "5",
+        "station_id": "105",
+        "stname_th": "ราชปรารภ",
+        "stname_en": "Ratchaprarop",
+        "code": "A7",
+        "direction": "1",
+        "dirname": "Suvarnabhumi",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "05:32",
+        "last": "00:01",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      },
+      {
+        "id": "1965",
+        "platform_line_id": "5",
+        "station_id": "105",
+        "stname_th": "ราชปรารภ",
+        "stname_en": "Ratchaprarop",
+        "code": "A7",
+        "direction": "1",
+        "dirname": "Suvarnabhumi",
+        "to_station_id": "0",
+        "name_th": "เสาร์ - อาทิตย์ และ วันหยุด นักขัตฤกษ์",
+        "name_en": "Saturday - Sunday and Public Holidays",
+        "first": "05:30",
+        "last": "00:01",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1962",
+        "platform_line_id": "5",
+        "station_id": "105",
+        "stname_th": "ราชปรารภ",
+        "stname_en": "Ratchaprarop",
+        "code": "A7",
+        "direction": "2",
+        "dirname": "Phaya Thai",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "06:00",
+        "last": "00:24",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      },
+      {
+        "id": "1964",
+        "platform_line_id": "5",
+        "station_id": "105",
+        "stname_th": "ราชปรารภ",
+        "stname_en": "Ratchaprarop",
+        "code": "A7",
+        "direction": "2",
+        "dirname": "Phaya Thai",
+        "to_station_id": "0",
+        "name_th": "เสาร์ - อาทิตย์ และ วันหยุด นักขัตฤกษ์",
+        "name_en": "Saturday - Sunday and Public Holidays",
+        "first": "05:55",
+        "last": "00:24",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "A8": [
+    [
+      {
+        "id": "1966",
+        "platform_line_id": "5",
+        "station_id": "106",
+        "stname_th": "พญาไท",
+        "stname_en": "Phaya Thai",
+        "code": "A8",
+        "direction": "1",
+        "dirname": "Suvarnabhumi",
+        "to_station_id": "0",
+        "name_th": "จันทร์ - ศุกร์",
+        "name_en": "Monday - Friday",
+        "first": "05:30",
+        "last": "00:00",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      },
+      {
+        "id": "1967",
+        "platform_line_id": "5",
+        "station_id": "106",
+        "stname_th": "พญาไท",
+        "stname_en": "Phaya Thai",
+        "code": "A8",
+        "direction": "1",
+        "dirname": "Suvarnabhumi",
+        "to_station_id": "0",
+        "name_th": "เสาร์ - อาทิตย์ และ วันหยุด นักขัตฤกษ์",
+        "name_en": "Saturday - Sunday and Public Holidays",
+        "first": "05:29",
+        "last": "00:00",
+        "created_time": "2021-07-02 13:06:52",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "W1": [
+    [
+      {
+        "id": "1914",
+        "platform_line_id": "2",
+        "station_id": "112",
+        "stname_th": "สนามกีฬาแห่งชาติ",
+        "stname_en": "National Stadium",
+        "code": "W1",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "5:30",
+        "last": "23:58",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1915",
+        "platform_line_id": "2",
+        "station_id": "112",
+        "stname_th": "สนามกีฬาแห่งชาติ",
+        "stname_en": "National Stadium",
+        "code": "W1",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางบางหว้า/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to Bang Wa/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:28",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "S1": [
+    [
+      {
+        "id": "1884",
+        "platform_line_id": "2",
+        "station_id": "114",
+        "stname_th": "ราชดำริ",
+        "stname_en": "Ratchadamri",
+        "code": "S1",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:50",
+        "last": "23:56",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1885",
+        "platform_line_id": "2",
+        "station_id": "114",
+        "stname_th": "ราชดำริ",
+        "stname_en": "Ratchadamri",
+        "code": "S1",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทาง สนามกีฬาแห่งชาติ/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to National Stadium/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:26",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1882",
+        "platform_line_id": "2",
+        "station_id": "114",
+        "stname_th": "ราชดำริ",
+        "stname_en": "Ratchadamri",
+        "code": "S1",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "5:34",
+        "last": "-",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1883",
+        "platform_line_id": "2",
+        "station_id": "114",
+        "stname_th": "ราชดำริ",
+        "stname_en": "Ratchadamri",
+        "code": "S1",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางบางหว้า/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to Bang Wa/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:32",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "S2": [
+    [
+      {
+        "id": "1888",
+        "platform_line_id": "2",
+        "station_id": "115",
+        "stname_th": "ศาลาแดง",
+        "stname_en": "Sala Daeng",
+        "code": "S2",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:48",
+        "last": "23:54",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1889",
+        "platform_line_id": "2",
+        "station_id": "115",
+        "stname_th": "ศาลาแดง",
+        "stname_en": "Sala Daeng",
+        "code": "S2",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทาง สนามกีฬาแห่งชาติ/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to National Stadium/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:24",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1886",
+        "platform_line_id": "2",
+        "station_id": "115",
+        "stname_th": "ศาลาแดง",
+        "stname_en": "Sala Daeng",
+        "code": "S2",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:36",
+        "last": "-",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1887",
+        "platform_line_id": "2",
+        "station_id": "115",
+        "stname_th": "ศาลาแดง",
+        "stname_en": "Sala Daeng",
+        "code": "S2",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "Last Train to National Stadium/Kasetsart University/Samrong",
+        "name_en": "Last Train to Bang Wa/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:34",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "S3": [
+    [
+      {
+        "id": "1892",
+        "platform_line_id": "2",
+        "station_id": "116",
+        "stname_th": "ช่องนนทรี",
+        "stname_en": "Chong Nonsi",
+        "code": "S3",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:45",
+        "last": "23:51",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1893",
+        "platform_line_id": "2",
+        "station_id": "116",
+        "stname_th": "ช่องนนทรี",
+        "stname_en": "Chong Nonsi",
+        "code": "S3",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทาง สนามกีฬาแห่งชาติ/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to National Stadium/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:21",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1890",
+        "platform_line_id": "2",
+        "station_id": "116",
+        "stname_th": "ช่องนนทรี",
+        "stname_en": "Chong Nonsi",
+        "code": "S3",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:39",
+        "last": "-",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1891",
+        "platform_line_id": "2",
+        "station_id": "116",
+        "stname_th": "ช่องนนทรี",
+        "stname_en": "Chong Nonsi",
+        "code": "S3",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางบางหว้า/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to Bang Wa/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:37",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "S5": [
+    [
+      {
+        "id": "1896",
+        "platform_line_id": "2",
+        "station_id": "118",
+        "stname_th": "สุรศักดิ์",
+        "stname_en": "Surasak",
+        "code": "S5",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:43",
+        "last": "23:49",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1897",
+        "platform_line_id": "2",
+        "station_id": "118",
+        "stname_th": "สุรศักดิ์",
+        "stname_en": "Surasak",
+        "code": "S5",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทาง สนามกีฬาแห่งชาติ/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to National Stadium/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:19",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1894",
+        "platform_line_id": "2",
+        "station_id": "118",
+        "stname_th": "สุรศักดิ์",
+        "stname_en": "Surasak",
+        "code": "S5",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:41",
+        "last": "-",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1895",
+        "platform_line_id": "2",
+        "station_id": "118",
+        "stname_th": "สุรศักดิ์",
+        "stname_en": "Surasak",
+        "code": "S5",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางบางหว้า/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to Bang Wa/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:39",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "S6": [
+    [
+      {
+        "id": "1900",
+        "platform_line_id": "2",
+        "station_id": "119",
+        "stname_th": "สะพานตากสิน",
+        "stname_en": "Saphan Taksin",
+        "code": "S6",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:41",
+        "last": "23:47",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1901",
+        "platform_line_id": "2",
+        "station_id": "119",
+        "stname_th": "สะพานตากสิน",
+        "stname_en": "Saphan Taksin",
+        "code": "S6",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทาง สนามกีฬาแห่งชาติ/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to National Stadium/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:17",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1898",
+        "platform_line_id": "2",
+        "station_id": "119",
+        "stname_th": "สะพานตากสิน",
+        "stname_en": "Saphan Taksin",
+        "code": "S6",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:43",
+        "last": "-",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1899",
+        "platform_line_id": "2",
+        "station_id": "119",
+        "stname_th": "สะพานตากสิน",
+        "stname_en": "Saphan Taksin",
+        "code": "S6",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางบางหว้า/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to Bang Wa/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:41",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "S7": [
+    [
+      {
+        "id": "1904",
+        "platform_line_id": "2",
+        "station_id": "120",
+        "stname_th": "กรุงธนบุรี",
+        "stname_en": "Krung Thonburi",
+        "code": "S7",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:39",
+        "last": "23:45",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1905",
+        "platform_line_id": "2",
+        "station_id": "120",
+        "stname_th": "กรุงธนบุรี",
+        "stname_en": "Krung Thonburi",
+        "code": "S7",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทาง สนามกีฬาแห่งชาติ/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to National Stadium/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:15",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1902",
+        "platform_line_id": "2",
+        "station_id": "120",
+        "stname_th": "กรุงธนบุรี",
+        "stname_en": "Krung Thonburi",
+        "code": "S7",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:45",
+        "last": "-",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1903",
+        "platform_line_id": "2",
+        "station_id": "120",
+        "stname_th": "กรุงธนบุรี",
+        "stname_en": "Krung Thonburi",
+        "code": "S7",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางบางหว้า/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to Bang Wa/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:43",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "S8": [
+    [
+      {
+        "id": "1908",
+        "platform_line_id": "2",
+        "station_id": "121",
+        "stname_th": "วงเวียนใหญ่",
+        "stname_en": "Wongwian Yai",
+        "code": "S8",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:38",
+        "last": "23:44",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1909",
+        "platform_line_id": "2",
+        "station_id": "121",
+        "stname_th": "วงเวียนใหญ่",
+        "stname_en": "Wongwian Yai",
+        "code": "S8",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทาง สนามกีฬาแห่งชาติ/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to National Stadium/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:14",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1906",
+        "platform_line_id": "2",
+        "station_id": "121",
+        "stname_th": "วงเวียนใหญ่",
+        "stname_en": "Wongwian Yai",
+        "code": "S8",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:47",
+        "last": "-",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1907",
+        "platform_line_id": "2",
+        "station_id": "121",
+        "stname_th": "วงเวียนใหญ่",
+        "stname_en": "Wongwian Yai",
+        "code": "S8",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางบางหว้า/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to Bang Wa/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:45",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "S9": [
+    [
+      {
+        "id": "1912",
+        "platform_line_id": "2",
+        "station_id": "122",
+        "stname_th": "โพธิ์นิมิตร",
+        "stname_en": "Pho Nimit",
+        "code": "S9",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:36",
+        "last": "23:42",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1913",
+        "platform_line_id": "2",
+        "station_id": "122",
+        "stname_th": "โพธิ์นิมิตร",
+        "stname_en": "Pho Nimit",
+        "code": "S9",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทาง สนามกีฬาแห่งชาติ/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to National Stadium/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:12",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1910",
+        "platform_line_id": "2",
+        "station_id": "122",
+        "stname_th": "โพธิ์นิมิตร",
+        "stname_en": "Pho Nimit",
+        "code": "S9",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:49",
+        "last": "-",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1911",
+        "platform_line_id": "2",
+        "station_id": "122",
+        "stname_th": "โพธิ์นิมิตร",
+        "stname_en": "Pho Nimit",
+        "code": "S9",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางบางหว้า/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to Bang Wa/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:47",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "S10": [
+    [
+      {
+        "id": "1922",
+        "platform_line_id": "2",
+        "station_id": "123",
+        "stname_th": "ตลาดพลู",
+        "stname_en": "Talat Phlu",
+        "code": "S10",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:34",
+        "last": "23:40",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1923",
+        "platform_line_id": "2",
+        "station_id": "123",
+        "stname_th": "ตลาดพลู",
+        "stname_en": "Talat Phlu",
+        "code": "S10",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทาง สนามกีฬาแห่งชาติ/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to National Stadium/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:10",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1920",
+        "platform_line_id": "2",
+        "station_id": "123",
+        "stname_th": "ตลาดพลู",
+        "stname_en": "Talat Phlu",
+        "code": "S10",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:51",
+        "last": "-",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1921",
+        "platform_line_id": "2",
+        "station_id": "123",
+        "stname_th": "ตลาดพลู",
+        "stname_en": "Talat Phlu",
+        "code": "S10",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางบางหว้า/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to Bang Wa/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:49",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "S11": [
+    [
+      {
+        "id": "1926",
+        "platform_line_id": "2",
+        "station_id": "124",
+        "stname_th": "วุฒากาศ",
+        "stname_en": "Wutthakad",
+        "code": "S11",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:32",
+        "last": "23:38",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1927",
+        "platform_line_id": "2",
+        "station_id": "124",
+        "stname_th": "วุฒากาศ",
+        "stname_en": "Wutthakad",
+        "code": "S11",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทาง สนามกีฬาแห่งชาติ/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to National Stadium/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:08",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1924",
+        "platform_line_id": "2",
+        "station_id": "124",
+        "stname_th": "วุฒากาศ",
+        "stname_en": "Wutthakad",
+        "code": "S11",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:52",
+        "last": "-",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1925",
+        "platform_line_id": "2",
+        "station_id": "124",
+        "stname_th": "วุฒากาศ",
+        "stname_en": "Wutthakad",
+        "code": "S11",
+        "direction": "2",
+        "dirname": "Bang Wa",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางบางหว้า/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to Bang Wa/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:51",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "S12": [
+    [
+      {
+        "id": "1928",
+        "platform_line_id": "2",
+        "station_id": "125",
+        "stname_th": "บางหว้า",
+        "stname_en": "Bang Wa",
+        "code": "S12",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "5:30",
+        "last": "23:36",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      },
+      {
+        "id": "1929",
+        "platform_line_id": "2",
+        "station_id": "125",
+        "stname_th": "บางหว้า",
+        "stname_en": "Bang Wa",
+        "code": "S12",
+        "direction": "1",
+        "dirname": "National Stadium",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทาง สนามกีฬาแห่งชาติ/มหาวิทยาลัยเกษตรศาสตร์/สำโรง",
+        "name_en": "Last Train to National Stadium/Kasetsart University/Samrong",
+        "first": "-",
+        "last": "00:06",
+        "created_time": "2020-03-29 18:07:30",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E16": [
+    [
+      {
+        "id": "1801",
+        "platform_line_id": "1",
+        "station_id": "126",
+        "stname_th": "ปู่เจ้า",
+        "stname_en": "Pu Chao",
+        "code": "E16",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "5:30",
+        "last": "23:58",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1802",
+        "platform_line_id": "1",
+        "station_id": "126",
+        "stname_th": "ปู่เจ้า",
+        "stname_en": "Pu Chao",
+        "code": "E16",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางสำโรง",
+        "name_en": "Last Train to Samrong",
+        "first": "-",
+        "last": "00:15",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1800",
+        "platform_line_id": "1",
+        "station_id": "126",
+        "stname_th": "ปู่เจ้า",
+        "stname_en": "Pu Chao",
+        "code": "E16",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "5:16",
+        "last": "00:30",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E17": [
+    [
+      {
+        "id": "1804",
+        "platform_line_id": "1",
+        "station_id": "127",
+        "stname_th": "ช้างเอราวัณ",
+        "stname_en": "Chang Erawan",
+        "code": "E17",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:27",
+        "last": "23:55",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1805",
+        "platform_line_id": "1",
+        "station_id": "127",
+        "stname_th": "ช้างเอราวัณ",
+        "stname_en": "Chang Erawan",
+        "code": "E17",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางสำโรง",
+        "name_en": "Last Train to Samrong",
+        "first": "-",
+        "last": "00:12",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1803",
+        "platform_line_id": "1",
+        "station_id": "127",
+        "stname_th": "ช้างเอราวัณ",
+        "stname_en": "Chang Erawan",
+        "code": "E17",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:19",
+        "last": "00:33",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E18": [
+    [
+      {
+        "id": "1807",
+        "platform_line_id": "1",
+        "station_id": "128",
+        "stname_th": "โรงเรียนนายเรือ",
+        "stname_en": "Royal Thai Naval Academy",
+        "code": "E18",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:25",
+        "last": "23:53",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1808",
+        "platform_line_id": "1",
+        "station_id": "128",
+        "stname_th": "โรงเรียนนายเรือ",
+        "stname_en": "Royal Thai Naval Academy",
+        "code": "E18",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางสำโรง",
+        "name_en": "Last Train to Samrong",
+        "first": "-",
+        "last": "00:10",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1806",
+        "platform_line_id": "1",
+        "station_id": "128",
+        "stname_th": "โรงเรียนนายเรือ",
+        "stname_en": "Royal Thai Naval Academy",
+        "code": "E18",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:22",
+        "last": "00:35",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E19": [
+    [
+      {
+        "id": "1810",
+        "platform_line_id": "1",
+        "station_id": "129",
+        "stname_th": "ปากน้ำ",
+        "stname_en": "Pak Nam",
+        "code": "E19",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:23",
+        "last": "23:51",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1811",
+        "platform_line_id": "1",
+        "station_id": "129",
+        "stname_th": "ปากน้ำ",
+        "stname_en": "Pak Nam",
+        "code": "E19",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางสำโรง",
+        "name_en": "Last Train to Samrong",
+        "first": "-",
+        "last": "00:08",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1809",
+        "platform_line_id": "1",
+        "station_id": "129",
+        "stname_th": "ปากน้ำ",
+        "stname_en": "Pak Nam",
+        "code": "E19",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:23",
+        "last": "00:37",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E20": [
+    [
+      {
+        "id": "1813",
+        "platform_line_id": "1",
+        "station_id": "130",
+        "stname_th": "ศรีนครินทร์",
+        "stname_en": "Srinagarindra",
+        "code": "E20",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:20",
+        "last": "23:48",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1814",
+        "platform_line_id": "1",
+        "station_id": "130",
+        "stname_th": "ศรีนครินทร์",
+        "stname_en": "Srinagarindra",
+        "code": "E20",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางสำโรง",
+        "name_en": "Last Train to Samrong",
+        "first": "-",
+        "last": "00:05",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1812",
+        "platform_line_id": "1",
+        "station_id": "130",
+        "stname_th": "ศรีนครินทร์",
+        "stname_en": "Srinagarindra",
+        "code": "E20",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:26",
+        "last": "00:40",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E21": [
+    [
+      {
+        "id": "1816",
+        "platform_line_id": "1",
+        "station_id": "131",
+        "stname_th": "แพรกษา",
+        "stname_en": "Phraek Sa",
+        "code": "E21",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:18",
+        "last": "23:46",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1817",
+        "platform_line_id": "1",
+        "station_id": "131",
+        "stname_th": "แพรกษา",
+        "stname_en": "Phraek Sa",
+        "code": "E21",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางสำโรง",
+        "name_en": "Last Train to Samrong",
+        "first": "-",
+        "last": "00:03",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1815",
+        "platform_line_id": "1",
+        "station_id": "131",
+        "stname_th": "แพรกษา",
+        "stname_en": "Phraek Sa",
+        "code": "E21",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:28",
+        "last": "00:42",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E22": [
+    [
+      {
+        "id": "1819",
+        "platform_line_id": "1",
+        "station_id": "132",
+        "stname_th": "สายลวด",
+        "stname_en": "Sai Luat",
+        "code": "E22",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:17",
+        "last": "23:45",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1820",
+        "platform_line_id": "1",
+        "station_id": "132",
+        "stname_th": "สายลวด",
+        "stname_en": "Sai Luat",
+        "code": "E22",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางสำโรง",
+        "name_en": "Last Train to Samrong",
+        "first": "-",
+        "last": "00:02",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1818",
+        "platform_line_id": "1",
+        "station_id": "132",
+        "stname_th": "สายลวด",
+        "stname_en": "Sai Luat",
+        "code": "E22",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "5:30",
+        "last": "00:43",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "E23": [
+    [
+      {
+        "id": "1821",
+        "platform_line_id": "1",
+        "station_id": "133",
+        "stname_th": "เคหะฯ",
+        "stname_en": "Kheha",
+        "code": "E23",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "5:15",
+        "last": "23:43",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1822",
+        "platform_line_id": "1",
+        "station_id": "133",
+        "stname_th": "เคหะฯ",
+        "stname_en": "Kheha",
+        "code": "E23",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายไปสถานีปลายทางสำโรง",
+        "name_en": "Last Train to Samrong",
+        "first": "-",
+        "last": "00:00",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "N9": [
+    [
+      {
+        "id": "1778",
+        "platform_line_id": "1",
+        "station_id": "145",
+        "stname_th": "ห้าแยกลาดพร้าว",
+        "stname_en": "Ha Yaek Lat Phrao",
+        "code": "N9",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:18",
+        "last": "00:47",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1777",
+        "platform_line_id": "1",
+        "station_id": "145",
+        "stname_th": "ห้าแยกลาดพร้าว",
+        "stname_en": "Ha Yaek Lat Phrao",
+        "code": "N9",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:21",
+        "last": "23:41",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1779",
+        "platform_line_id": "1",
+        "station_id": "145",
+        "stname_th": "ห้าแยกลาดพร้าว",
+        "stname_en": "Ha Yaek Lat Phrao",
+        "code": "N9",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:11",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "N10": [
+    [
+      {
+        "id": "1824",
+        "platform_line_id": "1",
+        "station_id": "146",
+        "stname_th": "พหลโยธิน 24",
+        "stname_en": "Phahonyothin 24",
+        "code": "N10",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:19",
+        "last": "00:49",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1825",
+        "platform_line_id": "1",
+        "station_id": "146",
+        "stname_th": "พหลโยธิน 24",
+        "stname_en": "Phahonyothin 24",
+        "code": "N10",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:09",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1823",
+        "platform_line_id": "1",
+        "station_id": "146",
+        "stname_th": "พหลโยธิน 24",
+        "stname_en": "Phahonyothin 24",
+        "code": "N10",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "5:19",
+        "last": "23:39",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "N11": [
+    [
+      {
+        "id": "1827",
+        "platform_line_id": "1",
+        "station_id": "147",
+        "stname_th": "รัชโยธิน",
+        "stname_en": "Ratchayothin",
+        "code": "N11",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:21",
+        "last": "00:50",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1828",
+        "platform_line_id": "1",
+        "station_id": "147",
+        "stname_th": "รัชโยธิน",
+        "stname_en": "Ratchayothin",
+        "code": "N11",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:08",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1826",
+        "platform_line_id": "1",
+        "station_id": "147",
+        "stname_th": "รัชโยธิน",
+        "stname_en": "Ratchayothin",
+        "code": "N11",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:18",
+        "last": "23:38",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "N12": [
+    [
+      {
+        "id": "1830",
+        "platform_line_id": "1",
+        "station_id": "148",
+        "stname_th": "เสนานิคม",
+        "stname_en": "Sena Nikhom",
+        "code": "N12",
+        "direction": "1",
+        "dirname": "Khu Khot",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:22",
+        "last": "00:52",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "1829",
+        "platform_line_id": "1",
+        "station_id": "148",
+        "stname_th": "เสนานิคม",
+        "stname_en": "Sena Nikhom",
+        "code": "N12",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:16",
+        "last": "23:36",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      },
+      {
+        "id": "1831",
+        "platform_line_id": "1",
+        "station_id": "148",
+        "stname_th": "เสนานิคม",
+        "stname_en": "Sena Nikhom",
+        "code": "N12",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:06",
+        "created_time": "2020-03-22 12:24:05",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "N13": [
+    [
+      {
+        "id": "1832",
+        "platform_line_id": "1",
+        "station_id": "149",
+        "stname_th": "มหาวิทยาลัยเกษตรศาสตร์",
+        "stname_en": "Kasetsart University",
+        "code": "N13",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "05:15",
+        "last": "23:35",
+        "created_time": "2020-03-22 12:24:06",
+        "deleted_time": null
+      },
+      {
+        "id": "1833",
+        "platform_line_id": "1",
+        "station_id": "149",
+        "stname_th": "มหาวิทยาลัยเกษตรศาสตร์",
+        "stname_en": "Kasetsart University",
+        "code": "N13",
+        "direction": "2",
+        "dirname": "Kheha",
+        "to_station_id": "0",
+        "name_th": "ขบวนสุดท้ายสถานีปลายทาง สำโรง/บางหว้า/สนามกีฬาแห่งชาติ ",
+        "name_en": "Last Train to Samrong/Bang Wa/National Stadium",
+        "first": "-",
+        "last": "00:05",
+        "created_time": "2020-03-22 12:24:06",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "G1": [
+    [
+      {
+        "id": "2103",
+        "platform_line_id": "9",
+        "station_id": "165",
+        "stname_th": "กรุงธนบุรี",
+        "stname_en": "Krung Thonburi",
+        "code": "G1",
+        "direction": "2",
+        "dirname": "Khlong San",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:00",
+        "last": "20:20",
+        "created_time": "2021-08-03 03:07:59",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "G2": [
+    [
+      {
+        "id": "2104",
+        "platform_line_id": "9",
+        "station_id": "166",
+        "stname_th": "เจริญนคร",
+        "stname_en": "Charoen Nakorn",
+        "code": "G2",
+        "direction": "1",
+        "dirname": "Krung Thonburi",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:01",
+        "last": "20:32",
+        "created_time": "2021-08-03 03:07:59",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "2105",
+        "platform_line_id": "9",
+        "station_id": "166",
+        "stname_th": "เจริญนคร",
+        "stname_en": "Charoen Nakorn",
+        "code": "G2",
+        "direction": "2",
+        "dirname": "Khlong San",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:03",
+        "last": "20:24",
+        "created_time": "2021-08-03 03:07:59",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "G3": [
+    [
+      {
+        "id": "2106",
+        "platform_line_id": "9",
+        "station_id": "167",
+        "stname_th": "คลองสาน",
+        "stname_en": "Khlong San",
+        "code": "G3",
+        "direction": "1",
+        "dirname": "Krung Thonburi",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:00",
+        "last": "20:30",
+        "created_time": "2021-08-03 03:07:59",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "RN01": [
+    [
+      {
+        "id": "2085",
+        "platform_line_id": "10",
+        "station_id": "168",
+        "stname_th": "บางซื่อ",
+        "stname_en": "Bangsue",
+        "code": "RN01",
+        "direction": "2",
+        "dirname": "Rangsit",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:00",
+        "last": "19:30",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "RW01": [
+    [
+      {
+        "id": "2074",
+        "platform_line_id": "11",
+        "station_id": "169",
+        "stname_th": "บางซื่อ",
+        "stname_en": "Bangsue",
+        "code": "RW01",
+        "direction": "2",
+        "dirname": "Taling Chan",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:00",
+        "last": "19:30",
+        "created_time": "2021-08-01 13:49:23",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "RW06": [
+    [
+      {
+        "id": "2079",
+        "platform_line_id": "11",
+        "station_id": "170",
+        "stname_th": "ตลิ่งชัน",
+        "stname_en": "Taling Chan",
+        "code": "RW06",
+        "direction": "1",
+        "dirname": "Bang Sue",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:06",
+        "last": "19:36",
+        "created_time": "2021-08-01 13:49:23",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "RW05": [
+    [
+      {
+        "id": "2078",
+        "platform_line_id": "11",
+        "station_id": "171",
+        "stname_th": "บางบำหรุ",
+        "stname_en": "Bang Bamru",
+        "code": "RW05",
+        "direction": "1",
+        "dirname": "Bang Sue",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:10",
+        "last": "19:40",
+        "created_time": "2021-08-01 13:49:23",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "2077",
+        "platform_line_id": "11",
+        "station_id": "171",
+        "stname_th": "บางบำหรุ",
+        "stname_en": "Bang Bamru",
+        "code": "RW05",
+        "direction": "2",
+        "dirname": "Taling Chan",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:10",
+        "last": "19:40",
+        "created_time": "2021-08-01 13:49:23",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "RW02": [
+    [
+      {
+        "id": "2076",
+        "platform_line_id": "11",
+        "station_id": "172",
+        "stname_th": "บางซ่อน",
+        "stname_en": "Bangson",
+        "code": "RW02",
+        "direction": "1",
+        "dirname": "Bang Sue",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:15",
+        "last": "19:45",
+        "created_time": "2021-08-01 13:49:23",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "2075",
+        "platform_line_id": "11",
+        "station_id": "172",
+        "stname_th": "บางซ่อน",
+        "stname_en": "Bangson",
+        "code": "RW02",
+        "direction": "2",
+        "dirname": "Taling Chan",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:03",
+        "last": "19:33",
+        "created_time": "2021-08-01 13:49:23",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "RN02": [
+    [
+      {
+        "id": "2087",
+        "platform_line_id": "10",
+        "station_id": "175",
+        "stname_th": "จตุจักร",
+        "stname_en": "Chatuchak",
+        "code": "RN02",
+        "direction": "1",
+        "dirname": "Bang Sue",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:20",
+        "last": "19:50",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "2086",
+        "platform_line_id": "10",
+        "station_id": "175",
+        "stname_th": "จตุจักร",
+        "stname_en": "Chatuchak",
+        "code": "RN02",
+        "direction": "2",
+        "dirname": "Rangsit",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:03",
+        "last": "19:30",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "RN03": [
+    [
+      {
+        "id": "2089",
+        "platform_line_id": "10",
+        "station_id": "176",
+        "stname_th": "วัดเสมียนนารี",
+        "stname_en": "Wat Samian Nari",
+        "code": "RN03",
+        "direction": "1",
+        "dirname": "Bang Sue",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:17",
+        "last": "19:47",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "2088",
+        "platform_line_id": "10",
+        "station_id": "176",
+        "stname_th": "วัดเสมียนนารี",
+        "stname_en": "Wat Samian Nari",
+        "code": "RN03",
+        "direction": "2",
+        "dirname": "Rangsit",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:05",
+        "last": "19:35",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "RN04": [
+    [
+      {
+        "id": "2091",
+        "platform_line_id": "10",
+        "station_id": "177",
+        "stname_th": "บางเขน",
+        "stname_en": "Bang Khen",
+        "code": "RN04",
+        "direction": "1",
+        "dirname": "Bang Sue",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:16",
+        "last": "19:46",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "2090",
+        "platform_line_id": "10",
+        "station_id": "177",
+        "stname_th": "บางเขน",
+        "stname_en": "Bang Khen",
+        "code": "RN04",
+        "direction": "2",
+        "dirname": "Rangsit",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:07",
+        "last": "19:37",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "RN05": [
+    [
+      {
+        "id": "2093",
+        "platform_line_id": "10",
+        "station_id": "178",
+        "stname_th": "ทุ่งสองห้อง",
+        "stname_en": "Thung Song Hong",
+        "code": "RN05",
+        "direction": "1",
+        "dirname": "Bang Sue",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:14",
+        "last": "19:44",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "2092",
+        "platform_line_id": "10",
+        "station_id": "178",
+        "stname_th": "ทุ่งสองห้อง",
+        "stname_en": "Thung Song Hong",
+        "code": "RN05",
+        "direction": "2",
+        "dirname": "Rangsit",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:09",
+        "last": "19:39",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "RN06": [
+    [
+      {
+        "id": "2095",
+        "platform_line_id": "10",
+        "station_id": "179",
+        "stname_th": "หลักสี่",
+        "stname_en": "Lak Si",
+        "code": "RN06",
+        "direction": "1",
+        "dirname": "Bang Sue",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:11",
+        "last": "19:41",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "2094",
+        "platform_line_id": "10",
+        "station_id": "179",
+        "stname_th": "หลักสี่",
+        "stname_en": "Lak Si",
+        "code": "RN06",
+        "direction": "2",
+        "dirname": "Rangsit",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:12",
+        "last": "19:42",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "RN07": [
+    [
+      {
+        "id": "2097",
+        "platform_line_id": "10",
+        "station_id": "180",
+        "stname_th": "การเคหะ",
+        "stname_en": "Kan Kheha",
+        "code": "RN07",
+        "direction": "1",
+        "dirname": "Bang Sue",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:09",
+        "last": "19:39",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "2096",
+        "platform_line_id": "10",
+        "station_id": "180",
+        "stname_th": "การเคหะ",
+        "stname_en": "Kan Kheha",
+        "code": "RN07",
+        "direction": "2",
+        "dirname": "Rangsit",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:14",
+        "last": "19:44",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "RN08": [
+    [
+      {
+        "id": "2099",
+        "platform_line_id": "10",
+        "station_id": "181",
+        "stname_th": "ดอนเมือง",
+        "stname_en": "Don Muang",
+        "code": "RN08",
+        "direction": "1",
+        "dirname": "Bang Sue",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:07",
+        "last": "19:37",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "2098",
+        "platform_line_id": "10",
+        "station_id": "181",
+        "stname_th": "ดอนเมือง",
+        "stname_en": "Don Muang",
+        "code": "RN08",
+        "direction": "2",
+        "dirname": "Rangsit",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:16",
+        "last": "19:46",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "RN09": [
+    [
+      {
+        "id": "2101",
+        "platform_line_id": "10",
+        "station_id": "182",
+        "stname_th": "หลักหก",
+        "stname_en": "Lak Hok",
+        "code": "RN09",
+        "direction": "1",
+        "dirname": "Bang Sue",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:02",
+        "last": "19:32",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ],
+    [
+      {
+        "id": "2100",
+        "platform_line_id": "10",
+        "station_id": "182",
+        "stname_th": "หลักหก",
+        "stname_en": "Lak Hok",
+        "code": "RN09",
+        "direction": "2",
+        "dirname": "Rangsit",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:20",
+        "last": "19:50",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ]
+  ],
+  "RN10": [
+    [
+      {
+        "id": "2102",
+        "platform_line_id": "10",
+        "station_id": "183",
+        "stname_th": "รังสิต",
+        "stname_en": "Rangsit",
+        "code": "RN10",
+        "direction": "1",
+        "dirname": "Bang Sue",
+        "to_station_id": "0",
+        "name_th": "ทุกวัน",
+        "name_en": "Everyday",
+        "first": "06:00",
+        "last": "19:30",
+        "created_time": "2021-08-03 02:48:59",
+        "deleted_time": null
+      }
+    ]
+  ]
+}
