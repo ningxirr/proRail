@@ -1,8 +1,7 @@
 "use strict";
 
 import React from 'react';
-import { StyleSheet, Text, View,  Dimensions, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import { StyleSheet, Text, View } from 'react-native';
 import TochableIcon from './tochableIcon';
 
 const Header = (props) => {
@@ -11,7 +10,7 @@ const Header = (props) => {
       {
         props.haveBackIcon ? 
         <View style={Styles.header_view}>
-          <TochableIcon name={'angle-left'} size={25} color={'white'} function={()=>console.log('back')}/>
+          <TochableIcon name={'angle-left'} size={25} color={'white'} function={props.function}/>
         </View>:
         null
       }
