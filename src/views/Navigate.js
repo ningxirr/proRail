@@ -16,7 +16,7 @@ import stationLocation from '../../data/station_location'
 
 const screenHeight = Dimensions.get('window').height;
 
-const Result = (props) => {
+const Navigate = (props) => {
   /********************BottomSeet********************/
   const sheetRef = useRef(null);
   const snapPoints = useMemo(() => ["55%", "100%"], []);
@@ -29,10 +29,15 @@ const Result = (props) => {
   const [hasLocationPermission, setHasLocationPermission] = useState(false);
   PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => setHasLocationPermission(response) )
 
-  const beginingStation = props.route.params.routes[0].path[0][0];
-  const [stationGPS, setStationGPS] = useState(beginingStation);
-  const [stationDistance, setStationDistance] = useState(false);
-  const interchangeStation = [... new Set([].concat(...props.route.params.routes).map(obj => obj.path).flat().map(subarray => subarray[0]))];
+  const beginingStation = props.route.params.routes[0].path[0][0]; 
+  const [stationGPS, setStationGPS] = useState(beginingStation); //set the station code of the nearest station
+  const [stationDistance, setStationDistance] = useState(false); //set the distance between the nearest station and the user
+
+  // filter all station interchanges (on iOS)
+  // const interchangeStation = [... new Set([].concat(...props.route.params.routes).map(obj => obj.path).flat().map(subarray => subarray[subarray.length-1]))];
+  // console.log(interchangeStation)
+
+  //filter for the latitude and longitude of the station in this path
   const filteredStation = stationLocation.filter(obj => [... new Set([].concat(...props.route.params.routes.map(obj => obj.path).flat()))].includes(obj.code));
   useEffect(() => {
     const _watchId = Geolocation.watchPosition(
@@ -46,10 +51,8 @@ const Result = (props) => {
         console.log(error);
       },
       {
+        distanceFilter: 100,
         enableHighAccuracy: true,
-        distanceFilter: 0,
-        interval: 5000,
-        fastestInterval: 2000,
       },
     );
     return () => {
@@ -60,14 +63,8 @@ const Result = (props) => {
   }, []);
 
   const selectNavigateText = () => {
-    if(setStationDistance > 10000){
+    if(stationDistance > 5000){
       return 'Nearest Station';
-    }
-    else if(beginingStation === stationGPS){
-      return 'Get on \n the Train at';
-    }
-    else if(interchangeStation.includes(stationGPS) && stationDistance < 250){
-      return 'Take the Train To' //fix later take the train to lastest of station
     }
     else{
       return 'Next Station';
@@ -89,7 +86,9 @@ const Result = (props) => {
             navigateText={selectNavigateText()} 
             stationName={stationInfo[stationGPS].station_name.en} 
             stationColor={stationInfo[stationGPS].platform.color.color} 
-            stationPlatform={stationInfo[stationGPS].platform.platform}/>
+            stationPlatform={stationInfo[stationGPS].platform.platform}
+            outOfRoute={selectNavigateText() === 'Nearest Station' ? true : false}
+            description={'You are out of the route'}/>
         </View>
       </ImageBackground>
         <GestureHandlerRootView style={{ flex: 1, marginTop: '-100%' }}>
@@ -155,4 +154,4 @@ const Styles = StyleSheet.create({
   }
 });
 
-export default Result;
+export default Navigate;
