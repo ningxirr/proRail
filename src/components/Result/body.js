@@ -203,8 +203,8 @@ const Body = (props) => {
               <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={Styles.more_choice_scroll_view}>
                 <View style={Styles.choice_view}>
                   <Choices 
-                    number={35} 
-                    unit={'baht'} 
+                    number={props.time} 
+                    unit={props.recommended[1] === 'fastest' ? 'min(s)' : props.recommended[1] === 'cheapest' ? 'baht' : 'station(s)'} 
                     choice={props.recommended[1] === 'fastest' ? 'Fastest' : props.recommended[1] === 'cheapest' ? 'Cheapest' : 'Least Interchanges' } 
                     selected={props.path===props.recommended[1]} 
                     function={()=> {
@@ -213,8 +213,8 @@ const Body = (props) => {
                 </View>
                 <View style={Styles.choice_view}>
                   <Choices 
-                    number={1} 
-                    unit={'station(s)'} 
+                    number={props.interchange} 
+                    unit={props.recommended[2] === 'fastest' ? 'min(s)' : props.recommended[1] === 'cheapest' ? 'baht' : 'station(s)'} 
                     choice={props.recommended[2] === 'fastest' ? 'Fastest' : props.recommended[2] === 'cheapest' ? 'Cheapest' : 'Least Interchanges' } 
                     selected={props.path===props.recommended[2]} 
                     function={()=> {

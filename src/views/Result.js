@@ -64,7 +64,8 @@ const Result = (props) => {
     const [isFavorite, setIsFavorite] = useState(false);
     const [favoriteRoutePrice, setFavoriteRoutePrice] = useState([]);
     // const stationPath = ['BL37', 'RW06'];
-    const stationPath = ['RW06', 'BL37'];
+    // const stationPath = ['BL37', 'RW06', 'BL37'];
+    const stationPath = ['S3','E11']
 
   const backgroundInterpolate = animationValue.interpolate({
     inputRange : [0, 100],

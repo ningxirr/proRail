@@ -6,7 +6,7 @@ const screenHeight = Dimensions.get('window').height;
 
 const RouteDescription = (props) => {
     return (
-        <View style={Styles.overall_component_view}>
+        <View style={Styles.route_description_component}>
             <View style={Styles.main_route_view}>
             <View style={Styles.line_view} />
             <View>
@@ -37,8 +37,8 @@ const RouteDescription = (props) => {
 }
 
 const Styles = StyleSheet.create({
-    overall_component_view: {
-        marginVertical: '2%',
+    route_description_component: {
+        marginVertical: 10,
     },
     main_route_view: {
         flexDirection: 'row', 
