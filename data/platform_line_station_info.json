@@ -1,0 +1,230 @@
+{
+    "1": {
+        "platform_name": {
+            "name_th": "บีทีเอส",
+            "name_en": "BTS"
+        },
+        "platform_line": [
+            {
+                "name_th": "สายสีเขียวสุขุมวิท",
+                "name_en": "Sukhumvit Line",
+                "stations": [
+                    "E1",
+                    "E2",
+                    "E3",
+                    "E4",
+                    "E5",
+                    "E6",
+                    "E7",
+                    "E8",
+                    "E9",
+                    "N1",
+                    "N2",
+                    "N3",
+                    "N4",
+                    "N5",
+                    "N7",
+                    "N8",
+                    "N9",
+                    "CEN",
+                    "E10",
+                    "E11",
+                    "E12",
+                    "E13",
+                    "E14",
+                    "E15",
+                    "E16",
+                    "E17",
+                    "E18",
+                    "E19",
+                    "E20",
+                    "E21",
+                    "E22",
+                    "E23",
+                    "N10",
+                    "N11",
+                    "N12",
+                    "N13",
+                    "N14",
+                    "N15",
+                    "N16",
+                    "N17",
+                    "N24",
+                    "N23",
+                    "N21",
+                    "N22",
+                    "N20",
+                    "N19",
+                    "N18"
+                ]
+            },
+            {
+                "name_th": "สายสีเขียวสีลม",
+                "name_en": "Silom Line",
+                "stations": [
+                    "S1",
+                    "S2",
+                    "S5",
+                    "S6",
+                    "S8",
+                    "S9",
+                    "W1",
+                    "CEN",
+                    "S10",
+                    "S11",
+                    "S12",
+                    "S7",
+                    "S3",
+                    "S4"
+                ]
+            }
+        ]
+    },
+    "2": {
+        "platform_name": {
+            "name_th": "รฟม.",
+            "name_en": "MRT"
+        },
+        "platform_line": [
+            {
+                "name_th": "สายสีน้ำเงิน",
+                "name_en": "Blue Line",
+                "stations": [
+                    "BL01",
+                    "BL02",
+                    "BL03",
+                    "BL04",
+                    "BL05",
+                    "BL06",
+                    "BL07",
+                    "BL08",
+                    "BL09",
+                    "BL10",
+                    "BL11",
+                    "BL12",
+                    "BL13",
+                    "BL14",
+                    "BL15",
+                    "BL16",
+                    "BL17",
+                    "BL18",
+                    "BL19",
+                    "BL20",
+                    "BL21",
+                    "BL22",
+                    "BL23",
+                    "BL24",
+                    "BL25",
+                    "BL26",
+                    "BL27",
+                    "BL28",
+                    "BL29",
+                    "BL30",
+                    "BL31",
+                    "BL32",
+                    "BL33",
+                    "BL34",
+                    "BL35",
+                    "BL36",
+                    "BL37",
+                    "BL38"
+                ]
+            },
+            {
+                "name_th": "สายสีม่วง",
+                "name_en": "Purple Line",
+                "stations": [
+                    "PP01",
+                    "PP02",
+                    "PP03",
+                    "PP04",
+                    "PP05",
+                    "PP06",
+                    "PP07",
+                    "PP08",
+                    "PP09",
+                    "PP10",
+                    "PP11",
+                    "PP12",
+                    "PP13",
+                    "PP14",
+                    "PP15",
+                    "PP16"
+                ]
+            }
+        ]
+    },
+    "3": {
+        "platform_name": {
+            "name_th": "แอร์พอร์ต เรล ลิงค์",
+            "name_en": "ARL"
+        },
+        "platform_line": [
+            {
+                "name_th": "แอร์พอร์ต เรล ลิงก์",
+                "name_en": "Airport Rail Link",
+                "stations": [
+                    "A1",
+                    "A2",
+                    "A3",
+                    "A4",
+                    "A5",
+                    "A6",
+                    "A7",
+                    "A8"
+                ]
+            }
+        ]
+    },
+    "10": {
+        "platform_name": {
+            "name_th": "ร.ฟ.ฟ.ท.",
+            "name_en": "SRTET"
+        },
+        "platform_line": [
+            {
+                "name_th": "สายสีแดงเข้ม",
+                "name_en": "Dark Red Line",
+                "stations": [
+                    "RN01",
+                    "RN03",
+                    "RN05",
+                    "RN07",
+                    "RN08",
+                    "RN09",
+                    "RN10",
+                    "RN06",
+                    "RN04",
+                    "RN02"
+                ]
+            },
+            {
+                "name_th": "สายสีแดงอ่อน",
+                "name_en": "Light Red Line",
+                "stations": [
+                    "RW01",
+                    "RW02",
+                    "RW05",
+                    "RW06"
+                ]
+            }
+        ]
+    },
+    "11": {
+        "platform_name": {
+            "name_th": "บีทีเอส สายสีทอง",
+            "name_en": "BTS-G"
+        },
+        "platform_line": [
+            {
+                "name_th": "สายสีทอง",
+                "name_en": "Gold Line",
+                "stations": [
+                    "G1",
+                    "G2",
+                    "G3"
+                ]
+            }
+        ]
+    }
+}
