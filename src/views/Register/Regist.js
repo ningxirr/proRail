@@ -2,7 +2,8 @@
 
 import React, {useState} from 'react';
 import {StyleSheet, Text, View, TextInput, SafeAreaView, ImageBackground, Dimensions} from 'react-native';
-import CustomButton from '../components/customButton';
+import CustomButton from '../../components/customButton';
+import storeDataToAsyncStorage from '../../function/storeDataToAsyncStorage';
 
 const screenWidth = Dimensions.get('window').width;
 
@@ -10,7 +11,7 @@ const Regist = (props) => {
   const [text, onChangeText] = useState('');
   return (
     <SafeAreaView style={styles.container}>
-      <ImageBackground source={require('../../assets/images/rocket.jpg')} resizeMode="cover" style={styles.image} ></ImageBackground>
+      <ImageBackground source={require('../../../assets/images/rocket.jpg')} resizeMode="cover" style={styles.image} ></ImageBackground>
       <View style={styles.body}>
         <Text style={{fontSize: 64, color:'#000000',fontFamily: 'LINESeedSans_A_Bd',}}>Hello</Text>
         <Text style={{fontSize: 24, color:'#000000', fontFamily: 'LINESeedSans_A_Bd',}}>How can we call you ?</Text>
@@ -24,7 +25,7 @@ const Regist = (props) => {
       </View>
       <View style={styles.footer}>
       <CustomButton 
-          text="Next" 
+          text="Let's go!" 
           backgroundColor={'#000000'} 
           textColor={'#FFFFFF'} 
           width={screenWidth*0.9} 
@@ -32,7 +33,7 @@ const Regist = (props) => {
             props.navigation.navigate('Choose', {
               routes: props.routes 
           })
-          console.log('Let\'s go!');
+            storeDataToAsyncStorage('@name', text)
           }}/>
       </View>
     </SafeAreaView>

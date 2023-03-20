@@ -2,14 +2,14 @@
 
 import React from 'react';
 import {StyleSheet, Text, View, SafeAreaView, ImageBackground, Dimensions} from 'react-native';
-import CustomButton from '../components/customButton';
+import CustomButton from '../../components/customButton';
 
 const screenWidth = Dimensions.get('window').width;
 
 const Welcome = (props) => {
   return (
     <SafeAreaView style={styles.container}>
-      <ImageBackground source={require('../../assets/images/rocket.jpg')} resizeMode="cover" style={styles.image} ></ImageBackground>
+      <ImageBackground source={require('../../../assets/images/rocket.jpg')} resizeMode="cover" style={styles.image} ></ImageBackground>
       <View style={styles.body}>
         <Text style={{fontSize: 32, fontFamily: 'LINESeedSans_A_Bd', color:'#000000'}}>Welcome to</Text>
         <Text style={{fontSize: 64, fontFamily: 'LINESeedSans_A_Bd', color:'#000000'}}>proRail</Text>
