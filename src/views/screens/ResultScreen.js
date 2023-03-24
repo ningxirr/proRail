@@ -2,13 +2,13 @@
 import React, { useEffect, useState } from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, View, Animated, Text } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import result from '../../data/results.json';
-import HeaderBar from '../components/headerBar'
-import Header from '../components/Result/header';
-import Body from '../components/Result/body';
-import getDataFromAsyncStorage from '../function/getDataFromAsyncStorage';
-import storeDataToAsyncStorage from '../function/storeDataToAsyncStorage';
-import removeDataFromAsyncStorage from '../function/removeDataFromAsyncStorage';
+import result from '../../../data/results.json';
+import HeaderBar from '../../components/headerBar'
+import Header from '../../components/Result/header';
+import Body from '../../components/Result/body';
+import getDataFromAsyncStorage from '../../function/getDataFromAsyncStorage';
+import storeDataToAsyncStorage from '../../function/storeDataToAsyncStorage';
+import removeDataFromAsyncStorage from '../../function/removeDataFromAsyncStorage';
 
 // const storeData = async () => {
 //   try {
@@ -65,7 +65,9 @@ const Result = (props) => {
     const [favoriteRoutePrice, setFavoriteRoutePrice] = useState([]);
     // const stationPath = ['BL37', 'RW06'];
     // const stationPath = ['BL37', 'RW06', 'BL37'];
-    const stationPath = ['S3','E11']
+    console.log(props.route.params.code)
+    // const stationPath = ['S3','E11']
+  let stationPath = props.route.params.code
 
   const backgroundInterpolate = animationValue.interpolate({
     inputRange : [0, 100],
@@ -107,6 +109,7 @@ const Result = (props) => {
     for (let index = 0; index < stationPath.length; index++) {
       if(index == stationPath.length-1) break;
       let pathResult = result[stationPath[index].concat('-').concat(stationPath[index+1])];
+      if(pathResult === undefined) return (<RouteNotFound/>)
       resultPath.push(pathResult[selectedPath]);
       time += parseInt(pathResult[selectedPath].time);
       interchage += pathResult[selectedPath].path.length;
@@ -119,7 +122,7 @@ const Result = (props) => {
                     selectedPath={selectedPath}
                     resultPathLength={resultPath.length}
                     isFavorite={isFavorite}
-                    backIconFunction={()=>console.log('Go Back!')}
+                    backIconFunction={()=>props.navigation.goBack()}
                     starIconFunction={()=>{
                       if(!favoriteRoute.includes(stationPath.join('-'))){
                         let data = favoriteRoute.concat(stationPath.join('-'));
@@ -167,6 +170,14 @@ const Result = (props) => {
   )
   }
 };
+
+const RouteNotFound = () =>{
+  return(
+    <View style={{alignItems:'center', flex: 1, justifyContent: 'center'}}>
+      <Text style={{fontFamily: 'LINESeedSansTH_A_Bd', fontSize: 50}}>ไม่พบเส้นทาง</Text>
+    </View>
+  )
+}
 
 const Styles = StyleSheet.create({
   container: {

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { SafeAreaView, StyleSheet, View,  Dimensions, Image, Text, Switch  } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import DraggableFlatList, { ScaleDecorator } from "react-native-draggable-flatlist";
-import DraggableUserPref from './../components/draggableUserPref';
+import DraggableUserPref from './../../components/draggableUserPref';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
@@ -16,7 +16,7 @@ const UserPreference = () => {
     
     return(
         <View style={Styles.container}>
-            <Image source={require('../../assets/images/background.png')} style={Styles.profile_image}/>
+            <Image source={require('../../../assets/images/background.png')} style={Styles.profile_image}/>
             <View style={Styles.name_text_view}>
                 <Text style={{fontSize: 20, fontFamily: 'LINESeedSans_A_Rg', color: 'black'}}>Hello, </Text>
                 <Text style={{fontSize: 20, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>{name}</Text>

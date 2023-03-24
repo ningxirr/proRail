@@ -77,7 +77,7 @@ const Styles = StyleSheet.create({
         fontFamily: 'LINESeedSans_A_Rg',
     },
     station_route_view: {
-        borderRadius: 20,
+        borderRadius: 15,
         marginTop: 2,
         paddingVertical: 5,
         width: 150

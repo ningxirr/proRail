@@ -7,19 +7,21 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { getDistance, findNearest } from 'geolib';
 import Geolocation from 'react-native-geolocation-service';
 
-import NextStation from '../components/nextStation';
-import AllRoute from '../components/allRoute';
-import TochableIcon from '../components/tochableIcon';
+import NextStation from '../../components/nextStation';
+import AllRoute from '../../components/allRoute';
+import TochableIcon from '../../components/tochableIcon';
+import RailMap from '../../components/RailMap';
+import Header from '../../components/header';
 
-import stationInfo from '../../data/station_info'
-import stationLocation from '../../data/station_location'
+import stationInfo from '../../../data/station_info'
+import stationLocation from '../../../data/station_location'
 
 const screenHeight = Dimensions.get('window').height;
 
 const Navigate = (props) => {
   /********************BottomSeet********************/
   const sheetRef = useRef(null);
-  const snapPoints = useMemo(() => ["55%", "100%"], []);
+  const snapPoints = useMemo(() => ["45%", "75%"], []);
   const handleSheetChange = useCallback((index) => {
     console.log("handleSheetChange", index);
   }, []);
@@ -73,13 +75,16 @@ const Navigate = (props) => {
 
   return (
     <SafeAreaView style={Styles.container}> 
-      <ImageBackground source={require('../../assets/images/Map.jpg')} resizemode='contain' style={{height:screenHeight*0.7}} >
-        <View style={Styles.header_view}>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      {/* <ImageBackground source={require('../../../assets/images/Map.jpg')} resizemode='contain' style={{height:screenHeight*0.7}} > */}
+        {/* <View style={Styles.header_view}>
         <Text style={Styles.header_text}>
           Navigate
         </Text>
         <TochableIcon name={'close'} color={'white'} size={20} function={()=> props.navigation.navigate('FavoriteRoute')}/>
-        </View>
+        </View> */}
+        
+        <RailMap/>
         <View style={Styles.navigation_view}>
           <NextStation 
             navigate={hasLocationPermission} 
@@ -90,8 +95,8 @@ const Navigate = (props) => {
             outOfRoute={selectNavigateText() === 'Nearest Station' ? true : false}
             description={'You are out of the route'}/>
         </View>
-      </ImageBackground>
-        <GestureHandlerRootView style={{ flex: 1, marginTop: '-100%' }}>
+      {/* </ImageBackground> */}
+        
           <BottomSheet 
             ref={sheetRef} 
             index={0} 

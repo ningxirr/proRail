@@ -1,26 +1,34 @@
 "use strict";
 import React, { useEffect, useState } from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNavigationContainerRef } from "@react-navigation/native"
 import getDataFromAsyncStorage from './src/function/getDataFromAsyncStorage';
-import Header from './src/components/header';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import ButtomNavigator from './src/views/Navigator/BottomNavigator';
 
-import Welcome from './src/views/Register/Welcome';
-import Regist from './src/views/Register/Regist';
-import Choose from './src/views/Register/Choose';
+// import Header from './src/components/header';
 
-import StationInfo from './src/views/StationInfo';
-import TimeTable from './src/views/TimeTable';
+// import Welcome from './src/views/Register/Welcome';
+// import Regist from './src/views/Register/Regist';
+// import Choose from './src/views/Register/Choose';
+// import StationInfo from './src/views/StationInfo';
+// import TimeTable from './src/views/TimeTable';
+// import Result from './src/views/Result';
+// import Navigate from './src/views/Navigate';
 
-import Result from './src/views/Result';
-import Navigate from './src/views/Navigate';
+// import StationInformationScreen from './src/views/StationInformationScreen';
 
-import FavoriteRoute from './src/views/FavoriteRoute';
+// import FavoriteRoute from './src/views/FavoriteRoute';
 
+// import UserPreference from './src/views/UserPreference';
+// import Test from './src/views/Test'; 
 
-import UserPreference from './src/views/UserPreference';
-import Test from './src/views/Test'; 
-import checkGPSPermission from './src/function/checkGPSPermission';
+// import HomeProRailScreen from './src/views/HomeProRailScreen';
+// import ChooseDirectionScreen from './src/views/ChooseDirectionScreen';
+// import MockScreen from './src/views/MockScreen';
+
+// import checkGPSPermission from './src/function/checkGPSPermission';
 
 /*const getData = async () => {
   const usersCollection = await firestore()
@@ -31,10 +39,12 @@ import checkGPSPermission from './src/function/checkGPSPermission';
   return usersCollection;
 };*/
 const Stack = createNativeStackNavigator();
+const ref = createNavigationContainerRef();
 
 const App = () => {
   const [isAreadyRegist, setIsAreadyRegist] = useState(false);
   const [isRender, setIsRender] = useState(false);
+  const [routeName, setRouteName] = useState();
   useEffect(() => {
     const fetchData = async () => {
       const data = await getDataFromAsyncStorage('@name');
@@ -45,12 +55,22 @@ const App = () => {
     fetchData();
   }, []);
   if(!isRender){
-    //Ning, You can put your beautiful animation "start page" here
+    //Ning, You can put your beautiful animation "start page" here.
     return (<></>)
   }
   return (
-    <NavigationContainer>
-        <Stack.Navigator>
+    <NavigationContainer
+      ref={ref}
+      onReady={() => {
+        setRouteName(ref.getCurrentRoute().name)
+      }}
+      onStateChange={async () => {
+        const currentRouteName = ref.getCurrentRoute().name;
+        setRouteName(currentRouteName);
+      }}
+    >
+      <ButtomNavigator routeName={routeName}/>
+        {/* <Stack.Navigator> */}
             {/* <Stack.Screen 
                 name="Test" 
                 component={Test} 
@@ -59,7 +79,7 @@ const App = () => {
                   headerShown: false
                 }}
               /> */}
-              {
+              {/* {
                 isAreadyRegist ? 
                 <Stack.Screen 
                   name="Welcome" 
@@ -93,7 +113,7 @@ const App = () => {
                   }}
                   />
                 : null
-              }
+              } */}
               {/* <Stack.Screen 
                 name="Result" 
                 component={Result} 
@@ -108,13 +128,17 @@ const App = () => {
               options={{ 
                 headerShown: false,
               }} 
-              />
+              /> */}
+            {/* <Stack.Screen
+              name='StationInformationScreen'
+              component={StationInformationScreen}
+              options={{
+                headerShown: false
+            }}/>
             <Stack.Screen
               name='StationInfo'
               component={StationInfo}
               options={{
-                // header: (props) => (<Header title={'Station Info'} station={props}/>),
-                // headerTitle: '',
                 headerShown: false
               }}/>
             <Stack.Screen
@@ -147,7 +171,34 @@ const App = () => {
               header: (props) => (<Header title={'Preference'} station={props}/>),
               headerTransparent: true
             }}/> */}
-        </Stack.Navigator>
+            {/* <Stack.Screen
+              name='HomeProRailScreen'
+              component={HomeProRailScreen}
+              options={{
+                headerShown: false
+            }}/>
+            <Stack.Screen
+              name='ChooseDirectionScreen'
+              component={ChooseDirectionScreen}
+              options={{
+                headerShown: false
+            }}/>
+            <Stack.Screen
+              name='MockScreen'
+              component={MockScreen}
+              options={{
+                headerShown: false
+            }}/>
+            <Stack.Screen 
+              name="Result" 
+              component={Result} 
+              header
+              options={{
+                headerShown: false
+              }}
+              />  */}
+            
+        {/* </Stack.Navigator> */}
     </NavigationContainer>
 );
 }

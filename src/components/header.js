@@ -18,11 +18,19 @@ const Header = (props) => {
           <Text style={Styles.header_text}>
               {props.title}
           </Text>
-          <View style = {[Styles.station_route_view, { backgroundColor: props.color }]}>
-            <Text style = {Styles.station_route_text}>
-                {props.platform}
-            </Text>
-          </View>
+          {
+            props.haveCloseIcon ?
+            <View>
+              <TochableIcon name={'close'} color={'white'} size={20} function={props.function2}/>
+            </View>
+            :
+            <View style = {[Styles.station_route_view, { backgroundColor: props.color }]}>
+              <Text style = {Styles.station_route_text}>
+                  {props.platform}
+              </Text>
+            </View>
+          }
+          
       </View>
     </View>  
    

@@ -5,9 +5,9 @@ import { SafeAreaView, StyleSheet, Text, View,  Dimensions, ImageBackground, Tou
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import TotalFavorite from '../components/totalFavorite';
-import FavoriteRouteList from '../components/favoriteRouteList';
-import getDataFromAsyncStorage from '../function/getDataFromAsyncStorage';
+import TotalFavorite from '../../components/totalFavorite';
+import FavoriteRouteList from '../../components/favoriteRouteList';
+import getDataFromAsyncStorage from '../../function/getDataFromAsyncStorage';
 
 const screenHeight = Dimensions.get('window').height;
 
@@ -16,7 +16,7 @@ const FavoriteRoute = (props) => {
   const [recommended, setRecommended] = useState('');
   const [favoriteRoutePrice, setFavoriteRoutePrice] = useState([]);
   const sheetRef = useRef(null);
-  const snapPoints = useMemo(() => ["40%", "100%"], []);
+  const snapPoints = useMemo(() => ["40%", "80%"], []);
 
   const handleSheetChange = useCallback((index) => {
     console.log("handleSheetChange", index);
@@ -40,7 +40,8 @@ const FavoriteRoute = (props) => {
 
   return (
     <SafeAreaView style={Styles.container}>
-      <ImageBackground source={require('../../assets/images/fav_background.png')} resizemode='contain' style={{height:screenHeight*0.7}} >
+      <GestureHandlerRootView style={{ flex: 1 }}>
+      <ImageBackground source={require('../../../assets/images/fav_background.png')} resizemode='contain' style={{height:screenHeight*0.7}} >
         <View style={Styles.header_view}>
             <Text style={Styles.header_text}>
                 Favorite Route
@@ -50,7 +51,7 @@ const FavoriteRoute = (props) => {
           <TotalFavorite favCount={1}/>
         </View>
       </ImageBackground>
-        <GestureHandlerRootView style={{ flex: 1, marginTop: '-100%' }}>
+        
           <BottomSheet 
             ref={sheetRef} 
             index={0} 
@@ -74,7 +75,7 @@ const FavoriteRoute = (props) => {
                         </View>
                     ))
                 }
-                <TouchableOpacity onPress={()=>console.log('addFav')}>
+                <TouchableOpacity onPress={()=>props.navigation.navigate('AddStopNavigator')}>
                   <View style={Styles.add_favorite_route_view}>
                     <Text style={Styles.add_favorite_route_text}>+ Favorite</Text>
                   </View>

@@ -35,8 +35,27 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This is the plist item for NSLocationAlwaysAndWhenInUseUsageDescription</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This is the plist item for NSLocationAlwaysUsageDescription</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
+	<string>This is the plist item for NSLocationWhenInUseUsageDescription</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FontAwesome.ttf</string>
+		<string>Foundation.ttf</string>
+		<string>Ionicons.ttf</string>
+		<string>Entypo.ttf</string>
+		<string>MaterialIcons.ttf</string>
+		<string>AntDesign.ttf</string>
+		<string>LINESeedSansTH_A_Bd.otf</string>
+		<string>LINESeedSansTH_A_Rg.otf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -51,12 +70,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>LINESeedSansTH_A_Bd.otf</string>
-		<string>LINESeedSansTH_A_Rg.otf</string>
-		<string>LINESeedSans_A_Bd.otf</string>
-		<string>LINESeedSans_A_Rg.otf</string>
-	</array>
 </dict>
 </plist>

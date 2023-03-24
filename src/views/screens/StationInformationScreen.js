@@ -3,22 +3,27 @@
 import React, { useState, useEffect } from 'react';
 import { SafeAreaView, StyleSheet, View,  Dimensions, Image, ScrollView, TouchableOpacity  } from 'react-native';
 import ImageView from "react-native-image-viewing";
-import stationInfo from '../../data/station_info.json';
-import TimingInfo from '../components/timingInfo';
-import FacilityList from '../components/facilityList';
-import ExitList from '../components/exitList';
-import Header from '../components/header';
+import stationInfo from '../../../data/station_info.json';
+import TimingInfo from '../../components/timingInfo';
+import FacilityList from '../../components/facilityList';
+import ExitList from '../../components/exitList';
+import Header from '../../components/header';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
-const StationInfo = ({navigation}) => {
+const StationInfo = ({navigation, route}) => {
   const [visible, setIsVisible] = useState(false);
-  const code = 'CEN'
+  const code = route.params.code
   return (
     <SafeAreaView style={Styles.container}>
       <View style = {Styles.header_navbar_view}>
-        <Header title={stationInfo[code].station_name.en} platform={stationInfo[code].platform.platform} color={stationInfo[code].platform.color.color} haveBackIcon={true}/>
+        <Header 
+          title={stationInfo[code].station_name.en} 
+          platform={stationInfo[code].platform.platform} 
+          color={stationInfo[code].platform.color.color} 
+          haveBackIcon={true}
+          function={()=>navigation.goBack()}/>
       </View>
       <ScrollView>
       <View style={Styles.image_view}>
