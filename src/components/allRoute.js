@@ -15,9 +15,9 @@ const AllRoute = (props) => {
                         props.routes.length !== 1 ?
                         <RouteDescription 
                             index={index} 
-                            time={route.time} 
-                            interchange={route.path.length}
-                            price={route.price.reduce((sum, x) => sum + x, 0)}/> : null
+                            time={Math.ceil(route.time)} 
+                            interchange={route.path.length-1}
+                            price={Math.ceil(route.price.reduce((sum, x) => sum + x, 0))}/> : null
                     }
                     {
                         route.path.map((item, index) => 

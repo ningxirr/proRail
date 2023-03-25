@@ -19,7 +19,7 @@ const Route = (props) => {
                 <View>
                     <Animated.View entering={FadeIn.duration(600)}>
                         {
-                             props.haveToWalk ? <Walking time={props.walk} station={stationInfo[props.route[0]].station_name.en}/> : null
+                             props.haveToWalk ? <Walking time={Math.ceil(props.walk)} station={stationInfo[props.route[0]].station_name.en}/> : null
                         }
                     </Animated.View> 
                 </View> : null
@@ -49,7 +49,7 @@ const Route = (props) => {
                                     null:
                                     <View>
                                         <Text style={Styles.price_text}>
-                                            {props.price}
+                                            {Math.ceil(props.price)}
                                         </Text>
                                         <Text style={Styles.price_unit_text}>
                                             THB

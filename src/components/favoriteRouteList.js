@@ -8,7 +8,12 @@ const FavoriteRouteList = (props) => {
     return (
         <TouchableOpacity 
             style = {Styles.container} 
-            onPress={()=>props.navigation.navigate('Result', stationList)}>
+            onPress={()=>props.navigation.navigate('AddStopNavigator',{
+                screen: 'ResultScreen',
+                params: {
+                    code: stationList
+                },
+            })}>
             <View style = {Styles.next_station_view}>
                 <Text style = {Styles.next_station_text}>
                     {stationInfo[stationList[0]].station_name.en}

@@ -3,9 +3,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import HomeProRailScreen from '../screens/HomeProRailScreen'
 import ChooseDirectionScreen from '../screens/ChooseDirectionScreen'
 import BTSFullScheduleScreen from '../screens/BTSFullScheduleScreen'
-import ResultScreen from '../screens/ResultScreen'
-import NavigateScreen from '../screens/NavigateScreen'
-import Header from '../../components/header'
 
 const Stack = createNativeStackNavigator();
 
@@ -42,28 +39,6 @@ const HomeProRailNavigator = () => {
           }}
         />
         <Stack.Screen 
-          name="ResultScreen" 
-          component={ResultScreen}
-          options={{
-            headerShown: false,
-            headerTransparent: true,
-          }}
-        />
-        <Stack.Screen 
-          name="NavigateScreen" 
-          component={NavigateScreen}
-          options={({ navigation }) => ({
-            header: () => (
-              <Header
-                title={'Navigate'}
-                haveCloseIcon={true}
-                function2={() => navigation.navigate('HomeProRailScreen')}
-              />
-            ),
-            headerTransparent: true
-          })}
-        /> 
-        <Stack.Screen 
           name="BTSFullScheduleScreen" 
           component={BTSFullScheduleScreen}
           options={{
@@ -71,7 +46,6 @@ const HomeProRailNavigator = () => {
             headerTransparent: true,
           }}
         />
-        {/* navigate to Result Screen */}
     </Stack.Navigator>
   )
 }

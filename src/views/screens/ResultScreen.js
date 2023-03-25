@@ -63,6 +63,11 @@ const Result = (props) => {
     const [animationValue] = useState(new Animated.Value(0));
     const [isFavorite, setIsFavorite] = useState(false);
     const [favoriteRoutePrice, setFavoriteRoutePrice] = useState([]);
+
+    const [cheapestPath, setCheapestPath] = useState(null);
+    const [fastestPath, setFastestPath] = useState(null);
+    const [leastInterchangesPath, setLeastInterchangesPath] = useState(null);
+
     // const stationPath = ['BL37', 'RW06'];
     // const stationPath = ['BL37', 'RW06', 'BL37'];
     console.log(props.route.params.code)
@@ -79,6 +84,51 @@ const Result = (props) => {
   }
 
   useEffect(() => {
+    for (let path of ['fastest', 'cheapest', 'leastInterchanges']){
+      let resultPath = [];
+      let time = 0;
+      let interchange = 0;
+      let price = 0;
+      for (let index = 0; index < stationPath.length; index++) {
+        if(index == stationPath.length-1) break;
+        let pathResult = result[stationPath[index].concat('-').concat(stationPath[index+1])];
+        if(pathResult === undefined) return (<BreakingScreen text={'ไม่พบเส้นทาง'}/>)
+        resultPath.push(pathResult[path]);
+        time += parseInt(Math.ceil(pathResult[path].time));
+        interchange += pathResult[path].path.length-1;
+        price += pathResult[path].price.reduce((sum, x) => sum + x, 0);
+      }
+      switch (path){
+        case 'fastest':
+          setFastestPath({
+            resultPath : resultPath,
+            time : Math.ceil(time),
+            interchange : interchange, //+stationPath.length-2 if stop is interchange
+            price : Math.ceil(price)
+          });
+          break;
+        case 'cheapest':
+          setCheapestPath({
+            resultPath : resultPath,
+            time : Math.ceil(time),
+            interchange : interchange,
+            price : Math.ceil(price)
+          });
+          break;
+        case 'leastInterchanges':
+          setLeastInterchangesPath({
+            resultPath : resultPath,
+            time : Math.ceil(time),
+            interchange : interchange, 
+            price : Math.ceil(price)
+          });
+          break;
+        default: break;
+      }
+    }
+  }, [stationPath])
+
+  useEffect(() => {
     const fetchData = async () => {
       const data = await getDataFromAsyncStorage('@recommended');
       const favoriteRouteData = await getDataFromAsyncStorage('@favorite');
@@ -87,46 +137,33 @@ const Result = (props) => {
       setRecommended(data);
       setFavoriteRoutePrice(favoriteRoutePriceData);
       setSelectedPath(data[0]);
+      setIsFavorite(favoriteRouteData.includes(stationPath.join('-')));
     };
     fetchData();
-    console.log("data: "+favoriteRoute)
   }, []);
 
   if(!selectedPath){
-    removeDataFromAsyncStorage('@recommended');
-    removeDataFromAsyncStorage('@favorite');
-    storeDataToAsyncStorage('@recommended', ['cheapest', 'fastest', 'leastInterchanges']);
+    // removeDataFromAsyncStorage('@recommended');
+    // removeDataFromAsyncStorage('@favorite');
+    // storeDataToAsyncStorage('@recommended', ['cheapest', 'fastest', 'leastInterchanges']);
     // storeDataToAsyncStorage('@favorite', ['RW06,BL37']);
-    storeDataToAsyncStorage('@favorite', ['BL37-RW06']);
-    storeDataToAsyncStorage('@favoriteRoutePrice', [75]);
-    return (<View></View>)
+    // storeDataToAsyncStorage('@favorite', ['BL37-RW06']);
+    // storeDataToAsyncStorage('@favoriteRoutePrice', [75]);
+    return (<BreakingScreen text={'กำลังโหลด'}/>)
   }
   else {
-    let resultPath = [];
-    let time = 0;
-    let interchage = 0;
-    let price = 0;
-    for (let index = 0; index < stationPath.length; index++) {
-      if(index == stationPath.length-1) break;
-      let pathResult = result[stationPath[index].concat('-').concat(stationPath[index+1])];
-      if(pathResult === undefined) return (<RouteNotFound/>)
-      resultPath.push(pathResult[selectedPath]);
-      time += parseInt(pathResult[selectedPath].time);
-      interchage += pathResult[selectedPath].path.length;
-      price += pathResult[selectedPath].price.reduce((sum, x) => sum + x, 0);
-    }
     return (
         <SafeAreaView style={Styles.container}>
             <Animated.View style={[Styles.nav_view, backgroundStyle]}>
                 <HeaderBar 
                     selectedPath={selectedPath}
-                    resultPathLength={resultPath.length}
+                    resultPathLength={selectedPath === 'cheapest' ? cheapestPath.resultPath.length : selectedPath === 'fastest' ? fastestPath.resultPath.length : leastInterchangesPath.resultPath.length}
                     isFavorite={isFavorite}
                     backIconFunction={()=>props.navigation.goBack()}
                     starIconFunction={()=>{
                       if(!favoriteRoute.includes(stationPath.join('-'))){
                         let data = favoriteRoute.concat(stationPath.join('-'));
-                        let priceData = favoriteRoutePrice.concat(price);
+                        let priceData = favoriteRoutePrice.concat(recommended[0] === 'cheapest' ? cheapestPath.price : recommended[0] === 'fastest' ? fastestPath.price : leastInterchangesPath.price);
                         removeDataFromAsyncStorage('@favorite');
                         storeDataToAsyncStorage('@favorite', data);
                         removeDataFromAsyncStorage('@favoriteRoutePrice');
@@ -150,31 +187,28 @@ const Result = (props) => {
                 scrollEventThrottle={16}
                 onScroll={Animated.event([{ nativeEvent : { contentOffset: { y : animationValue } }}],{ useNativeDriver: false } )}>
                 <Header 
-                    stop={resultPath.length}
                     startStation={stationPath[0]} 
                     stopStation={stationPath[stationPath.length-1]} />
                 <Body 
-                    header = {selectedPath === 'fastest' ? 'Fastest' : selectedPath === 'cheapest' ? 'Cheapest' : 'Least Interchanges'}
-                    path={selectedPath}
-                    routes={resultPath}
+                    selectedPath={selectedPath}
                     recommended={recommended}
                     setSelectedPath={header => setSelectedPath(header)}
                     favRoute={props.route.params} 
                     navigate={props.navigation}
-                    time={time}
-                    interchange={interchage}
-                    price={price}
+                    fastestPath={fastestPath}
+                    cheapestPath={cheapestPath}
+                    leastInterchangesPath={leastInterchangesPath}
                     favoriteRoute={favoriteRoute}/>
             </ScrollView>
         </SafeAreaView>
-  )
+    )
   }
 };
 
-const RouteNotFound = () =>{
+const BreakingScreen = ({text}) =>{
   return(
     <View style={{alignItems:'center', flex: 1, justifyContent: 'center'}}>
-      <Text style={{fontFamily: 'LINESeedSansTH_A_Bd', fontSize: 50}}>ไม่พบเส้นทาง</Text>
+      <Text style={{fontFamily: 'LINESeedSansTH_A_Bd', fontSize: 50}}>{text}</Text>
     </View>
   )
 }

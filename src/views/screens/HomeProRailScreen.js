@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet, ImageBackground, TouchableOpacity, ScrollView, Dimensions} from 'react-native';
-import stationInfo from '../../../data/station_info.json';
 import NextStation from '../../components/nextStation';
 import AlertModel from '../../components/AlertModel';
 import StationWithCode from '../../components/stationWithCode'
@@ -15,18 +14,21 @@ const HomeProRailScreen = ({route, navigation}) => {
 
   function checkCollectStation() {
     if (oriStation == null || destStation == null) {
-      setModalVisible(true);
     } else {
-      navigation.navigate({
-        name: 'ResultScreen',
+      navigation.navigate('AddStopNavigator',{
+        screen: 'ResultScreen',
         params: {
-          code: [oriStation, destStation],
+          code: [oriStation, destStation]
         },
       });
     }
   }
 
   useEffect(() => {
+    if(route.params?.code === undefined){
+      setOriStation(null);
+      setDestStation(null);
+    }
     if (route.params?.num == 0) {
       setOriStation(route.params?.code);
     } else {

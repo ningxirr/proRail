@@ -96,7 +96,7 @@ const Navigate = (props) => {
             description={'You are out of the route'}/>
         </View>
       {/* </ImageBackground> */}
-        
+      
           <BottomSheet 
             ref={sheetRef} 
             index={0} 

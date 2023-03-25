@@ -39,7 +39,7 @@ const FavoriteRoute = (props) => {
   }
 
   return (
-    <SafeAreaView style={Styles.container}>
+    <SafeAreaView style={Styles.container}> 
       <GestureHandlerRootView style={{ flex: 1 }}>
       <ImageBackground source={require('../../../assets/images/fav_background.png')} resizemode='contain' style={{height:screenHeight*0.7}} >
         <View style={Styles.header_view}>
@@ -48,7 +48,7 @@ const FavoriteRoute = (props) => {
             </Text>
         </View>
         <View style={Styles.navigation_view}>
-          <TotalFavorite favCount={1}/>
+          <TotalFavorite favCount={favoriteRoute.length}/>
         </View>
       </ImageBackground>
         

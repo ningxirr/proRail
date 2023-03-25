@@ -1,19 +1,56 @@
 "use-strict"
 
 import React, { useState, useEffect } from 'react';
-import { SafeAreaView, StyleSheet, View,  Dimensions, Image, Text, Switch  } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
-import DraggableFlatList, { ScaleDecorator } from "react-native-draggable-flatlist";
-import DraggableUserPref from './../../components/draggableUserPref';
+import { StyleSheet, View,  Dimensions, Image, Text, Switch  } from 'react-native';
+import CustomButton from './../../components/customButton';
+import getDataFromAsyncStorage from './../../function/getDataFromAsyncStorage';
+import storeDataToAsyncStorage from './../../function/storeDataToAsyncStorage';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
 const UserPreference = () => {
-    const name = 'Somsak';
     const [isEnabled, setIsEnable] = useState(false);
     const toggleSwitch = () => setIsEnable(previousState => !previousState)
+    const [recommended, setRecommended] = useState(['cheapest', 'fastest', 'leastInterchanges']);
+    const [name, setName] = useState('');
+    const [selectedCheapest, setSelectedCheapest] = useState(false);
+    const [selectedFastest, setSelectedFastest] = useState(false);
+    const [selectedLeastInterchanges, setSelectedLeastInterchanges] = useState(false);
     
+    useEffect(() => {
+        getDataFromAsyncStorage
+    },[])
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const name = await getDataFromAsyncStorage('@name');
+            const recommended = await getDataFromAsyncStorage('@recommended');
+            setRecommended(recommended);
+            setName(name);
+            if(recommended[0] === 'cheapest'){
+                setSelectedCheapest(true);
+                setSelectedFastest(false);
+                setSelectedLeastInterchanges(false);
+            } 
+            else if(recommended[0] === 'fastest'){
+                setSelectedCheapest(false);
+                setSelectedFastest(true);
+                setSelectedLeastInterchanges(false);
+            } 
+            else if(recommended[0] === 'leastInterchanges'){
+                setSelectedCheapest(false);
+                setSelectedFastest(false);
+                setSelectedLeastInterchanges(true);
+            } 
+        };
+        fetchData();
+      }, []);
+
+    if(!recommended){
+        return (<View></View>)
+    }
+
     return(
         <View style={Styles.container}>
             <Image source={require('../../../assets/images/background.png')} style={Styles.profile_image}/>
@@ -34,7 +71,50 @@ const UserPreference = () => {
             </View>
             <View style={Styles.route_suggestion_view}>
                 <Text style={{fontSize: 20, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>Route Suggestion</Text>
-                {/* <DraggableUserPref/> */}
+                <View style={{paddingVertical: 5}}>
+            <CustomButton 
+              text="Cheapest" 
+              borderColor={selectedCheapest ? 'black' : '#F2F2F2'} 
+              backgroundColor={'#F2F2F2'} 
+              textColor={'#000000'} width={'100%'} 
+              function={()=> {
+                setRecommended(['cheapest', 'fastest', 'leastInterchanges'])
+                setSelectedCheapest(true);
+                setSelectedFastest(false);
+                setSelectedLeastInterchanges(false);
+                storeDataToAsyncStorage('@recommended',['cheapest', 'fastest', 'leastInterchanges']);
+              }}/>
+          </View>
+          <View style={{paddingVertical: 5}}>
+            <CustomButton 
+              text="Fastest" 
+              borderColor={selectedFastest ? 'black': '#F2F2F2'} 
+              backgroundColor={'#F2F2F2'} 
+              textColor={'#000000'} 
+              width={'100%'} 
+              function={()=> {
+                setRecommended(['fastest', 'cheapest', 'leastInterchanges'])
+                setSelectedCheapest(false);
+                setSelectedFastest(true);
+                setSelectedLeastInterchanges(false);
+                storeDataToAsyncStorage('@recommended',['fastest', 'cheapest', 'leastInterchanges']);
+              }}/>
+          </View>
+          <View style={{paddingVertical: 5}}>
+            <CustomButton 
+              text="Least Interchanges" 
+              borderColor={selectedLeastInterchanges ? 'black' :'#F2F2F2'} 
+              backgroundColor={'#F2F2F2'} 
+              textColor={'#000000'} 
+              width={'100%'} 
+              function={()=> {
+                setRecommended(['leastInterchanges', 'cheapest', 'fastest'])
+                setSelectedCheapest(false);
+                setSelectedFastest(false);
+                setSelectedLeastInterchanges(true);
+                storeDataToAsyncStorage('@recommended',['leastInterchanges', 'cheapest', 'fastest']);
+              }}/>
+          </View>
             </View>
         </View>
     );

@@ -17,14 +17,14 @@ const StationInfoNavigator = () => {
           }}
           />
         {/* navigate to Result Screen */}
-        <Stack.Screen 
+        {/* <Stack.Screen 
           name="AddStopNavigator" 
           component={AddStopNavigator}
           options={{
             headerShown: false,
             headerTransparent: true,
           }}
-        /> 
+        />  */}
     </Stack.Navigator>
   )
 }

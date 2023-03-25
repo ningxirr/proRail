@@ -1,5 +1,5 @@
 import {View, StyleSheet} from 'react-native';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import HomeProRailNavigator from './HomeProRailNavigator';
 import StationInfoNavigator from './StationInfoNavigator';
 import FavoriteNavigator from './FavoriteNavigator';
@@ -7,14 +7,19 @@ import AddStopNavigator from './AddStopNavigator';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import UserPreferenceScreen from '../screens/UserPreferenceScreen';
 import Header from '../../components/header';
 
 const Tab = createBottomTabNavigator();
 
 const ButtomNavigator = (props) => {
-  console.log(props)
-  const hide = props.routeName === "ResultScreen" || props.routeName === "NavigateScreen"
+  const hide = props.routeName === "ResultScreen";
+  const [navigate, setNavigate] = useState(false);
+  useEffect(() => {
+    setNavigate(props.routeName === "NavigateScreen");
+  }, []);
+
   return (
     <Tab.Navigator
       screenOptions={{
@@ -23,7 +28,7 @@ const ButtomNavigator = (props) => {
       }}
       >
       <Tab.Screen
-        name="Home"
+        name="HomeProRailNavigator"
         component={HomeProRailNavigator}
         options={{
           tabBarIcon: ({color, size}) => (
@@ -34,7 +39,7 @@ const ButtomNavigator = (props) => {
         }}
       />
        <Tab.Screen
-        name="StationInfo"
+        name="StationInfoNavigator"
         component={StationInfoNavigator}
         options={{
           tabBarIcon: ({color, size}) => (
@@ -47,19 +52,25 @@ const ButtomNavigator = (props) => {
         }}
       />
       <Tab.Screen
-        name="AddRoute"
-        component={AddStopNavigator}
+        name="AddStopNavigator"
+        children={() => <AddStopNavigator setNavigate={navigate => setNavigate(navigate)} routeName={props.routeName}/>}
+        // component={AddStopNavigator}
         options={{
           tabBarIcon: ({size}) => (
+            navigate ? 
+            <View style={styles.addBottonView}>
+              <MaterialCommunityIcons name="navigation-variant" color="white" size={size * 1.4} />
+            </View> :
             <View style={styles.addBottonView}>
               <FontAwesomeIcon name="plus" color="white" size={size * 1.4} />
             </View>
           ),
+          tabBarStyle: { display: hide ? "none" : "flex" },
           headerShown: false,
         }}
       />
       <Tab.Screen
-        name="Favourite"
+        name="FavoriteNavigator"
         component={FavoriteNavigator}
         options={{
           tabBarIcon: ({color, size}) => (
@@ -70,7 +81,7 @@ const ButtomNavigator = (props) => {
         }}
       />
      <Tab.Screen
-        name="User"
+        name="UserPreferenceScreen"
         component={UserPreferenceScreen}
         options={{
           tabBarIcon: ({color, size}) => (

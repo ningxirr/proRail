@@ -30,11 +30,11 @@ const AddStopScreen = ({route, navigation}) => {
     }
   };
 
-  const checkBeforSubmit = () => {
-    if (oriStation[0] == null || destStation[0] == null) {
+  const checkBeforeSubmit = () => {
+    if (oriStation == null || destStation == null) {
       setModalVisible(true);
     } else {
-      const resultStations = [oriStation[0], ...itemsCode, destStation[0]]
+      const resultStations = [oriStation, ...itemsCode, destStation]
       navigation.navigate({
         name: 'ResultScreen',
         params: {
@@ -45,6 +45,11 @@ const AddStopScreen = ({route, navigation}) => {
   };
 
   useEffect(() => {
+    if(route.params?.code === undefined){
+      setOriStation(null);
+      setItemsCode([]);
+      setDestStation(null);
+    }
     if (route.params?.num === 0) {
       setOriStation(route.params?.code);
     } 
@@ -179,7 +184,7 @@ const AddStopScreen = ({route, navigation}) => {
         <TouchableOpacity
           style={styles.letsgoButton}
           onPress={() => {
-            checkBeforSubmit();
+            checkBeforeSubmit();
           }}>
           <Text style={styles.letsgoText}>
             Let's Go
