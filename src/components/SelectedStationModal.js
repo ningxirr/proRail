@@ -4,7 +4,7 @@ import StationInfo from '../../data/station_info.json';
 import {BlurView} from '@react-native-community/blur';
 import {useNavigation} from '@react-navigation/native';
 
-const SelectedStationModal = ({code, modalVisible, setModalVisible}) => {
+const SelectedStationModal = ({code, modalVisible, setModalVisible, num, notSelectedStation}) => {
   const navigation = useNavigation();
   const [confirm, setConfirm] = useState(false);
 
@@ -14,7 +14,7 @@ const SelectedStationModal = ({code, modalVisible, setModalVisible}) => {
         name: chooseScreenNameToNavigate(),
         params: {
           code: code,
-          nameth: StationInfo[code].station_name.th,
+          num: num
         },
         merge: true,
       });
@@ -28,9 +28,9 @@ const SelectedStationModal = ({code, modalVisible, setModalVisible}) => {
 
   function chooseScreenNameToNavigate() {
     const routes = navigation.getState()?.routes;
-    if (routes[0].name == 'StationInformationScreen') {
+    if (routes[0].name == 'StationInformationListScreen') {
       // EachStationInfoScreen
-      return 'StationInfo';
+      return 'StationInformationScreen';
     } else if (routes[0].name == 'AddStopScreen') {
       return 'AddStopScreen';
     }
@@ -58,7 +58,6 @@ const SelectedStationModal = ({code, modalVisible, setModalVisible}) => {
               ]}>
               <View style={[styles.modalView]}>
                 <View style={{flex:1, justifyContent: 'center', marginLeft: 5, }}>
-                  
                   <View style={{flexWrap: 'wrap', flexDirection: 'row', alignSelf: 'baseline'}}>
                     <Text style={styles.stationText}>
                       {StationInfo[code].station_name.en}
@@ -80,17 +79,21 @@ const SelectedStationModal = ({code, modalVisible, setModalVisible}) => {
 
                 </View>
 
-                <View
-                  style={styles.bottonsView}>
-                  <TouchableOpacity
-                    style={[styles.buttonView, {backgroundColor: '#000000'}]}
-                    onPress={() => {
-                      setConfirm(true);
-                    }}>
-                    <Text style={[styles.bottonText, {color: '#FFFFFF'}]}>
-                      Confirm
-                    </Text>
-                  </TouchableOpacity>
+                <View style={styles.bottonsView}>
+                  {
+                    notSelectedStation.includes(code) ? 
+                    null :
+                    <TouchableOpacity
+                      style={[styles.buttonView, {backgroundColor: '#000000'}]}
+                      onPress={() => {
+                        setConfirm(true);
+                      }}>
+                      <Text style={[styles.bottonText, {color: '#FFFFFF'}]}>
+                        Confirm
+                      </Text>
+                    </TouchableOpacity> 
+                  }
+                  
 
                   <TouchableOpacity
                     style={[

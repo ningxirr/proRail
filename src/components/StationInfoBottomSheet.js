@@ -43,7 +43,7 @@ const StationInfoBottomSheet = ({ clicked, searchPhrase, setClicked, memoScale, 
           </View>
             {
               clicked ? 
-              <AllStationsSearchList searchPhrase={searchPhrase} setClicked={setClicked} notSelectedStation={notSelectedStation}/>
+              <AllStationsSearchList searchPhrase={searchPhrase} setClicked={setClicked} num={num} notSelectedStation={notSelectedStation}/>
               : 
               <View>
                 {/* shows platform */}

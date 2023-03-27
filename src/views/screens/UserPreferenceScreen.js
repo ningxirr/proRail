@@ -55,8 +55,12 @@ const UserPreference = () => {
         <View style={Styles.container}>
             <Image source={require('../../../assets/images/background.png')} style={Styles.profile_image}/>
             <View style={Styles.name_text_view}>
-                <Text style={{fontSize: 20, fontFamily: 'LINESeedSans_A_Rg', color: 'black'}}>Hello, </Text>
-                <Text style={{fontSize: 20, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>{name}</Text>
+                <Text style={{fontSize: 20, fontFamily: 'LINESeedSans_A_Rg', color: 'black'}}>Hello</Text>
+                {
+                    name === '' ? 
+                    <Text style={{fontSize: 20, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>, User01</Text>:
+                    <Text style={{fontSize: 20, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>, {name}</Text>
+                }
             </View>
             <View style={Styles.notification_view}>
                 <Text style={{fontSize: 20, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>Alert notification</Text>
@@ -71,50 +75,50 @@ const UserPreference = () => {
             </View>
             <View style={Styles.route_suggestion_view}>
                 <Text style={{fontSize: 20, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>Route Suggestion</Text>
+                <View style={{paddingTop : 20, paddingBottom: 5}}>
+                    <CustomButton 
+                    text="Cheapest" 
+                    borderColor={selectedCheapest ? 'black' : '#F2F2F2'} 
+                    backgroundColor={'#F2F2F2'} 
+                    textColor={'#000000'} width={'100%'} 
+                    function={()=> {
+                        setRecommended(['cheapest', 'fastest', 'leastInterchanges'])
+                        setSelectedCheapest(true);
+                        setSelectedFastest(false);
+                        setSelectedLeastInterchanges(false);
+                        storeDataToAsyncStorage('@recommended',['cheapest', 'fastest', 'leastInterchanges']);
+                    }}/>
+                </View>
                 <View style={{paddingVertical: 5}}>
-            <CustomButton 
-              text="Cheapest" 
-              borderColor={selectedCheapest ? 'black' : '#F2F2F2'} 
-              backgroundColor={'#F2F2F2'} 
-              textColor={'#000000'} width={'100%'} 
-              function={()=> {
-                setRecommended(['cheapest', 'fastest', 'leastInterchanges'])
-                setSelectedCheapest(true);
-                setSelectedFastest(false);
-                setSelectedLeastInterchanges(false);
-                storeDataToAsyncStorage('@recommended',['cheapest', 'fastest', 'leastInterchanges']);
-              }}/>
-          </View>
-          <View style={{paddingVertical: 5}}>
-            <CustomButton 
-              text="Fastest" 
-              borderColor={selectedFastest ? 'black': '#F2F2F2'} 
-              backgroundColor={'#F2F2F2'} 
-              textColor={'#000000'} 
-              width={'100%'} 
-              function={()=> {
-                setRecommended(['fastest', 'cheapest', 'leastInterchanges'])
-                setSelectedCheapest(false);
-                setSelectedFastest(true);
-                setSelectedLeastInterchanges(false);
-                storeDataToAsyncStorage('@recommended',['fastest', 'cheapest', 'leastInterchanges']);
-              }}/>
-          </View>
-          <View style={{paddingVertical: 5}}>
-            <CustomButton 
-              text="Least Interchanges" 
-              borderColor={selectedLeastInterchanges ? 'black' :'#F2F2F2'} 
-              backgroundColor={'#F2F2F2'} 
-              textColor={'#000000'} 
-              width={'100%'} 
-              function={()=> {
-                setRecommended(['leastInterchanges', 'cheapest', 'fastest'])
-                setSelectedCheapest(false);
-                setSelectedFastest(false);
-                setSelectedLeastInterchanges(true);
-                storeDataToAsyncStorage('@recommended',['leastInterchanges', 'cheapest', 'fastest']);
-              }}/>
-          </View>
+                    <CustomButton 
+                    text="Fastest" 
+                    borderColor={selectedFastest ? 'black': '#F2F2F2'} 
+                    backgroundColor={'#F2F2F2'} 
+                    textColor={'#000000'} 
+                    width={'100%'} 
+                    function={()=> {
+                        setRecommended(['fastest', 'cheapest', 'leastInterchanges'])
+                        setSelectedCheapest(false);
+                        setSelectedFastest(true);
+                        setSelectedLeastInterchanges(false);
+                        storeDataToAsyncStorage('@recommended',['fastest', 'cheapest', 'leastInterchanges']);
+                    }}/>
+                </View>
+                <View style={{paddingVertical: 5}}>
+                    <CustomButton 
+                    text="Least Interchanges" 
+                    borderColor={selectedLeastInterchanges ? 'black' :'#F2F2F2'} 
+                    backgroundColor={'#F2F2F2'} 
+                    textColor={'#000000'} 
+                    width={'100%'} 
+                    function={()=> {
+                        setRecommended(['leastInterchanges', 'cheapest', 'fastest'])
+                        setSelectedCheapest(false);
+                        setSelectedFastest(false);
+                        setSelectedLeastInterchanges(true);
+                        storeDataToAsyncStorage('@recommended',['leastInterchanges', 'cheapest', 'fastest']);
+                    }}/>
+                </View>
             </View>
         </View>
     );
@@ -145,7 +149,7 @@ const Styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     route_suggestion_view: {
-        marginVertical: 10
+        marginVertical: 30,
     }
 });
 

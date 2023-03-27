@@ -2,7 +2,7 @@
 
 import React, { useCallback, useMemo, useRef, useState, useEffect } from 'react';
 import { SafeAreaView, StyleSheet, Text, View,  Dimensions, ImageBackground, TouchableOpacity } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useFocusEffect } from '@react-navigation/native';
 import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import TotalFavorite from '../../components/totalFavorite';
@@ -14,7 +14,6 @@ const screenHeight = Dimensions.get('window').height;
 const FavoriteRoute = (props) => {
   const [favoriteRoute, setFavaoriteRoute] = useState([]);
   const [recommended, setRecommended] = useState('');
-  const [favoriteRoutePrice, setFavoriteRoutePrice] = useState([]);
   const sheetRef = useRef(null);
   const snapPoints = useMemo(() => ["40%", "80%"], []);
 
@@ -22,17 +21,27 @@ const FavoriteRoute = (props) => {
     console.log("handleSheetChange", index);
   }, []);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const favoriteRouteData = await getDataFromAsyncStorage('@favorite');
-      const favoriteRoutePriceData = await getDataFromAsyncStorage('@favoriteRoutePrice');
-      const recommendedData = await getDataFromAsyncStorage('@recommended')
-      setFavoriteRoutePrice(favoriteRoutePriceData);
-      setFavaoriteRoute(favoriteRouteData);
-      setRecommended(recommendedData[0]);
-    };
-    fetchData();
-  }, []);
+  useFocusEffect(
+    useCallback(() => {
+      const fetchData = async () => {
+        const favoriteRouteData = await getDataFromAsyncStorage('@favorite');
+        const recommendedData = await getDataFromAsyncStorage('@recommended');
+        if(favoriteRouteData !== null) setFavaoriteRoute(favoriteRouteData);
+        if(recommendedData !== null) setRecommended(recommendedData[0]);
+      };
+      fetchData();
+    }, [])
+  );
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const favoriteRouteData = await getDataFromAsyncStorage('@favorite');
+  //     const recommendedData = await getDataFromAsyncStorage('@recommended')
+  //     setFavaoriteRoute(favoriteRouteData);
+  //     setRecommended(recommendedData[0]);
+  //   };
+  //   fetchData();
+  // }, []);
 
   if(!recommended){
     return (<View/>)
@@ -70,8 +79,7 @@ const FavoriteRoute = (props) => {
                             <FavoriteRouteList 
                               route={route} 
                               navigation={props.navigation} 
-                              recommended={recommended}
-                              favoriteRoutePrice={favoriteRoutePrice[index]}/>
+                              recommended={recommended}/>
                         </View>
                     ))
                 }

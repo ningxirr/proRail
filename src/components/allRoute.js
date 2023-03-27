@@ -1,11 +1,10 @@
 "use strict";
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import Route from './route';
 import RouteDescription from './routeDescription';
 
 const AllRoute = (props) => {
-    
     return( 
         <View style = {Styles.overall_component_view}>
             {
@@ -21,15 +20,16 @@ const AllRoute = (props) => {
                     }
                     {
                         route.path.map((item, index) => 
-                        <View key={index}>
-                            <Route 
-                                key={index}
-                                route={item}
-                                walk={route.walk[index-1]}
-                                price={route.price[index]}
-                                haveToWalk={index === 0 ? false : true}
-                            />
-                        </View>
+                            (item.length === 1 && item[0] === 'CEN') || item.length === 1 && item[0] === 'BL01' ? null :
+                            <View key={index}> 
+                                <Route 
+                                    index={index}
+                                    route={item}
+                                    walk={route.walk[index-1]}
+                                    price={route.price[index]}
+                                    haveToWalk={index === 0 ? false : true}
+                                />
+                            </View>
                         )
                     }
                    

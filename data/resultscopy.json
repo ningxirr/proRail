@@ -1,0 +1,21 @@
+{
+    "BL37-CEN" : {
+        "fastest" : {
+        "path": [["BL37", "BL36", "BL35", "BL34"], ["S12", "S11", "S10", "S9", "S8", "S7", "S6", "S5", "S4", "S3", "S2", "S1", "CEN"]],
+        "walk": [3.0],
+        "price": [21, 62],
+        "time": 35.0
+        }, 
+        "cheapest" : {
+        "path": [["BL37", "BL36", "BL35", "BL34", "BL33", "BL01", "BL32", "BL31", "BL30", "BL29", "BL28", "BL27", "BL26"], ["S2", "S1", "CEN"]],
+        "walk": [7.0],
+        "price": [43, 25],
+        "time": 35.36
+        }, 
+        "leastInterchanges" : {
+        "path": [["BL37", "BL36", "BL35", "BL34", "BL33", "BL01", "BL32", "BL31", "BL30", "BL29", "BL28", "BL27", "BL26"], ["S2", "S1", "CEN"]],
+        "walk": [7.0],
+        "price": [43, 25],
+        "time": 35.36
+        }}
+}

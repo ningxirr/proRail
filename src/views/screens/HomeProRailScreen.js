@@ -64,7 +64,9 @@ const HomeProRailScreen = ({route, navigation}) => {
                     navigation.navigate('ChooseDirectionScreen', {
                       header: 'Choose Origin',
                       num: 0,
-                      notSelectedStation: [destStation]
+                      notSelectedStation: destStation ? [destStation] : [],
+                      oriStation: oriStation,
+                      destStation: destStation
                     });
                   }}>
                   {
@@ -80,7 +82,9 @@ const HomeProRailScreen = ({route, navigation}) => {
                     navigation.navigate('ChooseDirectionScreen', {
                       header: 'Choose Destination',
                       num: 1,
-                      notSelectedStation: [oriStation]
+                      notSelectedStation: oriStation ? [oriStation] : [],
+                      oriStation: oriStation,
+                      destStation: destStation
                     });
                   }}>
                   {
@@ -105,9 +109,11 @@ const HomeProRailScreen = ({route, navigation}) => {
           <View style={styles.moreInfoSecView}>
             <Text style={styles.moreInfoText}>More Information</Text>
             <ScrollView horizontal={true} style={{marginLeft: 15}}>
-              <TouchableOpacity style={styles.moreInfoInScrollTouch}>
+              <TouchableOpacity 
+                style={styles.moreInfoInScrollTouch}
+                onPress={() => navigation.navigate('AboutProRailScreen')}>
                 <Text style={styles.moreInfoInScrollText}>
-                  {'SRT\nSchedule'}
+                  {'About'}
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity

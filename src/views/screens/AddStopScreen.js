@@ -87,6 +87,7 @@ const AddStopScreen = ({route, navigation}) => {
           <View style={{position: 'relative'}}>
             <RailMap
               cannotClicked={true}
+              num={route.params?.num}
               oriStationCode={oriStation}
               destStationCode={destStation}
               itemsCode={itemsCode}

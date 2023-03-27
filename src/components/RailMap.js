@@ -11,7 +11,7 @@ const destMarkPic = require('../../assets/images/destMark.png');
 const stopMarkPic = require('../../assets/images/stopMark.png');
 const {width} = Dimensions.get('window');
 
-const RailMap = ({oriStationCode, destStationCode, itemsCode, cannotClicked}) => {
+const RailMap = ({oriStationCode, destStationCode, itemsCode, cannotClicked, num, notSelectedStation}) => {
   const ratioTransform = 3.30527928;
   const [scale, setScale] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
@@ -80,14 +80,13 @@ const RailMap = ({oriStationCode, destStationCode, itemsCode, cannotClicked}) =>
 
   return (
     <View>
-      {
-        cannotClicked ? 
-        <SelectedStationModal
-          code={selectedCode}
-          modalVisible={modalVisible}
-          setModalVisible={setModalVisible}
-        />:null
-      }
+      <SelectedStationModal
+        code={selectedCode}
+        num={num}
+        notSelectedStation={notSelectedStation}
+        modalVisible={modalVisible}
+        setModalVisible={setModalVisible}
+      />
       
       <View style={{position: 'relative'}}>
         <ImageZoom
@@ -97,7 +96,7 @@ const RailMap = ({oriStationCode, destStationCode, itemsCode, cannotClicked}) =>
           imageHeight={600}
           imageWidth={600}
           onMove={e => setScale(e.scale)}
-          onClick={handleClick}>
+          onClick={cannotClicked ? null : handleClick}>
           <View style={{position: 'relative'}}>
             <Image
               style={{

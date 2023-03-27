@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 import { NavigationContainer, createNavigationContainerRef } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import getDataFromAsyncStorage from './src/function/getDataFromAsyncStorage';
-import ButtomNavigator from './src/views/Navigator/BottomNavigator';
+import BottomNavigator from './src/views/Navigator/BottomNavigator';
 import RegisterNavigator from './src/views/Navigator/RegisterNavigator';
 
 const Stack = createNativeStackNavigator();
@@ -51,12 +51,9 @@ const App = () => {
               }}
             /> 
         }
-        <Stack.Screen 
-          name="ButtomNavigator" 
-          component={ButtomNavigator} 
-          options={{
-            headerShown: false,
-          }}/>
+          <Stack.Screen name="BottomNavigator" options={{ headerShown: false }}>
+            {() => <BottomNavigator routeName={routeName} />}
+          </Stack.Screen>
         </Stack.Navigator> 
     </NavigationContainer>
   );

@@ -104,7 +104,7 @@ const Body = (props) => {
                   function={()=>{
                       props.navigate.navigate('NavigateScreen', {
                           routes: routes, 
-                          page: props.page
+                          stationPath: props.stationPath,
                       })
                   }}/>
           </View>
@@ -115,7 +115,7 @@ const Body = (props) => {
 
 const Styles = StyleSheet.create({
   overall_component_view: {
-    marginHorizontal : 25,
+    marginHorizontal : 25
   },
   more_choice_scroll_view:{
     marginHorizontal : 25,

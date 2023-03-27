@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import HomeProRailScreen from '../screens/HomeProRailScreen'
 import ChooseDirectionScreen from '../screens/ChooseDirectionScreen'
 import BTSFullScheduleScreen from '../screens/BTSFullScheduleScreen'
+import AboutProRailScreen from '../screens/AboutProRailScreen'
 
 const Stack = createNativeStackNavigator();
 
@@ -41,6 +42,14 @@ const HomeProRailNavigator = () => {
         <Stack.Screen 
           name="BTSFullScheduleScreen" 
           component={BTSFullScheduleScreen}
+          options={{
+            headerShown: false,
+            headerTransparent: true,
+          }}
+        />
+        <Stack.Screen 
+          name="AboutProRailScreen" 
+          component={AboutProRailScreen}
           options={{
             headerShown: false,
             headerTransparent: true,

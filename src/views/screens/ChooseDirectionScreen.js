@@ -14,7 +14,13 @@ const ChooseDirectionScreen = ({navigation, route}) => {
       <View style={{backgroundColor: 'white', flex: 1}}>
       <View style={{position: 'relative'}}>
         <View style={{position: 'relative'}}>
-          <RailMap/>
+          <RailMap 
+            cannotClicked={false}
+             num={route.params.num} 
+             notSelectedStation={route.params.notSelectedStation} 
+            //  oriStationCode={route.params.oriStation}
+            //  destStationCode={route.params.destStation}
+             />
           <View style={{position: 'absolute', width: '100%'}}>
               <Header 
                 haveBackIcon={true} 

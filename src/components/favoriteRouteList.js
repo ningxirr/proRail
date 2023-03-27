@@ -8,12 +8,13 @@ const FavoriteRouteList = (props) => {
     return (
         <TouchableOpacity 
             style = {Styles.container} 
-            onPress={()=>props.navigation.navigate('AddStopNavigator',{
+            onPress={()=>{
+                props.navigation.navigate('AddStopNavigator',{
                 screen: 'ResultScreen',
                 params: {
                     code: stationList
                 },
-            })}>
+            })}}>
             <View style = {Styles.next_station_view}>
                 <Text style = {Styles.next_station_text}>
                     {stationInfo[stationList[0]].station_name.en}
@@ -26,8 +27,11 @@ const FavoriteRouteList = (props) => {
                 </Text>
             </View>
             <View style = {Styles.station_route_view}>
-                <Text style = {Styles.station_route_text}>
-                    { props.favoriteRoutePrice } THB
+                <Text style = {Styles.station_stop_text}>
+                    {stationList.length-2}
+                </Text>
+                <Text style = {[Styles.station_stop_text, {fontSize: 10, fontFamily: 'LINESeedSans_A_Rg'}]}>
+                    STOP(S)
                 </Text>
             </View>
         </TouchableOpacity>
@@ -52,7 +56,8 @@ const Styles = StyleSheet.create({
     },
     next_station_view: {
         margin:'5%',
-        alignSelf: 'center',
+        flex: 1,
+        justifyContent: 'center',
     },
     next_station_text: {
         color:'black', 
@@ -68,17 +73,17 @@ const Styles = StyleSheet.create({
     },
     station_route_view: {
         backgroundColor: 'black',
-        margin:10, 
-        paddingVertical: 5,
-        paddingHorizontal: 30,
+        marginHorizontal:'5%',
+        paddingVertical: 10,
+        paddingHorizontal: 10,
         alignSelf: 'center',
-        borderRadius:100,
+        borderRadius: 10,
     },
-    station_route_text:{
+    station_stop_text:{
         color:'white', 
-        fontSize: 15, 
+        fontSize: 25, 
         textAlign:'center',
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSans_A_Bd',
     }
 });
 

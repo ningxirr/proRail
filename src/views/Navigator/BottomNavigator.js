@@ -25,8 +25,7 @@ const ButtomNavigator = (props) => {
       screenOptions={{
         tabBarShowLabel: false,
         tabBarActiveTintColor: 'black',
-      }}
-      >
+      }}>
       <Tab.Screen
         name="HomeProRailNavigator"
         component={HomeProRailNavigator}

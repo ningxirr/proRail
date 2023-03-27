@@ -26,7 +26,6 @@ const StationList = ({code, isSiamSukhumvit, num, notSelectedStation}) => {
       merge: true,
     });
   };
-
   if(navigation.getState()?.routes[0].name !== 'StationInformationListScreen' && notSelectedStation.includes(code)){
     return (
     <View style={[styles.containerView, {backgroundColor: '#F8F8F8'}]}>

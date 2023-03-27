@@ -278,7 +278,7 @@ const ChooseScreen = ({navigation}) => {
             width={'90%'} 
             function={()=> {
               storeDataToAsyncStorage('@recommended', recommended);
-              navigation.navigate('ButtomNavigator')
+              navigation.navigate('BottomNavigator')
             }}/>
         </View>
     </SafeAreaView>
