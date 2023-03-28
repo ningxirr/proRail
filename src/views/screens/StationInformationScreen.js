@@ -50,7 +50,7 @@ const StationInfo = ({navigation, route}) => {
         <TimingInfo 
           frequency={stationInfo[code].frequency} 
           function={() => {
-            navigation.navigate('TimeTable',{
+            navigation.navigate('TimeTableScreen',{
               route: { code: code }
             })
             console.log('View Time Table')

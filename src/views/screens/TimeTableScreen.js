@@ -8,10 +8,10 @@ import {
   TouchableOpacity
 } from 'react-native';
 import {Row, Table} from 'react-native-table-component';
-import freqJS from '../../data/freq.json';
-import schJS from '../../data/schedule.json';
-import StationInfo from '../../data/station_info.json';
-import flTime from '../../data/flt.json';
+import freqJS from '../../../data/freq.json';
+import schJS from '../../../data/schedule.json';
+import StationInfo from '../../../data/station_info.json';
+import flTime from '../../../data/flt.json';
 
 const checkStyleBorder = (index, data) => {
   if (index === 0 && data.length - 1 === 0) {
@@ -41,18 +41,18 @@ const Day = ({pf}) => {
     console.log(freqJS[pf]['Mon-Fri'][0].period_time)
     return (
       <View style={{backgroundColor: 'transparent'}}>
-        <Text style={{fontSize: 15, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>Monday - Friday</Text>
-        <View style={{paddingBottom: 20}}>
-          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13, width: 360, backgroundColor: '#ECEBEB'}}>
+        <Text style={{  marginBottom: 15, fontSize: 20, fontFamily: 'LINESeedSans_A_Rg', color: 'black'}}>Departure Frequency</Text>
+        <Text style={{ fontSize: 15, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>Monday - Friday</Text>
+        <View style={{paddingBottom: 20, alignItems: 'center'}}>
+          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13, width: 360,paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
             <Table >
               <Row
                 data = {['Period','Duration/Train(mins)']}
-                height = {33}
                 flexArr = {[1,1]}
                 textStyle = {{
                   textAlign: 'center',
                   fontFamily: 'LINESeedSans_A_Rg',
-                  color: 'black'
+                  color: 'black',
                 }}
               />
             </Table>
@@ -76,18 +76,19 @@ const Day = ({pf}) => {
             })}
           </View>
         </View>
-        <Text style={{fontSize: 15, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>Saturday - Sunday & Public Holidays</Text>
+        <Text style={{ fontSize: 15, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}} >Saturday - Sunday {'\n'}& Public Holidays</Text>
         <View style={{alignItems:'center',paddingBottom: 20,backgroundColor: 'transparent'}}>
-          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13, width: 360, backgroundColor: '#ECEBEB'}}>
+          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360,paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
             <Table >
               <Row
                 data = {['Period','Duration/Train(mins)']}
-                height = {33}
+                
                 flexArr = {[1,1]}
                 textStyle = {{
                   textAlign: 'center',
                   fontFamily: 'LINESeedSans_A_Rg',
-                  color: 'black'
+                  color: 'black',
+                  
                 }}
               />
             </Table>
@@ -113,23 +114,126 @@ const Day = ({pf}) => {
       </View>
     )
   }
-  else if (pf === '3' || pf === '10' || pf === '11') {
+  else if (pf === '3') {
+    return (
+      <View style={{backgroundColor: 'transparent'}}>
+        <Text style={{fontSize: 15, fontFamily: 'LINESeedSans_A_Bd', fontWeight: 'bold'}}>Monday - Friday</Text>
+        <View style={{paddingBottom: 20}}>
+          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360, paddingVertical: 10,backgroundColor: '#ECEBEB'}}>
+            <Table >
+              <Row
+                data = {['Period','Duration/Train(mins)']}
+                
+                flexArr = {[1,1]}
+                textStyle = {{
+                  textAlign: 'center',
+                  fontFamily: 'LINESeedSans_A_Rg',
+                  color: 'black',
+                  
+                }}
+              />
+            </Table>
+          </View>
+          <View>
+            {freqJS[pf]['Mon-Fri'].map((item,index) => {
+              return (
+                <View key={index} style={{ flexDirection: 'row'}}>
+                  <View style={checkStyleBorder(index,freqJS[pf]['Mon-Fri'])}>
+                    <Text style={styles.textItem}>{item.period_time}</Text>
+                  </View>
+                  <View style={{...lineBorder(index), width: 180, backgroundColor: 'transparent'}}>
+                    <Text style={styles.textItem}>{item.period_interval}</Text>
+                  </View>
+                </View>
+              )
+            })}
+          </View>
+        </View>
+        <Text style={{fontSize: 15, fontFamily: 'LINESeedSans_A_Bd', fontWeight: 'bold'}}>Saturday</Text>
+        <View style={{alignItems:'center',paddingBottom: 20,backgroundColor: 'transparent'}}>
+          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360,paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
+            <Table >
+              <Row
+                data = {['Period','Duration/Train(mins)']}
+                
+                flexArr = {[1,1]}
+                textStyle = {{
+                  textAlign: 'center',
+                  fontFamily: 'LINESeedSans_A_Rg',
+                  color: 'black',
+                  
+                }}
+              />
+            </Table>
+          </View>
+          <View>
+            {freqJS[pf]['Sat'].map((item,index) => {
+              return (
+                <View key={index} style={{ flexDirection: 'row'}}>
+                  <View style={checkStyleBorder(index,freqJS[pf]['Sat'])}>
+                    <Text style={styles.textItem}>{item.period_time}</Text>
+                  </View>
+                  <View style={{...lineBorder(index), width: 180, backgroundColor: 'transparent'}}>
+                    <Text style={styles.textItem}>{item.period_interval}</Text>
+                  </View>
+                </View>
+              )
+            })}
+          </View>
+        </View>
+        <Text style={{fontSize: 15, fontFamily: 'LINESeedSans_A_Bd', fontWeight: 'bold'}}>Sunday</Text>
+        <View style={{alignItems:'center',paddingBottom: 20,backgroundColor: 'transparent'}}>
+          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360,paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
+            <Table >
+              <Row
+                data = {['Period','Duration/Train(mins)']}
+                
+                flexArr = {[1,1]}
+                textStyle = {{
+                  textAlign: 'center',
+                  fontFamily: 'LINESeedSans_A_Rg',
+                  color: 'black',
+                  
+                }}
+              />
+            </Table>
+          </View>
+          <View>
+            {freqJS[pf]['Sun'].map((item,index) => {
+              return (
+                <View key={index} style={{ flexDirection: 'row'}}>
+                  <View style={checkStyleBorder(index,freqJS[pf]['Sun'])}>
+                    <Text style={styles.textItem}>{item.period_time}</Text>
+                  </View>
+                  <View style={{...lineBorder(index), width: 180, backgroundColor: 'transparent'}}>
+                    <Text style={styles.textItem}>{item.period_interval}</Text>
+                  </View>
+                </View>
+              )
+            })}
+          </View>
+        </View>
+      </View>
+    )
+  }
+  else if (pf === '10' || pf === '11') {
     console.log(pf)
     console.log('EveryDay')
     return (
       <View>
         <Text style={{fontSize: 15,  fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>Everyday</Text>
         <View style={{alignItems:'center',paddingBottom: 20}}>
-          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13, width: 360, backgroundColor: '#ECEBEB'}}>
+          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360,paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
             <Table >
               <Row
                 data = {['Period','Duration/Train(mins)']}
-                height = {33}
+                
                 flexArr = {[1,1]}
                 textStyle = {{
                   textAlign: 'center',
                   fontFamily: 'LINESeedSans_A_Rg',
-                  color: 'black'
+                  color: 'black',
+                  
                 }}
               />
             </Table>
@@ -361,7 +465,17 @@ const BGroup = ({buttons, code}) => {
   if (buttons.length == 1) {
     return (
       <View>
-        <View style={{marginTop: -60, marginBottom: 10, flexDirection: 'row'}}>
+        <View style={{
+          paddingVertical: 10,
+          marginBottom: 10, 
+          width: '100%', 
+          flexDirection: 'row', 
+          backgroundColor: StationInfo[code].platform.color.color, 
+          borderBottomRightRadius: 20, 
+          borderBottomLeftRadius: 20,
+          justifyContent: 'center',
+          }}>
+          <View style={{alignSelf:'center'}}>
           {buttons.map((buttonLabel, index) => {
             return (
               <TouchableOpacity
@@ -392,6 +506,8 @@ const BGroup = ({buttons, code}) => {
               </TouchableOpacity>
             );
           })}
+          </View>
+          
         </View>
         <ScrollView>
           <View
@@ -401,6 +517,7 @@ const BGroup = ({buttons, code}) => {
               borderRadius: 13,
               width: 360,
               backgroundColor: '#ECEBEB',
+              alignSelf: 'center',
             }}>
             <Table>
               <Row
@@ -419,7 +536,7 @@ const BGroup = ({buttons, code}) => {
             {flTime[code][activeTab].map((item, index) => {
               console.log(item);
               return (
-                <View style={{flexDirection: 'row'}}>
+                <View style={{flexDirection: 'row', justifyContent: 'center'}}>
                   <View
                     style={{
                       ...checkStyleBorder(index, flTime[code][activeTab]),
@@ -459,7 +576,7 @@ const BGroup = ({buttons, code}) => {
               />
             </Text>
           </View>
-          <Text style={{marginBottom: 15, fontSize: 20, fontFamily: 'LINESeedSans_A_Rg', color: 'black'}}>Departure Frequency</Text>
+          
           <View style = {{alignItems: 'center'}}>
             <Text>
               <Day pf={flTime[code][activeTab][0].platform_line_id}/>
@@ -471,7 +588,16 @@ const BGroup = ({buttons, code}) => {
   } else {
     return (
       <View>
-        <View style={{marginTop: -60, marginBottom: 10, flexDirection: 'row'}}>
+        <View style={{
+          paddingVertical: 10,
+          marginBottom: 10, 
+          width: '100%',
+          flexDirection: 'row',
+          justifyContent: 'center', 
+          backgroundColor: StationInfo[code].platform.color.color, 
+          borderBottomRightRadius: 20, 
+          borderBottomLeftRadius: 20
+          }}>
           {buttons.map((buttonLabel, index) => {
             return (
               <View>
@@ -501,7 +627,7 @@ const BGroup = ({buttons, code}) => {
             );
           })}
         </View>
-        <ScrollView>
+        <ScrollView style={{alignSelf: 'center'}}>
           <View
             style={{
               marginTop: 10,
@@ -509,6 +635,7 @@ const BGroup = ({buttons, code}) => {
               borderRadius: 13,
               width: 360,
               backgroundColor: '#ECEBEB',
+              alignSelf: 'center',
             }}>
             <Table>
               <Row
@@ -527,7 +654,7 @@ const BGroup = ({buttons, code}) => {
             {flTime[code][activeTab].map((item, index) => {
               console.log(item);
               return (
-                <View style={{flexDirection: 'row'}}>
+                <View style={{flexDirection: 'row', justifyContent: 'center'}}>
                   <View
                     style={{
                       ...checkStyleBorder(index, flTime[code][activeTab]),
@@ -567,7 +694,6 @@ const BGroup = ({buttons, code}) => {
               />
             </Text>
           </View>
-          <Text style={{marginBottom: 15, fontSize: 20, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>Departure Frequency</Text>
           <View style = {{alignItems: 'center'}}>
             <Text>
               <Day pf={flTime[code][activeTab][0].platform_line_id}/>
@@ -611,10 +737,8 @@ const TimeTable = ({route}) => {
               {flTime[code][0][0].stname_en}'s Departure Time
             </Text>
           </View>
-          <View style={{alignItems: 'center'}}>
-            <View>
+          <View>
               <BGroup buttons={dir} code={code} />
-            </View>
           </View>
         </View>
       </ScrollView>
@@ -625,6 +749,7 @@ const TimeTable = ({route}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 20,
   },
   body: {
     flex: 9,
@@ -634,11 +759,6 @@ const styles = StyleSheet.create({
   },
   header: {
     width: '100%',
-    height: 200,
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
-    // backgroundColor: '#77CC00',
-    // textAlign: 'center'
   },
   textItem: {
     margin: 15,
