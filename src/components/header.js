@@ -40,7 +40,7 @@ const Header = (props) => {
 
 const Styles = StyleSheet.create({
   container: {
-    paddingVertical: 15,
+    paddingVertical: 5,
     backgroundColor: 'black',
     borderBottomEndRadius: 20,
     borderBottomStartRadius: 20,

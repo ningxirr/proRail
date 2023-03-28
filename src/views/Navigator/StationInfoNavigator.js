@@ -2,6 +2,8 @@ import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import StationInformationListScreen from '../screens/StationInformationListScreen'
 import StationInformationScreen from '../screens/StationInformationScreen'
+import TimeTableScreen from '../screens/TimeTableScreen'
+import Header from '../../components/header'
 
 const Stack = createNativeStackNavigator();
 
@@ -16,7 +18,6 @@ const StationInfoNavigator = () => {
             headerTransparent: true,
           }}
           />
-        {/* navigate to Result Screen */}
         <Stack.Screen 
           name="StationInformationScreen" 
           component={StationInformationScreen}
@@ -24,6 +25,22 @@ const StationInfoNavigator = () => {
             headerShown: false,
             headerTransparent: true,
           }}
+        /> 
+         <Stack.Screen 
+          name="TimeTableScreen" 
+          component={TimeTableScreen}
+          options= {({navigation}) => ({
+            header: () => (
+              <Header
+                title={'Time Table'}
+                haveBackIcon={true}
+                function={() => {
+                  navigation.goBack();
+                }}
+              />
+            ),
+            headerTransparent: true,
+          })}
         /> 
     </Stack.Navigator>
   )

@@ -18,12 +18,13 @@ import stationLocation from '../../../data/station_location'
 import platFormLineStationInfo from '../../../data/platform_line_station_info'
 
 const Navigate = (props) => {
-  const { setNavigate, setIsSet } = props.route.params;
   /********************BottomSeet********************/
   const sheetRef = useRef(null);
-  const snapPoints = useMemo(() => ["45%", "75%"], []);
+  const snapPoints = useMemo(() => ["10%", "40%", "70%"], []);
+  const [fullScreenMap, setFullScreenMap] = useState(false);
   const handleSheetChange = useCallback((index) => {
-    console.log("handleSheetChange", index);
+    if(index === 0) setFullScreenMap(true);
+    else setFullScreenMap(false);
   }, []);
   /********************Geolocation********************/
   //Check if the user has allowed the app to use the location
@@ -67,65 +68,31 @@ const Navigate = (props) => {
       };
   }, []);
 
-  // useEffect(() => {
-  //   if(props.route.params.routes.length === 1) {
-  //     let stopStation = [];
-  //     for (let i = 0; i < props.route.params.routes[0].path.length; i++) {
-  //       if (props.route.params.routes[0].path[i].length > 1){
-  //         let takeTheTrainTo = "";
-  //         const stationCode = props.route.params.routes[0].path[i][0];
-  //         if (platFormLineStationInfo["1"]["platform_line"][0]["stations"].includes(stationCode)){ //สายสีเขียวสุขุมวิท
-  //           if(props.route.params.routes[0].path[i][1] === 'N8' 
-  //           || props.route.params.routes[0].path[i][1] === 'N7'
-  //           || props.route.params.routes[0].path[i][1] === 'N1'
-  //           || props.route.params.routes[0].path[i][1] === 'E1'
-  //           || props.route.params.routes[0].path[i][1] === 'E5') {
-  //             takeTheTrainTo = 'E23'; //Kheha
-  //           }
-  //           else {
-  //             takeTheTrainTo = 'N24'; //Khu Khot
-  //           }
-  //         }
-  //         else if (platFormLineStationInfo["1"]["platform_line"][1]["stations"].includes(stationCode)) { //สายสีเขียวสีลม
-  //           if(props.route.params.routes[0].path[i][1] === 'S1'
-  //           || props.route.params.routes[0].path[i][1] === 'S3'
-  //           || props.route.params.routes[0].path[i][1] === 'S8'){
-  //             takeTheTrainTo = 'S12'; //Bang Wa
-  //           }
-  //           else {
-  //             takeTheTrainTo = 'W1'; //National Stadium
-  //           }
-  //         }
-  //         else if (platFormLineStationInfo["2"]["platform_line"][0]["stations"].includes(stationCode)) { //สายสีน้ำเงิน
-  //           if(props.route.params.routes[0].path[i][1] === 'BL33'){
-              
-  //           }
-  //         }
-  //         // stopStation.push({
-  //         //   interchage: props.route.params.routes[0].path[i][0],
-  //         //   takeTheTrainTo: ,
-  //         // });
-  //       }
-  //     }
-  //     setStationInterchanges(stopStation);
-  //   }
-  //   else{
-  //     setStationInterchanges([]);
-  //   }
-  // }, [props.route.params.routes])
+  useEffect(() => {
+    if(props.route.params.routes.length === 1) {
+      let stopStation = [];
+      for (let i = 0; i < props.route.params.routes[0].path.length; i++) {
+        stopStation.push(props.route.params.routes[0].path[i][0]);
+      }
+      setStationInterchanges(stopStation);
+    }
+    else{
+      setStationInterchanges([]);
+    }
+  }, [props.route.params.routes])
 
 
   const selectNavigateText = () => {
     if (stationDistance > 5000) {
-      return 'Nearest Station';
+      return 'Nearest\nStation';
     }
     else if (stationInterchanges.length !== 0) {
-      if (stationGPS === beginingStation) return 'Get on the train at';
+      if (stationGPS === beginingStation) return 'Get on \nthe train at';
       else if (stationDistance < 100 && stationInterchanges.includes(stationGPS)) return 'Take the train to';
       else return 'Next Station';
     }
     else {
-      return 'Next Station';
+      return 'Next\nStation';
     }
   }
 
@@ -133,21 +100,7 @@ const Navigate = (props) => {
   return (
     <SafeAreaView style={Styles.container}> 
     <GestureHandlerRootView style={{ flex: 1 }}>
-        <View style={Styles.header_view}>
-          <Header
-            title={'Navigate'}
-            haveCloseIcon={true}
-            function2={() => {
-              props.navigation.navigate('HomeProRailNavigator');
-              props.navigation.reset({
-                index: 0,
-                routes: [{ name: 'AddStopScreen' }]
-              });
-              // setNavigate(false);
-              // setIsSet(false);
-            }}
-          />
-        </View>
+        <View style={Styles.header_view}/>
         <View style={Styles.navigation_view}>
           <NextStation 
             navigate={hasLocationPermission} 
@@ -158,16 +111,18 @@ const Navigate = (props) => {
             description={'You are out of the route'}/>
         </View>
         
-        <RailMap 
-          cannotClicked={true}
-          oriStationCode={stationPath[0]}
-          destStationCode={stationPath[stationPath.length-1]}
-          itemsCode={stationPath.slice(1, stationPath.length - 1)}
-          />
+        <View style={{marginTop: fullScreenMap ? 0 : -80 }}>
+          <RailMap 
+            cannotClicked={true}
+            oriStationCode={stationPath[0]}
+            destStationCode={stationPath[stationPath.length-1]}
+            itemsCode={stationPath.slice(1, stationPath.length - 1)}
+            />
+        </View>
         
           <BottomSheet 
             ref={sheetRef} 
-            index={0} 
+            index={1} 
             snapPoints={snapPoints} 
             onChange={handleSheetChange} 
             overDragResistanceFactor={10}
@@ -192,21 +147,22 @@ const Styles = StyleSheet.create({
   },
   header_view: {
     zIndex:1,
-    height: 100,
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
+    height: 120,
+    borderBottomEndRadius: 20,
+    borderBottomStartRadius: 20,
+    backgroundColor: 'black',
+    width: '100%'
   },
   navigation_view: {
     zIndex:1,
     height: 100,
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
+    marginTop: -50,
+    // position: 'absolute',
+    // top: 10,
+    // left: 0,
+    // right: 0,
     paddingHorizontal: '5%',
-    marginTop: 60,
+    // marginTop: 60,
   },
   header_text:{
     color: 'white',

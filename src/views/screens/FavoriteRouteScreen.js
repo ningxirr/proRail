@@ -26,22 +26,12 @@ const FavoriteRoute = (props) => {
       const fetchData = async () => {
         const favoriteRouteData = await getDataFromAsyncStorage('@favorite');
         const recommendedData = await getDataFromAsyncStorage('@recommended');
-        if(favoriteRouteData !== null) setFavaoriteRoute(favoriteRouteData);
+        if(favoriteRouteData !== null) setFavaoriteRoute([...favoriteRouteData].reverse());
         if(recommendedData !== null) setRecommended(recommendedData[0]);
       };
       fetchData();
     }, [])
   );
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const favoriteRouteData = await getDataFromAsyncStorage('@favorite');
-  //     const recommendedData = await getDataFromAsyncStorage('@recommended')
-  //     setFavaoriteRoute(favoriteRouteData);
-  //     setRecommended(recommendedData[0]);
-  //   };
-  //   fetchData();
-  // }, []);
 
   if(!recommended){
     return (<View/>)
@@ -60,7 +50,6 @@ const FavoriteRoute = (props) => {
           <TotalFavorite favCount={favoriteRoute.length}/>
         </View>
       </ImageBackground>
-        
           <BottomSheet 
             ref={sheetRef} 
             index={0} 

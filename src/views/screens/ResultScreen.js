@@ -97,7 +97,7 @@ const Result = (props) => {
       } 
     };
     fetchData();
-  }, [])
+  }, [stationPath])
 
   if(!selectedPath){
     // removeDataFromAsyncStorage('@recommended');

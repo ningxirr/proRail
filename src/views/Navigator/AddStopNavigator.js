@@ -47,23 +47,22 @@ const AddStopNavigator = ({routeName, setNavigate}) => {
             name="NavigateScreen" 
             component={NavigateScreen}
             options={({ navigation }) => ({
-              // header: () => (
-              //   <Header
-              //     title={'Navigate'}
-              //     haveCloseIcon={true}
-              //     function2={() => {
-              //       navigation.navigate('HomeProRailNavigator');
-              //       navigation.reset({
-              //         index: 0,
-              //         routes: [{ name: 'AddStopScreen' }]
-              //       });
-              //       setNavigate(false);
-              //       setIsSet(false);
-              //     }}
-              //   />
-              // ),
+              header: () => (
+                <Header
+                  title={'Navigate'}
+                  haveCloseIcon={true}
+                  function2={() => {
+                    navigation.navigate('HomeProRailNavigator');
+                    navigation.reset({
+                      index: 0,
+                      routes: [{ name: 'AddStopScreen' }]
+                    });
+                    setNavigate(false);
+                    setIsSet(false);
+                  }}
+                />
+              ),
               headerTransparent: true,
-              headerShown: false,
             })}
             initialParams={{ setNavigate, setIsSet }}
           /> 

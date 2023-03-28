@@ -14,7 +14,7 @@ const NextStation = (props) => {
                             </Text>
                         </View>
                         <View style = {Styles.station_name_view}>
-                            <Text style = {Styles.station_name_text}>
+                            <Text style = {Styles.station_name_text} numberOfLines={2} ellipsizeMode='tail'>
                                 {props.stationName}
                             </Text>
                             <View style = {[Styles.station_route_view, { backgroundColor: props.stationColor }]}>
@@ -73,7 +73,7 @@ const Styles = StyleSheet.create({
     station_name_text: {
         color:'black', 
         fontSize: 18, 
-        textAlign:'right',
+        // textAlign:'right',
         fontFamily: 'LINESeedSans_A_Rg',
     },
     station_route_view: {

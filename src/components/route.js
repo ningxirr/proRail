@@ -28,7 +28,6 @@ const Route = (props) => {
         }
         return color;
     }
-    console.log('stationInfo[props.route[0]].station_name.en' +props.route)
     return(   
         <View>
             {
@@ -36,7 +35,10 @@ const Route = (props) => {
                 <View>
                     <Animated.View entering={FadeIn.duration(600)}>
                         {
-                             props.haveToWalk ? <Walking time={Math.ceil(props.walk)} station={stationInfo[props.route[0]].station_name.en}/> : null
+                             props.haveToWalk ? 
+                             <Walking 
+                                time={Math.ceil(props.walk)} 
+                                station={stationInfo[props.route[0]].station_name.en.length >= 23 ? stationInfo[props.route[0]].station_name.en.substring(0,23) + '...' : stationInfo[props.route[0]].station_name.en }/> : null
                         }
                     </Animated.View> 
                 </View> : null
@@ -54,7 +56,7 @@ const Route = (props) => {
                             </View>
                             <View>
                                 <Text style={Styles.briefly_path_en_text}>
-                                    {stationInfo[props.route[0]].station_name.en}
+                                    {stationInfo[props.route[0]].station_name.en.length > 23 ? stationInfo[props.route[0]].station_name.en.substring(0,23) + '...' :stationInfo[props.route[0]].station_name.en}
                                 </Text>
                                 <Text style={Styles.briefly_path_th_text}>
                                     {stationInfo[props.route[0]].station_name.th}
@@ -89,7 +91,7 @@ const Route = (props) => {
                             </View>
                             <View>
                                 <Text style={Styles.briefly_path_en_text}>
-                                    {stationInfo[props.route[0]].station_name.en}
+                                    {stationInfo[props.route[0]].station_name.en.length > 23 ? stationInfo[props.route[0]].station_name.en.substring(0,23)+'...' : stationInfo[props.route[0]].station_name.en}
                                 </Text>
                                 <Text style={Styles.briefly_path_th_text}>
                                     {stationInfo[props.route[0]].station_name.th}
@@ -120,7 +122,7 @@ const Route = (props) => {
                             </View>
                             <View>
                                 <Text style={Styles.briefly_path_en_text}>
-                                    {stationInfo[props.route[props.route.length-1]].station_name.en}
+                                    {stationInfo[props.route[props.route.length-1]].station_name.en.length > 23 ? stationInfo[props.route[props.route.length-1]].station_name.en.substring(0,23)+'...' : stationInfo[props.route[props.route.length-1]].station_name.en}
                                 </Text>
                                 <Text style={Styles.briefly_path_th_text}>
                                     {stationInfo[props.route[props.route.length-1]].station_name.th}
@@ -159,7 +161,7 @@ const Route = (props) => {
                                             </Animated.View>
                                         }
                                         <Animated.View entering={index===0 ? null: props.route.length === 2 ? FadeIn: FadeInUp} >
-                                            <Text style={Styles.briefly_path_en_text}>
+                                            <Text style={Styles.briefly_path_en_text} numberOfLines={1} ellipsizeMode='tail' >
                                                 {stationInfo[station].station_name.en}
                                             </Text>
                                             <Text style={Styles.briefly_path_th_text}>
@@ -194,6 +196,7 @@ const Route = (props) => {
 
 const Styles = StyleSheet.create({
     path_view: {
+        flex: 1,
         paddingVertical: 10,
         marginVertical: 5,
         borderColor: '#CCCCCC',
@@ -201,6 +204,7 @@ const Styles = StyleSheet.create({
         borderRadius: 10,
     },
     path_with_image_view: {
+        flex: 1,
         flexDirection: 'row',
         alignItems: 'center'
     },
@@ -212,6 +216,7 @@ const Styles = StyleSheet.create({
         fontSize: 14,
         color: 'black',
         fontFamily: 'LINESeedSans_A_Bd',
+        width: 200
     },
     briefly_path_th_text: {
         marginLeft: 40,
