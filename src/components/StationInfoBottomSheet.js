@@ -39,7 +39,9 @@ const StationInfoBottomSheet = ({ clicked, searchPhrase, setClicked, memoScale, 
         style={Styles.bottom_sheet}
         >
           <View style={{marginHorizontal: '5%', marginVertical: 20}}>
-            <NextStation navigate={true} navigateText={'Nearest\nStation'} stationName={'Khu Khot'} stationColor={'#71B047'} stationPlatform={'BTS'}/>
+            <NextStation 
+              navigate={true} 
+              isNearestOnly={true}/>
           </View>
             {
               clicked ? 

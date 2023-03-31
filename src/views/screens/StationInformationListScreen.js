@@ -6,7 +6,7 @@ import Header from '../../components/header';
 import RailMap from '../../components/RailMap';
 import StationInfoBottomSheet from '../../components/StationInfoBottomSheet';
 
-const StationInformationScreen = () => {
+const StationInformationListScreen = () => {
   const [searchPhrase, setSearchPhrase] = useState('');
   const [clicked, setClicked] = useState(false);
 
@@ -42,4 +42,4 @@ const StationInformationScreen = () => {
   );
 };
 
-export default StationInformationScreen;
+export default StationInformationListScreen;

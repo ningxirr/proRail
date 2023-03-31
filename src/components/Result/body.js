@@ -81,7 +81,7 @@ const Body = (props) => {
                 <View style={Styles.choice_view}>
                   <Choices 
                     number={props.recommended[2] === 'fastest' ? props.fastestPath.time : props.recommended[2] === 'cheapest' ? props.cheapestPath.price : props.leastInterchangesPath.interchange} 
-                    unit={props.recommended[2] === 'fastest' ? 'min(s)' : props.recommended[1] === 'cheapest' ? 'baht' : 'station(s)'} 
+                    unit={props.recommended[2] === 'fastest' ? 'min(s)' : props.recommended[2] === 'cheapest' ? 'baht' : 'station(s)'} 
                     choice={props.recommended[2] === 'fastest' ? 'Fastest' : props.recommended[2] === 'cheapest' ? 'Cheapest' : 'Least Interchanges' } 
                     selected={props.selectedPath===props.recommended[2]} 
                     function={()=> {

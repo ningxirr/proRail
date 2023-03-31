@@ -51,7 +51,7 @@ const Route = (props) => {
                             <View style={[Styles.path_image_view]}>
                                 <BrieflyPathIcon 
                                     color={'transparent'} 
-                                    // lightColor={stationInfo[props.route[0]].platform.color.path_light_color}
+                                    lightColor={stationInfo[props.route[0]].platform.color.path_light_color}
                                 />
                             </View>
                             <View>

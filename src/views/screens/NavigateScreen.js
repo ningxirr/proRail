@@ -1,7 +1,7 @@
 "use strict";
 
 import React, { useCallback, useMemo, useRef, useEffect, useState } from 'react';
-import { SafeAreaView, StyleSheet, Text, View,  Dimensions, ImageBackground, PermissionsAndroid } from 'react-native';
+import { SafeAreaView, StyleSheet, View, PermissionsAndroid } from 'react-native';
 import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { getDistance, findNearest } from 'geolib';
@@ -9,13 +9,10 @@ import Geolocation from 'react-native-geolocation-service';
 
 import NextStation from '../../components/nextStation';
 import AllRoute from '../../components/allRoute';
-import TochableIcon from '../../components/tochableIcon';
 import RailMap from '../../components/RailMap';
-import Header from '../../components/header';
 
 import stationInfo from '../../../data/station_info'
 import stationLocation from '../../../data/station_location'
-import platFormLineStationInfo from '../../../data/platform_line_station_info'
 
 const Navigate = (props) => {
   /********************BottomSeet********************/
@@ -41,32 +38,6 @@ const Navigate = (props) => {
 
   //filter for the latitude and longitude of the station in this path
   const filteredStation = stationLocation.filter(obj => [... new Set([].concat(...props.route.params.routes.map(obj => obj.path).flat()))].includes(obj.code));
-  
-  useEffect(() => {
-      const _watchId = Geolocation.watchPosition(
-        position => {
-          console.log(position.coords)
-          let nearest = findNearest(position.coords, filteredStation);
-          setStationGPS(nearest.code);
-          setStationDistance(getDistance(nearest, position.coords));
-        },
-        error => {
-          console.log(error);
-        },
-        {
-          enableHighAccuracy: true,
-          interval: 1000,
-          fastestInterval: 5000,
-          distanceFilter: 0,
-        },
-      );
-      return () => {
-        if (_watchId) {
-          console.log('clear watch')
-          Geolocation.clearWatch(_watchId);
-        }
-      };
-  }, []);
 
   useEffect(() => {
     if(props.route.params.routes.length === 1) {
@@ -81,21 +52,6 @@ const Navigate = (props) => {
     }
   }, [props.route.params.routes])
 
-
-  const selectNavigateText = () => {
-    if (stationDistance > 5000) {
-      return 'Nearest\nStation';
-    }
-    else if (stationInterchanges.length !== 0) {
-      if (stationGPS === beginingStation) return 'Get on \nthe train at';
-      else if (stationDistance < 100 && stationInterchanges.includes(stationGPS)) return 'Take the train to';
-      else return 'Next Station';
-    }
-    else {
-      return 'Next\nStation';
-    }
-  }
-
   const stationPath = props.route.params.stationPath;
   return (
     <SafeAreaView style={Styles.container}> 
@@ -104,11 +60,10 @@ const Navigate = (props) => {
         <View style={Styles.navigation_view}>
           <NextStation 
             navigate={hasLocationPermission} 
-            navigateText={selectNavigateText()} 
-            stationName={stationInfo[stationGPS].station_name.en} 
-            stationColor={stationInfo[stationGPS].platform.color.color} 
-            stationPlatform={stationInfo[stationGPS].platform.platform}
-            description={'You are out of the route'}/>
+            isNearestOnly={false}
+            beginingStation={beginingStation}
+            filteredStation={filteredStation}
+            stationInterchanges={stationInterchanges}/>
         </View>
         
         <View style={{marginTop: fullScreenMap ? 0 : -80 }}>

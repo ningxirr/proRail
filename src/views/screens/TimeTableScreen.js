@@ -123,7 +123,6 @@ const Day = ({pf}) => {
             <Table >
               <Row
                 data = {['Period','Duration/Train(mins)']}
-                
                 flexArr = {[1,1]}
                 textStyle = {{
                   textAlign: 'center',
@@ -467,6 +466,7 @@ const BGroup = ({buttons, code}) => {
       <View>
         <View style={{
           paddingVertical: 10,
+          marginTop: -5,
           marginBottom: 10, 
           width: '100%', 
           flexDirection: 'row', 
@@ -733,6 +733,7 @@ const TimeTable = ({route}) => {
                 fontFamily: 'LINESeedSans_A_Bd',
                 marginTop: 100,
                 marginLeft: 15,
+                paddingBottom: 10
               }}>
               {flTime[code][0][0].stname_en}'s Departure Time
             </Text>

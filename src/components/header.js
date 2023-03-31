@@ -9,7 +9,7 @@ const Header = (props) => {
     <View style={Styles.container}>
       {
         props.haveBackIcon ? 
-        <View style={Styles.header_view}>
+        <View style={Styles.icon_header_view}>
           <TochableIcon name={'angle-left'} size={25} color={'white'} function={props.function}/>
         </View>:
         null
@@ -46,8 +46,15 @@ const Styles = StyleSheet.create({
     borderBottomStartRadius: 20,
     // height: 110,
   },
+  icon_header_view: {
+    paddingTop: 5,
+    paddingHorizontal: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
   header_view:{
-    paddingVertical: 10,
+    paddingTop: 15,
+    paddingBottom: 20,
     paddingHorizontal: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',

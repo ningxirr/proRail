@@ -15,7 +15,7 @@ const FavoriteRoute = (props) => {
   const [favoriteRoute, setFavaoriteRoute] = useState([]);
   const [recommended, setRecommended] = useState('');
   const sheetRef = useRef(null);
-  const snapPoints = useMemo(() => ["40%", "80%"], []);
+  const snapPoints = useMemo(() => ["40%", "75%"], []);
 
   const handleSheetChange = useCallback((index) => {
     console.log("handleSheetChange", index);

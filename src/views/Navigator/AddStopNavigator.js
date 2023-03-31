@@ -16,6 +16,10 @@ const AddStopNavigator = ({routeName, setNavigate}) => {
         setIsSet(true);
         setNavigate(routeName === "NavigateScreen");
       }
+      else if(routeName === "AddStopScreen"){
+        setIsSet(false);
+        setNavigate(routeName === "NavigateScreen");
+      }
     }, [routeName]);
     return (
       <Stack.Navigator>
@@ -34,6 +38,7 @@ const AddStopNavigator = ({routeName, setNavigate}) => {
               headerShown: false,
               headerTransparent: true
             }}
+            
           />
           <Stack.Screen 
             name="ResultScreen" 
@@ -64,7 +69,6 @@ const AddStopNavigator = ({routeName, setNavigate}) => {
               ),
               headerTransparent: true,
             })}
-            initialParams={{ setNavigate, setIsSet }}
           /> 
       </Stack.Navigator>
     )

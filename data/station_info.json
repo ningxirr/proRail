@@ -17,10 +17,6 @@
       "coor_x": "537",
       "coor_y": "1397"
     },
-    "gpsCoordinate": {
-      "latitude": "13.7295762",
-      "longtitude": "100.4740367"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -125,10 +121,6 @@
       "coor_x": "537",
       "coor_y": "1346"
     },
-    "gpsCoordinate": {
-      "latitude": "13.7419490",
-      "longtitude": "100.4705180"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -188,10 +180,6 @@
       "coor_x": "537",
       "coor_y": "1315"
     },
-    "gpsCoordinate": {
-      "latitude": "13.7547670",
-      "longtitude": "100.4694990"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -250,10 +238,6 @@
     "imageCoordinate": {
       "coor_x": "537",
       "coor_y": "1259"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.7633120",
-      "longtitude": "100.4732110"
     },
     "facility": [
       {
@@ -319,10 +303,6 @@
       "coor_x": "537",
       "coor_y": "1207"
     },
-    "gpsCoordinate": {
-      "latitude": "13.7731910,",
-      "longtitude": "100.4819870"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -381,10 +361,6 @@
     "imageCoordinate": {
       "coor_x": "537",
       "coor_y": "1154"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.7839942",
-      "longtitude": "100.4934559"
     },
     "facility": [
       {
@@ -470,10 +446,6 @@
       "coor_x": "556",
       "coor_y": "1096"
     },
-    "gpsCoordinate": {
-      "latitude": "13.7928845",
-      "longtitude": "100.5035819"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -533,10 +505,6 @@
       "coor_x": "583",
       "coor_y": "1067"
     },
-    "gpsCoordinate": {
-      "latitude": "13.7986464",
-      "longtitude": "100.5064787"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -595,10 +563,6 @@
     "imageCoordinate": {
       "coor_x": "615",
       "coor_y": "1035"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.8055307",
-      "longtitude": "100.5250547"
     },
     "facility": [
       {
@@ -673,10 +637,6 @@
     "imageCoordinate": {
       "coor_x": "669",
       "coor_y": "1020"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.8058474",
-      "longtitude": "100.5316604"
     },
     "facility": [
       {
@@ -762,10 +722,6 @@
       "coor_x": "734",
       "coor_y": "1014"
     },
-    "gpsCoordinate": {
-      "latitude": "13.803311",
-      "longtitude": "100.539273"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -819,10 +775,6 @@
     "imageCoordinate": {
       "coor_x": "823",
       "coor_y": "1010"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.7980149",
-      "longtitude": "100.5450412"
     },
     "facility": [
       {
@@ -887,10 +839,6 @@
     "imageCoordinate": {
       "coor_x": "862",
       "coor_y": "975"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.803443",
-      "longtitude": "100.553525"
     },
     "facility": [
       {
@@ -960,10 +908,6 @@
     "imageCoordinate": {
       "coor_x": "863",
       "coor_y": "937"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.814220",
-      "longtitude": "100.560146"
     },
     "facility": [
       {
@@ -1039,10 +983,6 @@
       "coor_x": "968",
       "coor_y": "930"
     },
-    "gpsCoordinate": {
-      "latitude": "13.805645",
-      "longtitude": "100.573954"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -1111,10 +1051,6 @@
     "imageCoordinate": {
       "coor_x": "1025",
       "coor_y": "948"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.799123",
-      "longtitude": "100.574608"
     },
     "facility": [
       {
@@ -1185,10 +1121,6 @@
       "coor_x": "1055",
       "coor_y": "980"
     },
-    "gpsCoordinate": {
-      "latitude": "13.789798",
-      "longtitude": "100.574190"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -1253,10 +1185,6 @@
       "coor_x": "1085",
       "coor_y": "1010"
     },
-    "gpsCoordinate": {
-      "latitude": "13.778492",
-      "longtitude": "100.573664"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -1320,10 +1248,6 @@
     "imageCoordinate": {
       "coor_x": "1106",
       "coor_y": "1040"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.765894",
-      "longtitude": "100.570059"
     },
     "facility": [
       {
@@ -1394,10 +1318,6 @@
       "coor_x": "1106",
       "coor_y": "1110"
     },
-    "gpsCoordinate": {
-      "latitude": "13.757797",
-      "longtitude": "100.565360"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -1466,10 +1386,6 @@
     "imageCoordinate": {
       "coor_x": "1106",
       "coor_y": "1166"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.748658",
-      "longtitude": "100.563128"
     },
     "facility": [
       {
@@ -1540,10 +1456,6 @@
       "coor_x": "1106",
       "coor_y": "1272"
     },
-    "gpsCoordinate": {
-      "latitude": "13.738570",
-      "longtitude": "100.561454"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -1607,10 +1519,6 @@
     "imageCoordinate": {
       "coor_x": "1104",
       "coor_y": "1340"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.723270",
-      "longtitude": "100.560038"
     },
     "facility": [
       {
@@ -1681,10 +1589,6 @@
       "coor_x": "1044",
       "coor_y": "1340"
     },
-    "gpsCoordinate": {
-      "latitude": "13.722064",
-      "longtitude": "100.554545"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -1743,10 +1647,6 @@
     "imageCoordinate": {
       "coor_x": "948",
       "coor_y": "1340"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.725837",
-      "longtitude": "100.545350"
     },
     "facility": [
       {
@@ -1807,10 +1707,6 @@
       "coor_x": "912",
       "coor_y": "1345"
     },
-    "gpsCoordinate": {
-      "latitude": "13.729214",
-      "longtitude": "100.536499"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -1865,10 +1761,6 @@
       "coor_x": "835",
       "coor_y": "1340"
     },
-    "gpsCoordinate": {
-      "latitude": "13.732341",
-      "longtitude": "100.529987"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -1922,10 +1814,6 @@
     "imageCoordinate": {
       "coor_x": "778",
       "coor_y": "1340"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.737874",
-      "longtitude": "100.517195"
     },
     "facility": [
       {
@@ -1991,10 +1879,6 @@
       "coor_x": "733",
       "coor_y": "1340"
     },
-    "gpsCoordinate": {
-      "latitude": "13.7421637",
-      "longtitude": "100.5093493"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -2044,10 +1928,6 @@
       "coor_x": "669",
       "coor_y": "1340"
     },
-    "gpsCoordinate": {
-      "latitude": "13.7467947",
-      "longtitude": "100.5017396"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -2096,10 +1976,6 @@
     "imageCoordinate": {
       "coor_x": "631",
       "coor_y": "1367"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.7438958",
-      "longtitude": "100.4944994"
     },
     "facility": [
       {
@@ -2165,10 +2041,6 @@
       "coor_x": "569",
       "coor_y": "1397"
     },
-    "gpsCoordinate": {
-      "latitude": "13.7378984",
-      "longtitude": "100.4847215"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -2217,10 +2089,6 @@
     "imageCoordinate": {
       "coor_x": "495",
       "coor_y": "1397"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.724563",
-      "longtitude": "100.465009"
     },
     "facility": [
       {
@@ -2281,10 +2149,6 @@
       "coor_x": "443",
       "coor_y": "1395"
     },
-    "gpsCoordinate": {
-      "latitude": "13.720194",
-      "longtitude": "100.456962"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -2343,10 +2207,6 @@
     "imageCoordinate": {
       "coor_x": "406",
       "coor_y": "1396"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.715466",
-      "longtitude": "100.445338"
     },
     "facility": [
       {
@@ -2407,10 +2267,6 @@
       "coor_x": "370",
       "coor_y": "1396"
     },
-    "gpsCoordinate": {
-      "latitude": "13.712871",
-      "longtitude": "100.434160"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -2469,10 +2325,6 @@
     "imageCoordinate": {
       "coor_x": "335",
       "coor_y": "1396"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.711929",
-      "longtitude": "100.422698"
     },
     "facility": [
       {
@@ -2533,10 +2385,6 @@
       "coor_x": "299",
       "coor_y": "1396"
     },
-    "gpsCoordinate": {
-      "latitude": "13.710819",
-      "longtitude": "100.409304"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -2595,10 +2443,6 @@
     "imageCoordinate": {
       "coor_x": "912",
       "coor_y": "1298"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.739515",
-      "longtitude": "100.539465"
     },
     "facility": [
       {
@@ -2678,10 +2522,6 @@
     "imageCoordinate": {
       "coor_x": "912",
       "coor_y": "1325"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.728478",
-      "longtitude": "100.534219"
     },
     "facility": [
       {
@@ -2772,10 +2612,6 @@
       "coor_x": "861",
       "coor_y": "1481"
     },
-    "gpsCoordinate": {
-      "latitude": "13.719223",
-      "longtitude": "100.521557"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -2855,10 +2691,6 @@
       "coor_x": "813",
       "coor_y": "1500"
     },
-    "gpsCoordinate": {
-      "latitude": "13.718775",
-      "longtitude": "100.514176"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -2927,10 +2759,6 @@
     "imageCoordinate": {
       "coor_x": "700",
       "coor_y": "1500"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.72114",
-      "longtitude": "100.495197"
     },
     "facility": [
       {
@@ -3016,10 +2844,6 @@
       "coor_x": "639",
       "coor_y": "1500"
     },
-    "gpsCoordinate": {
-      "latitude": "13.719268",
-      "longtitude": "100.486070"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -3088,10 +2912,6 @@
     "imageCoordinate": {
       "coor_x": "836",
       "coor_y": "1268"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.746518",
-      "longtitude": "100.529057"
     },
     "facility": [
       {
@@ -3176,10 +2996,6 @@
     "imageCoordinate": {
       "coor_x": "898",
       "coor_y": "1268"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.745558",
-      "longtitude": "100.534603"
     },
     "facility": [
       {
@@ -3295,10 +3111,6 @@
       "coor_x": "590",
       "coor_y": "1500"
     },
-    "gpsCoordinate": {
-      "latitude": "13.714264",
-      "longtitude": "100.476746"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -3367,10 +3179,6 @@
     "imageCoordinate": {
       "coor_x": "513",
       "coor_y": "1460"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.713045",
-      "longtitude": "100.468946"
     },
     "facility": [
       {
@@ -3445,10 +3253,6 @@
     "imageCoordinate": {
       "coor_x": "464",
       "coor_y": "1395"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.720685",
-      "longtitude": "100.457809"
     },
     "facility": [
       {
@@ -3529,10 +3333,6 @@
       "coor_x": "1622",
       "coor_y": "1199"
     },
-    "gpsCoordinate": {
-      "latitude": "13.697591",
-      "longtitude": "100.752539"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -3602,10 +3402,6 @@
       "coor_x": "1575",
       "coor_y": "1155"
     },
-    "gpsCoordinate": {
-      "latitude": "13.727572",
-      "longtitude": "100.748592"
-    },
     "facility": [],
     "exit": [
       {
@@ -3633,10 +3429,6 @@
     "imageCoordinate": {
       "coor_x": "1516",
       "coor_y": "1155"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.732740",
-      "longtitude": "100.691427"
     },
     "facility": [],
     "exit": [
@@ -3666,10 +3458,6 @@
       "coor_x": "1460",
       "coor_y": "1157"
     },
-    "gpsCoordinate": {
-      "latitude": "13.738267",
-      "longtitude": "100.645088"
-    },
     "facility": [],
     "exit": [
       {
@@ -3698,10 +3486,6 @@
       "coor_x": "1334",
       "coor_y": "1152"
     },
-    "gpsCoordinate": {
-      "latitude": "13.743088",
-      "longtitude": "100.601023"
-    },
     "facility": [],
     "exit": [
       {
@@ -3729,10 +3513,6 @@
     "imageCoordinate": {
       "coor_x": "1106",
       "coor_y": "1150"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.749581",
-      "longtitude": "100.563761"
     },
     "facility": [
       {
@@ -3783,10 +3563,6 @@
       "coor_x": "966",
       "coor_y": "1155"
     },
-    "gpsCoordinate": {
-      "latitude": "13.755344",
-      "longtitude": "100.541778"
-    },
     "facility": [],
     "exit": [
       {
@@ -3814,10 +3590,6 @@
     "imageCoordinate": {
       "coor_x": "895",
       "coor_y": "1158"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.756834",
-      "longtitude": "100.535062"
     },
     "facility": [
       {
@@ -3872,10 +3644,6 @@
     "imageCoordinate": {
       "coor_x": "749",
       "coor_y": "1505"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.720932",
-      "longtitude": "100.502836"
     },
     "facility": [
       {
@@ -3955,10 +3723,6 @@
     "imageCoordinate": {
       "coor_x": "941",
       "coor_y": "1262"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.74409",
-      "longtitude": "100.543028"
     },
     "facility": [
       {
@@ -4059,10 +3823,6 @@
       "coor_x": "986",
       "coor_y": "1262"
     },
-    "gpsCoordinate": {
-      "latitude": "13.74306",
-      "longtitude": "100.548849"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -4147,10 +3907,6 @@
       "coor_x": "1030",
       "coor_y": "1262"
     },
-    "gpsCoordinate": {
-      "latitude": "13.740508",
-      "longtitude": "100.555412"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -4229,10 +3985,6 @@
     "imageCoordinate": {
       "coor_x": "1106",
       "coor_y": "1250"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.736996",
-      "longtitude": "100.560387"
     },
     "facility": [
       {
@@ -4333,10 +4085,6 @@
       "coor_x": "1150",
       "coor_y": "1265"
     },
-    "gpsCoordinate": {
-      "latitude": "13.730434",
-      "longtitude": "100.569688"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -4431,10 +4179,6 @@
       "coor_x": "1206",
       "coor_y": "1277"
     },
-    "gpsCoordinate": {
-      "latitude": "13.724243",
-      "longtitude": "100.578502"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -4513,10 +4257,6 @@
     "imageCoordinate": {
       "coor_x": "1234",
       "coor_y": "1300"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.719439",
-      "longtitude": "100.585274"
     },
     "facility": [
       {
@@ -4597,10 +4337,6 @@
       "coor_x": "1260",
       "coor_y": "1328"
     },
-    "gpsCoordinate": {
-      "latitude": "13.715178",
-      "longtitude": "100.591332"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -4674,10 +4410,6 @@
     "imageCoordinate": {
       "coor_x": "1291",
       "coor_y": "1360"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.705545",
-      "longtitude": "100.601064"
     },
     "facility": [
       {
@@ -4763,10 +4495,6 @@
       "coor_x": "880",
       "coor_y": "1203"
     },
-    "gpsCoordinate": {
-      "latitude": "13.751931",
-      "longtitude": "100.531535"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -4840,10 +4568,6 @@
     "imageCoordinate": {
       "coor_x": "880",
       "coor_y": "1176"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.756822",
-      "longtitude": "100.533782"
     },
     "facility": [
       {
@@ -4939,10 +4663,6 @@
       "coor_x": "880",
       "coor_y": "1130"
     },
-    "gpsCoordinate": {
-      "latitude": "13.762793",
-      "longtitude": "100.537085"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -5027,10 +4747,6 @@
       "coor_x": "880",
       "coor_y": "1100"
     },
-    "gpsCoordinate": {
-      "latitude": "13.772642",
-      "longtitude": "100.542103"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -5105,10 +4821,6 @@
       "coor_x": "880",
       "coor_y": "1070"
     },
-    "gpsCoordinate": {
-      "latitude": "13.779788",
-      "longtitude": "100.544704"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -5177,10 +4889,6 @@
     "imageCoordinate": {
       "coor_x": "880",
       "coor_y": "1008"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.793834",
-      "longtitude": "100.549696"
     },
     "facility": [
       {
@@ -5255,10 +4963,6 @@
     "imageCoordinate": {
       "coor_x": "882",
       "coor_y": "975"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.802649",
-      "longtitude": "100.553763"
     },
     "facility": [
       {
@@ -5354,10 +5058,6 @@
       "coor_x": "882",
       "coor_y": "937"
     },
-    "gpsCoordinate": {
-      "latitude": "13.816553",
-      "longtitude": "100.562007"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -5431,10 +5131,6 @@
     "imageCoordinate": {
       "coor_x": "1327",
       "coor_y": "1390"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.696551",
-      "longtitude": "100.605486"
     },
     "facility": [
       {
@@ -5514,10 +5210,6 @@
     "imageCoordinate": {
       "coor_x": "1345",
       "coor_y": "1427"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.689303",
-      "longtitude": "100.609041"
     },
     "facility": [
       {
@@ -5602,10 +5294,6 @@
     "imageCoordinate": {
       "coor_x": "1345",
       "coor_y": "1465"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.67993",
-      "longtitude": "100.609554"
     },
     "facility": [
       {
@@ -5696,10 +5384,6 @@
       "coor_x": "1345",
       "coor_y": "1502"
     },
-    "gpsCoordinate": {
-      "latitude": "13.668122",
-      "longtitude": "100.604649"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -5789,10 +5473,6 @@
       "coor_x": "1345",
       "coor_y": "1540"
     },
-    "gpsCoordinate": {
-      "latitude": "13.66117",
-      "longtitude": "100.601862"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -5871,10 +5551,6 @@
     "imageCoordinate": {
       "coor_x": "1339",
       "coor_y": "1574"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.646192",
-      "longtitude": "100.595653"
     },
     "facility": [
       {
@@ -5960,10 +5636,6 @@
       "coor_x": "1345",
       "coor_y": "1612"
     },
-    "gpsCoordinate": {
-      "latitude": "13.637247",
-      "longtitude": "100.591993"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -6033,10 +5705,6 @@
       "coor_x": "1345",
       "coor_y": "1645"
     },
-    "gpsCoordinate": {
-      "latitude": "13.621447",
-      "longtitude": "100.590112"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -6095,10 +5763,6 @@
     "imageCoordinate": {
       "coor_x": "1345",
       "coor_y": "1682"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.608552",
-      "longtitude": "100.594827"
     },
     "facility": [
       {
@@ -6168,10 +5832,6 @@
     "imageCoordinate": {
       "coor_x": "1345",
       "coor_y": "1720"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.60207",
-      "longtitude": "100.597072"
     },
     "facility": [
       {
@@ -6247,10 +5907,6 @@
       "coor_x": "1345",
       "coor_y": "1755"
     },
-    "gpsCoordinate": {
-      "latitude": "13.592079",
-      "longtitude": "100.608906"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -6315,10 +5971,6 @@
       "coor_x": "1345",
       "coor_y": "1795"
     },
-    "gpsCoordinate": {
-      "latitude": "13.584324",
-      "longtitude": "100.608027"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -6377,10 +6029,6 @@
     "imageCoordinate": {
       "coor_x": "1345",
       "coor_y": "1830"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.577784",
-      "longtitude": "100.605396"
     },
     "facility": [
       {
@@ -6451,10 +6099,6 @@
       "coor_x": "1377",
       "coor_y": "1862"
     },
-    "gpsCoordinate": {
-      "latitude": "13.567647",
-      "longtitude": "100.607681"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -6518,10 +6162,6 @@
     "imageCoordinate": {
       "coor_x": "881",
       "coor_y": "866"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.824056",
-      "longtitude": "100.566417"
     },
     "facility": [
       {
@@ -6587,10 +6227,6 @@
       "coor_x": "882",
       "coor_y": "828"
     },
-    "gpsCoordinate": {
-      "latitude": "13.829694",
-      "longtitude": "100.56975"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -6655,10 +6291,6 @@
       "coor_x": "882",
       "coor_y": "782"
     },
-    "gpsCoordinate": {
-      "latitude": "13.836361",
-      "longtitude": "100.573639"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -6717,10 +6349,6 @@
     "imageCoordinate": {
       "coor_x": "882",
       "coor_y": "750"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.84225",
-      "longtitude": "100.577083"
     },
     "facility": [
       {
@@ -6785,10 +6413,6 @@
     "imageCoordinate": {
       "coor_x": "882",
       "coor_y": "710"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.850255",
-      "longtitude": "100.581794"
     },
     "facility": [
       {
@@ -6859,10 +6483,6 @@
       "coor_x": "882",
       "coor_y": "670"
     },
-    "gpsCoordinate": {
-      "latitude": "13.855994",
-      "longtitude": "100.585171"
-    },
     "facility": [
       {
         "icon": "seat-legroom-normal",
@@ -6932,10 +6552,6 @@
       "coor_x": "882",
       "coor_y": "630"
     },
-    "gpsCoordinate": {
-      "latitude": "13.867528",
-      "longtitude": "100.591940"
-    },
     "facility": [
       {
         "icon": "escalator",
@@ -6994,10 +6610,6 @@
     "imageCoordinate": {
       "coor_x": "895",
       "coor_y": "584"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.875286",
-      "longtitude": " 100.596811"
     },
     "facility": [
       {
@@ -7068,10 +6680,6 @@
       "coor_x": "1120",
       "coor_y": "420"
     },
-    "gpsCoordinate": {
-      "latitude": "13.932341",
-      "longtitude": "100.646626"
-    },
     "facility": [
       {
         "icon": "stairs",
@@ -7125,10 +6733,6 @@
     "imageCoordinate": {
       "coor_x": "105",
       "coor_y": "670"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.892273",
-      "longtitude": "100.408282"
     },
     "facility": [
       {
@@ -7194,10 +6798,6 @@
       "coor_x": "105",
       "coor_y": "705"
     },
-    "gpsCoordinate": {
-      "latitude": "13.881062",
-      "longtitude": "100.409306"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -7261,10 +6861,6 @@
     "imageCoordinate": {
       "coor_x": "130",
       "coor_y": "730"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.874735",
-      "longtitude": "100.419525"
     },
     "facility": [
       {
@@ -7330,10 +6926,6 @@
       "coor_x": "187",
       "coor_y": "730"
     },
-    "gpsCoordinate": {
-      "latitude": "13.875714",
-      "longtitude": "100.433923"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -7397,10 +6989,6 @@
     "imageCoordinate": {
       "coor_x": "230",
       "coor_y": "730"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.876651",
-      "longtitude": "100.444577"
     },
     "facility": [
       {
@@ -7466,10 +7054,6 @@
       "coor_x": "273",
       "coor_y": "732"
     },
-    "gpsCoordinate": {
-      "latitude": "13.874918",
-      "longtitude": "100.456039"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -7533,10 +7117,6 @@
     "imageCoordinate": {
       "coor_x": "317",
       "coor_y": "732"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.870523",
-      "longtitude": "100.466639"
     },
     "facility": [
       {
@@ -7607,10 +7187,6 @@
       "coor_x": "362",
       "coor_y": "732"
     },
-    "gpsCoordinate": {
-      "latitude": "13.870344",
-      "longtitude": "100.480524"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -7669,10 +7245,6 @@
     "imageCoordinate": {
       "coor_x": "405",
       "coor_y": "732"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.866001",
-      "longtitude": "100.494235"
     },
     "facility": [
       {
@@ -7738,10 +7310,6 @@
       "coor_x": "451",
       "coor_y": "732"
     },
-    "gpsCoordinate": {
-      "latitude": "13.861741",
-      "longtitude": "100.504792"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -7806,10 +7374,6 @@
       "coor_x": "508",
       "coor_y": "737"
     },
-    "gpsCoordinate": {
-      "latitude": "13.860147",
-      "longtitude": "100.513386"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -7873,10 +7437,6 @@
     "imageCoordinate": {
       "coor_x": "545",
       "coor_y": "810"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.848647",
-      "longtitude": "100.514909"
     },
     "facility": [
       {
@@ -7947,10 +7507,6 @@
       "coor_x": "585",
       "coor_y": "850"
     },
-    "gpsCoordinate": {
-      "latitude": "13.839303",
-      "longtitude": "100.515113"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -8015,10 +7571,6 @@
       "coor_x": "625",
       "coor_y": "893"
     },
-    "gpsCoordinate": {
-      "latitude": "13.829900",
-      "longtitude": "100.526495"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -8082,10 +7634,6 @@
     "imageCoordinate": {
       "coor_x": "670",
       "coor_y": "942"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.820190",
-      "longtitude": "100.532514"
     },
     "facility": [
       {
@@ -8156,10 +7704,6 @@
       "coor_x": "669",
       "coor_y": "1000"
     },
-    "gpsCoordinate": {
-      "latitude": "13.806135",
-      "longtitude": "100.530819"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -8223,10 +7767,6 @@
     "imageCoordinate": {
       "coor_x": "912",
       "coor_y": "1428"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.723684",
-      "longtitude": "100.529357"
     },
     "facility": [
       {
@@ -8307,10 +7847,6 @@
       "coor_x": "1064",
       "coor_y": "422"
     },
-    "gpsCoordinate": {
-      "latitude": "13.924983",
-      "longtitude": "100.625876"
-    },
     "facility": [
       {
         "icon": "seat-legroom-normal",
@@ -8369,10 +7905,6 @@
     "imageCoordinate": {
       "coor_x": "990",
       "coor_y": "470"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.910722",
-      "longtitude": "100.617423"
     },
     "facility": [
       {
@@ -8433,10 +7965,6 @@
       "coor_x": "1015",
       "coor_y": "450"
     },
-    "gpsCoordinate": {
-      "latitude": "13.917945",
-      "longtitude": "100.621715"
-    },
     "facility": [
       {
         "icon": "stairs",
@@ -8496,10 +8024,6 @@
       "coor_x": "959",
       "coor_y": "499"
     },
-    "gpsCoordinate": {
-      "latitude": "13.896595",
-      "longtitude": "100.609132"
-    },
     "facility": [
       {
         "icon": "seat-legroom-normal",
@@ -8554,10 +8078,6 @@
       "coor_x": "935",
       "coor_y": "525"
     },
-    "gpsCoordinate": {
-      "latitude": "13.888442",
-      "longtitude": "100.604292"
-    },
     "facility": [
       {
         "icon": "seat-legroom-normal",
@@ -8611,10 +8131,6 @@
     "imageCoordinate": {
       "coor_x": "905",
       "coor_y": "558"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.882454",
-      "longtitude": "100.600766"
     },
     "facility": [
       {
@@ -8674,10 +8190,6 @@
     "imageCoordinate": {
       "coor_x": "888",
       "coor_y": "1456"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.7184248",
-      "longtitude": "100.5233461"
     },
     "facility": [
       {
@@ -8748,10 +8260,6 @@
       "coor_x": "765",
       "coor_y": "1487"
     },
-    "gpsCoordinate": {
-      "latitude": "13.7209120806998",
-      "longtitude": "100.502619751809"
-    },
     "facility": [
       {
         "icon": "stairs",
@@ -8810,10 +8318,6 @@
     "imageCoordinate": {
       "coor_x": "763",
       "coor_y": "1456"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.726478",
-      "longtitude": "100.509032"
     },
     "facility": [
       {
@@ -8874,10 +8378,6 @@
       "coor_x": "738",
       "coor_y": "1432"
     },
-    "gpsCoordinate": {
-      "latitude": "13.730379",
-      "longtitude": "100.507646"
-    },
     "facility": [
       {
         "icon": "stairs",
@@ -8931,10 +8431,6 @@
     "imageCoordinate": {
       "coor_x": "756",
       "coor_y": "1014"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.8035188",
-      "longtitude": "100.5399456"
     },
     "facility": [
       {
@@ -8993,10 +8489,6 @@
     "imageCoordinate": {
       "coor_x": "670",
       "coor_y": "967"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.8411907",
-      "longtitude": "100.5568394"
     },
     "facility": [
       {
@@ -9060,10 +8552,6 @@
     "imageCoordinate": {
       "coor_x": "462",
       "coor_y": "1106"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.791746311705188",
-      "longtitude": "100.47772084022967"
     },
     "facility": [
       {
@@ -9133,10 +8621,6 @@
       "coor_x": "373",
       "coor_y": "1127"
     },
-    "gpsCoordinate": {
-      "latitude": "ฺ13.791746311705188",
-      "longtitude": "100.47772084022967"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -9204,10 +8688,6 @@
     "imageCoordinate": {
       "coor_x": "781",
       "coor_y": "1014"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.8035188",
-      "longtitude": "100.5399456"
     },
     "facility": [
       {
@@ -9288,10 +8768,6 @@
       "coor_x": "776",
       "coor_y": "820"
     },
-    "gpsCoordinate": {
-      "latitude": "13.8266724279577",
-      "longtitude": "100.549354832341"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -9349,10 +8825,6 @@
     "imageCoordinate": {
       "coor_x": "776",
       "coor_y": "670"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.8411907",
-      "longtitude": "100.5568394"
     },
     "facility": [
       {
@@ -9412,10 +8884,6 @@
       "coor_x": "776",
       "coor_y": "542"
     },
-    "gpsCoordinate": {
-      "latitude": "13.8411907",
-      "longtitude": "100.5568394"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -9473,10 +8941,6 @@
     "imageCoordinate": {
       "coor_x": "776",
       "coor_y": "500"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.8411907",
-      "longtitude": "100.5568394"
     },
     "facility": [
       {
@@ -9541,10 +9005,6 @@
       "coor_x": "776",
       "coor_y": "462"
     },
-    "gpsCoordinate": {
-      "latitude": "13.8411907",
-      "longtitude": "100.5568394"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -9602,10 +9062,6 @@
     "imageCoordinate": {
       "coor_x": "775",
       "coor_y": "420"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.8411907",
-      "longtitude": "100.5568394"
     },
     "facility": [
       {
@@ -9665,10 +9121,6 @@
       "coor_x": "784",
       "coor_y": "576"
     },
-    "gpsCoordinate": {
-      "latitude": "13.8411907",
-      "longtitude": "100.5568394"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -9727,10 +9179,6 @@
       "coor_x": "776",
       "coor_y": "736"
     },
-    "gpsCoordinate": {
-      "latitude": "13.8411907",
-      "longtitude": "100.5568394"
-    },
     "facility": [
       {
         "icon": "wheelchair-accessibility",
@@ -9788,10 +9236,6 @@
     "imageCoordinate": {
       "coor_x": "776",
       "coor_y": "945"
-    },
-    "gpsCoordinate": {
-      "latitude": "13.8266724279577",
-      "longtitude": "100.549354832341"
     },
     "facility": [
       {

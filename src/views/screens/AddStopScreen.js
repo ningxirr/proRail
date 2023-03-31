@@ -70,7 +70,12 @@ const AddStopScreen = ({route, navigation}) => {
           size={20}
           color="grey"
           style={{padding: 1}}
-          onPress={() => removeItems(item)}
+          onPress={() => {
+            removeItems(item);
+            if(oriStation===destStation && itemsCode.length === 1){
+              setDestStation(null);
+            }
+          }}
         />
       </View>
     );
@@ -95,7 +100,9 @@ const AddStopScreen = ({route, navigation}) => {
             <View style={{position: 'absolute', width: '100%'}}>
               <Header title={'Choose Direction'} />
               <View style={{marginHorizontal: '5%', marginVertical: -20}}>
-                <NextStation navigate={true} navigateText={'Nearest\nStation'} stationName={'Khu Khot'} stationColor={'#71B047'} stationPlatform={'BTS'}/>
+                <NextStation 
+                  navigate={true} 
+                  isNearestOnly={true}/>
               </View>
             </View>
           </View>

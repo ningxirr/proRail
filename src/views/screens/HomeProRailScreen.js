@@ -49,7 +49,9 @@ const HomeProRailScreen = ({route, navigation}) => {
 
         <View style={{marginTop: -height*0.3}}>
             <View style={{ marginHorizontal: '5%', marginVertical: 20}}>
-              <NextStation navigate={true} navigateText={'Nearest\nStation'} stationName={'Khu Khot'} stationColor={'#71B047'} stationPlatform={'BTS'}/>
+              <NextStation 
+                navigate={true} 
+                isNearestOnly={true}/>
             </View>
 
             <View style={styles.chooseDirView}>
