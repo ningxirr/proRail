@@ -30,7 +30,7 @@ const FavoriteRouteList = (props) => {
                 <Text style = {Styles.station_stop_text}>
                     {stationList.length-2}
                 </Text>
-                <Text style = {[Styles.station_stop_text, {fontSize: 10, fontFamily: 'LINESeedSans_A_Rg'}]}>
+                <Text style = {[Styles.station_stop_text, {fontSize: 10, fontFamily: 'LINESeedSansApp-Regular'}]}>
                     STOP(S)
                 </Text>
             </View>
@@ -62,14 +62,14 @@ const Styles = StyleSheet.create({
     next_station_text: {
         color:'black', 
         fontSize: 14, 
-        fontFamily: 'LINESeedSans_A_Bd',
+        fontFamily: 'LINESeedSansApp-Bold',
         marginVertical: 2,
     },
     route_text: {
         color:'#9E9A9A',
         fontSize: 12,
         marginVertical: 2,
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
     },
     station_route_view: {
         backgroundColor: 'black',
@@ -83,7 +83,7 @@ const Styles = StyleSheet.create({
         color:'white', 
         fontSize: 25, 
         textAlign:'center',
-        fontFamily: 'LINESeedSans_A_Bd',
+        fontFamily: 'LINESeedSansApp-Bold',
     }
 });
 

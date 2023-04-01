@@ -49,8 +49,10 @@
 		<string>Entypo.ttf</string>
 		<string>MaterialIcons.ttf</string>
 		<string>AntDesign.ttf</string>
-		<string>LINESeedSansTH_A_Bd.otf</string>
-		<string>LINESeedSansTH_A_Rg.otf</string>
+		<string>LINESeedSansApp-Bold.otf</string>
+		<string>LINESeedSansApp-Regular.otf</string>
+		<string>LINESeedSansTHApp-Bold.otf</string>
+		<string>LINESeedSansTHApp-Regular.otf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

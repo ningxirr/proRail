@@ -114,13 +114,13 @@ const Styles = StyleSheet.create({
         marginLeft: screenWidth*0.1,
         fontSize: screenHeight*0.016,
         fontColor: 'black',
-        fontFamily: 'LINESeedSans_A_Bd',
+        fontFamily: 'LINESeedSansApp-Bold',
     },
     briefly_path_th_text: {
         marginLeft: screenWidth*0.1,
         fontSize: screenHeight*0.016,
         fontColor: 'black',
-        fontFamily: 'LINESeedSansTH_A_Rg',
+        fontFamily: 'LINESeedSansTHApp-Regular',
     },
 });
 

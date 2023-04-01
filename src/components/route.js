@@ -215,14 +215,14 @@ const Styles = StyleSheet.create({
         marginLeft: 40,
         fontSize: 14,
         color: 'black',
-        fontFamily: 'LINESeedSans_A_Bd',
+        fontFamily: 'LINESeedSansApp-Bold',
         width: 200
     },
     briefly_path_th_text: {
         marginLeft: 40,
         fontSize: 12,
         color: 'black',
-        fontFamily: 'LINESeedSansTH_A_Rg',
+        fontFamily: 'LINESeedSansTHApp-Regular',
     },
     container_view: {
         paddingVertical: 10,
@@ -234,13 +234,13 @@ const Styles = StyleSheet.create({
     price_text:{
         textAlign: 'center',
         fontSize: 16,
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
         color: 'black',
     },
     price_unit_text:{
         textAlign: 'center',
         fontSize: 10,
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
         color: 'black',
     },
     price_component_view: {

@@ -5,7 +5,7 @@ import TochableIcon from '../components/tochableIcon';
 
 const HeaderBar = (props) => {
     return (
-        <View>
+        <View style={{marginTop: 40}}>
             <View style = {Styles.header_navbar_view}>
                 <TochableIcon name='angle-left' size={25} color={'white'} function={props.backIconFunction}/>
                 {
@@ -48,7 +48,7 @@ const Styles = StyleSheet.create({
       header_bar_text:{
         color: 'white',
         fontSize: 24,
-        fontFamily: 'LINESeedSans_A_Bd',
+        fontFamily: 'LINESeedSansApp-Bold',
       },
       stop_view: {
         paddingVertical: 5,
@@ -61,7 +61,7 @@ const Styles = StyleSheet.create({
         color:'white', 
         fontSize: 15, 
         textAlign:'center',
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
       },
 });
 

@@ -88,6 +88,7 @@ const FavoriteRoute = (props) => {
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'black'
   },
   header_view: {
     paddingVertical: 30,
@@ -104,7 +105,7 @@ const Styles = StyleSheet.create({
   header_text:{
     color: 'white',
     fontSize: 24,
-    fontFamily: 'LINESeedSans_A_Bd',
+    fontFamily: 'LINESeedSansApp-Bold',
   },
   content_bottom_sheet_scroll_view: {
     backgroundColor: "white",
@@ -135,7 +136,7 @@ const Styles = StyleSheet.create({
   },
   add_favorite_route_text: {
     textAlign: 'center',
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
     fontSize: 15,
     color: 'black'
   }

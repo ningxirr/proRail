@@ -111,7 +111,7 @@ const Styles = StyleSheet.create({
     next_station_text: {
         color:'black', 
         fontSize: 20, 
-        fontFamily: 'LINESeedSans_A_Bd',
+        fontFamily: 'LINESeedSansApp-Bold',
     },
     station_name_view: {
         alignSelf: 'center',
@@ -122,7 +122,7 @@ const Styles = StyleSheet.create({
         color:'black', 
         fontSize: 18, 
         // textAlign:'right',
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
     },
     station_route_view: {
         borderRadius: 15,
@@ -134,7 +134,7 @@ const Styles = StyleSheet.create({
         color:'white', 
         fontSize: 15, 
         textAlign:'center',
-        fontFamily: 'LINESeedSans_A_Bd',
+        fontFamily: 'LINESeedSansApp-Bold',
     },
     description_view:{
         marginHorizontal: 10,
@@ -149,7 +149,7 @@ const Styles = StyleSheet.create({
     description_text:{
         color:'black',
         fontSize: 14,
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
     }
 });
 

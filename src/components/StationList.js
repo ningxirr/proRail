@@ -95,17 +95,17 @@ const styles = StyleSheet.create({
   codeText: {
     color: '#FFFFFF',
     fontSize: 15,
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
   staNameEn: {
     color: '#000000',
     fontSize: 15,
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
   staNameTh: {
     color: '#B4B4B4',
     fontSize: 14,
-    fontFamily: 'LINESeedSansTH_A_Rg',
+    fontFamily: 'LINESeedSansTHApp-Regular',
     lineHeight: 18,
   },
 });

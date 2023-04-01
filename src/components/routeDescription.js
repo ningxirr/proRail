@@ -51,7 +51,7 @@ const Styles = StyleSheet.create({
     },
     route_text: {
         textAlign: 'center',
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
         fontSize: 13,
         fontWeight: 'bold',
         color: '#CCCCCC'
@@ -63,13 +63,13 @@ const Styles = StyleSheet.create({
     },
     label_text: {
         fontSize: 10,
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
         color: 'black',
         marginHorizontal: '0.5%'
     },
     value_text: {
         fontSize: 24,
-        fontFamily: 'LINESeedSans_A_Bd',
+        fontFamily: 'LINESeedSansApp-Bold',
         color: 'black',
         marginHorizontal: '0.5%'
     }

@@ -26,7 +26,7 @@ const App = () => {
     //Ning, You can put your beautiful animation "start page" here. This will come after spash page.
     return (
     <View style={{alignItems:'center', flex: 1, justifyContent: 'center'}}>
-      <Text style={{fontFamily: 'LINESeedSans_A_Bd', fontSize: 50}}>Loading</Text>
+      <Text style={{fontFamily: 'LINESeedSansApp-Bold', fontSize: 50}}>Loading</Text>
     </View>)
   }
   return (

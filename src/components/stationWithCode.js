@@ -32,13 +32,13 @@ const Style = StyleSheet.create({
     },
     station_code_text: {
         fontSize: 15,
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
         color: 'white',
         textAlign: 'center'
     },
     station_name_text: {
         fontSize: 15,
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
         color: 'black',
         marginLeft: 5
     }

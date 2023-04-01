@@ -17,6 +17,7 @@ const StationInfo = ({navigation, route}) => {
   const code = route.params.code
   return (
     <SafeAreaView style={Styles.container}>
+      <View style={{backgroundColor: '#fafafa'}}>
       <View style = {Styles.header_navbar_view}>
         <Header 
           title={stationInfo[code].station_name.en.length >= 20 ? stationInfo[code].station_name.en.substring(0,20)+'...' : stationInfo[code].station_name.en} 
@@ -68,6 +69,7 @@ const StationInfo = ({navigation, route}) => {
           }
       </View>
     </ScrollView>
+      </View>
   </SafeAreaView>
   );
 };
@@ -75,10 +77,11 @@ const StationInfo = ({navigation, route}) => {
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fafafa'
+    backgroundColor: 'black'
   },
   image_view: {
-    paddingTop: 110,
+    // paddingTop: 110,
+    paddingTop: 0
   },
   description_view: {
     backgroundColor: 'white',
@@ -91,7 +94,6 @@ const Styles = StyleSheet.create({
   header_navbar_view:{
     zIndex:1,
     height: 100,
-    position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
