@@ -94,7 +94,7 @@ const Result = (props) => {
       if (data!==null){
         setRecommended(data);
         setSelectedPath(data[0]);
-      } 
+      }
     };
     fetchData();
   }, [stationPath])
@@ -112,8 +112,8 @@ const Result = (props) => {
   }
   else {
     return (
-        <SafeAreaView style={Styles.container}>
-            <Animated.View style={[Styles.nav_view, backgroundStyle]}> 
+          <View style={{flex: 1, backgroundColor: 'white'}}>
+          <Animated.View style={[Styles.nav_view, backgroundStyle]}> 
                 <HeaderBar 
                     selectedPath={selectedPath}
                     resultPathLength={selectedPath === 'cheapest' ? cheapestPath.resultPath.length : selectedPath === 'fastest' ? fastestPath.resultPath.length : leastInterchangesPath.resultPath.length}
@@ -139,9 +139,9 @@ const Result = (props) => {
             <ScrollView 
                 scrollEventThrottle={16}
                 onScroll={Animated.event([{ nativeEvent : { contentOffset: { y : animationValue } }}],{ useNativeDriver: false } )}>
-                <Header 
-                    startStation={stationPath[0]} 
-                    stopStation={stationPath[stationPath.length-1]} />
+                  <Header 
+                      startStation={stationPath[0]} 
+                      stopStation={stationPath[stationPath.length-1]} />
                 <Body 
                     selectedPath={selectedPath}
                     recommended={recommended}
@@ -154,7 +154,7 @@ const Result = (props) => {
                     leastInterchangesPath={leastInterchangesPath}
                     favoriteRoute={favoriteRoute}/>
             </ScrollView>
-        </SafeAreaView>
+          </View>
     )
   }
 };
@@ -162,7 +162,7 @@ const Result = (props) => {
 const BreakingScreen = ({text}) =>{
   return(
     <View style={{alignItems:'center', flex: 1, justifyContent: 'center'}}>
-      <Text style={{fontFamily: 'LINESeedSansTH_A_Bd', fontSize: 50}}>{text}</Text>
+      <Text style={{fontFamily: 'LINESeedSansTHApp-Bold', fontSize: 50}}>{text}</Text>
     </View>
   )
 }
@@ -179,7 +179,7 @@ const Styles = StyleSheet.create({
     left: 0,
     right: 0,
     borderBottomStartRadius: 20,
-    borderBottomEndRadius: 20
+    borderBottomEndRadius: 20,
   },
   header_navbar_view:{
     flexDirection: 'row',
@@ -196,7 +196,7 @@ const Styles = StyleSheet.create({
   header_bar_text:{
     color: 'white',
     fontSize: 24,
-    fontFamily: 'LINESeedSans_A_Bd',
+    fontFamily: 'LINESeedSansApp-Bold',
   },
   stop_view: {
     paddingVertical: 5,
@@ -209,7 +209,7 @@ const Styles = StyleSheet.create({
     color:'white', 
     fontSize: 15, 
     textAlign:'center',
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
 });
 

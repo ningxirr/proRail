@@ -33,18 +33,18 @@ const Styles = StyleSheet.create({
   number_text: {
       fontSize: 40, 
       color:'black', 
-      fontFamily: 'LINESeedSans_A_Bd',
+      fontFamily: 'LINESeedSansApp-Bold',
       textAlign:'right'
   },
   unit_text: {
     fontSize: 16, 
-    fontFamily: 'LINESeedSans_A_Bd',
+    fontFamily: 'LINESeedSansApp-Bold',
     color:'black', 
     textAlign:'right'
   },
   topic_text: {
     fontSize: 16, 
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
     marginBottom: 5, 
     marginLeft: 5,
     textAlign:'left'

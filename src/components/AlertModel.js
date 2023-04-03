@@ -71,11 +71,11 @@ const styles = StyleSheet.create({
   discardText: {
     textAlign: 'center',
     fontSize: 14,
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
     color: 'black',
   },
   warningText: {
-    fontFamily: 'LINESeedSans_A_Bd',
+    fontFamily: 'LINESeedSansApp-Bold',
     paddingVertical: 10,
     color: 'black',
     fontSize: 16
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     marginVertical: (15),
   },
   detailText: {
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
     color: 'black',
     fontSize: 14,
   },

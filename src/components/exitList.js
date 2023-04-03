@@ -22,8 +22,8 @@ const ExitList = (props) => {
                         </View>
                         {
                             props.language === 'th' ? 
-                                <Text style={[Styles.exit_description_text, {fontFamily:'LINESeedSansTH_A_Rg'}]}>{item.th}</Text> : 
-                                <Text style={[Styles.exit_description_text, {fontFamily:'LINESeedSans_A_Rg'}]}>{item.en}</Text>
+                                <Text style={[Styles.exit_description_text, {fontFamily:'LINESeedSansTHApp-Regular'}]}>{item.th}</Text> : 
+                                <Text style={[Styles.exit_description_text, {fontFamily:'LINESeedSansApp-Regular'}]}>{item.en}</Text>
                         }
                     </View>
                 ))
@@ -39,7 +39,7 @@ const Styles = StyleSheet.create({
     },
     title_text:{
         fontSize: 20,
-        fontFamily: 'LINESeedSans_A_Bd',
+        fontFamily: 'LINESeedSansApp-Bold',
         color: 'black',
         paddingVertical: 10,
     },
@@ -69,14 +69,14 @@ const Styles = StyleSheet.create({
     },
     exit_number_text:{
         fontSize: 16,
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
         color: 'white',
         textAlignVertical: 'center',
         textAlign: 'center',
     },
     exit_description_text: {
         fontSize: 14,
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
         textAlignVertical: 'center',
         textAlign: 'left',
         flex: 1, 

@@ -11,10 +11,10 @@ const Welcome = (props) => {
     <SafeAreaView style={styles.container}>
       <ImageBackground source={require('../../../../assets/images/rocket.jpg')} resizeMode="cover" style={styles.image} ></ImageBackground>
       <View style={styles.body}>
-        <Text style={{fontSize: 32, fontFamily: 'LINESeedSans_A_Bd', color:'#000000'}}>Welcome to</Text>
-        <Text style={{fontSize: 64, fontFamily: 'LINESeedSans_A_Bd', color:'#000000'}}>proRail</Text>
-        <Text style={{paddingTop: 10,fontSize: 20, fontFamily: 'LINESeedSans_A_Bd', color:'#000000'}}>Suggested the</Text>
-        <Text style={{fontSize: 20, fontFamily: 'LINESeedSans_A_Bd', color:'#000000'}}>best route for you</Text>
+        <Text style={{fontSize: 32, fontFamily: 'LINESeedSansApp-Bold', color:'#000000'}}>Welcome to</Text>
+        <Text style={{fontSize: 64, fontFamily: 'LINESeedSansApp-Bold', color:'#000000'}}>proRail</Text>
+        <Text style={{paddingTop: 10,fontSize: 20, fontFamily: 'LINESeedSansApp-Bold', color:'#000000'}}>Suggested the</Text>
+        <Text style={{fontSize: 20, fontFamily: 'LINESeedSansApp-Bold', color:'#000000'}}>best route for you</Text>
       </View>
       <View style={styles.footer}>
         <CustomButton 

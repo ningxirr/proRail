@@ -54,7 +54,7 @@ const AllStationsInfoList = () => {
                 style={{
                   color: platformTab == index ? 'white' : 'black',
                   fontSize: 16,
-                  fontFamily: 'LINESeedSans_A_Rg',
+                  fontFamily: 'LINESeedSansApp-Regular',
                   textAlign: 'center',
                 }}>
                 {Object.values(platform.platform_name.name_en)}
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
   platformLineText: {
     fontSize: 16,
     lineHeight: 22,
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
 });
 

@@ -19,8 +19,7 @@ const StartAndEndRoute = (props) => {
 
 const Styles = StyleSheet.create({
     main_component_view: {
-      width: 130,
-      height: 200
+      width: 130
     },
     route_component_view: {
       borderRadius: 20, 
@@ -31,13 +30,13 @@ const Styles = StyleSheet.create({
       textAlign:'center', 
       color:'white', 
       fontSize: 15, 
-      fontFamily: 'LINESeedSans_A_Rg'
+      fontFamily: 'LINESeedSansApp-Regular'
     },
     station_name_text: {
       textAlign:'center', 
       color:'white', 
       fontSize: 14, 
-      fontFamily: 'LINESeedSans_A_Bd'
+      fontFamily: 'LINESeedSansApp-Bold'
     }
 });
 

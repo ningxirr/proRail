@@ -1,5 +1,5 @@
 import React, {useState, useMemo, useRef, useEffect, useCallback} from 'react';
-import {View, StyleSheet, TouchableOpacity, Text} from 'react-native';
+import {SafeAreaView, View, StyleSheet, TouchableOpacity, Text} from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import NextStation from '../../components/nextStation';
 import Header from '../../components/header';
@@ -11,7 +11,7 @@ import StationWithCode from '../../components/stationWithCode';
 
 const AddStopScreen = ({route, navigation}) => {
   const bottomSheetRef = useRef(null);
-  const snapPoints = useMemo(() => ['50%', '80%'], []);
+  const snapPoints = useMemo(() => ['50%', '36%', '75%'], []);
   const handleSheetChange = useCallback((index) => {
     console.log("handleSheetChange", index);
   }, []);
@@ -81,7 +81,8 @@ const AddStopScreen = ({route, navigation}) => {
     );
   }
   return (
-    <GestureHandlerRootView style={{flex: 1}}> 
+    <SafeAreaView style={{flex: 1, backgroundColor:'black'}}>
+      <GestureHandlerRootView style={{flex: 1}}> 
       <View style={{backgroundColor: 'white', flex: 1}}>
         <AlertModel
           modalVisible={modalVisible}
@@ -108,27 +109,25 @@ const AddStopScreen = ({route, navigation}) => {
           </View>
         </View>
 
-      <BottomSheet 
-        ref={bottomSheetRef} 
-        index={0} 
-        snapPoints={snapPoints} 
-        onChange={handleSheetChange} 
-        overDragResistanceFactor={10}
-        handleComponent={() => <></>}
-        enableOverDrag={false}
-        >
-        {/* <View
-          style={[styles.infoBox, {justifyContent: 'space-around'}, {flex: 6}]}> */}
-          <BottomSheetFlatList
-            data={itemsCode}
-            ListHeaderComponent={startStation()}
-            renderItem={addStopStation}
-            ListFooterComponent={endButton()}
-          />
-        {/* </View> */}
-      </BottomSheet>
-    </View>
-    </GestureHandlerRootView>
+        <BottomSheet 
+          ref={bottomSheetRef} 
+          index={0} 
+          snapPoints={snapPoints} 
+          onChange={handleSheetChange} 
+          overDragResistanceFactor={10}
+          handleComponent={() => <></>}
+          enableOverDrag={false}
+          >
+            <BottomSheetFlatList
+              data={itemsCode}
+              ListHeaderComponent={startStation()}
+              renderItem={addStopStation}
+              ListFooterComponent={endButton()}
+            />
+        </BottomSheet>
+      </View>
+      </GestureHandlerRootView>
+    </SafeAreaView>
   );
 
   function startStation() {
@@ -207,7 +206,7 @@ const styles = StyleSheet.create({
   letsgoText: {
     color: 'white',
     fontSize: 15, 
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
   infoBox: {
     flex: 4,
@@ -250,12 +249,12 @@ const styles = StyleSheet.create({
   textInChooseBox: {
     fontSize: 15,
     paddingLeft: (10),
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
   textInAddBox: {
     fontSize: 15,
     color: 'black',
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
 });
 

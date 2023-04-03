@@ -36,7 +36,7 @@ export default SearchBar;
 const styles = StyleSheet.create({
   searchBarView: {
     marginVertical: (10),
-    paddingVertical: (5),
+    paddingVertical: (10),
     paddingHorizontal: (10),
     flexDirection: 'row',
     width: '90%',
@@ -59,6 +59,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     marginLeft: (10),
     width: '85%',
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
 });

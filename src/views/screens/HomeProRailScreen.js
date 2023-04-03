@@ -14,6 +14,7 @@ const HomeProRailScreen = ({route, navigation}) => {
 
   function checkCollectStation() {
     if (oriStation == null || destStation == null) {
+      setModalVisible(true);
     } else {
       navigation.navigate('AddStopNavigator',{
         screen: 'ResultScreen',
@@ -135,13 +136,12 @@ const HomeProRailScreen = ({route, navigation}) => {
 
 const styles = StyleSheet.create({
   proRailText: {
-    position: 'absolute',
     fontSize: 36,
     flex: 1,
     color: 'white',
-    marginTop: 10,
+    marginTop: 25,
     padding: 20,
-    fontFamily: 'LINESeedSans_A_Bd',
+    fontFamily: 'LINESeedSansApp-Bold',
   },
   centerSecView: {
     flex: 5,
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     color: 'black',
     marginLeft: 30,
     marginVertical: 5,
-    fontFamily: 'LINESeedSans_A_Bd',
+    fontFamily: 'LINESeedSansApp-Bold',
   },
   chooseDirView: {
     backgroundColor: 'white',
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: 'black',
     marginLeft: 20,
-    fontFamily: 'LINESeedSans_A_Bd',
+    fontFamily: 'LINESeedSansApp-Bold',
     lineHeight: 30,
   },
   choseStTouch: {
@@ -204,20 +204,20 @@ const styles = StyleSheet.create({
   },
   choseStText: {
     fontSize: 15,
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
     color: '#404040',
     paddingLeft: 10,
   },
   letsgoText: {
     color: 'white',
     fontSize: 14,
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
   moreInfoInScrollText: {
     margin: 10,
     fontSize: 22,
     color: 'black',
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
     lineHeight: 30,
   },
 });

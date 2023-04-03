@@ -13,8 +13,8 @@ const Regist = (props) => {
     <SafeAreaView style={styles.container}>
       <ImageBackground source={require('../../../../assets/images/rocket.jpg')} resizeMode="cover" style={styles.image} ></ImageBackground>
       <View style={styles.body}>
-        <Text style={{fontSize: 64, color:'#000000',fontFamily: 'LINESeedSans_A_Bd',}}>Hello</Text>
-        <Text style={{fontSize: 24, color:'#000000', fontFamily: 'LINESeedSans_A_Bd',}}>How can we call you ?</Text>
+        <Text style={{fontSize: 64, color:'#000000',fontFamily: 'LINESeedSansApp-Bold',}}>Hello</Text>
+        <Text style={{fontSize: 24, color:'#000000', fontFamily: 'LINESeedSansApp-Bold',}}>How can we call you ?</Text>
         <TextInput
             style={styles.input}
             onChangeText={onChangeText}
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end'
   },
   input: {
-    fontFamily: 'LINESeedSans_A_Bd',
+    fontFamily: 'LINESeedSansApp-Bold',
     height: 45,
     width: 241,
     marginTop: 12,
