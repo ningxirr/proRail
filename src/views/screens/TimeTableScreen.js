@@ -44,7 +44,7 @@ const Day = ({pf}) => {
         <Text style={{  marginBottom: 15, fontSize: 20, fontFamily: 'LINESeedSans_A_Rg', color: 'black'}}>Departure Frequency</Text>
         <Text style={{ fontSize: 15, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>Monday - Friday</Text>
         <View style={{paddingBottom: 20, alignItems: 'center'}}>
-          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13, width: 360,paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
+          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13, width: 360, paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
             <Table >
               <Row
                 data = {['Period','Duration/Train(mins)']}
@@ -78,11 +78,10 @@ const Day = ({pf}) => {
         </View>
         <Text style={{ fontSize: 15, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}} >Saturday - Sunday {'\n'}& Public Holidays</Text>
         <View style={{alignItems:'center',paddingBottom: 20,backgroundColor: 'transparent'}}>
-          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360,paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
+          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360, paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
             <Table >
               <Row
                 data = {['Period','Duration/Train(mins)']}
-                
                 flexArr = {[1,1]}
                 textStyle = {{
                   textAlign: 'center',
@@ -150,17 +149,15 @@ const Day = ({pf}) => {
         </View>
         <Text style={{fontSize: 15, fontFamily: 'LINESeedSans_A_Bd', fontWeight: 'bold'}}>Saturday</Text>
         <View style={{alignItems:'center',paddingBottom: 20,backgroundColor: 'transparent'}}>
-          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360,paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
-            <Table >
+          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360, paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
+            <Table>
               <Row
                 data = {['Period','Duration/Train(mins)']}
-                
                 flexArr = {[1,1]}
                 textStyle = {{
                   textAlign: 'center',
                   fontFamily: 'LINESeedSans_A_Rg',
                   color: 'black',
-                  
                 }}
               />
             </Table>
@@ -182,17 +179,15 @@ const Day = ({pf}) => {
         </View>
         <Text style={{fontSize: 15, fontFamily: 'LINESeedSans_A_Bd', fontWeight: 'bold'}}>Sunday</Text>
         <View style={{alignItems:'center',paddingBottom: 20,backgroundColor: 'transparent'}}>
-          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360,paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
+          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360, paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
             <Table >
               <Row
                 data = {['Period','Duration/Train(mins)']}
-                
                 flexArr = {[1,1]}
                 textStyle = {{
                   textAlign: 'center',
                   fontFamily: 'LINESeedSans_A_Rg',
                   color: 'black',
-                  
                 }}
               />
             </Table>
@@ -222,11 +217,10 @@ const Day = ({pf}) => {
       <View>
         <Text style={{fontSize: 15,  fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>Everyday</Text>
         <View style={{alignItems:'center',paddingBottom: 20}}>
-          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360,paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
+          <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360, paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
             <Table >
               <Row
                 data = {['Period','Duration/Train(mins)']}
-                
                 flexArr = {[1,1]}
                 textStyle = {{
                   textAlign: 'center',
@@ -509,7 +503,7 @@ const BGroup = ({buttons, code}) => {
           </View>
           
         </View>
-        <ScrollView>
+        <ScrollView style={{alignSelf: 'center'}}>
           <View
             style={{
               marginTop: 10,

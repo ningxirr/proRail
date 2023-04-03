@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
+import { View } from 'react-native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import ChooseDirectionScreen from '../screens/ChooseDirectionScreen'
 import Header from '../../components/header'
 import AddStopScreen from '../screens/AddStopScreen'
 import ResultScreen from '../screens/ResultScreen'
 import NavigateScreen from '../screens/NavigateScreen'
+import TochableIcon from '../../components/tochableIcon'
 
 const Stack = createNativeStackNavigator();
 
@@ -51,24 +53,11 @@ const AddStopNavigator = ({routeName, setNavigate}) => {
            <Stack.Screen 
             name="NavigateScreen" 
             component={NavigateScreen}
-            options={({ navigation }) => ({
-              header: () => (
-                <Header
-                  title={'Navigate'}
-                  haveCloseIcon={true}
-                  function2={() => {
-                    navigation.navigate('HomeProRailNavigator');
-                    navigation.reset({
-                      index: 0,
-                      routes: [{ name: 'AddStopScreen' }]
-                    });
-                    setNavigate(false);
-                    setIsSet(false);
-                  }}
-                />
-              ),
+            options={{
+              headerShown: false,
+              headerBackVisible: false,
               headerTransparent: true,
-            })}
+            }}
           /> 
       </Stack.Navigator>
     )

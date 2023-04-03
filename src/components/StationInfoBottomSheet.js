@@ -14,11 +14,17 @@ const platformsData = Object.entries(platformLineStationsList).map(
   ([platformId, platformData]) => platformData,
 );
 
-const StationInfoBottomSheet = ({ clicked, searchPhrase, setClicked, memoScale, num, notSelectedStation }) => {
+const StationInfoBottomSheet = ({ clicked, searchPhrase, setClicked, memoScale, num, notSelectedStation, setFullScreenMap }) => {
   const bottomSheetRef = useRef(null);
   const snapPoints = useMemo(() => memoScale, []);
+  
   const handleSheetChange = useCallback((index) => {
-    console.log("handleSheetChange", index);
+    if(index === 0) setFullScreenMap(true);
+    else setFullScreenMap(false);
+  }, []);
+
+  const handleSnapPress = useCallback((index) => {
+    bottomSheetRef.current?.snapToIndex(index);
   }, []);
 
   const [platformTab, setPlatformTab] = useState(0);
@@ -26,12 +32,16 @@ const StationInfoBottomSheet = ({ clicked, searchPhrase, setClicked, memoScale, 
   useEffect(() => {
     setPlatformLineTab(0);
   }, [platformTab]);
+  useEffect(() => {
+    if(clicked) handleSnapPress(2);
+    else handleSnapPress(1);
+  }, [clicked])
 
   return (
       <BottomSheet 
         ref={bottomSheetRef} 
-        index={0} 
-        snapPoints={clicked ? ['60%'] : snapPoints} 
+        index={1} 
+        snapPoints={snapPoints} 
         onChange={handleSheetChange} 
         overDragResistanceFactor={10}
         handleComponent={() => <></>}
@@ -40,7 +50,6 @@ const StationInfoBottomSheet = ({ clicked, searchPhrase, setClicked, memoScale, 
         >
           <View style={{marginHorizontal: '5%', marginVertical: 20}}>
             <NextStation 
-              navigate={true} 
               isNearestOnly={true}/>
           </View>
             {
@@ -107,7 +116,6 @@ const StationInfoBottomSheet = ({ clicked, searchPhrase, setClicked, memoScale, 
               clicked ?
               null:
               <BottomSheetScrollView contentContainerStyle={{paddingBottom: 20}}>
-                {console.log(platformLineTab)}
                 {platformsData[platformTab].platform_line[platformLineTab] == undefined
                   ? platformsData[platformTab].platform_line[0].stations.map((code, index) => 
                       <StationList key={index} code={code} num={num} notSelectedStation={notSelectedStation}/>

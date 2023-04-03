@@ -1,7 +1,7 @@
 import {Modal, View, Text, StyleSheet, Pressable} from 'react-native';
 import React from 'react';
 
-const AlertModel = ({modalVisible, setModalVisible}) => {
+const AlertModel = ({modalVisible, setModalVisible, text}) => {
   return (
     <View>
       <Modal
@@ -21,7 +21,7 @@ const AlertModel = ({modalVisible, setModalVisible}) => {
             <View style={styles.warningView}>
               <Text style={styles.warningText}>Warning ! </Text>
               <Text style={styles.detailText}>
-                {`You need to select the origin \n and destination first.`}
+                {text}
               </Text>
             </View>
 

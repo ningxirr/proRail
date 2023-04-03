@@ -105,7 +105,7 @@ const Result = (props) => {
     // storeDataToAsyncStorage('@recommended', ['cheapest', 'fastest', 'leastInterchanges']);
     // storeDataToAsyncStorage('@favorite', ['RW06,BL37']);
     // storeDataToAsyncStorage('@favorite', ['BL37-RW06']);
-    return (<BreakingScreen text={'กำลังโหลด...'}/>)
+    return (<BreakingScreen text={'Loading...'}/>)
   }
   else if(cannotFindPath){
     return (<BreakingScreen text={'ไม่พบเส้นทาง'}/>)

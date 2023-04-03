@@ -8,6 +8,7 @@ import TimingInfo from '../../components/timingInfo';
 import FacilityList from '../../components/facilityList';
 import ExitList from '../../components/exitList';
 import Header from '../../components/header';
+import freq from '../../../data/freq.json';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
@@ -15,6 +16,17 @@ const screenWidth = Dimensions.get('window').width;
 const StationInfo = ({navigation, route}) => {
   const [visible, setIsVisible] = useState(false);
   const code = route.params.code
+  const today = new Date()
+  const day = today.getDay();
+  const hour = today.getHours();
+  const minute = today.getMinutes();
+  if(day > 1 && day < 5){
+    
+  }
+  else{
+
+  }
+
   return (
     <SafeAreaView style={Styles.container}>
       <View style = {Styles.header_navbar_view}>
@@ -78,7 +90,7 @@ const Styles = StyleSheet.create({
     backgroundColor: '#fafafa'
   },
   image_view: {
-    paddingTop: 110,
+    paddingTop: 50,
   },
   description_view: {
     backgroundColor: 'white',

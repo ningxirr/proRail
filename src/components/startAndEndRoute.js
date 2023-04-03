@@ -19,8 +19,7 @@ const StartAndEndRoute = (props) => {
 
 const Styles = StyleSheet.create({
     main_component_view: {
-      width: 130,
-      height: 200
+      width: 130
     },
     route_component_view: {
       borderRadius: 20, 

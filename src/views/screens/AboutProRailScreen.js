@@ -87,13 +87,14 @@ const styles = StyleSheet.create({
   },
   objectiveHeaderText: {
     fontSize: 24,
-    fontFamily: 'LINE Seed Sans TH App',
-    fontWeight: 'bold',
+    fontFamily: 'LINESeedSans_A_Bd',
+    color: 'black',
     marginLeft: 20
   },
   objectiveDetailText: {
     fontSize: 14,
-    fontFamily: 'LINE Seed Sans TH App',
+    fontFamily: 'LINESeedSans_A_Rg',
+    color: 'black',
     marginBottom: 10,
   },
   deatilAndIconView: {

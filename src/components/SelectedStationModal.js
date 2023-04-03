@@ -81,7 +81,7 @@ const SelectedStationModal = ({code, modalVisible, setModalVisible, num, notSele
 
                 <View style={styles.bottonsView}>
                   {
-                    notSelectedStation.includes(code) ? 
+                    notSelectedStation !== undefined && notSelectedStation.includes(code) ? 
                     null :
                     <TouchableOpacity
                       style={[styles.buttonView, {backgroundColor: '#000000'}]}

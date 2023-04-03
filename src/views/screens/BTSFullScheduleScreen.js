@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
   },
   imageView: {
     padding: 5,
+    marginBottom: 50,
     borderRadius: 20,
     backgroundColor: 'white',
   },

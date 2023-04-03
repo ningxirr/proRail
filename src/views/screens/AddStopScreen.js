@@ -1,5 +1,5 @@
 import React, {useState, useMemo, useRef, useEffect, useCallback} from 'react';
-import {View, StyleSheet, TouchableOpacity, Text} from 'react-native';
+import {View, StyleSheet, TouchableOpacity, Text, SafeAreaView} from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import NextStation from '../../components/nextStation';
 import Header from '../../components/header';
@@ -11,15 +11,18 @@ import StationWithCode from '../../components/stationWithCode';
 
 const AddStopScreen = ({route, navigation}) => {
   const bottomSheetRef = useRef(null);
-  const snapPoints = useMemo(() => ['50%', '80%'], []);
+  const snapPoints = useMemo(() => ["10%", "40%", "75%"], []);
   const handleSheetChange = useCallback((index) => {
-    console.log("handleSheetChange", index);
+    if(index === 0) setFullScreenMap(true);
+    else setFullScreenMap(false);
   }, []);
 
   const [itemsCode, setItemsCode] = useState([]);
   const [oriStation, setOriStation] = useState(null);
   const [destStation, setDestStation] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
+  const [fullScreenMap, setFullScreenMap] = useState(false);
+  const [alertText, setAlertText] = useState('');
 
   const removeItems = item => {
     const index = itemsCode.indexOf(item);
@@ -31,9 +34,18 @@ const AddStopScreen = ({route, navigation}) => {
   };
 
   const checkBeforeSubmit = () => {
-    if (oriStation == null || destStation == null) {
+    if (oriStation === null || destStation === null) {
+      setAlertText('You need to select the origin \n and destination first.');
       setModalVisible(true);
-    } else {
+    } 
+    else if ((oriStation === destStation && itemsCode.length === 0)
+            || oriStation === itemsCode[0] 
+            || destStation === itemsCode[itemsCode.length-1]
+            || itemsCode.some((value, index) => value === itemsCode[index+1])){
+      setAlertText('You cannot select the same station consecutively in your route. Please choose difference stations');
+      setModalVisible(true);
+    }
+    else {
       const resultStations = [oriStation, ...itemsCode, destStation]
       navigation.navigate({
         name: 'ResultScreen',
@@ -50,85 +62,116 @@ const AddStopScreen = ({route, navigation}) => {
       setItemsCode([]);
       setDestStation(null);
     }
-    if (route.params?.num === 0) {
-      setOriStation(route.params?.code);
-    } 
-    else if (route.params?.num === 4) {
-      setDestStation(route.params?.code);
-    } 
-    else if (route.params?.num === 1 || route.params?.num === 2 || route.params?.num === 3) {
-      setItemsCode(itemsCode.concat(route.params?.code));
+    switch(route.params?.num){
+      case 0:
+        setOriStation(route.params?.code);
+        break;
+      case 1:
+        if(itemsCode[1] !== undefined && itemsCode[2] !== undefined) setItemsCode([route.params?.code, itemsCode[1], itemsCode[2]]);
+        else if(itemsCode[1] !== undefined) setItemsCode([route.params?.code, itemsCode[1]]);
+        else setItemsCode([route.params?.code])
+        break;
+      case 2:
+        if(itemsCode[2] !== undefined) setItemsCode([itemsCode[0], route.params?.code, itemsCode[2]])
+        else setItemsCode([itemsCode[0], route.params?.code]);
+        break;
+      case 3:
+        setItemsCode([itemsCode[0], itemsCode[1], route.params?.code]);
+        break;
+      case 4:
+        setDestStation(route.params?.code);
+        break;
+      default:
+        break;
     }
   }, [route.params]);
 
-  function addStopStation({item}) {
+  function getNotSelectedStation(index){
+    switch(index){
+      case 0:
+        if(itemsCode.length > 1) return [oriStation, itemsCode[1]]
+        else return [oriStation, destStation]
+      case 1:
+        if(itemsCode.length > 2) return [itemsCode[0], itemsCode[2]]
+        else if(itemsCode.length === 2) return [itemsCode[0], destStation]
+        else return [oriStation, destStation]
+      case 2:
+         return [itemsCode[1], destStation]
+      default:
+        return []
+    }
+  }
+
+  function addStopStation({item, index}) {
     return (
-      <View style={styles.choosebox}>
-        <StationWithCode code={item} />
-        <Entypo
-          name="cross"
-          size={20}
-          color="grey"
-          style={{padding: 1}}
-          onPress={() => {
-            removeItems(item);
-            if(oriStation===destStation && itemsCode.length === 1){
-              setDestStation(null);
-            }
-          }}
-        />
-      </View>
+      <TouchableOpacity 
+        style={styles.choosebox}
+        onPress={() => {
+          navigation.navigate('ChooseDirectionScreen',{
+            header: index === 0 ? 'Change First Stop' : index === 1 ? 'Change Second Stop' : 'Change Third Stop',
+            num : index+1,
+            notSelectedStation: getNotSelectedStation(index)
+          });
+          console.log(index)
+        }}>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <StationWithCode code={item} />
+          <Entypo
+            name="cross"
+            size={20}
+            color="grey"
+            style={{padding: 1}}
+            onPress={() => {
+              removeItems(item);
+            }}
+          />
+        </View>
+      </TouchableOpacity>
     );
   }
   return (
+    <SafeAreaView style={{flex:1}}>
     <GestureHandlerRootView style={{flex: 1}}> 
       <View style={{backgroundColor: 'white', flex: 1}}>
+        <View style={{zIndex: 1}}>
+          <Header title="Choose Direction"/>
+        </View>
+        <View style={styles.navigation_view}>
+          <NextStation isNearestOnly={true}/>
+        </View>
         <AlertModel
+          text={alertText}
           modalVisible={modalVisible}
           setModalVisible={setModalVisible}
         />
-
-        <View style={{position: 'relative'}}>
-          <View style={{position: 'relative'}}>
-            <RailMap
-              cannotClicked={true}
-              num={route.params?.num}
-              oriStationCode={oriStation}
-              destStationCode={destStation}
-              itemsCode={itemsCode}
-            />
-            <View style={{position: 'absolute', width: '100%'}}>
-              <Header title={'Choose Direction'} />
-              <View style={{marginHorizontal: '5%', marginVertical: -20}}>
-                <NextStation 
-                  navigate={true} 
-                  isNearestOnly={true}/>
-              </View>
-            </View>
-          </View>
+        <View style={{marginTop: fullScreenMap ? 0 : -80 }}>
+          <RailMap
+            cannotClicked={true}
+            num={route.params?.num}
+            oriStationCode={oriStation}
+            destStationCode={destStation}
+            itemsCode={itemsCode}
+          />
         </View>
-
+      </View>
       <BottomSheet 
         ref={bottomSheetRef} 
-        index={0} 
+        index={1} 
         snapPoints={snapPoints} 
         onChange={handleSheetChange} 
         overDragResistanceFactor={10}
         handleComponent={() => <></>}
         enableOverDrag={false}
         >
-        {/* <View
-          style={[styles.infoBox, {justifyContent: 'space-around'}, {flex: 6}]}> */}
-          <BottomSheetFlatList
-            data={itemsCode}
-            ListHeaderComponent={startStation()}
-            renderItem={addStopStation}
-            ListFooterComponent={endButton()}
-          />
-        {/* </View> */}
+        <BottomSheetFlatList
+          data={itemsCode}
+          ListHeaderComponent={startStation()}
+          renderItem={addStopStation}
+          ListFooterComponent={endButton()}
+        />
       </BottomSheet>
-    </View>
     </GestureHandlerRootView>
+    </SafeAreaView>
   );
 
   function startStation() {
@@ -146,7 +189,18 @@ const AddStopScreen = ({route, navigation}) => {
           {
             oriStation === null ? 
             <Text style={styles.textInChooseBox}>Origin</Text>:
-            <StationWithCode code={oriStation}/>
+            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+               <StationWithCode code={oriStation}/>
+               <Entypo
+                name="cross"
+                size={20}
+                color="grey"
+                style={{padding: 1}}
+                onPress={() => {
+                  setOriStation(null)
+                }}
+              />
+            </View>
           }
         </TouchableOpacity>
       </View>
@@ -160,8 +214,8 @@ const AddStopScreen = ({route, navigation}) => {
           <TouchableOpacity
             onPress={() => {
               navigation.navigate('ChooseDirectionScreen',{
-                header: 'Add Stop',
-                num: 1,
+                header: itemsCode.length === 0 ? 'Add First Stop' : itemsCode.length === 1 ? 'Add Second Stop' : 'Add Third Stop',
+                num: itemsCode.length+1,
                 notSelectedStation: itemsCode.length === 0 ? [oriStation, destStation] : [itemsCode[itemsCode.length - 1], destStation]
               }); 
             }}>
@@ -185,7 +239,18 @@ const AddStopScreen = ({route, navigation}) => {
           {
             destStation === null ? 
             <Text style={styles.textInChooseBox}>Destination</Text>:
-            <StationWithCode code={destStation}/>
+            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+               <StationWithCode code={destStation}/>
+               <Entypo
+                name="cross"
+                size={20}
+                color="grey"
+                style={{padding: 1}}
+                onPress={() => {
+                  setDestStation(null)
+                }}
+              />
+            </View>
           }
         </TouchableOpacity>
 
@@ -228,14 +293,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   choosebox: {
-    flexDirection: 'row',
+    justifyContent: 'center',
     backgroundColor: '#F0F0F0',
     borderRadius: (10),
     marginHorizontal: (20),
     marginTop: (20),
     height: (40),
-    justifyContent: 'space-between',
-    alignItems: 'center',
     paddingHorizontal: 5,
   },
   letsgoButton: {
@@ -256,6 +319,11 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: 'black',
     fontFamily: 'LINESeedSans_A_Rg',
+  },
+  navigation_view: {
+    zIndex:1,
+    marginTop: -20,
+    paddingHorizontal: '5%',
   },
 });
 

@@ -1,5 +1,5 @@
-import React, {useState, useMemo, useRef, useEffect, useCallback} from 'react';
-import {View, StyleSheet, TouchableOpacity, Text} from 'react-native';
+import React from 'react';
+import {View, StyleSheet, Text} from 'react-native';
 import stationInfo from '../../data/station_info';
 
 const stationWithCode = ({code}) => {

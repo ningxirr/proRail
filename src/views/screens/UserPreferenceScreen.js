@@ -5,18 +5,23 @@ import { StyleSheet, View,  Dimensions, Image, Text, Switch  } from 'react-nativ
 import CustomButton from './../../components/customButton';
 import getDataFromAsyncStorage from './../../function/getDataFromAsyncStorage';
 import storeDataToAsyncStorage from './../../function/storeDataToAsyncStorage';
+import removeDataFromAsyncStorage from './../../function/removeDataFromAsyncStorage';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
 const UserPreference = () => {
     const [isEnabled, setIsEnable] = useState(false);
-    const toggleSwitch = () => setIsEnable(previousState => !previousState)
     const [recommended, setRecommended] = useState(['cheapest', 'fastest', 'leastInterchanges']);
     const [name, setName] = useState('');
     const [selectedCheapest, setSelectedCheapest] = useState(false);
     const [selectedFastest, setSelectedFastest] = useState(false);
     const [selectedLeastInterchanges, setSelectedLeastInterchanges] = useState(false);
+
+    const toggleSwitch = () => {
+        setIsEnable(previousState => !previousState)
+        removeDataFromAsyncStorage('@name')
+    }
     
     useEffect(() => {
         getDataFromAsyncStorage

@@ -3,6 +3,7 @@ import {View, Text, StyleSheet, ImageBackground, TouchableOpacity, ScrollView, D
 import NextStation from '../../components/nextStation';
 import AlertModel from '../../components/AlertModel';
 import StationWithCode from '../../components/stationWithCode'
+import Entypo from 'react-native-vector-icons/Entypo';
 
 const {width, height} = Dimensions.get('window');
 const image = require('../../../assets/images/choose-direction.png');
@@ -14,6 +15,7 @@ const HomeProRailScreen = ({route, navigation}) => {
 
   function checkCollectStation() {
     if (oriStation == null || destStation == null) {
+      setModalVisible(true);
     } else {
       navigation.navigate('AddStopNavigator',{
         screen: 'ResultScreen',
@@ -39,6 +41,7 @@ const HomeProRailScreen = ({route, navigation}) => {
   return (
     <View style={{backgroundColor: '#F5F5F5', flex: 1}}>
       <AlertModel
+        text={`You need to select the origin \n and destination first.`}
         modalVisible={modalVisible}
         setModalVisible={setModalVisible}
       />
@@ -50,7 +53,6 @@ const HomeProRailScreen = ({route, navigation}) => {
         <View style={{marginTop: -height*0.3}}>
             <View style={{ marginHorizontal: '5%', marginVertical: 20}}>
               <NextStation 
-                navigate={true} 
                 isNearestOnly={true}/>
             </View>
 
@@ -74,7 +76,18 @@ const HomeProRailScreen = ({route, navigation}) => {
                   {
                     oriStation == null ? 
                     <Text style={styles.choseStText}>Origin</Text>:
-                    <StationWithCode code={oriStation}/>
+                    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                      <StationWithCode code={oriStation}/>
+                      <Entypo
+                        name="cross"
+                        size={20}
+                        color="grey"
+                        style={{marginRight: 10}}
+                        onPress={() =>{
+                          setOriStation(null);
+                        }}
+                      />
+                    </View>
                   }
                 </TouchableOpacity>
 
@@ -92,7 +105,18 @@ const HomeProRailScreen = ({route, navigation}) => {
                   {
                     destStation == null ? 
                     <Text style={styles.choseStText}>Destination</Text>:
-                    <StationWithCode code={destStation}/>
+                    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                      <StationWithCode code={destStation}/>
+                      <Entypo
+                        name="cross"
+                        size={20}
+                        color="grey"
+                        style={{marginRight: 10}}
+                        onPress={() =>{
+                          setDestStation(null);
+                        }}
+                      />
+                    </View>
                   }
                 </TouchableOpacity>
               </View>

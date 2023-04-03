@@ -9,13 +9,16 @@ import StationInfoBottomSheet from '../../components/StationInfoBottomSheet';
 const StationInformationListScreen = () => {
   const [searchPhrase, setSearchPhrase] = useState('');
   const [clicked, setClicked] = useState(false);
+  const [fullScreenMap, setFullScreenMap] = useState(false);
 
   return (
     <GestureHandlerRootView style={{flex: 1}}>
       <View style={{backgroundColor: 'white', flex: 1}}>
         <View style={{position: 'relative'}}>
           <View style={{position: 'relative'}}>
-            <RailMap />
+            <View style={{marginTop: fullScreenMap ? 150 : 20 }}>
+              <RailMap />
+            </View>
             <View style={{position: 'absolute', width: '100%'}}>
               <Header title={'Station Information'} />
             </View>
@@ -31,10 +34,11 @@ const StationInformationListScreen = () => {
           </View>
         </View>
         <StationInfoBottomSheet
+          setFullScreenMap={fullScreenMap => setFullScreenMap(fullScreenMap)}
           clicked={clicked}
           searchPhrase={searchPhrase}
           setClicked={setClicked}
-          memoScale={['50%', '80%']}
+          memoScale={["10%", "40%", "65%"]}
         />
       </View>
     </GestureHandlerRootView>

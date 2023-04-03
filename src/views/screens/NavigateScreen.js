@@ -10,6 +10,7 @@ import Geolocation from 'react-native-geolocation-service';
 import NextStation from '../../components/nextStation';
 import AllRoute from '../../components/allRoute';
 import RailMap from '../../components/RailMap';
+import Header from '../../components/header';
 
 import stationInfo from '../../../data/station_info'
 import stationLocation from '../../../data/station_location'
@@ -26,7 +27,6 @@ const Navigate = (props) => {
   /********************Geolocation********************/
   //Check if the user has allowed the app to use the location
   const [hasLocationPermission, setHasLocationPermission] = useState(false);
-  PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => setHasLocationPermission(response))
   const beginingStation = props.route.params.routes[0].path[0][0]; 
   const [stationGPS, setStationGPS] = useState(beginingStation); //set the station code of the nearest station
   const [stationDistance, setStationDistance] = useState(false); //set the distance between the nearest station and the user
@@ -38,7 +38,6 @@ const Navigate = (props) => {
 
   //filter for the latitude and longitude of the station in this path
   const filteredStation = stationLocation.filter(obj => [... new Set([].concat(...props.route.params.routes.map(obj => obj.path).flat()))].includes(obj.code));
-
   useEffect(() => {
     if(props.route.params.routes.length === 1) {
       let stopStation = [];
@@ -56,10 +55,11 @@ const Navigate = (props) => {
   return (
     <SafeAreaView style={Styles.container}> 
     <GestureHandlerRootView style={{ flex: 1 }}>
-        <View style={Styles.header_view}/>
+        <View style={{zIndex: 1}}>
+          <Header title="Navigate" back={true} navigation={props.navigation} haveCloseIcon={true} function2={()=> props.navigation.navigate('AddStopScreen')}/>
+        </View>
         <View style={Styles.navigation_view}>
           <NextStation 
-            navigate={hasLocationPermission} 
             isNearestOnly={false}
             beginingStation={beginingStation}
             filteredStation={filteredStation}
@@ -111,7 +111,7 @@ const Styles = StyleSheet.create({
   navigation_view: {
     zIndex:1,
     height: 100,
-    marginTop: -50,
+    marginTop: -20,
     // position: 'absolute',
     // top: 10,
     // left: 0,

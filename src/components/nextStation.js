@@ -1,16 +1,26 @@
 "use strict";
 import React, { useEffect, useState, useRef } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions, } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Dimensions, PermissionsAndroid, Platform } from 'react-native';
 import { getDistance, findNearest } from 'geolib';
 import Geolocation from 'react-native-geolocation-service';
 import stationInfo from '../../data/station_info'
 import stationLocation from '../../data/station_location'
+import { color } from 'react-native-reanimated';
 
 const NextStation = (props) => {
-    const [stationGPS, setStationGPS] = useState(props.beginingStation === undefined ? 'CEN' : props.beginingStation); //set the station code of the nearest station
+    const [stationGPS, setStationGPS] = useState(props.beginingStation === undefined ? null : props.beginingStation); //set the station code of the nearest station
     const [stationDistance, setStationDistance] = useState(false); //set the distance between the nearest station and the user
+    const [hasLocationPermission, setHasLocationPermission] = useState(false);
 
     const filteredStation = props.isNearestOnly ? stationLocation : props.filteredStation;
+    useEffect(() => {
+        if(Platform.OS === 'ios'){
+            setHasLocationPermission(true);
+        }
+        else if(Platform.OS === 'android'){
+            PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => setHasLocationPermission(response));
+        }
+    }, []);
 
     useEffect(() => {
         const _watchId = Geolocation.watchPosition(
@@ -50,8 +60,8 @@ const NextStation = (props) => {
         }
       }
 
-    if(!props.navigate){
-        return (<></>)
+    if(!hasLocationPermission){
+        return null;
     }
     return (
         <View>
@@ -63,14 +73,30 @@ const NextStation = (props) => {
                         </Text>
                     </View>
                     <View style = {Styles.station_name_view}>
-                        <Text style = {Styles.station_name_text} numberOfLines={2} ellipsizeMode='tail'>
-                            {stationInfo[stationGPS].station_name.en}
-                        </Text>
-                        <View style = {[Styles.station_route_view, { backgroundColor: stationInfo[stationGPS].platform.color.color }]}>
-                            <Text style = {Styles.station_route_text}>
-                                 {stationInfo[stationGPS].platform.platform}
-                            </Text>
-                        </View>
+                        {
+                            stationGPS === null ? 
+                            <View>
+                                <Text style = {[Styles.station_name_text, {color:'grey'}]}>
+                                    Loading...
+                                </Text>
+                                <View style = {[Styles.station_route_view, { backgroundColor: '#cfcfcf' }]}>
+                                    <Text style = {Styles.station_route_text}>
+                                        Loading...
+                                    </Text>
+                                </View>
+                            </View>:
+                            <View>
+                                <Text style = {Styles.station_name_text} numberOfLines={2} ellipsizeMode='tail'>
+                                    {stationInfo[stationGPS].station_name.en}
+                                </Text>
+                                <View style = {[Styles.station_route_view, { backgroundColor: stationInfo[stationGPS].platform.color.color }]}>
+                                    <Text style = {Styles.station_route_text}>
+                                        {stationInfo[stationGPS].platform.platform}
+                                    </Text>
+                                </View>
+                            </View>
+                        }
+                       
                     </View>
                 </View> 
                 {
@@ -121,7 +147,7 @@ const Styles = StyleSheet.create({
     station_name_text: {
         color:'black', 
         fontSize: 18, 
-        // textAlign:'right',
+        textAlign:'right',
         fontFamily: 'LINESeedSans_A_Rg',
     },
     station_route_view: {

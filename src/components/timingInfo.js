@@ -12,7 +12,8 @@ const TimingInfo = (props) => {
         </Text>
         <View style={Styles.freq_min_view}>
             <Text style={Styles.frequency_num_text}>
-            {props.frequency}
+            {/* {props.frequency} */}
+            5
             </Text>
             <Text style={Styles.frequency_mins_text}>
             mins

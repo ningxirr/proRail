@@ -48,6 +48,7 @@ const ButtomNavigator = (props) => {
           statusBar: {
             backgroundColor: 'white',
           },
+          // tabBarHideOnKeyboard: true
         }}
       />
       <Tab.Screen
