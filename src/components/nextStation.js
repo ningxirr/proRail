@@ -61,7 +61,7 @@ const NextStation = (props) => {
         }
       }
 
-    if(!hasLocationPermission){
+    if(hasLocationPermission === 'denied'){
         return null;
     }
     return (
