@@ -23,7 +23,7 @@ const App = () => {
     fetchData();
   }, []);
   if(!isRender){
-    //Ning, You can put your beautiful animation "start page" here. This will come after spash page.
+    //Ning, You can put your beautiful animation "start page" here. This will come after splash page.
     return (
     <View style={{alignItems:'center', flex: 1, justifyContent: 'center'}}>
       <Text style={{fontFamily: 'LINESeedSansApp-Bold', fontSize: 50}}>Loading</Text>
