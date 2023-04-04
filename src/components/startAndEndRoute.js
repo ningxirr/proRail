@@ -10,7 +10,7 @@ const StartAndEndRoute = (props) => {
             {props.stationPlatform}
           </Text>
         </View>
-        <Text style = {Styles.station_name_text}>
+        <Text style = {Styles.station_name_text} numberOfLines={2} ellipsizeMode='tail'>
           {props.stationName}
         </Text>
       </View>

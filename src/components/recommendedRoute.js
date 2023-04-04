@@ -54,7 +54,8 @@ const Styles = StyleSheet.create({
         fontSize: 12, 
         fontFamily: 'LINESeedSansApp-Regular', 
         color:'white', 
-        textAlign:'center'
+        textAlign:'center',
+        alignSelf: 'center'
     }
 });
 

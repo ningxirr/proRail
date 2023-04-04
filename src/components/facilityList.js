@@ -33,7 +33,7 @@ const FacilityList = (props) => {
 
 const Styles = StyleSheet.create({
     component:{
-        paddingTop: 20,
+        paddingTop: 0,
     },
     title_text:{
         fontSize: 20,

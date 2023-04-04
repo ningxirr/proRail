@@ -72,7 +72,7 @@ const Body = (props) => {
                   <Choices 
                     number={props.recommended[1] === 'fastest' ? props.fastestPath.time : props.recommended[1] === 'cheapest' ? props.cheapestPath.price : props.leastInterchangesPath.interchange} 
                     unit={props.recommended[1] === 'fastest' ? 'min(s)' : props.recommended[1] === 'cheapest' ? 'baht' : 'station(s)'} 
-                    choice={props.recommended[1] === 'fastest' ? 'Fastest' : props.recommended[1] === 'cheapest' ? 'Cheapest' : 'Least Interchanges' } 
+                    choice={props.recommended[1] === 'fastest' ? 'Fastest' : props.recommended[1] === 'cheapest' ? 'Cheapest' : 'Least\nInterchanges' } 
                     selected={props.selectedPath===props.recommended[1]} 
                     function={()=> {
                         props.setSelectedPath(props.recommended[1])
@@ -82,7 +82,7 @@ const Body = (props) => {
                   <Choices 
                     number={props.recommended[2] === 'fastest' ? props.fastestPath.time : props.recommended[2] === 'cheapest' ? props.cheapestPath.price : props.leastInterchangesPath.interchange} 
                     unit={props.recommended[2] === 'fastest' ? 'min(s)' : props.recommended[2] === 'cheapest' ? 'baht' : 'station(s)'} 
-                    choice={props.recommended[2] === 'fastest' ? 'Fastest' : props.recommended[2] === 'cheapest' ? 'Cheapest' : 'Least Interchanges' } 
+                    choice={props.recommended[2] === 'fastest' ? 'Fastest' : props.recommended[2] === 'cheapest' ? 'Cheapest' : 'Least\nInterchanges' } 
                     selected={props.selectedPath===props.recommended[2]} 
                     function={()=> {
                         props.setSelectedPath(props.recommended[2])
@@ -96,7 +96,7 @@ const Body = (props) => {
         <View style = {Styles.overall_component_view}>
           <View style = {Styles.body_view}>
               <CustomButton 
-                  text={'Confirm'} 
+                  text={'Start Navigate'} 
                   backgroundColor={'black'} 
                   borderColor={'black'} 
                   textColor={'white'} 

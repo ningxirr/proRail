@@ -65,21 +65,24 @@ const StationInfo = ({navigation, route}) => {
           frequency={stationInfo[code].frequency} 
           function={() => {
             navigation.navigate('TimeTableScreen',{
-              route: { code: code }
+              route: { 
+                code: code,
+                navigation: navigation
+              }
             })
             console.log('View Time Table')
           }
           }/>
-          {
-            stationInfo[code].facility.length > 0 ?
-            <FacilityList facility={stationInfo[code].facility} language={'en'}/>:
-            null
-          }
           { 
             stationInfo[code].exit.length > 0 ?
             <ExitList exit={stationInfo[code].exit} language={'en'} color={stationInfo[code].platform.color.path_color}/>:
             null
           }
+          {
+            stationInfo[code].facility.length > 0 ?
+            <FacilityList facility={stationInfo[code].facility} language={'en'}/>:
+            null
+          } 
       </View>
     </ScrollView>
       </View>

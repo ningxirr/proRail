@@ -6,8 +6,9 @@ import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setClicked}) => {
   return (
     <View style={styles.searchBarView}>
-      <FontAwesomeIcon name="search" size={18} color='#CDCDCD' style={{ marginLeft: 2 }}/>
+      <FontAwesomeIcon name="search" size={18} color='grey' style={{ marginLeft: 2 }}/>
       <TextInput
+        placeholderTextColor='grey'
         style={styles.searchText}
         placeholder="Search"
         value={searchPhrase}
@@ -20,7 +21,7 @@ const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setClicked}) => {
           <Entypo
             name="cross"
             size={25}
-            color="#CDCDCD"
+            color="grey"
             onPress={() => {
               Keyboard.dismiss();
               setClicked(false);
@@ -35,6 +36,7 @@ export default SearchBar;
 
 const styles = StyleSheet.create({
   searchBarView: {
+    color: 'grey',
     marginVertical: (10),
     paddingVertical: (10),
     paddingHorizontal: (10),
@@ -59,6 +61,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     marginLeft: (10),
     width: '85%',
+    color: 'black',
     fontFamily: 'LINESeedSansApp-Regular',
   },
 });

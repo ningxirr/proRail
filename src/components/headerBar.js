@@ -1,17 +1,17 @@
 "use strict";
 import React from 'react';
 import { StyleSheet, Text,  View } from 'react-native';
-import TochableIcon from '../components/tochableIcon';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const HeaderBar = (props) => {
     return (
         <View style={{marginTop: 30}}>
             <View style = {Styles.header_navbar_view}>
-                <TochableIcon name='angle-left' size={25} color={'white'} function={props.backIconFunction}/>
+                <Icon name='angle-left' color={'white'} size={25} onPress={props.backIconFunction}/>
                 {
                   props.isFavorite ?
-                    <TochableIcon name='star' size={20} color={'#FF5733'} function={props.starIconFunction}/>:
-                    <TochableIcon name='star-o' size={20} color={'white'} function={props.starIconFunction}/>
+                    <Icon name='star' color={'#FF5733'} size={20} onPress={props.starIconFunction}/>:
+                    <Icon name='star-o' color={'white'} size={20} onPress={props.starIconFunction}/>
                 }
             </View>
             <View style={Styles.header_bar_view}>

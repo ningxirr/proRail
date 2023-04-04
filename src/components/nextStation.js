@@ -121,8 +121,8 @@ const NextStation = (props) => {
 const Styles = StyleSheet.create({
     container: {
         paddingVertical: 20,
-        paddingHorizontal: 15,
-        borderRadius: 20,
+        paddingHorizontal: 30,
+        borderRadius: 10,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,

@@ -16,7 +16,7 @@ const AllStationsSearchList = ({searchPhrase, setClicked, num, notSelectedStatio
     else if (StationInfo[item].station_name.th.toUpperCase().includes(searchPhrase.toUpperCase())) {
       return <StationList key={index} code={item} num={num} notSelectedStation={notSelectedStation}/>;
     } 
-    else if (item.toUpperCase().includes(searchPhrase)) {
+    else if (item.toUpperCase().includes(searchPhrase.toUpperCase())) {
       return <StationList key={index} code={item} num={num} notSelectedStation={notSelectedStation}/>;
     }
   };
