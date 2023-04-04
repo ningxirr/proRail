@@ -34,6 +34,7 @@ const ButtomNavigator = (props) => {
           ),
           tabBarStyle: { display: hide ? "none" : "flex" },
           headerShown: false,
+          tabBarHideOnKeyboard: true
         }}
       />
        <Tab.Screen
@@ -47,7 +48,7 @@ const ButtomNavigator = (props) => {
           statusBar: {
             backgroundColor: 'white',
           },
-          // tabBarHideOnKeyboard: true
+          tabBarHideOnKeyboard: true
         }}
       />
       <Tab.Screen
@@ -66,6 +67,7 @@ const ButtomNavigator = (props) => {
           ),
           tabBarStyle: { display: hide ? "none" : "flex" },
           headerShown: false,
+          tabBarHideOnKeyboard: true
         }}
       />
       <Tab.Screen

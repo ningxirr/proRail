@@ -25,7 +25,7 @@ const StationInformationListScreen = () => {
             </View>
           </View>
 
-          <View style={{position: 'absolute', marginTop: (50), alignItems: 'center', width: '100%'}}>
+          <View style={{position: 'absolute', marginTop: (50), alignItems: 'center', width: '100%', zIndex: 1}}>
             <SearchBar
               searchPhrase={searchPhrase}
               setSearchPhrase={setSearchPhrase}
