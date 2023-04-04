@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View} from 'react-native';
+import {SafeAreaView, View} from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import SearchBar from '../../components/SearchBar';
 import Header from '../../components/header';
@@ -11,7 +11,8 @@ const ChooseDirectionScreen = ({navigation, route}) => {
   const [clicked, setClicked] = useState(false);
   const [fullScreenMap, setFullScreenMap] = useState(false);
   return (
-    <GestureHandlerRootView style={{flex: 1}}>
+    <SafeAreaView style={{flex:1, backgroundColor:'black'}}>
+      <GestureHandlerRootView style={{flex: 1}}>
       <View style={{backgroundColor: 'white', flex: 1}}>
       <View style={{position: 'relative'}}>
         <View style={{position: 'relative'}}>
@@ -41,18 +42,18 @@ const ChooseDirectionScreen = ({navigation, route}) => {
           />
         </View>
       </View>
-
       <StationInfoBottomSheet
         setFullScreenMap={fullScreenMap => setFullScreenMap(fullScreenMap)}
         clicked={clicked}
         searchPhrase={searchPhrase}
         setClicked={setClicked}
-        memoScale={["10%", "40%", "65%"]}
+        memoScale={["10%", "40%", "60%"]}
         num={route.params.num}
         notSelectedStation={route.params.notSelectedStation}
       />
     </View>
     </GestureHandlerRootView>
+    </SafeAreaView> 
   );
 };
 

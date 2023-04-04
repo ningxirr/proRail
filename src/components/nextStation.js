@@ -15,6 +15,7 @@ const NextStation = (props) => {
     const filteredStation = props.isNearestOnly ? stationLocation : props.filteredStation;
     useEffect(() => {
         if(Platform.OS === 'ios'){
+            //Ning may be you can add new lib for ios that can know the permission here
             setHasLocationPermission(true);
         }
         else if(Platform.OS === 'android'){
@@ -137,7 +138,7 @@ const Styles = StyleSheet.create({
     next_station_text: {
         color:'black', 
         fontSize: 20, 
-        fontFamily: 'LINESeedSans_A_Bd',
+        fontFamily: 'LINESeedSansApp-Bold',
     },
     station_name_view: {
         alignSelf: 'center',
@@ -148,19 +149,20 @@ const Styles = StyleSheet.create({
         color:'black', 
         fontSize: 18, 
         textAlign:'right',
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
     },
     station_route_view: {
         borderRadius: 15,
         marginTop: 2,
         paddingVertical: 5,
-        width: 150
+        width: 150,
+        alignSelf: 'flex-end'
     },
     station_route_text:{
         color:'white', 
         fontSize: 15, 
         textAlign:'center',
-        fontFamily: 'LINESeedSans_A_Bd',
+        fontFamily: 'LINESeedSansApp-Bold',
     },
     description_view:{
         marginHorizontal: 10,
@@ -175,7 +177,7 @@ const Styles = StyleSheet.create({
     description_text:{
         color:'black',
         fontSize: 14,
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
     }
 });
 

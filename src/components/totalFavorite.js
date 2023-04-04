@@ -57,7 +57,7 @@ const Styles = StyleSheet.create({
     total_fav_text: {
         color:'black', 
         fontSize: 20, 
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
     },
     fav_num_view: {
         marginVertical: 20,
@@ -68,13 +68,13 @@ const Styles = StyleSheet.create({
         color:'black', 
         fontSize: 20, 
         textAlign:'right',
-        fontFamily: 'LINESeedSans_A_Bd',
+        fontFamily: 'LINESeedSansApp-Bold',
     },
     route_text:{
         color:'black', 
         fontSize: 13, 
         textAlign:'right',
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
     }
 });
 

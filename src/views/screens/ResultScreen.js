@@ -1,7 +1,6 @@
 "use strict";
 import React, { useEffect, useState } from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, View, Animated, Text } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { SafeAreaView, ScrollView, StyleSheet, View, Animated, Text, StatusBar } from 'react-native';
 import result from '../../../data/results.json';
 import HeaderBar from '../../components/headerBar'
 import Header from '../../components/Result/header';
@@ -94,17 +93,12 @@ const Result = (props) => {
       if (data!==null){
         setRecommended(data);
         setSelectedPath(data[0]);
-      } 
+      }
     };
     fetchData();
   }, [stationPath])
 
   if(!selectedPath){
-    // removeDataFromAsyncStorage('@recommended');
-    // removeDataFromAsyncStorage('@favorite');
-    // storeDataToAsyncStorage('@recommended', ['cheapest', 'fastest', 'leastInterchanges']);
-    // storeDataToAsyncStorage('@favorite', ['RW06,BL37']);
-    // storeDataToAsyncStorage('@favorite', ['BL37-RW06']);
     return (<BreakingScreen text={'Loading...'}/>)
   }
   else if(cannotFindPath){
@@ -112,29 +106,30 @@ const Result = (props) => {
   }
   else {
     return (
-        <SafeAreaView style={Styles.container}>
-            <Animated.View style={[Styles.nav_view, backgroundStyle]}> 
-                <HeaderBar 
-                    selectedPath={selectedPath}
-                    resultPathLength={selectedPath === 'cheapest' ? cheapestPath.resultPath.length : selectedPath === 'fastest' ? fastestPath.resultPath.length : leastInterchangesPath.resultPath.length}
-                    isFavorite={isFavorite}
-                    backIconFunction={()=>props.navigation.goBack()}
-                    starIconFunction={()=>{
-                      if(!favoriteRoute.includes(stationPath.join('-'))){
-                        let data = favoriteRoute.concat(stationPath.join('-'));
-                        removeDataFromAsyncStorage('@favorite');
-                        storeDataToAsyncStorage('@favorite', data);
-                        setFavoriteRoute(data);
-                        setIsFavorite(true);
-                      }
-                      else{
-                        let data = favoriteRoute.filter(e => e !== stationPath.join('-'));
-                        removeDataFromAsyncStorage('@favorite');
-                        storeDataToAsyncStorage('@favorite', data);
-                        setFavoriteRoute(data);
-                        setIsFavorite(false);
-                      }
-                    }}/>
+      //Ning may be we cannot use that margintop since margintop set that night is not look nice in android
+      <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
+            <Animated.View style={[Styles.nav_view, backgroundStyle]}>
+              <HeaderBar 
+                selectedPath={selectedPath}
+                resultPathLength={selectedPath === 'cheapest' ? cheapestPath.resultPath.length : selectedPath === 'fastest' ? fastestPath.resultPath.length : leastInterchangesPath.resultPath.length}
+                isFavorite={isFavorite}
+                backIconFunction={()=>props.navigation.goBack()}
+                starIconFunction={()=>{
+                  if(!favoriteRoute.includes(stationPath.join('-'))){
+                    let data = favoriteRoute.concat(stationPath.join('-'));
+                    removeDataFromAsyncStorage('@favorite');
+                    storeDataToAsyncStorage('@favorite', data);
+                    setFavoriteRoute(data);
+                    setIsFavorite(true);
+                  }
+                  else{
+                    let data = favoriteRoute.filter(e => e !== stationPath.join('-'));
+                    removeDataFromAsyncStorage('@favorite');
+                    storeDataToAsyncStorage('@favorite', data);
+                    setFavoriteRoute(data);
+                    setIsFavorite(false);
+                  }
+                }}/>
             </Animated.View>
             <ScrollView 
                 scrollEventThrottle={16}
@@ -154,7 +149,7 @@ const Result = (props) => {
                     leastInterchangesPath={leastInterchangesPath}
                     favoriteRoute={favoriteRoute}/>
             </ScrollView>
-        </SafeAreaView>
+          </SafeAreaView>
     )
   }
 };
@@ -162,7 +157,7 @@ const Result = (props) => {
 const BreakingScreen = ({text}) =>{
   return(
     <View style={{alignItems:'center', flex: 1, justifyContent: 'center'}}>
-      <Text style={{fontFamily: 'LINESeedSansTH_A_Bd', fontSize: 50}}>{text}</Text>
+      <Text style={{fontFamily: 'LINESeedSansTHApp-Bold', fontSize: 50}}>{text}</Text>
     </View>
   )
 }
@@ -173,13 +168,12 @@ const Styles = StyleSheet.create({
   },
   nav_view:{
     zIndex:1,
-    height: 100,
     position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
     borderBottomStartRadius: 20,
-    borderBottomEndRadius: 20
+    borderBottomEndRadius: 20,
   },
   header_navbar_view:{
     flexDirection: 'row',
@@ -196,7 +190,7 @@ const Styles = StyleSheet.create({
   header_bar_text:{
     color: 'white',
     fontSize: 24,
-    fontFamily: 'LINESeedSans_A_Bd',
+    fontFamily: 'LINESeedSansApp-Bold',
   },
   stop_view: {
     paddingVertical: 5,
@@ -209,7 +203,7 @@ const Styles = StyleSheet.create({
     color:'white', 
     fontSize: 15, 
     textAlign:'center',
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
 });
 

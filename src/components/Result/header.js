@@ -7,14 +7,14 @@ import stationInfo from '../../../data/station_info.json';
 const Header = (props) => {
     return (
       <View>
-        <ImageBackground source={require('../../../assets/images/background.png')} style={{height:300}}> 
+        <ImageBackground source={require('../../../assets/images/background.png')} style={{height:330}}> 
             <View style = {Styles.header_view}>
               <View style = {Styles.header_body_view}>
                 <View style = {Styles.main_header_view}>
                 </View>
                 <View style = {Styles.start_and_end_route_view}>
                   <StartAndEndRoute stationName = {stationInfo[props.startStation].station_name.en} stationPlatform = {stationInfo[props.startStation].platform.platform} stationColor = {stationInfo[props.startStation].platform.color.color}/>
-                  <Text style = {{color:'white', fontSize: 15, fontFamily: 'LINESeedSans_A_Rg'}}>
+                  <Text style = {{color:'white', fontSize: 15, fontFamily: 'LINESeedSansApp-Regular'}}>
                     to
                   </Text>
                   <StartAndEndRoute stationName = {stationInfo[props.stopStation].station_name.en} stationPlatform = {stationInfo[props.stopStation].platform.platform} stationColor = {stationInfo[props.stopStation].platform.color.color}/>
@@ -38,6 +38,7 @@ const Header = (props) => {
       justifyContent: 'space-between',
     },
     start_and_end_route_view: {
+      marginTop: 40,
       paddingVertical: 50,
       paddingHorizontal: 25,
       flexDirection: 'row',

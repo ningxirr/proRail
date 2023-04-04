@@ -25,7 +25,7 @@ const Styles = StyleSheet.create({
         textAlign:'center', 
         alignContent:'center', 
         fontSize: 14,
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
     }
 });
 

@@ -140,10 +140,10 @@ const ChooseScreen = ({navigation}) => {
     const TextDrag = () => {
       return (
         <View style={styles.textDrag}>
-          <Text style={{fontSize: 40, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>
+          <Text style={{fontSize: 40, fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>
             Personalized
           </Text>
-          <Text style={{paddingTop: 100, fontSize: 24, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>
+          <Text style={{paddingTop: 100, fontSize: 24, fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>
             Drag and reorder{'\n'}your route preference?
           </Text>
         </View>
@@ -224,9 +224,9 @@ const ChooseScreen = ({navigation}) => {
     <SafeAreaView style={androidStyles.container}>
         <ImageBackground source={require('../../../../assets/images/rocket.jpg')} resizeMode="cover" style={androidStyles.image} ></ImageBackground>
         <View style={androidStyles.body}>
-          <Text style={{paddingTop: 110,fontSize: 40,fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>Personalized</Text>
+          <Text style={{paddingTop: 110,fontSize: 40,fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>Personalized</Text>
           <View style={{ flex: 1, justifyContent: 'flex-end'}}>
-            <Text style={{paddingBottom: 20,fontSize: 24,fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>Which route style{'\n'}that matched you ?</Text>
+            <Text style={{paddingBottom: 20,fontSize: 24,fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>Which route style{'\n'}that matched you ?</Text>
           </View>
           <View style={{paddingVertical: 5}}>
             <CustomButton 
@@ -327,7 +327,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     textAlign: 'center',
     margin: 20,
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
   textDrag: {
     marginHorizontal: 20,
@@ -376,7 +376,7 @@ const androidStyles = StyleSheet.create({
     fontSize: 15,
     textAlign: 'center',
     margin: 20,
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
   textDrag: {
     marginHorizontal: 20,

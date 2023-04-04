@@ -1,7 +1,7 @@
 "use-strict"
 
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View,  Dimensions, Image, Text, Switch  } from 'react-native';
+import { StyleSheet, View,  Dimensions, Image, Text, Switch, SafeAreaView  } from 'react-native';
 import CustomButton from './../../components/customButton';
 import getDataFromAsyncStorage from './../../function/getDataFromAsyncStorage';
 import storeDataToAsyncStorage from './../../function/storeDataToAsyncStorage';
@@ -57,29 +57,34 @@ const UserPreference = () => {
     }
 
     return(
-        <View style={Styles.container}>
+        <SafeAreaView style={{flex:1, backgroundColor: 'black'}}>
+            <View style={{backgroundColor:'white', flex:1}}>
+            <View style={Styles.header_view}>
+                <Text style={Styles.header_text}>Preference</Text>
+            </View>
+            <View style={Styles.container}>
             <Image source={require('../../../assets/images/background.png')} style={Styles.profile_image}/>
             <View style={Styles.name_text_view}>
-                <Text style={{fontSize: 20, fontFamily: 'LINESeedSans_A_Rg', color: 'black'}}>Hello</Text>
+                <Text style={{fontSize: 20, fontFamily: 'LINESeedSansApp-Regular', color: 'black'}}>Hello</Text>
                 {
                     name === '' ? 
-                    <Text style={{fontSize: 20, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>, User01</Text>:
-                    <Text style={{fontSize: 20, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>, {name}</Text>
+                    <Text style={{fontSize: 20, fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>, User01</Text>:
+                    <Text style={{fontSize: 20, fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>, {name}</Text>
                 }
             </View>
             <View style={Styles.notification_view}>
-                <Text style={{fontSize: 20, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>Alert notification</Text>
+                <Text style={{fontSize: 20, fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>Alert notification</Text>
                 <Switch 
                     trackColor={{false: 'grey', true: 'black'}}
                     thumbColor={isEnabled ? '#fcfcfc' : '#fcfcfc'}  
                     ios_backgroundColor={'black'}
                     onValueChange={toggleSwitch}
                     value={isEnabled}  
-                    style={{ transform: [{scaleX: 1.2}, {scaleY: 1.2}]}}
+                    style={{ transform: [{scaleX: 1.0}, {scaleY: 1.0}]}}
                 />
             </View>
             <View style={Styles.route_suggestion_view}>
-                <Text style={{fontSize: 20, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>Route Suggestion</Text>
+                <Text style={{fontSize: 20, fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>Route Suggestion</Text>
                 <View style={{paddingTop : 20, paddingBottom: 5}}>
                     <CustomButton 
                     text="Cheapest" 
@@ -126,13 +131,17 @@ const UserPreference = () => {
                 </View>
             </View>
         </View>
+            </View>
+            
+        </SafeAreaView>
     );
 }
 
 const Styles = StyleSheet.create({
     container: {
         paddingHorizontal: 20,
-        paddingTop: screenHeight*0.15,
+        // paddingTop: screenHeight*0.15,
+        paddingTop: 50,
         flex:1,
         backgroundColor: 'white'
     },
@@ -155,7 +164,20 @@ const Styles = StyleSheet.create({
     },
     route_suggestion_view: {
         marginVertical: 30,
-    }
+    },
+    header_view: {
+        paddingVertical: 30,
+        paddingHorizontal: 30,
+        backgroundColor: 'black',
+        height: 100,
+        borderBottomEndRadius: 20,
+        borderBottomStartRadius: 20
+    },
+    header_text:{
+        color: 'white',
+        fontSize: 24,
+        fontFamily: 'LINESeedSansApp-Bold',
+    },
 });
 
 export default UserPreference;

@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
   stationText: {
     marginLeft: (20),
     fontSize: 25,
-    fontFamily: 'LINESeedSansTH_A_Rg',
+    fontFamily: 'LINESeedSansTHApp-Regular',
     color: '#000000',
     lineHeight: 30,
   },
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
   platformText: {
     color: 'white',
     fontSize: 15,
-    fontFamily: 'LINESeedSansTH_A_Rg',
+    fontFamily: 'LINESeedSansTHApp-Regular',
   },
   buttonView: {
     borderRadius: 10,
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
   },
   bottonText: {
     fontSize: 14,
-    fontFamily: 'LINESeedSansTH_A_Rg',
+    fontFamily: 'LINESeedSansTHApp-Regular',
   },
   bottonsView: {
     flexDirection: 'row',

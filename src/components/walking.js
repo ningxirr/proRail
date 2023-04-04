@@ -1,17 +1,17 @@
 "use strict";
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const Walking = (props) => {
     return(   
         <View style={Styles.path_with_icon_view}>
-            <Icon name='walking' color={'black'} size={20} style={Styles.walking_icon}/>
+            <MaterialIcons name='directions-walk' color={'black'} size={20} style={Styles.walking_icon}/>
             <View style={Styles.description_text_view}>
                 <Text style={Styles.briefly_path_text}>
                     {props.time} mins to {'\t'}
                 </Text>
-                <Text style={[Styles.briefly_path_text, {fontFamily: 'LINESeedSans_A_Bd'}]}>
+                <Text style={[Styles.briefly_path_text, {fontFamily: 'LINESeedSansApp-Bold'}]}>
                     {props.station}
                 </Text>
             </View>
@@ -39,7 +39,7 @@ const Styles = StyleSheet.create({
     briefly_path_text: {
         fontSize: 15,
         color: 'black',
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
     },
 });
 

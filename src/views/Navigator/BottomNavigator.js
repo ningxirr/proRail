@@ -7,7 +7,6 @@ import AddStopNavigator from './AddStopNavigator';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import UserPreferenceScreen from '../screens/UserPreferenceScreen';
 import Header from '../../components/header';
 
@@ -59,7 +58,7 @@ const ButtomNavigator = (props) => {
           tabBarIcon: ({size}) => (
             navigate ? 
             <View style={styles.addBottonView}>
-              <MaterialCommunityIcons name="navigation-variant" color="white" size={size * 1.4} />
+              <Icon name="navigate" color="white" size={size * 1.4} />
             </View> :
             <View style={styles.addBottonView}>
               <FontAwesomeIcon name="plus" color="white" size={size * 1.4} />
@@ -87,7 +86,7 @@ const ButtomNavigator = (props) => {
           tabBarIcon: ({color, size}) => (
             <FontAwesomeIcon name="user-o" color={color} size={size} />
           ),
-          header: (props) => (<Header title={'Preference'} station={props}/>),
+          headerShown: false,
           headerTransparent: true
         }}
       />

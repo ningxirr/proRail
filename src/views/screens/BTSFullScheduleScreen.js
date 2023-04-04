@@ -1,4 +1,4 @@
-import {View, Image, StyleSheet} from 'react-native';
+import {View, Image, StyleSheet, SafeAreaView} from 'react-native';
 import React from 'react';
 import Header from '../../components/header';
 import {ScrollView} from 'react-native-gesture-handler';
@@ -7,7 +7,8 @@ const image = require('../../../assets/images/ServiceTimetable.png');
 
 const BTSFullScheduleScreen = ({navigation}) => {
   return (
-    <View style={{backgroundColor: '#FAFAFA', marginBottom: (65)}}>
+    <SafeAreaView style={{flex:1, backgroundColor: 'black'}}>
+      <View style={{backgroundColor: '#FAFAFA', marginBottom: (65)}}>
       <Header haveBackIcon={true} title={'BTS Full Schedule'} function={()=>navigation.goBack()}/>
       <ScrollView>
         <View style={{margin: (10)}}>
@@ -17,6 +18,7 @@ const BTSFullScheduleScreen = ({navigation}) => {
         </View>
       </ScrollView>
     </View>
+    </SafeAreaView>
   );
 };
 
@@ -31,6 +33,7 @@ const styles = StyleSheet.create({
     marginBottom: 50,
     borderRadius: 20,
     backgroundColor: 'white',
+    marginBottom: 30
   },
 });
 

@@ -64,13 +64,12 @@ const HomeProRailScreen = ({route, navigation}) => {
                 <TouchableOpacity
                   style={styles.choseStTouch}
                   onPress={() => {
-                    console.log('destStation '+destStation)
                     navigation.navigate('ChooseDirectionScreen', {
                       header: 'Choose Origin',
                       num: 0,
                       notSelectedStation: destStation ? [destStation] : [],
-                      oriStation: oriStation,
-                      destStation: destStation
+                      // oriStation: oriStation,
+                      // destStation: destStation
                     });
                   }}>
                   {
@@ -82,7 +81,7 @@ const HomeProRailScreen = ({route, navigation}) => {
                         name="cross"
                         size={20}
                         color="grey"
-                        style={{marginRight: 10}}
+                        style={{ marginLeft: 'auto', marginRight: 5 }}
                         onPress={() =>{
                           setOriStation(null);
                         }}
@@ -98,8 +97,8 @@ const HomeProRailScreen = ({route, navigation}) => {
                       header: 'Choose Destination',
                       num: 1,
                       notSelectedStation: oriStation ? [oriStation] : [],
-                      oriStation: oriStation,
-                      destStation: destStation
+                      // oriStation: oriStation,
+                      // destStation: destStation
                     });
                   }}>
                   {
@@ -111,7 +110,7 @@ const HomeProRailScreen = ({route, navigation}) => {
                         name="cross"
                         size={20}
                         color="grey"
-                        style={{marginRight: 10}}
+                        style={{ marginLeft: 'auto', marginRight: 5 }}
                         onPress={() =>{
                           setDestStation(null);
                         }}
@@ -159,13 +158,12 @@ const HomeProRailScreen = ({route, navigation}) => {
 
 const styles = StyleSheet.create({
   proRailText: {
-    position: 'absolute',
     fontSize: 36,
     flex: 1,
     color: 'white',
-    marginTop: 10,
+    marginTop: 25,
     padding: 20,
-    fontFamily: 'LINESeedSans_A_Bd',
+    fontFamily: 'LINESeedSansApp-Bold',
   },
   centerSecView: {
     flex: 5,
@@ -189,7 +187,7 @@ const styles = StyleSheet.create({
     color: 'black',
     marginLeft: 30,
     marginVertical: 5,
-    fontFamily: 'LINESeedSans_A_Bd',
+    fontFamily: 'LINESeedSansApp-Bold',
   },
   chooseDirView: {
     backgroundColor: 'white',
@@ -202,7 +200,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: 'black',
     marginLeft: 20,
-    fontFamily: 'LINESeedSans_A_Bd',
+    fontFamily: 'LINESeedSansApp-Bold',
     lineHeight: 30,
   },
   choseStTouch: {
@@ -228,20 +226,20 @@ const styles = StyleSheet.create({
   },
   choseStText: {
     fontSize: 15,
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
     color: '#404040',
     paddingLeft: 10,
   },
   letsgoText: {
     color: 'white',
     fontSize: 14,
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
   moreInfoInScrollText: {
     margin: 10,
     fontSize: 22,
     color: 'black',
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
     lineHeight: 30,
   },
 });

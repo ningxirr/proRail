@@ -20,8 +20,8 @@ const FacilityList = (props) => {
                             </View>
                             {
                                 props.language === 'th' ? 
-                                    <Text style={[Styles.facility_text, {fontFamily:'LINESeedSansTH_A_Rg'}]}>{item.th}</Text> : 
-                                    <Text style={[Styles.facility_text, {fontFamily:'LINESeedSans_A_Rg'}]}>{item.en}</Text>
+                                    <Text style={[Styles.facility_text, {fontFamily:'LINESeedSansTHApp-Regular'}]}>{item.th}</Text> : 
+                                    <Text style={[Styles.facility_text, {fontFamily:'LINESeedSansApp-Regular'}]}>{item.en}</Text>
                             }
                         </View>
                     ))
@@ -37,7 +37,7 @@ const Styles = StyleSheet.create({
     },
     title_text:{
         fontSize: 20,
-        fontFamily: 'LINESeedSans_A_Bd',
+        fontFamily: 'LINESeedSansApp-Bold',
         color: 'black',
         paddingVertical: 10,
     },

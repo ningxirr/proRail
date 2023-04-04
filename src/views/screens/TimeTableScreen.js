@@ -41,8 +41,8 @@ const Day = ({pf}) => {
     console.log(freqJS[pf]['Mon-Fri'][0].period_time)
     return (
       <View style={{backgroundColor: 'transparent'}}>
-        <Text style={{  marginBottom: 15, fontSize: 20, fontFamily: 'LINESeedSans_A_Rg', color: 'black'}}>Departure Frequency</Text>
-        <Text style={{ fontSize: 15, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>Monday - Friday</Text>
+        <Text style={{  marginBottom: 15, fontSize: 20, fontFamily: 'LINESeedSansApp-Regular', color: 'black'}}>Departure Frequency</Text>
+        <Text style={{ fontSize: 15, fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>Monday - Friday</Text>
         <View style={{paddingBottom: 20, alignItems: 'center'}}>
           <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13, width: 360, paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
             <Table >
@@ -51,7 +51,7 @@ const Day = ({pf}) => {
                 flexArr = {[1,1]}
                 textStyle = {{
                   textAlign: 'center',
-                  fontFamily: 'LINESeedSans_A_Rg',
+                  fontFamily: 'LINESeedSansApp-Regular',
                   color: 'black',
                 }}
               />
@@ -76,7 +76,7 @@ const Day = ({pf}) => {
             })}
           </View>
         </View>
-        <Text style={{ fontSize: 15, fontFamily: 'LINESeedSans_A_Bd', color: 'black'}} >Saturday - Sunday {'\n'}& Public Holidays</Text>
+        <Text style={{ fontSize: 15, fontFamily: 'LINESeedSansApp-Bold', color: 'black'}} >Saturday - Sunday {'\n'}& Public Holidays</Text>
         <View style={{alignItems:'center',paddingBottom: 20,backgroundColor: 'transparent'}}>
           <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360, paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
             <Table >
@@ -85,7 +85,7 @@ const Day = ({pf}) => {
                 flexArr = {[1,1]}
                 textStyle = {{
                   textAlign: 'center',
-                  fontFamily: 'LINESeedSans_A_Rg',
+                  fontFamily: 'LINESeedSansApp-Regular',
                   color: 'black',
                   
                 }}
@@ -116,7 +116,7 @@ const Day = ({pf}) => {
   else if (pf === '3') {
     return (
       <View style={{backgroundColor: 'transparent'}}>
-        <Text style={{fontSize: 15, fontFamily: 'LINESeedSans_A_Bd', fontWeight: 'bold'}}>Monday - Friday</Text>
+        <Text style={{fontSize: 15, fontFamily: 'LINESeedSansApp-Bold', fontWeight: 'bold'}}>Monday - Friday</Text>
         <View style={{paddingBottom: 20}}>
           <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360, paddingVertical: 10,backgroundColor: '#ECEBEB'}}>
             <Table >
@@ -125,7 +125,7 @@ const Day = ({pf}) => {
                 flexArr = {[1,1]}
                 textStyle = {{
                   textAlign: 'center',
-                  fontFamily: 'LINESeedSans_A_Rg',
+                  fontFamily: 'LINESeedSansApp-Regular',
                   color: 'black',
                   
                 }}
@@ -147,7 +147,7 @@ const Day = ({pf}) => {
             })}
           </View>
         </View>
-        <Text style={{fontSize: 15, fontFamily: 'LINESeedSans_A_Bd', fontWeight: 'bold'}}>Saturday</Text>
+        <Text style={{fontSize: 15, fontFamily: 'LINESeedSansApp-Bold', fontWeight: 'bold'}}>Saturday</Text>
         <View style={{alignItems:'center',paddingBottom: 20,backgroundColor: 'transparent'}}>
           <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360, paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
             <Table>
@@ -156,7 +156,7 @@ const Day = ({pf}) => {
                 flexArr = {[1,1]}
                 textStyle = {{
                   textAlign: 'center',
-                  fontFamily: 'LINESeedSans_A_Rg',
+                  fontFamily: 'LINESeedSansApp-Regular',
                   color: 'black',
                 }}
               />
@@ -177,7 +177,7 @@ const Day = ({pf}) => {
             })}
           </View>
         </View>
-        <Text style={{fontSize: 15, fontFamily: 'LINESeedSans_A_Bd', fontWeight: 'bold'}}>Sunday</Text>
+        <Text style={{fontSize: 15, fontFamily: 'LINESeedSansApp-Bold', fontWeight: 'bold'}}>Sunday</Text>
         <View style={{alignItems:'center',paddingBottom: 20,backgroundColor: 'transparent'}}>
           <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360, paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
             <Table >
@@ -186,7 +186,7 @@ const Day = ({pf}) => {
                 flexArr = {[1,1]}
                 textStyle = {{
                   textAlign: 'center',
-                  fontFamily: 'LINESeedSans_A_Rg',
+                  fontFamily: 'LINESeedSansApp-Regular',
                   color: 'black',
                 }}
               />
@@ -215,7 +215,7 @@ const Day = ({pf}) => {
     console.log('EveryDay')
     return (
       <View>
-        <Text style={{fontSize: 15,  fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>Everyday</Text>
+        <Text style={{fontSize: 15,  fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>Everyday</Text>
         <View style={{alignItems:'center',paddingBottom: 20}}>
           <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360, paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
             <Table >
@@ -224,7 +224,7 @@ const Day = ({pf}) => {
                 flexArr = {[1,1]}
                 textStyle = {{
                   textAlign: 'center',
-                  fontFamily: 'LINESeedSans_A_Rg',
+                  fontFamily: 'LINESeedSansApp-Regular',
                   color: 'black',
                   
                 }}
@@ -270,7 +270,7 @@ const Time = ({st, pf, activeTab}) => {
             marginTop: 20,
             marginBottom: 10,
             fontSize: 20,
-            fontFamily: 'LINESeedSans_A_Bd',
+            fontFamily: 'LINESeedSansApp-Bold',
             color: 'black'
           }}>
           TimeTable
@@ -291,7 +291,7 @@ const Time = ({st, pf, activeTab}) => {
                 flexArr={[1]}
                 textStyle={{
                   textAlign: 'center',
-                  fontFamily: 'LINESeedSans_A_Rg',
+                  fontFamily: 'LINESeedSansApp-Regular',
                   color: 'black'
                 }}
               />
@@ -342,7 +342,7 @@ const Time = ({st, pf, activeTab}) => {
                 flexArr={[1]}
                 textStyle={{
                   textAlign: 'center',
-                  fontFamily: 'LINESeedSans_A_Rg',
+                  fontFamily: 'LINESeedSansApp-Regular',
                   color: 'black'
                 }}
               />
@@ -391,7 +391,7 @@ const Time = ({st, pf, activeTab}) => {
             marginTop: 20,
             marginBottom: 10,
             fontSize: 20,
-            fontFamily: 'LINESeedSans_A_Bd',
+            fontFamily: 'LINESeedSansApp-Bold',
             color: 'black'
           }}>
           TimeTable
@@ -412,7 +412,7 @@ const Time = ({st, pf, activeTab}) => {
                 flexArr={[1]}
                 textStyle={{
                   textAlign: 'center',
-                  fontFamily: 'LINESeedSans_A_Rg',
+                  fontFamily: 'LINESeedSansApp-Regular',
                   color: 'black'
                 }}
               />
@@ -520,7 +520,7 @@ const BGroup = ({buttons, code}) => {
                 flexArr={[1, 1, 1]}
                 textStyle={{
                   textAlign: 'center',
-                  fontFamily: 'LINESeedSans_A_Rg',
+                  fontFamily: 'LINESeedSansApp-Regular',
                   color: 'black'
                 }}
               />
@@ -537,7 +537,7 @@ const BGroup = ({buttons, code}) => {
                       ...lineBorder(index),
                       width: 120,
                     }}>
-                    <Text style={{margin: 15, fontSize: 12, textAlign: 'left', fontFamily: 'LINESeedSans_A_Bd', color: 'black'}}>
+                    <Text style={{margin: 15, fontSize: 12, textAlign: 'left', fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>
                       {item.name_en}
                     </Text>
                   </View>
@@ -638,7 +638,7 @@ const BGroup = ({buttons, code}) => {
                 flexArr={[1, 1, 1]}
                 textStyle={{
                   textAlign: 'center',
-                  fontFamily: 'LINESeedSans_A_Rg',
+                  fontFamily: 'LINESeedSansApp-Regular',
                   color: 'black'
                 }}
               />
@@ -655,7 +655,7 @@ const BGroup = ({buttons, code}) => {
                       ...lineBorder(index),
                       width: 120,
                     }}>
-                    <Text style={{margin: 15, fontSize: 12, textAlign: 'left', fontFamily: 'LINESeedSans_A_Rg',color: 'black'}}>
+                    <Text style={{margin: 15, fontSize: 12, textAlign: 'left', fontFamily: 'LINESeedSansApp-Regular',color: 'black'}}>
                       {item.name_en}
                     </Text>
                   </View>
@@ -724,7 +724,7 @@ const TimeTable = ({route}) => {
               style={{
                 color: 'white',
                 fontSize: 20,
-                fontFamily: 'LINESeedSans_A_Bd',
+                fontFamily: 'LINESeedSansApp-Bold',
                 marginTop: 100,
                 marginLeft: 15,
                 paddingBottom: 10
@@ -759,7 +759,7 @@ const styles = StyleSheet.create({
     margin: 15,
     fontSize: 12,
     textAlign: 'center',
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
     color: 'black',
   },
   borderNormal: {
@@ -804,7 +804,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 14,
     textAlign: 'center',
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
     margin: 13,
   },
   buttonActive: {
@@ -819,7 +819,7 @@ const styles = StyleSheet.create({
   textActive: {
     fontSize: 14,
     textAlign: 'center',
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
     margin: 13,
   },
 });

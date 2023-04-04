@@ -1,7 +1,7 @@
 "use strict";
 
 import React, { useCallback, useMemo, useRef, useEffect, useState } from 'react';
-import { SafeAreaView, StyleSheet, View, PermissionsAndroid } from 'react-native';
+import { SafeAreaView, StyleSheet, View, PermissionsAndroid, Text } from 'react-native';
 import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { getDistance, findNearest } from 'geolib';
@@ -54,7 +54,7 @@ const Navigate = (props) => {
   const stationPath = props.route.params.stationPath;
   return (
     <SafeAreaView style={Styles.container}> 
-    <GestureHandlerRootView style={{ flex: 1 }}>
+    <GestureHandlerRootView style={{ flex: 1, backgroundColor:'white' }}>
         <View style={{zIndex: 1}}>
           <Header title="Navigate" back={true} navigation={props.navigation} haveCloseIcon={true} function2={()=> props.navigation.navigate('AddStopScreen')}/>
         </View>
@@ -91,14 +91,13 @@ const Navigate = (props) => {
           </BottomSheet> 
         </GestureHandlerRootView>
     </SafeAreaView>
-    
   );
 };
 
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'black',
   },
   header_view: {
     zIndex:1,
@@ -111,6 +110,7 @@ const Styles = StyleSheet.create({
   navigation_view: {
     zIndex:1,
     height: 100,
+    marginTop: -20,
     marginTop: -20,
     // position: 'absolute',
     // top: 10,

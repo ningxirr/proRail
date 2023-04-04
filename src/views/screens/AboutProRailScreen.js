@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet, ImageBackground, Image, ScrollView} from 'react-native';
+import {View, Text, StyleSheet, ImageBackground, Image, ScrollView, SafeAreaView} from 'react-native';
 import React from 'react';
 import Header from '../../components/header';
 
@@ -12,7 +12,8 @@ const effort = require('../../../assets/images/icons/004-effort.png');
 
 const AboutProRailScreen = ({navigation}) => {
   return (
-      <View>
+    <SafeAreaView style={{flex:1, backgroundColor:'black'}}>
+      <View style={{backgroundColor:'white'}}>
         <Header haveBackIcon={true} title={'About'} function={()=>navigation.goBack()}/>
         <ScrollView contentContainerStyle={{alignItems: 'center'}}>
             <Image source={firstImg} style={styles.firstImage} />
@@ -62,6 +63,8 @@ const AboutProRailScreen = ({navigation}) => {
             <Image source={lastImg} style={styles.lastImg}/>
         </ScrollView>
       </View>
+    </SafeAreaView>
+      
   );
 };
 
@@ -87,13 +90,13 @@ const styles = StyleSheet.create({
   },
   objectiveHeaderText: {
     fontSize: 24,
-    fontFamily: 'LINESeedSans_A_Bd',
+    fontFamily: 'LINESeedSansApp-Bold',
     color: 'black',
     marginLeft: 20
   },
   objectiveDetailText: {
     fontSize: 14,
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
     color: 'black',
     marginBottom: 10,
   },

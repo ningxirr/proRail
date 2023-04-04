@@ -20,6 +20,7 @@ const StationInfo = ({navigation, route}) => {
   const day = today.getDay();
   const hour = today.getHours();
   const minute = today.getMinutes();
+  //I will add frequency later
   if(day > 1 && day < 5){
     
   }
@@ -29,6 +30,7 @@ const StationInfo = ({navigation, route}) => {
 
   return (
     <SafeAreaView style={Styles.container}>
+      <View style={{backgroundColor: '#fafafa'}}>
       <View style = {Styles.header_navbar_view}>
         <Header 
           title={stationInfo[code].station_name.en.length >= 20 ? stationInfo[code].station_name.en.substring(0,20)+'...' : stationInfo[code].station_name.en} 
@@ -80,6 +82,7 @@ const StationInfo = ({navigation, route}) => {
           }
       </View>
     </ScrollView>
+      </View>
   </SafeAreaView>
   );
 };
@@ -87,7 +90,7 @@ const StationInfo = ({navigation, route}) => {
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fafafa'
+    backgroundColor: 'black'
   },
   image_view: {
     paddingTop: 50,
@@ -103,7 +106,6 @@ const Styles = StyleSheet.create({
   header_navbar_view:{
     zIndex:1,
     height: 100,
-    position: 'absolute',
     top: 0,
     left: 0,
     right: 0,

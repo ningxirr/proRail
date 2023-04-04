@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View } from 'react-native';
+import { SafeAreaView, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import SearchBar from '../../components/SearchBar';
 import Header from '../../components/header';
@@ -12,7 +12,8 @@ const StationInformationListScreen = () => {
   const [fullScreenMap, setFullScreenMap] = useState(false);
 
   return (
-    <GestureHandlerRootView style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1, backgroundColor:'black'}}>
+      <GestureHandlerRootView style={{flex: 1}}>
       <View style={{backgroundColor: 'white', flex: 1}}>
         <View style={{position: 'relative'}}>
           <View style={{position: 'relative'}}>
@@ -42,7 +43,7 @@ const StationInformationListScreen = () => {
         />
       </View>
     </GestureHandlerRootView>
-    
+    </SafeAreaView>
   );
 };
 

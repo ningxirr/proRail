@@ -54,19 +54,19 @@ const Styles = StyleSheet.create({
   },
   frequency_text: {
     fontSize: 14,
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
     marginBottom: 5,
     color: 'black'
   },
   frequency_num_text: {
     fontSize: 20,
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
     color: 'black'
   },
   frequency_mins_text: {
     paddingLeft: 5,
     fontSize: 12,
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
     textAlignVertical: 'bottom',
     color: 'black'
   },
@@ -83,7 +83,7 @@ const Styles = StyleSheet.create({
   time_table_botton_text:{
     color: 'white',
     fontSize: 16,
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
   alignment_timing_view: {
     alignSelf: 'center',

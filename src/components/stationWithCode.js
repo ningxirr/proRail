@@ -10,8 +10,8 @@ const stationWithCode = ({code}) => {
                     {code}
                 </Text>
             </View>
-            <Text style={Style.station_name_text}>
-                {stationInfo[code].station_name.en.length >= 30 ? stationInfo[code].station_name.en.substring(0, 30)+'...' : stationInfo[code].station_name.en}
+            <Text style={Style.station_name_text} ellipsizeMode='tail' numberOfLines={1}>
+                {stationInfo[code].station_name.en}
             </Text>
         </View>
     )
@@ -32,15 +32,16 @@ const Style = StyleSheet.create({
     },
     station_code_text: {
         fontSize: 15,
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
         color: 'white',
         textAlign: 'center'
     },
     station_name_text: {
         fontSize: 15,
-        fontFamily: 'LINESeedSans_A_Rg',
+        fontFamily: 'LINESeedSansApp-Regular',
         color: 'black',
-        marginLeft: 5
+        marginLeft: 5,
+        width: '75%'
     }
 })
 

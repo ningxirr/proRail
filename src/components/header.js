@@ -1,12 +1,13 @@
 "use strict";
 
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import TochableIcon from './tochableIcon';
 
 const Header = (props) => {
   return (
     <View style={Styles.container}>
+      {/* <StatusBar translucent={false} backgroundColor="black" barStyle="light-content" /> */}
       {
         props.haveBackIcon ? 
         <View style={Styles.icon_header_view}>
@@ -63,7 +64,7 @@ const Styles = StyleSheet.create({
   header_text:{
     color: 'white',
     fontSize: 24,
-    fontFamily: 'LINESeedSans_A_Bd',
+    fontFamily: 'LINESeedSansApp-Bold',
   },
   station_route_view: {
     paddingVertical: 5,
@@ -74,7 +75,7 @@ const Styles = StyleSheet.create({
     color:'white', 
     fontSize: 15, 
     textAlign:'center',
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   }
 });
 

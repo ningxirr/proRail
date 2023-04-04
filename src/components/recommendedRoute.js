@@ -39,20 +39,20 @@ const Styles = StyleSheet.create({
     },
     title_text: {
         fontSize: 14, 
-        fontFamily: 'LINESeedSans_A_Rg',        
+        fontFamily: 'LINESeedSansApp-Regular',        
         color:'white', 
         textAlign:'center'
     },
     number_text: {
         fontSize: 36, 
-        fontFamily: 'LINESeedSans_A_Bd', 
+        fontFamily: 'LINESeedSansApp-Bold', 
         color:'white', 
         textAlign:'center',
         paddingVertical: 10
     },
     unit_text: {
         fontSize: 12, 
-        fontFamily: 'LINESeedSans_A_Rg', 
+        fontFamily: 'LINESeedSansApp-Regular', 
         color:'white', 
         textAlign:'center'
     }

@@ -120,7 +120,7 @@ const AddStopScreen = ({route, navigation}) => {
             name="cross"
             size={20}
             color="grey"
-            style={{padding: 1}}
+            style={{ marginLeft: 'auto', marginRight: 5 }}
             onPress={() => {
               removeItems(item);
             }}
@@ -130,8 +130,8 @@ const AddStopScreen = ({route, navigation}) => {
     );
   }
   return (
-    <SafeAreaView style={{flex:1}}>
-    <GestureHandlerRootView style={{flex: 1}}> 
+    <SafeAreaView style={{flex: 1, backgroundColor:'black'}}>
+      <GestureHandlerRootView style={{flex: 1}}> 
       <View style={{backgroundColor: 'white', flex: 1}}>
         <View style={{zIndex: 1}}>
           <Header title="Choose Direction"/>
@@ -195,7 +195,7 @@ const AddStopScreen = ({route, navigation}) => {
                 name="cross"
                 size={20}
                 color="grey"
-                style={{padding: 1}}
+                style={{ marginLeft: 'auto', marginRight: 5 }}
                 onPress={() => {
                   setOriStation(null)
                 }}
@@ -245,7 +245,7 @@ const AddStopScreen = ({route, navigation}) => {
                 name="cross"
                 size={20}
                 color="grey"
-                style={{padding: 1}}
+                style={{ marginLeft: 'auto', marginRight: 5 }}
                 onPress={() => {
                   setDestStation(null)
                 }}
@@ -272,7 +272,7 @@ const styles = StyleSheet.create({
   letsgoText: {
     color: 'white',
     fontSize: 15, 
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
   infoBox: {
     flex: 4,
@@ -313,12 +313,12 @@ const styles = StyleSheet.create({
   textInChooseBox: {
     fontSize: 15,
     paddingLeft: (10),
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
   textInAddBox: {
     fontSize: 15,
     color: 'black',
-    fontFamily: 'LINESeedSans_A_Rg',
+    fontFamily: 'LINESeedSansApp-Regular',
   },
   navigation_view: {
     zIndex:1,
