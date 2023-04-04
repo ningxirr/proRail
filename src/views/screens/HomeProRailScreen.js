@@ -50,8 +50,8 @@ const HomeProRailScreen = ({route, navigation}) => {
           <Text style={styles.proRailText}>proRail</Text>
         </ImageBackground>
 
-        <View style={{marginTop: -height*0.3}}>
-            <View style={{ marginHorizontal: '5%', marginVertical: 20}}>
+        <View style={{marginTop: -height*0.3,}}>
+            <View style={{  marginHorizontal: '5%', marginVertical: 20}}>
               <NextStation 
                 isNearestOnly={true}/>
             </View>
@@ -110,7 +110,7 @@ const HomeProRailScreen = ({route, navigation}) => {
                         name="cross"
                         size={20}
                         color="grey"
-                        style={{ marginLeft: 'auto', marginRight: 5 }}
+                        style={{ marginLeft: 'auto', marginRight: 5}}
                         onPress={() =>{
                           setDestStation(null);
                         }}
