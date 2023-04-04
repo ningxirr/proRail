@@ -5,7 +5,7 @@ import TochableIcon from '../components/tochableIcon';
 
 const HeaderBar = (props) => {
     return (
-        <View style={{marginTop: 20}}>
+        <View style={{marginTop: 30}}>
             <View style = {Styles.header_navbar_view}>
                 <TochableIcon name='angle-left' size={25} color={'white'} function={props.backIconFunction}/>
                 {

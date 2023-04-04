@@ -7,7 +7,7 @@ import CustomButton from '../../../components/customButton';
 import storeDataToAsyncStorage from '../../../function/storeDataToAsyncStorage';
 
 const ChooseScreen = ({navigation}) => {
-  if(Platform.OS === 'ios'){
+  {/* if(Platform.OS === 'ios'){
     const [recommendedOrder, setRecommendedOrder] = useState({"1": 0, "2": 1, "3": 2});
     const clamp = (value, lowerBound, upperBound) => {
       'worklet';
@@ -215,7 +215,7 @@ const ChooseScreen = ({navigation}) => {
         </SafeAreaView>
       </SafeAreaProvider>
     );
-  }
+  } */}
   const [recommended, setRecommended] = useState(['cheapest', 'fastest', 'leastInterchanges']);
   const [selectedCheapest, setSelectedCheapest] = useState(true);
   const [selectedFastest, setSelectedFastest] = useState(false);
