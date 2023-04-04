@@ -7,7 +7,7 @@ const ExitList = (props) => {
   let exitList = props.exit;
 
   return (
-    <View style={Styles.component}>
+    <View>
         <Text style={Styles.title_text}>
             Exits
         </Text>
@@ -34,9 +34,6 @@ const ExitList = (props) => {
 };
 
 const Styles = StyleSheet.create({
-    component:{
-        paddingVertical: 30,
-    },
     title_text:{
         fontSize: 20,
         fontFamily: 'LINESeedSansApp-Bold',

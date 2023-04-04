@@ -8,6 +8,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import TotalFavorite from '../../components/totalFavorite';
 import FavoriteRouteList from '../../components/favoriteRouteList';
 import getDataFromAsyncStorage from '../../function/getDataFromAsyncStorage';
+import Header from '../../components/header';
 
 const screenHeight = Dimensions.get('window').height;
 
@@ -41,11 +42,7 @@ const FavoriteRoute = (props) => {
     <SafeAreaView style={Styles.container}> 
       <GestureHandlerRootView style={{ flex: 1 }}>
       <ImageBackground source={require('../../../assets/images/fav_background.png')} resizemode='contain' style={{height:screenHeight*0.7}} >
-        <View style={Styles.header_view}>
-            <Text style={Styles.header_text}>
-                Favorite Route
-            </Text>
-        </View>
+        <Header title="Favorite Route"/>
         <View style={Styles.navigation_view}>
           <TotalFavorite favCount={favoriteRoute.length}/>
         </View>

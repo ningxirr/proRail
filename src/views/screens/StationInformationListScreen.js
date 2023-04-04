@@ -17,7 +17,7 @@ const StationInformationListScreen = () => {
       <View style={{backgroundColor: 'white', flex: 1}}>
         <View style={{position: 'relative'}}>
           <View style={{position: 'relative'}}>
-            <View style={{marginTop: fullScreenMap ? 150 : 20 }}>
+            <View style={{marginTop: fullScreenMap ? 80 : 20 }}>
               <RailMap />
             </View>
             <View style={{position: 'absolute', width: '100%'}}>
@@ -25,7 +25,7 @@ const StationInformationListScreen = () => {
             </View>
           </View>
 
-          <View style={{position: 'absolute', marginTop: (50), alignItems: 'center', width: '100%', zIndex: 1}}>
+          <View style={{position: 'absolute', marginTop: 75, alignItems: 'center', width: '100%', zIndex: 1}}>
             <SearchBar
               searchPhrase={searchPhrase}
               setSearchPhrase={setSearchPhrase}
@@ -39,7 +39,7 @@ const StationInformationListScreen = () => {
           clicked={clicked}
           searchPhrase={searchPhrase}
           setClicked={setClicked}
-          memoScale={["10%", "40%", "65%"]}
+          memoScale={["20%", "44%", "65%"]}
         />
       </View>
     </GestureHandlerRootView>

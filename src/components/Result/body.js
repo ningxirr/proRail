@@ -115,7 +115,8 @@ const Body = (props) => {
 
 const Styles = StyleSheet.create({
   overall_component_view: {
-    marginHorizontal : 25
+    marginHorizontal : 25,
+    marginBottom: 20
   },
   more_choice_scroll_view:{
     marginHorizontal : 25,

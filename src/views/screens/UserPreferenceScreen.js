@@ -6,6 +6,7 @@ import CustomButton from './../../components/customButton';
 import getDataFromAsyncStorage from './../../function/getDataFromAsyncStorage';
 import storeDataToAsyncStorage from './../../function/storeDataToAsyncStorage';
 import removeDataFromAsyncStorage from './../../function/removeDataFromAsyncStorage';
+import Header from '../../components/header';
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
@@ -59,9 +60,7 @@ const UserPreference = () => {
     return(
         <SafeAreaView style={{flex:1, backgroundColor: 'black'}}>
             <View style={{backgroundColor:'white', flex:1}}>
-            <View style={Styles.header_view}>
-                <Text style={Styles.header_text}>Preference</Text>
-            </View>
+            <Header title="Preference"/>
             <View style={Styles.container}>
             <Image source={require('../../../assets/images/background.png')} style={Styles.profile_image}/>
             <View style={Styles.name_text_view}>
@@ -76,8 +75,7 @@ const UserPreference = () => {
                 <Text style={{fontSize: 20, fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>Alert notification</Text>
                 <Switch 
                     trackColor={{false: 'grey', true: 'black'}}
-                    thumbColor={isEnabled ? '#fcfcfc' : '#fcfcfc'}  
-                    ios_backgroundColor={'black'}
+                    thumbColor={isEnabled ? '#fcfcfc' : '#fcfcfc'}
                     onValueChange={toggleSwitch}
                     value={isEnabled}  
                     style={{ transform: [{scaleX: 1.0}, {scaleY: 1.0}]}}

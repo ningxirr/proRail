@@ -12,6 +12,7 @@ import freqJS from '../../../data/freq.json';
 import schJS from '../../../data/schedule.json';
 import StationInfo from '../../../data/station_info.json';
 import flTime from '../../../data/flt.json';
+import Header from '../../components/header'
 
 const checkStyleBorder = (index, data) => {
   if (index === 0 && data.length - 1 === 0) {
@@ -699,7 +700,7 @@ const BGroup = ({buttons, code}) => {
   }
 };
 
-const TimeTable = ({route}) => {
+const TimeTable = ({route, navigation}) => {
   const code = route.params.route.code;
   console.log(code)
   console.log(flTime[code].length);
@@ -713,30 +714,42 @@ const TimeTable = ({route}) => {
   console.log(dir);
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView scrollEnabled={true}>
-        <View style={styles.body}>
-          <View
-            style={{
-              ...styles.header,
-              backgroundColor: StationInfo[code].platform.color.path_color,
-            }}>
-            <Text
+      <View style={{position:'relative', backgroundColor: '#FAFAFA'}}>
+        <ScrollView scrollEnabled={true}>
+          <View style={styles.body}>
+            <View
               style={{
-                color: 'white',
-                fontSize: 20,
-                fontFamily: 'LINESeedSansApp-Bold',
-                marginTop: 100,
-                marginLeft: 15,
-                paddingBottom: 10
+                ...styles.header,
+                backgroundColor: StationInfo[code].platform.color.path_color,
               }}>
-              {flTime[code][0][0].stname_en}'s Departure Time
-            </Text>
+                <Text
+                  style={{
+                    color: 'white',
+                    fontSize: 20,
+                    fontFamily: 'LINESeedSansApp-Bold',
+                    marginTop: 35,
+                    marginLeft: 15,
+                    paddingBottom: 10
+                  }}>
+                  {flTime[code][0][0].stname_en}'s Departure Time
+                </Text>
+            </View>
+            <View>
+                <BGroup buttons={dir} code={code} />
+            </View>
           </View>
-          <View>
-              <BGroup buttons={dir} code={code} />
-          </View>
+        </ScrollView>
+
+        <View style={{position:'absolute', width: '100%'}}>
+          <Header
+            title={'Time Table'}
+            haveBackIcon={true}
+            function={() => {
+              navigation.goBack();
+            }}
+          />
         </View>
-      </ScrollView>
+      </View>
     </SafeAreaView>
   );
 };
@@ -744,10 +757,11 @@ const TimeTable = ({route}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 20,
+    backgroundColor: 'black'
   },
   body: {
     flex: 9,
+    marginTop: 100
   },
   footer: {
     flex: 1,

@@ -284,7 +284,7 @@ const styles = StyleSheet.create({
   addbox: {
     backgroundColor: 'white',
     borderWidth: 1,
-    borderColor: '#000000',
+    borderColor: '#6C6C6C',
     borderRadius: (10),
     marginHorizontal: (20),
     marginTop: (20),
@@ -317,12 +317,12 @@ const styles = StyleSheet.create({
   },
   textInAddBox: {
     fontSize: 15,
-    color: 'black',
+    color: '#3A3A3A',
     fontFamily: 'LINESeedSansApp-Regular',
   },
   navigation_view: {
     zIndex:1,
-    marginTop: -20,
+    marginTop: -10,
     paddingHorizontal: '5%',
   },
 });

@@ -22,8 +22,9 @@ const RouteDetail = (props) => {
         {props.number}
       </Text>
       <Text style = {Styles.unit_text}>
-        {"\t"}{props.unit}
+        {props.unit}
       </Text>
+      
     </View>
   );
 }

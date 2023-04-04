@@ -118,16 +118,16 @@ const HomeProRailScreen = ({route, navigation}) => {
                     </View>
                   }
                 </TouchableOpacity>
+
+                <TouchableOpacity
+                  style={styles.letsgoView}
+                  onPress={() => {
+                    checkCollectStation();
+                  }}>
+                  <Text style={styles.letsgoText}>Let's Go</Text>
+                </TouchableOpacity>
               </View>
             </View>
-
-            <TouchableOpacity
-              style={styles.letsgoView}
-              onPress={() => {
-                checkCollectStation();
-              }}>
-              <Text style={styles.letsgoText}>Let's Go</Text>
-            </TouchableOpacity>
           </View>
 
         <View style={{marginBottom: 20}}>
@@ -138,7 +138,7 @@ const HomeProRailScreen = ({route, navigation}) => {
                 style={styles.moreInfoInScrollTouch}
                 onPress={() => navigation.navigate('AboutProRailScreen')}>
                 <Text style={styles.moreInfoInScrollText}>
-                  {'About'}
+                  {'About\nproRail'}
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity
@@ -193,8 +193,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     marginHorizontal: 20,
-    marginVertical: 10,
-    height: 220,
+    height: 300,
   },
   chooseDirText: {
     fontSize: 24,
@@ -214,8 +213,8 @@ const styles = StyleSheet.create({
   letsgoView: {
     backgroundColor: 'black',
     borderRadius: 10,
-    marginHorizontal: 20,
-    marginVertical: 15,
+    marginHorizontal: 25,
+    marginBottom: 20,
     alignItems: 'center',
     justifyContent: 'center',
     height: 40,
@@ -238,6 +237,7 @@ const styles = StyleSheet.create({
   moreInfoInScrollText: {
     margin: 10,
     fontSize: 22,
+    fontWeight: 'bold',
     color: 'black',
     fontFamily: 'LINESeedSansApp-Regular',
     lineHeight: 30,

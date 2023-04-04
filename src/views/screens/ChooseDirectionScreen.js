@@ -16,7 +16,7 @@ const ChooseDirectionScreen = ({navigation, route}) => {
       <View style={{backgroundColor: 'white', flex: 1}}>
       <View style={{position: 'relative'}}>
         <View style={{position: 'relative'}}>
-          <View style={{marginTop: fullScreenMap ? 150 : 20 }}>
+          <View style={{marginTop: fullScreenMap ? 140 : 20 }}>
             <RailMap 
               cannotClicked={false}
               num={route.params.num} 
@@ -33,7 +33,7 @@ const ChooseDirectionScreen = ({navigation, route}) => {
           </View>
         </View>
 
-        <View style={{position: 'absolute', marginTop: (90), alignItems: 'center', width: '100%', zIndex:1}}>
+        <View style={{position: 'absolute', marginTop: 100, alignItems: 'center', width: '100%', zIndex:1}}>
           <SearchBar
             searchPhrase={searchPhrase}
             setSearchPhrase={setSearchPhrase}
@@ -47,7 +47,7 @@ const ChooseDirectionScreen = ({navigation, route}) => {
         clicked={clicked}
         searchPhrase={searchPhrase}
         setClicked={setClicked}
-        memoScale={["10%", "40%", "65%"]}
+        memoScale={["20%", "44%", "65%"]}
         num={route.params.num}
         notSelectedStation={route.params.notSelectedStation}
       />

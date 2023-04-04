@@ -81,9 +81,12 @@ const NextStation = (props) => {
                         {
                             stationGPS === null ? 
                             <View>
-                                <Text style = {[Styles.station_name_text, {color:'grey'}]}>
-                                    Loading...
-                                </Text>
+                                <View style={{marginBottom: 5}}>
+                                    <Text style = {[Styles.station_name_text, {color:'grey'}]}>
+                                        Loading...
+                                    </Text>
+                                </View>
+                                
                                 <View style = {[Styles.station_route_view, { backgroundColor: '#cfcfcf' }]}>
                                     <Text style = {Styles.station_route_text}>
                                         Loading...
@@ -91,9 +94,11 @@ const NextStation = (props) => {
                                 </View>
                             </View>:
                             <View>
-                                <Text style = {Styles.station_name_text} numberOfLines={2} ellipsizeMode='tail'>
-                                    {stationInfo[stationGPS].station_name.en}
-                                </Text>
+                                <View style={{marginBottom: 5}}>
+                                    <Text style = {Styles.station_name_text} numberOfLines={2} ellipsizeMode='tail'>
+                                        {stationInfo[stationGPS].station_name.en}
+                                    </Text>
+                                </View>
                                 <View style = {[Styles.station_route_view, { backgroundColor: stationInfo[stationGPS].platform.color.path_color }]}>
                                     <Text style = {Styles.station_route_text}>
                                         {stationInfo[stationGPS].platform.platform}

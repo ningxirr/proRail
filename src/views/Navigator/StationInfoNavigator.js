@@ -29,18 +29,22 @@ const StationInfoNavigator = () => {
          <Stack.Screen 
           name="TimeTableScreen" 
           component={TimeTableScreen}
-          options= {({navigation}) => ({
-            header: () => (
-              <Header
-                title={'Time Table'}
-                haveBackIcon={true}
-                function={() => {
-                  navigation.goBack();
-                }}
-              />
-            ),
+          // options= {({navigation}) => ({
+          //   header: () => (
+          //     <Header
+          //       title={'Time Table'}
+          //       haveBackIcon={true}
+          //       function={() => {
+          //         navigation.goBack();
+          //       }}
+          //     />
+          //   ),
+          //   headerTransparent: true,
+          // })}
+          options={{
+            headerShown: false,
             headerTransparent: true,
-          })}
+          }}
         /> 
     </Stack.Navigator>
   )

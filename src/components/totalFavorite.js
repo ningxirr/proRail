@@ -53,6 +53,7 @@ const Styles = StyleSheet.create({
     star_icon_view:{
         marginRight: 10,
         alignItems: 'center',
+        marginTop: 5
     },
     total_fav_text: {
         color:'black', 
