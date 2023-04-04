@@ -1,6 +1,6 @@
 "use strict";
 import React, { useEffect, useState, useRef } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions, PermissionsAndroid, Platform } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Dimensions, PermissionsAndroid, PermissionsIOS, Platform } from 'react-native';
 import { getDistance, findNearest } from 'geolib';
 import Geolocation from 'react-native-geolocation-service';
 import stationInfo from '../../data/station_info'
@@ -15,8 +15,12 @@ const NextStation = (props) => {
     const filteredStation = props.isNearestOnly ? stationLocation : props.filteredStation;
     useEffect(() => {
         if(Platform.OS === 'ios'){
-            // Ning may be you can add new lib for ios that can know the permission here
-            setHasLocationPermission(true);
+            //Ning may be you can add new lib for ios that can know the permission here
+            // Geolocation.requestAuthorization('always')
+            // setHasLocationPermission(true);
+            
+            Geolocation.requestAuthorization('always')
+            .then((status) => status === 'granted' ? setHasLocationPermission(true) : setHasLocationPermission(false))
         }
         else if(Platform.OS === 'android'){
             PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => setHasLocationPermission(response));

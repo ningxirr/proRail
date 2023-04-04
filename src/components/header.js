@@ -1,13 +1,13 @@
 "use strict";
 
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, Platform } from 'react-native';
 import TochableIcon from './tochableIcon';
 
 const Header = (props) => {
   return (
     <View style={Styles.container}>
-      {/* <StatusBar translucent={false} backgroundColor="black" barStyle="light-content" /> */}
+      <StatusBar translucent={false} backgroundColor="black" barStyle="light-content" />
       {
         props.haveBackIcon ? 
         <View style={Styles.icon_header_view}>
