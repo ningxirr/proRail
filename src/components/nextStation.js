@@ -15,7 +15,7 @@ const NextStation = (props) => {
     const filteredStation = props.isNearestOnly ? stationLocation : props.filteredStation;
     useEffect(() => {
         if(Platform.OS === 'ios'){
-            //Ning may be you can add new lib for ios that can know the permission here
+            // Ning may be you can add new lib for ios that can know the permission here
             setHasLocationPermission(true);
         }
         else if(Platform.OS === 'android'){

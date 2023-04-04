@@ -105,7 +105,7 @@ const Styles = StyleSheet.create({
   },
   header_navbar_view:{
     zIndex:1,
-    height: 100,
+    position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
