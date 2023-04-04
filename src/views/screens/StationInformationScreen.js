@@ -35,7 +35,7 @@ const StationInfo = ({navigation, route}) => {
         <Header 
           title={stationInfo[code].station_name.en.length >= 20 ? stationInfo[code].station_name.en.substring(0,20)+'...' : stationInfo[code].station_name.en} 
           platform={stationInfo[code].platform.platform} 
-          color={stationInfo[code].platform.color.color} 
+          color={stationInfo[code].platform.color.path_color} 
           haveBackIcon={true}
           function={()=>navigation.goBack()}/>
       </View>
@@ -77,7 +77,7 @@ const StationInfo = ({navigation, route}) => {
           }
           { 
             stationInfo[code].exit.length > 0 ?
-            <ExitList exit={stationInfo[code].exit} language={'en'} color={stationInfo[code].platform.color.color}/>:
+            <ExitList exit={stationInfo[code].exit} language={'en'} color={stationInfo[code].platform.color.path_color}/>:
             null
           }
       </View>

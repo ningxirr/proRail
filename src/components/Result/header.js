@@ -13,11 +13,11 @@ const Header = (props) => {
                 <View style = {Styles.main_header_view}>
                 </View>
                 <View style = {Styles.start_and_end_route_view}>
-                  <StartAndEndRoute stationName = {stationInfo[props.startStation].station_name.en} stationPlatform = {stationInfo[props.startStation].platform.platform} stationColor = {stationInfo[props.startStation].platform.color.color}/>
+                  <StartAndEndRoute stationName = {stationInfo[props.startStation].station_name.en} stationPlatform = {stationInfo[props.startStation].platform.platform} stationColor = {stationInfo[props.startStation].platform.color.path_color}/>
                   <Text style = {{color:'white', fontSize: 15, fontFamily: 'LINESeedSansApp-Regular'}}>
                     to
                   </Text>
-                  <StartAndEndRoute stationName = {stationInfo[props.stopStation].station_name.en} stationPlatform = {stationInfo[props.stopStation].platform.platform} stationColor = {stationInfo[props.stopStation].platform.color.color}/>
+                  <StartAndEndRoute stationName = {stationInfo[props.stopStation].station_name.en} stationPlatform = {stationInfo[props.stopStation].platform.platform} stationColor = {stationInfo[props.stopStation].platform.color.path_color}/>
                 </View>
               </View>
             </View>

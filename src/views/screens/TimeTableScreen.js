@@ -464,7 +464,7 @@ const BGroup = ({buttons, code}) => {
           marginBottom: 10, 
           width: '100%', 
           flexDirection: 'row', 
-          backgroundColor: StationInfo[code].platform.color.color, 
+          backgroundColor: StationInfo[code].platform.color.path_color, 
           borderBottomRightRadius: 20, 
           borderBottomLeftRadius: 20,
           justifyContent: 'center',
@@ -491,7 +491,7 @@ const BGroup = ({buttons, code}) => {
                     activeTab == index
                       ? {
                           ...styles.textActive,
-                          color: StationInfo[code].platform.color.color,
+                          color: StationInfo[code].platform.color.path_color,
                         }
                       : styles.text
                   }>
@@ -588,7 +588,7 @@ const BGroup = ({buttons, code}) => {
           width: '100%',
           flexDirection: 'row',
           justifyContent: 'center', 
-          backgroundColor: StationInfo[code].platform.color.color, 
+          backgroundColor: StationInfo[code].platform.color.path_color, 
           borderBottomRightRadius: 20, 
           borderBottomLeftRadius: 20
           }}>
@@ -610,7 +610,7 @@ const BGroup = ({buttons, code}) => {
                       activeTab == index
                         ? {
                             ...styles.textActive,
-                            color: StationInfo[code].platform.color.color,
+                            color: StationInfo[code].platform.color.path_color,
                           }
                         : styles.text
                     }>
@@ -718,7 +718,7 @@ const TimeTable = ({route}) => {
           <View
             style={{
               ...styles.header,
-              backgroundColor: StationInfo[code].platform.color.color,
+              backgroundColor: StationInfo[code].platform.color.path_color,
             }}>
             <Text
               style={{
