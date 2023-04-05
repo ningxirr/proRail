@@ -46,16 +46,13 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     alignItems: 'center',
     shadowOpacity: 0.2,
-    shadowRadius: 5,
-    overflow: 'hidden',
-    shadowColor: '#000000',
+    shadowColor: "#000",
     shadowOffset: {
-      width: 0,
-      height: 8,
+        width: 0,
+        height: 3,
     },
-    shadowOpacity: 0.25,
-    shadowRadius: 24,
-    elevation: 10,
+    shadowRadius: 3, //for ios
+    elevation: 5, //for android
   },
   searchText: {
     fontSize: 15,

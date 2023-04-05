@@ -2,6 +2,7 @@ import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Welcome from '../screens/Register/Welcome'
 import Regist from '../screens/Register/Regist'
+import Feature from '../screens/Register/Feature'
 import Choose from '../screens/Register/Choose'
 
 const Stack = createNativeStackNavigator();
@@ -17,14 +18,22 @@ const RegisterNavigator = () => {
             headerShown: false
             }}
             /> 
-        <Stack.Screen 
+          <Stack.Screen 
+            name="Feature" 
+            component={Feature} 
+            header
+            options={{
+              headerShown: false
+            }}
+          /> 
+        {/* <Stack.Screen 
             name="Regist" 
             component={Regist} 
             header
             options={{
             headerShown: false
             }}
-            />
+            /> */}
         <Stack.Screen 
             name="Choose" 
             component={Choose} 

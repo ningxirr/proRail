@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
   modalView: {
     margin: 20,
     backgroundColor: 'white',
-    height: (175),
+    height: (180),
     width: (325),
     borderRadius: 10,
     shadowColor: '#000',
@@ -142,7 +142,8 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
   },
   stationText: {
-    marginLeft: (20),
+    marginLeft: 20,
+    marginTop: 20,
     fontSize: 25,
     fontFamily: 'LINESeedSansTHApp-Regular',
     color: '#000000',
@@ -150,8 +151,9 @@ const styles = StyleSheet.create({
   },
   platformView: {
     borderRadius: 100,
-    padding: (2),
+    padding: (3),
     marginLeft: (15),
+    marginVertical: 5,
     width: '40%',
     alignItems: 'center',
     shadowOpacity: 0.2,

@@ -6,8 +6,8 @@ import SelectedStationModal from './SelectedStationModal';
 import StationInfo from '../../data/station_info.json';
 
 const image = require('../../assets/images/railmap2.jpg');
-const oriMarkPic = require('../../assets/images/oriMark.png');
-const destMarkPic = require('../../assets/images/destMark.png');
+const oriMarkPic = require('../../assets/images/oridestMark.png');
+const destMarkPic = require('../../assets/images/oridestMark.png');
 const stopMarkPic = require('../../assets/images/stopMark.png');
 const {width} = Dimensions.get('window');
 
@@ -85,6 +85,7 @@ const RailMap = ({oriStationCode, destStationCode, itemsCode, cannotClicked, num
         num={num}
         notSelectedStation={notSelectedStation}
         modalVisible={modalVisible}
+        // modalVisible={true}
         setModalVisible={setModalVisible}
       />
       

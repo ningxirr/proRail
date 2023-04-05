@@ -114,7 +114,7 @@ const AddStopScreen = ({route, navigation}) => {
           });
           console.log(index)
         }}>
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
           <StationWithCode code={item} />
           <Entypo
             name="cross"
@@ -189,7 +189,7 @@ const AddStopScreen = ({route, navigation}) => {
           {
             oriStation === null ? 
             <Text style={styles.textInChooseBox}>Origin</Text>:
-            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+            <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
                <StationWithCode code={oriStation}/>
                <Entypo
                 name="cross"
@@ -239,7 +239,7 @@ const AddStopScreen = ({route, navigation}) => {
           {
             destStation === null ? 
             <Text style={styles.textInChooseBox}>Destination</Text>:
-            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+            <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
                <StationWithCode code={destStation}/>
                <Entypo
                 name="cross"

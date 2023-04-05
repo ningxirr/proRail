@@ -42,6 +42,7 @@ const Styles = StyleSheet.create({
       },
       header_bar_view:{
         paddingVertical: 10,
+        paddingBottom: 20,
         paddingHorizontal: 20,
         flexDirection: 'row',
         justifyContent: 'space-between',

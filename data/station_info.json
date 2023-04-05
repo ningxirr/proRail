@@ -15,8 +15,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "537",
-      "coor_y": "1397"
+      "coor_x": "539",
+      "coor_y": "1394"
     },
     "facility": [
       {
@@ -95,8 +95,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "537",
-      "coor_y": "1346"
+      "coor_x": "539",
+      "coor_y": "1343"
     },
     "facility": [
       {
@@ -150,8 +150,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "537",
-      "coor_y": "1315"
+      "coor_x": "539",
+      "coor_y": "1309"
     },
     "facility": [
       {
@@ -210,8 +210,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "537",
-      "coor_y": "1259"
+      "coor_x": "539",
+      "coor_y": "1256"
     },
     "facility": [
       {
@@ -270,8 +270,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "537",
-      "coor_y": "1207"
+      "coor_x": "539",
+      "coor_y": "1206"
     },
     "facility": [
       {
@@ -330,8 +330,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "537",
-      "coor_y": "1154"
+      "coor_x": "539",
+      "coor_y": "1151"
     },
     "facility": [
       {
@@ -415,7 +415,7 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "556",
+      "coor_x": "559",
       "coor_y": "1096"
     },
     "facility": [
@@ -475,7 +475,7 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "583",
+      "coor_x": "585",
       "coor_y": "1067"
     },
     "facility": [
@@ -535,7 +535,7 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "615",
+      "coor_x": "618",
       "coor_y": "1035"
     },
     "facility": [
@@ -610,8 +610,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "669",
-      "coor_y": "1020"
+      "coor_x": "670",
+      "coor_y": "1025"
     },
     "facility": [
       {
@@ -695,8 +695,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "734",
-      "coor_y": "1014"
+      "coor_x": "737",
+      "coor_y": "1016"
     },
     "facility": [
       {
@@ -750,8 +750,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "823",
-      "coor_y": "1010"
+      "coor_x": "824",
+      "coor_y": "1016"
     },
     "facility": [
       {
@@ -815,8 +815,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "862",
-      "coor_y": "975"
+      "coor_x": "860",
+      "coor_y": "976"
     },
     "facility": [
       {
@@ -885,8 +885,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "863",
-      "coor_y": "937"
+      "coor_x": "860",
+      "coor_y": "939"
     },
     "facility": [
       {
@@ -960,8 +960,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "968",
-      "coor_y": "930"
+      "coor_x": "962",
+      "coor_y": "928"
     },
     "facility": [
       {
@@ -1030,8 +1030,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "1025",
-      "coor_y": "948"
+      "coor_x": "1019",
+      "coor_y": "949"
     },
     "facility": [
       {
@@ -1100,7 +1100,7 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "1055",
+      "coor_x": "1050",
       "coor_y": "980"
     },
     "facility": [
@@ -1165,8 +1165,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "1085",
-      "coor_y": "1010"
+      "coor_x": "1079",
+      "coor_y": "1012"
     },
     "facility": [
       {
@@ -1230,8 +1230,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "1106",
-      "coor_y": "1040"
+      "coor_x": "1099",
+      "coor_y": "1044"
     },
     "facility": [
       {
@@ -1300,7 +1300,7 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "1106",
+      "coor_x": "1099",
       "coor_y": "1110"
     },
     "facility": [
@@ -1370,8 +1370,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "1106",
-      "coor_y": "1166"
+      "coor_x": "1099",
+      "coor_y": "1169"
     },
     "facility": [
       {
@@ -1440,7 +1440,7 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "1106",
+      "coor_x": "1099",
       "coor_y": "1272"
     },
     "facility": [
@@ -1505,8 +1505,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "1104",
-      "coor_y": "1340"
+      "coor_x": "1099",
+      "coor_y": "1341"
     },
     "facility": [
       {
@@ -1575,8 +1575,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "1044",
-      "coor_y": "1340"
+      "coor_x": "1039",
+      "coor_y": "1341"
     },
     "facility": [
       {
@@ -1635,8 +1635,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "948",
-      "coor_y": "1340"
+      "coor_x": "945",
+      "coor_y": "1341"
     },
     "facility": [
       {
@@ -1695,8 +1695,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "912",
-      "coor_y": "1345"
+      "coor_x": "909",
+      "coor_y": "1344"
     },
     "facility": [
       {
@@ -1750,8 +1750,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "835",
-      "coor_y": "1340"
+      "coor_x": "834",
+      "coor_y": "1341"
     },
     "facility": [
       {
@@ -1805,8 +1805,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "778",
-      "coor_y": "1340"
+      "coor_x": "777",
+      "coor_y": "1341"
     },
     "facility": [
       {
@@ -1870,8 +1870,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "733",
-      "coor_y": "1340"
+      "coor_x": "734",
+      "coor_y": "1341"
     },
     "facility": [
       {
@@ -1920,8 +1920,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "669",
-      "coor_y": "1340"
+      "coor_x": "670",
+      "coor_y": "1341"
     },
     "facility": [
       {
@@ -1970,7 +1970,7 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "631",
+      "coor_x": "633",
       "coor_y": "1367"
     },
     "facility": [
@@ -2035,8 +2035,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "569",
-      "coor_y": "1397"
+      "coor_x": "572",
+      "coor_y": "1393"
     },
     "facility": [
       {
@@ -2085,8 +2085,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "495",
-      "coor_y": "1397"
+      "coor_x": "500",
+      "coor_y": "1393"
     },
     "facility": [
       {
@@ -2145,8 +2145,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "443",
-      "coor_y": "1395"
+      "coor_x": "446",
+      "coor_y": "1393"
     },
     "facility": [
       {
@@ -2205,8 +2205,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "406",
-      "coor_y": "1396"
+      "coor_x": "412",
+      "coor_y": "1393"
     },
     "facility": [
       {
@@ -2265,8 +2265,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "370",
-      "coor_y": "1396"
+      "coor_x": "377",
+      "coor_y": "1393"
     },
     "facility": [
       {
@@ -2325,8 +2325,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "335",
-      "coor_y": "1396"
+      "coor_x": "342",
+      "coor_y": "1393"
     },
     "facility": [
       {
@@ -2385,8 +2385,8 @@
     "frequency": null,
     "platform_line_id": "3",
     "imageCoordinate": {
-      "coor_x": "299",
-      "coor_y": "1396"
+      "coor_x": "307",
+      "coor_y": "1393"
     },
     "facility": [
       {
@@ -2445,7 +2445,7 @@
     "frequency": null,
     "platform_line_id": "2",
     "imageCoordinate": {
-      "coor_x": "912",
+      "coor_x": "908",
       "coor_y": "1298"
     },
     "facility": [
@@ -2525,8 +2525,8 @@
     "frequency": null,
     "platform_line_id": "2",
     "imageCoordinate": {
-      "coor_x": "912",
-      "coor_y": "1325"
+      "coor_x": "908",
+      "coor_y": "1322"
     },
     "facility": [
       {
@@ -2615,8 +2615,8 @@
     "frequency": null,
     "platform_line_id": "2",
     "imageCoordinate": {
-      "coor_x": "861",
-      "coor_y": "1481"
+      "coor_x": "860",
+      "coor_y": "1480"
     },
     "facility": [
       {
@@ -2695,8 +2695,8 @@
     "frequency": null,
     "platform_line_id": "2",
     "imageCoordinate": {
-      "coor_x": "813",
-      "coor_y": "1500"
+      "coor_x": "811",
+      "coor_y": "1498"
     },
     "facility": [
       {
@@ -2766,7 +2766,7 @@
     "platform_line_id": "2",
     "imageCoordinate": {
       "coor_x": "700",
-      "coor_y": "1500"
+      "coor_y": "1498"
     },
     "facility": [
       {
@@ -2850,8 +2850,8 @@
     "frequency": null,
     "platform_line_id": "2",
     "imageCoordinate": {
-      "coor_x": "639",
-      "coor_y": "1500"
+      "coor_x": "641",
+      "coor_y": "1498"
     },
     "facility": [
       {
@@ -2920,7 +2920,7 @@
     "frequency": null,
     "platform_line_id": "2",
     "imageCoordinate": {
-      "coor_x": "836",
+      "coor_x": "833",
       "coor_y": "1268"
     },
     "facility": [
@@ -3005,7 +3005,7 @@
     "frequency": null,
     "platform_line_id": "2",
     "imageCoordinate": {
-      "coor_x": "898",
+      "coor_x": "894",
       "coor_y": "1268"
     },
     "facility": [
@@ -3120,8 +3120,8 @@
     "frequency": null,
     "platform_line_id": "2",
     "imageCoordinate": {
-      "coor_x": "590",
-      "coor_y": "1500"
+      "coor_x": "592",
+      "coor_y": "1498"
     },
     "facility": [
       {
@@ -3190,7 +3190,7 @@
     "frequency": null,
     "platform_line_id": "2",
     "imageCoordinate": {
-      "coor_x": "513",
+      "coor_x": "517",
       "coor_y": "1460"
     },
     "facility": [
@@ -3265,8 +3265,8 @@
     "frequency": null,
     "platform_line_id": "2",
     "imageCoordinate": {
-      "coor_x": "464",
-      "coor_y": "1395"
+      "coor_x": "468",
+      "coor_y": "1393"
     },
     "facility": [
       {
@@ -3345,7 +3345,7 @@
     "frequency": null,
     "platform_line_id": "5",
     "imageCoordinate": {
-      "coor_x": "1622",
+      "coor_x": "1607",
       "coor_y": "1199"
     },
     "facility": [
@@ -3415,7 +3415,7 @@
     "frequency": null,
     "platform_line_id": "5",
     "imageCoordinate": {
-      "coor_x": "1575",
+      "coor_x": "1559",
       "coor_y": "1155"
     },
     "facility": [],
@@ -3444,7 +3444,7 @@
     "frequency": null,
     "platform_line_id": "5",
     "imageCoordinate": {
-      "coor_x": "1516",
+      "coor_x": "1502",
       "coor_y": "1155"
     },
     "facility": [],
@@ -3473,8 +3473,8 @@
     "frequency": null,
     "platform_line_id": "5",
     "imageCoordinate": {
-      "coor_x": "1460",
-      "coor_y": "1157"
+      "coor_x": "1447",
+      "coor_y": "1155"
     },
     "facility": [],
     "exit": [
@@ -3502,8 +3502,8 @@
     "frequency": null,
     "platform_line_id": "5",
     "imageCoordinate": {
-      "coor_x": "1334",
-      "coor_y": "1152"
+      "coor_x": "1324",
+      "coor_y": "1155"
     },
     "facility": [],
     "exit": [
@@ -3531,7 +3531,7 @@
     "frequency": null,
     "platform_line_id": "5",
     "imageCoordinate": {
-      "coor_x": "1106",
+      "coor_x": "1099",
       "coor_y": "1150"
     },
     "facility": [
@@ -3581,7 +3581,7 @@
     "frequency": null,
     "platform_line_id": "5",
     "imageCoordinate": {
-      "coor_x": "966",
+      "coor_x": "962",
       "coor_y": "1155"
     },
     "facility": [],
@@ -3610,8 +3610,8 @@
     "frequency": null,
     "platform_line_id": "5",
     "imageCoordinate": {
-      "coor_x": "895",
-      "coor_y": "1158"
+      "coor_x": "891",
+      "coor_y": "1155"
     },
     "facility": [
       {
@@ -3665,8 +3665,8 @@
     "frequency": null,
     "platform_line_id": "2",
     "imageCoordinate": {
-      "coor_x": "749",
-      "coor_y": "1505"
+      "coor_x": "748",
+      "coor_y": "1500"
     },
     "facility": [
       {
@@ -3745,7 +3745,7 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "941",
+      "coor_x": "938",
       "coor_y": "1262"
     },
     "facility": [
@@ -3845,7 +3845,7 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "986",
+      "coor_x": "982",
       "coor_y": "1262"
     },
     "facility": [
@@ -3930,7 +3930,7 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1030",
+      "coor_x": "1025",
       "coor_y": "1262"
     },
     "facility": [
@@ -4010,7 +4010,7 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1106",
+      "coor_x": "1099",
       "coor_y": "1250"
     },
     "facility": [
@@ -4110,8 +4110,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1150",
-      "coor_y": "1265"
+      "coor_x": "1144",
+      "coor_y": "1262"
     },
     "facility": [
       {
@@ -4205,8 +4205,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1206",
-      "coor_y": "1277"
+      "coor_x": "1198",
+      "coor_y": "1276"
     },
     "facility": [
       {
@@ -4285,7 +4285,7 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1234",
+      "coor_x": "1226",
       "coor_y": "1300"
     },
     "facility": [
@@ -4365,7 +4365,7 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1260",
+      "coor_x": "1252",
       "coor_y": "1328"
     },
     "facility": [
@@ -4440,8 +4440,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1291",
-      "coor_y": "1360"
+      "coor_x": "1282",
+      "coor_y": "1357"
     },
     "facility": [
       {
@@ -4525,8 +4525,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "880",
-      "coor_y": "1203"
+      "coor_x": "879",
+      "coor_y": "1202"
     },
     "facility": [
       {
@@ -4600,8 +4600,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "880",
-      "coor_y": "1176"
+      "coor_x": "877",
+      "coor_y": "1173"
     },
     "facility": [
       {
@@ -4695,8 +4695,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "880",
-      "coor_y": "1130"
+      "coor_x": "879",
+      "coor_y": "1132"
     },
     "facility": [
       {
@@ -4780,7 +4780,7 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "880",
+      "coor_x": "879",
       "coor_y": "1100"
     },
     "facility": [
@@ -4855,7 +4855,7 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "880",
+      "coor_x": "879",
       "coor_y": "1070"
     },
     "facility": [
@@ -4925,7 +4925,7 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "880",
+      "coor_x": "879",
       "coor_y": "1008"
     },
     "facility": [
@@ -5000,8 +5000,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "882",
-      "coor_y": "975"
+      "coor_x": "879",
+      "coor_y": "977"
     },
     "facility": [
       {
@@ -5095,7 +5095,7 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "882",
+      "coor_x": "879",
       "coor_y": "937"
     },
     "facility": [
@@ -5170,7 +5170,7 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1327",
+      "coor_x": "1315",
       "coor_y": "1390"
     },
     "facility": [
@@ -5250,7 +5250,7 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1345",
+      "coor_x": "1335",
       "coor_y": "1427"
     },
     "facility": [
@@ -5335,8 +5335,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1345",
-      "coor_y": "1465"
+      "coor_x": "1335",
+      "coor_y": "1460"
     },
     "facility": [
       {
@@ -5425,8 +5425,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1345",
-      "coor_y": "1502"
+      "coor_x": "1335",
+      "coor_y": "1496"
     },
     "facility": [
       {
@@ -5515,8 +5515,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1345",
-      "coor_y": "1540"
+      "coor_x": "1335",
+      "coor_y": "1535"
     },
     "facility": [
       {
@@ -5595,8 +5595,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1339",
-      "coor_y": "1574"
+      "coor_x": "1335",
+      "coor_y": "1572"
     },
     "facility": [
       {
@@ -5680,8 +5680,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1345",
-      "coor_y": "1612"
+      "coor_x": "1335",
+      "coor_y": "1606"
     },
     "facility": [
       {
@@ -5750,8 +5750,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1345",
-      "coor_y": "1645"
+      "coor_x": "1335",
+      "coor_y": "1641"
     },
     "facility": [
       {
@@ -5810,8 +5810,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1345",
-      "coor_y": "1682"
+      "coor_x": "1335",
+      "coor_y": "1676"
     },
     "facility": [
       {
@@ -5880,8 +5880,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1345",
-      "coor_y": "1720"
+      "coor_x": "1335",
+      "coor_y": "1714"
     },
     "facility": [
       {
@@ -5955,8 +5955,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1345",
-      "coor_y": "1755"
+      "coor_x": "1335",
+      "coor_y": "1750"
     },
     "facility": [
       {
@@ -6020,8 +6020,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1345",
-      "coor_y": "1795"
+      "coor_x": "1335",
+      "coor_y": "1789"
     },
     "facility": [
       {
@@ -6080,8 +6080,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1345",
-      "coor_y": "1830"
+      "coor_x": "1335",
+      "coor_y": "1826"
     },
     "facility": [
       {
@@ -6150,8 +6150,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1377",
-      "coor_y": "1862"
+      "coor_x": "1365",
+      "coor_y": "1855"
     },
     "facility": [
       {
@@ -6215,8 +6215,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "881",
-      "coor_y": "866"
+      "coor_x": "879",
+      "coor_y": "870"
     },
     "facility": [
       {
@@ -6280,7 +6280,7 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "882",
+      "coor_x": "879",
       "coor_y": "828"
     },
     "facility": [
@@ -6345,8 +6345,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "882",
-      "coor_y": "782"
+      "coor_x": "879",
+      "coor_y": "790"
     },
     "facility": [
       {
@@ -6405,8 +6405,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "882",
-      "coor_y": "750"
+      "coor_x": "879",
+      "coor_y": "755"
     },
     "facility": [
       {
@@ -6470,8 +6470,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "882",
-      "coor_y": "710"
+      "coor_x": "879",
+      "coor_y": "715"
     },
     "facility": [
       {
@@ -6540,8 +6540,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "882",
-      "coor_y": "670"
+      "coor_x": "879",
+      "coor_y": "675"
     },
     "facility": [
       {
@@ -6610,8 +6610,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "882",
-      "coor_y": "630"
+      "coor_x": "879",
+      "coor_y": "634"
     },
     "facility": [
       {
@@ -6670,8 +6670,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "895",
-      "coor_y": "584"
+      "coor_x": "879",
+      "coor_y": "586"
     },
     "facility": [
       {
@@ -6740,8 +6740,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1120",
-      "coor_y": "420"
+      "coor_x": "1115",
+      "coor_y": "430"
     },
     "facility": [
       {
@@ -6795,8 +6795,8 @@
     "frequency": null,
     "platform_line_id": "4",
     "imageCoordinate": {
-      "coor_x": "105",
-      "coor_y": "670"
+      "coor_x": "115",
+      "coor_y": "675"
     },
     "facility": [
       {
@@ -6860,8 +6860,8 @@
     "frequency": null,
     "platform_line_id": "4",
     "imageCoordinate": {
-      "coor_x": "105",
-      "coor_y": "705"
+      "coor_x": "115",
+      "coor_y": "712"
     },
     "facility": [
       {
@@ -6925,8 +6925,8 @@
     "frequency": null,
     "platform_line_id": "4",
     "imageCoordinate": {
-      "coor_x": "130",
-      "coor_y": "730"
+      "coor_x": "142",
+      "coor_y": "736"
     },
     "facility": [
       {
@@ -6990,8 +6990,8 @@
     "frequency": null,
     "platform_line_id": "4",
     "imageCoordinate": {
-      "coor_x": "187",
-      "coor_y": "730"
+      "coor_x": "195",
+      "coor_y": "736"
     },
     "facility": [
       {
@@ -7055,8 +7055,8 @@
     "frequency": null,
     "platform_line_id": "4",
     "imageCoordinate": {
-      "coor_x": "230",
-      "coor_y": "730"
+      "coor_x": "238",
+      "coor_y": "736"
     },
     "facility": [
       {
@@ -7120,8 +7120,8 @@
     "frequency": null,
     "platform_line_id": "4",
     "imageCoordinate": {
-      "coor_x": "273",
-      "coor_y": "732"
+      "coor_x": "281",
+      "coor_y": "736"
     },
     "facility": [
       {
@@ -7185,8 +7185,8 @@
     "frequency": null,
     "platform_line_id": "4",
     "imageCoordinate": {
-      "coor_x": "317",
-      "coor_y": "732"
+      "coor_x": "323",
+      "coor_y": "736"
     },
     "facility": [
       {
@@ -7255,8 +7255,8 @@
     "frequency": null,
     "platform_line_id": "4",
     "imageCoordinate": {
-      "coor_x": "362",
-      "coor_y": "732"
+      "coor_x": "367",
+      "coor_y": "736"
     },
     "facility": [
       {
@@ -7315,8 +7315,8 @@
     "frequency": null,
     "platform_line_id": "4",
     "imageCoordinate": {
-      "coor_x": "405",
-      "coor_y": "732"
+      "coor_x": "412",
+      "coor_y": "736"
     },
     "facility": [
       {
@@ -7380,8 +7380,8 @@
     "frequency": null,
     "platform_line_id": "4",
     "imageCoordinate": {
-      "coor_x": "451",
-      "coor_y": "732"
+      "coor_x": "455",
+      "coor_y": "736"
     },
     "facility": [
       {
@@ -7445,7 +7445,7 @@
     "frequency": null,
     "platform_line_id": "4",
     "imageCoordinate": {
-      "coor_x": "508",
+      "coor_x": "512",
       "coor_y": "737"
     },
     "facility": [
@@ -7510,8 +7510,8 @@
     "frequency": null,
     "platform_line_id": "4",
     "imageCoordinate": {
-      "coor_x": "545",
-      "coor_y": "810"
+      "coor_x": "546",
+      "coor_y": "813"
     },
     "facility": [
       {
@@ -7581,7 +7581,7 @@
     "platform_line_id": "4",
     "imageCoordinate": {
       "coor_x": "585",
-      "coor_y": "850"
+      "coor_y": "852"
     },
     "facility": [
       {
@@ -7711,7 +7711,7 @@
     "platform_line_id": "4",
     "imageCoordinate": {
       "coor_x": "670",
-      "coor_y": "942"
+      "coor_y": "952"
     },
     "facility": [
       {
@@ -7780,8 +7780,8 @@
     "frequency": null,
     "platform_line_id": "4",
     "imageCoordinate": {
-      "coor_x": "669",
-      "coor_y": "1000"
+      "coor_x": "670",
+      "coor_y": "1007"
     },
     "facility": [
       {
@@ -7845,8 +7845,8 @@
     "frequency": null,
     "platform_line_id": "2",
     "imageCoordinate": {
-      "coor_x": "912",
-      "coor_y": "1428"
+      "coor_x": "908",
+      "coor_y": "1426"
     },
     "facility": [
       {
@@ -7925,8 +7925,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1064",
-      "coor_y": "422"
+      "coor_x": "1060",
+      "coor_y": "430"
     },
     "facility": [
       {
@@ -7985,8 +7985,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "990",
-      "coor_y": "470"
+      "coor_x": "984",
+      "coor_y": "479"
     },
     "facility": [
       {
@@ -8045,8 +8045,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "1015",
-      "coor_y": "450"
+      "coor_x": "1011",
+      "coor_y": "452"
     },
     "facility": [
       {
@@ -8105,8 +8105,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "959",
-      "coor_y": "499"
+      "coor_x": "956",
+      "coor_y": "505"
     },
     "facility": [
       {
@@ -8160,8 +8160,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "935",
-      "coor_y": "525"
+      "coor_x": "932",
+      "coor_y": "531"
     },
     "facility": [
       {
@@ -8215,8 +8215,8 @@
     "frequency": null,
     "platform_line_id": "1",
     "imageCoordinate": {
-      "coor_x": "905",
-      "coor_y": "558"
+      "coor_x": "907",
+      "coor_y": "557"
     },
     "facility": [
       {
@@ -8275,8 +8275,8 @@
     "frequency": null,
     "platform_line_id": "2",
     "imageCoordinate": {
-      "coor_x": "888",
-      "coor_y": "1456"
+      "coor_x": "885",
+      "coor_y": "1454"
     },
     "facility": [
       {
@@ -8345,8 +8345,8 @@
     "frequency": null,
     "platform_line_id": "9",
     "imageCoordinate": {
-      "coor_x": "765",
-      "coor_y": "1487"
+      "coor_x": "763",
+      "coor_y": "1485"
     },
     "facility": [
       {
@@ -8405,7 +8405,7 @@
     "frequency": null,
     "platform_line_id": "9",
     "imageCoordinate": {
-      "coor_x": "763",
+      "coor_x": "760",
       "coor_y": "1456"
     },
     "facility": [
@@ -8466,7 +8466,7 @@
     "platform_line_id": "9",
     "imageCoordinate": {
       "coor_x": "738",
-      "coor_y": "1432"
+      "coor_y": "1430"
     },
     "facility": [
       {
@@ -8521,7 +8521,7 @@
     "platform_line_id": "11",
     "imageCoordinate": {
       "coor_x": "756",
-      "coor_y": "1014"
+      "coor_y": "1016"
     },
     "facility": [
       {
@@ -8580,7 +8580,7 @@
     "platform_line_id": "11",
     "imageCoordinate": {
       "coor_x": "670",
-      "coor_y": "967"
+      "coor_y": "970"
     },
     "facility": [
       {
@@ -8643,8 +8643,8 @@
     "frequency": null,
     "platform_line_id": "11",
     "imageCoordinate": {
-      "coor_x": "462",
-      "coor_y": "1106"
+      "coor_x": "465",
+      "coor_y": "1109"
     },
     "facility": [
       {
@@ -8712,8 +8712,8 @@
     "frequency": null,
     "platform_line_id": "11",
     "imageCoordinate": {
-      "coor_x": "373",
-      "coor_y": "1127"
+      "coor_x": "381",
+      "coor_y": "1129"
     },
     "facility": [
       {
@@ -8781,8 +8781,8 @@
     "frequency": null,
     "platform_line_id": "10",
     "imageCoordinate": {
-      "coor_x": "781",
-      "coor_y": "1014"
+      "coor_x": "776",
+      "coor_y": "1016"
     },
     "facility": [
       {
@@ -8862,7 +8862,7 @@
     "platform_line_id": "10",
     "imageCoordinate": {
       "coor_x": "776",
-      "coor_y": "820"
+      "coor_y": "828"
     },
     "facility": [
       {
@@ -8921,7 +8921,7 @@
     "platform_line_id": "10",
     "imageCoordinate": {
       "coor_x": "776",
-      "coor_y": "670"
+      "coor_y": "673"
     },
     "facility": [
       {
@@ -8980,7 +8980,7 @@
     "platform_line_id": "10",
     "imageCoordinate": {
       "coor_x": "776",
-      "coor_y": "542"
+      "coor_y": "543"
     },
     "facility": [
       {
@@ -9039,7 +9039,7 @@
     "platform_line_id": "10",
     "imageCoordinate": {
       "coor_x": "776",
-      "coor_y": "500"
+      "coor_y": "506"
     },
     "facility": [
       {
@@ -9103,7 +9103,7 @@
     "platform_line_id": "10",
     "imageCoordinate": {
       "coor_x": "776",
-      "coor_y": "462"
+      "coor_y": "466"
     },
     "facility": [
       {
@@ -9161,8 +9161,8 @@
     "frequency": null,
     "platform_line_id": "10",
     "imageCoordinate": {
-      "coor_x": "775",
-      "coor_y": "420"
+      "coor_x": "776",
+      "coor_y": "428"
     },
     "facility": [
       {
@@ -9220,8 +9220,8 @@
     "frequency": null,
     "platform_line_id": "10",
     "imageCoordinate": {
-      "coor_x": "784",
-      "coor_y": "576"
+      "coor_x": "776",
+      "coor_y": "597"
     },
     "facility": [
       {
@@ -9280,7 +9280,7 @@
     "platform_line_id": "10",
     "imageCoordinate": {
       "coor_x": "776",
-      "coor_y": "736"
+      "coor_y": "738"
     },
     "facility": [
       {

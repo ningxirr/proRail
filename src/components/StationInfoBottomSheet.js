@@ -132,15 +132,14 @@ const Styles = StyleSheet.create({
   bottom_sheet: {
     backgroundColor: '#FAFAFA',
     borderRadius: 20,
-    overflow: 'hidden',
     shadowColor: '#000000',
     shadowOffset: {
       width: 0,
-      height: 8,
+      height: 5,
     },
     shadowOpacity: 0.25,
-    shadowRadius: 24,
-    elevation: 10,
+    shadowRadius: 8,
+    elevation: 8,
   }
 });
 

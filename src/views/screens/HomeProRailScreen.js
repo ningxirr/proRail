@@ -38,6 +38,8 @@ const HomeProRailScreen = ({route, navigation}) => {
     }
   }, [route.params]);
 
+  const HEADER_HEIGHT = 0;
+
   return (
     <View style={{backgroundColor: '#F5F5F5', flex: 1}}>
       <AlertModel
@@ -45,11 +47,12 @@ const HomeProRailScreen = ({route, navigation}) => {
         modalVisible={modalVisible}
         setModalVisible={setModalVisible}
       />
-      <ScrollView style={{flex: 1}}>
+      <ScrollView style={{flex: 1}} contentOffset={{ y: HEADER_HEIGHT }}>
+        
         <ImageBackground source={image} style={styles.image} resizeMode='cover'>
           <Text style={styles.proRailText}>proRail</Text>
         </ImageBackground>
-
+        
         <View style={{marginTop: -height*0.3,}}>
             <View style={{  marginHorizontal: '5%', marginVertical: 20}}>
               <NextStation 
@@ -57,7 +60,7 @@ const HomeProRailScreen = ({route, navigation}) => {
             </View>
 
             <View style={styles.chooseDirView}>
-              <View style={{marginVertical: 20}}>
+              <View style={{marginTop: 20}}>
                 <Text style={styles.chooseDirText}>{'Choose\nDirection'}</Text>
               </View>
               <View style={{flex: 1, justifyContent: 'center'}}>
@@ -68,14 +71,12 @@ const HomeProRailScreen = ({route, navigation}) => {
                       header: 'Choose Origin',
                       num: 0,
                       notSelectedStation: destStation ? [destStation] : [],
-                      // oriStation: oriStation,
-                      // destStation: destStation
                     });
                   }}>
                   {
                     oriStation == null ? 
                     <Text style={styles.choseStText}>Origin</Text>:
-                    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                    <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
                       <StationWithCode code={oriStation}/>
                       <Entypo
                         name="cross"
@@ -104,7 +105,7 @@ const HomeProRailScreen = ({route, navigation}) => {
                   {
                     destStation == null ? 
                     <Text style={styles.choseStText}>Destination</Text>:
-                    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                    <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
                       <StationWithCode code={destStation}/>
                       <Entypo
                         name="cross"
@@ -193,7 +194,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     marginHorizontal: 20,
-    height: 300,
+    height: 290,
   },
   chooseDirText: {
     fontSize: 24,
@@ -206,7 +207,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F0F0F0',
     borderRadius: 10,
     marginHorizontal: 25,
-    marginBottom: 20,
+    marginBottom: 10,
     height: 40,
     justifyContent: 'center',
   },
@@ -214,7 +215,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     borderRadius: 10,
     marginHorizontal: 25,
-    marginBottom: 20,
+    margin: 10,
     alignItems: 'center',
     justifyContent: 'center',
     height: 40,

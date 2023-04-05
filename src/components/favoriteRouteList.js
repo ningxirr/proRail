@@ -22,17 +22,18 @@ const FavoriteRouteList = (props) => {
                 <Text style = {Styles.next_station_text}>
                     To {stationInfo[stationList[stationList.length-1]].station_name.en}
                 </Text>
-                <Text style = {Styles.route_text}>
-                    {props.route}
-                </Text>
-            </View>
-            <View style = {Styles.station_route_view}>
-                <Text style = {Styles.station_stop_text}>
-                    {stationList.length-2}
-                </Text>
-                <Text style = {[Styles.station_stop_text, {fontSize: 10, fontFamily: 'LINESeedSansApp-Regular'}]}>
-                    STOP(S)
-                </Text>
+                <View style={{flexDirection: 'row', flexWrap: 'wrap', marginTop: 10}}>
+                {
+                    stationList.map((station, index) => (
+                        <View key={index} style= {[Styles.route_view ,{backgroundColor: stationInfo[station].platform.color.path_color}]}>
+                            <Text style = {[Styles.route_text]}>
+                                {stationInfo[station].station_name.en}
+                            </Text>
+                        </View>
+                    ))
+                }
+                </View>
+                 
             </View>
         </TouchableOpacity>
     );
@@ -45,14 +46,8 @@ const Styles = StyleSheet.create({
         borderRadius: 20,
         flexDirection:'row',
         justifyContent: 'space-between',
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
+        borderColor: '#E4E4E4',
+        borderWidth: 2
     },
     next_station_view: {
         margin:'5%',
@@ -61,29 +56,38 @@ const Styles = StyleSheet.create({
     },
     next_station_text: {
         color:'black', 
-        fontSize: 14, 
+        fontSize: 16, 
         fontFamily: 'LINESeedSansApp-Bold',
         marginVertical: 2,
     },
+    route_view: {
+        flexDirection: 'row',
+        alignContent: 'center',
+        justifyContent: 'center',
+        margin: 2,
+        paddingHorizontal: 5,
+        paddingVertical: 2,
+        borderRadius: 5,
+    },
     route_text: {
-        color:'#9E9A9A',
+        color:'#FFFFFF',
         fontSize: 12,
-        marginVertical: 2,
         fontFamily: 'LINESeedSansApp-Regular',
     },
     station_route_view: {
-        backgroundColor: 'black',
+        borderColor: 'black',
+        borderWidth: 1,
         marginHorizontal:'5%',
-        paddingVertical: 10,
-        paddingHorizontal: 10,
+        paddingVertical: 5,
+        width: '30%',
         alignSelf: 'center',
         borderRadius: 10,
     },
     station_stop_text:{
-        color:'white', 
-        fontSize: 25, 
+        color:'black', 
+        fontSize: 14, 
         textAlign:'center',
-        fontFamily: 'LINESeedSansApp-Bold',
+        fontFamily: 'LINESeedSansApp-Regular',
     }
 });
 

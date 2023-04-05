@@ -1,7 +1,7 @@
 "use strict";
 
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar, Platform } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, Platform, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Header = (props) => {
@@ -11,7 +11,9 @@ const Header = (props) => {
       {
         props.haveBackIcon ? 
         <View style={Styles.icon_header_view}>
-           <Icon name='angle-left' color={'white'} size={25} onPress={props.function}/>
+          <TouchableOpacity style={{width: 25, height: 25}} onPress={props.function}>
+            <Icon name='angle-left' color={'white'} size={25} />
+          </TouchableOpacity>
         </View>:
         null
       }
@@ -46,7 +48,6 @@ const Styles = StyleSheet.create({
     backgroundColor: 'black',
     borderBottomEndRadius: 20,
     borderBottomStartRadius: 20,
-    // height: 110,
   },
   icon_header_view: {
     paddingTop: 5,

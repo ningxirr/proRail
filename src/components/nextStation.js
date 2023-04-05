@@ -128,14 +128,14 @@ const Styles = StyleSheet.create({
         paddingVertical: 20,
         paddingHorizontal: 30,
         borderRadius: 10,
+        shadowOpacity: 0.15,
         shadowColor: "#000",
-        shadowOffset: {
+        shadowOffset: { //for ios
             width: 0,
-            height: 2,
+            height: 3,
         },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
+        shadowRadius: 3, //for ios
+        elevation: 3, //for android
     },
     overall_next_station_view:{
         flexDirection:'row',

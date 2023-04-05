@@ -23,7 +23,8 @@ const Welcome = (props) => {
           textColor={'#FFFFFF'} 
           width={screenWidth*0.9} 
           function={()=>{
-            props.navigation.navigate('Regist', {
+            // props.navigation.navigate('Regist', {
+              props.navigation.navigate('Feature', {
               routes: props.routes 
         })
         console.log('Let\'s go!');

@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import {ImageBackground, Text, View, StyleSheet, Platform} from 'react-native';
+import {ImageBackground, Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
 import Animated, { runOnJS, useAnimatedGestureHandler, useAnimatedReaction, useAnimatedScrollHandler, useAnimatedStyle, useSharedValue, withSpring, withTiming, } from 'react-native-reanimated';
 import {PanGestureHandler, GestureHandlerRootView } from 'react-native-gesture-handler';
 import CustomButton from '../../../components/customButton';
 import storeDataToAsyncStorage from '../../../function/storeDataToAsyncStorage';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const ChooseScreen = ({navigation}) => {
   {/* if(Platform.OS === 'ios'){
@@ -222,6 +223,11 @@ const ChooseScreen = ({navigation}) => {
   const [selectedLeastInterchanges, setSelectedLeastInterchanges] = useState(false);
   return (
     <SafeAreaView style={androidStyles.container}>
+        <View style={androidStyles.icon_header_view}>
+          <TouchableOpacity style={{width: 25, height: 25}} onPress={()=>navigation.goBack()}>
+            <Icon name='angle-left' color={'black'} size={25} />
+          </TouchableOpacity>
+        </View>
         <ImageBackground source={require('../../../../assets/images/rocket.jpg')} resizeMode="cover" style={androidStyles.image} ></ImageBackground>
         <View style={androidStyles.body}>
           <Text style={{paddingTop: 110,fontSize: 40,fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>Personalized</Text>
@@ -381,7 +387,12 @@ const androidStyles = StyleSheet.create({
   textDrag: {
     marginHorizontal: 20,
     marginVertical: 20,
-  }
+  },
+  icon_header_view: {
+    paddingTop: 5,
+    paddingHorizontal: 20,
+    backgroundColor: '#FFFFFF',
+  },
 });
 
 export default ChooseScreen;
