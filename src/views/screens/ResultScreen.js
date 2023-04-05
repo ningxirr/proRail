@@ -134,7 +134,8 @@ const Result = (props) => {
             </Animated.View>
             <ScrollView 
                 scrollEventThrottle={16}
-                onScroll={Animated.event([{ nativeEvent : { contentOffset: { y : animationValue } }}],{ useNativeDriver: false } )}>
+                onScroll={Animated.event([{ nativeEvent : { contentOffset: { y : animationValue } }}],{ useNativeDriver: false } )}
+                showsVerticalScrollIndicator={false} bounces={false}>
                 <Header 
                     startStation={stationPath[0]} 
                     stopStation={stationPath[stationPath.length-1]} />

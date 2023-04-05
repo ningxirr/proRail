@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     prorail_text: {
         fontFamily: 'LINESeedSansApp-Bold',
         fontSize: 40,
-        fontWeight: 'bold'
+        color: 'black'
     },
     prorail_view: {
         marginHorizontal: 20
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     },
     image: {
         width: ITEM_WIDTH,
-        height: 650,
+        height: 700,
     },
     icon_header_view: {
       paddingTop: 5,

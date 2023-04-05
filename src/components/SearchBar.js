@@ -37,7 +37,6 @@ export default SearchBar;
 const styles = StyleSheet.create({
   searchBarView: {
     color: 'grey',
-    paddingVertical: (10),
     paddingHorizontal: (10),
     height: 45,
     flexDirection: 'row',

@@ -51,9 +51,8 @@ const Styles = StyleSheet.create({
     },
     route_text: {
         textAlign: 'center',
-        fontFamily: 'LINESeedSansApp-Regular',
+        fontFamily: 'LINESeedSansApp-Bold',
         fontSize: 13,
-        fontWeight: 'bold',
         color: '#CCCCCC'
     },
     route_description_view: {

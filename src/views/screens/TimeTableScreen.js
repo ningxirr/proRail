@@ -117,7 +117,7 @@ const Day = ({pf}) => {
   else if (pf === '3') {
     return (
       <View style={{backgroundColor: 'transparent'}}>
-        <Text style={{fontSize: 15, fontFamily: 'LINESeedSansApp-Bold', fontWeight: 'bold'}}>Monday - Friday</Text>
+        <Text style={{fontSize: 15, fontFamily: 'LINESeedSansApp-Bold'}}>Monday - Friday</Text>
         <View style={{paddingBottom: 20}}>
           <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360, paddingVertical: 10,backgroundColor: '#ECEBEB'}}>
             <Table >
@@ -148,7 +148,7 @@ const Day = ({pf}) => {
             })}
           </View>
         </View>
-        <Text style={{fontSize: 15, fontFamily: 'LINESeedSansApp-Bold', fontWeight: 'bold'}}>Saturday</Text>
+        <Text style={{fontSize: 15, fontFamily: 'LINESeedSansApp-Bold'}}>Saturday</Text>
         <View style={{alignItems:'center',paddingBottom: 20,backgroundColor: 'transparent'}}>
           <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360, paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
             <Table>
@@ -178,7 +178,7 @@ const Day = ({pf}) => {
             })}
           </View>
         </View>
-        <Text style={{fontSize: 15, fontFamily: 'LINESeedSansApp-Bold', fontWeight: 'bold'}}>Sunday</Text>
+        <Text style={{fontSize: 15, fontFamily: 'LINESeedSansApp-Bold'}}>Sunday</Text>
         <View style={{alignItems:'center',paddingBottom: 20,backgroundColor: 'transparent'}}>
           <View style={{marginTop: 10, marginBottom: 10, borderRadius: 13,  width: 360, paddingVertical: 10, backgroundColor: '#ECEBEB'}}>
             <Table >

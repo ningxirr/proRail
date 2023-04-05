@@ -31,7 +31,7 @@ const TotalFavorite = (props) => {
 const Styles = StyleSheet.create({
     container: {
         width: '100%',
-        borderRadius: 20,
+        borderRadius: 10,
         backgroundColor: 'white',
         flexDirection:'row',
         justifyContent: 'space-between',

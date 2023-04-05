@@ -30,7 +30,7 @@ const ButtomNavigator = (props) => {
         component={HomeProRailNavigator}
         options={{
           tabBarIcon: ({color, size}) => (
-            <Icon name="home" color={color} size={size} />
+            <Icon name="md-home-outline" color={color} size={size} />
           ),
           tabBarStyle: { display: hide ? "none" : "flex" },
           headerShown: false,
@@ -42,7 +42,7 @@ const ButtomNavigator = (props) => {
         component={StationInfoNavigator}
         options={{
           tabBarIcon: ({color, size}) => (
-            <Icon name="bus" color={color} size={size} />
+            <Icon name="bus-outline" color={color} size={size} />
           ),
           headerShown: false,
           statusBar: {

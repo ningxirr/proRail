@@ -47,7 +47,7 @@ const HomeProRailScreen = ({route, navigation}) => {
         modalVisible={modalVisible}
         setModalVisible={setModalVisible}
       />
-      <ScrollView style={{flex: 1}} contentOffset={{ y: HEADER_HEIGHT }}>
+      <ScrollView style={{flex: 1}} contentOffset={{ y: HEADER_HEIGHT }} showsVerticalScrollIndicator={false} bounces={false}>
         
         <ImageBackground source={image} style={styles.image} resizeMode='cover'>
           <Text style={styles.proRailText}>proRail</Text>
@@ -134,7 +134,7 @@ const HomeProRailScreen = ({route, navigation}) => {
         <View style={{marginBottom: 20}}>
           <View style={styles.moreInfoSecView}>
             <Text style={styles.moreInfoText}>More Information</Text>
-            <ScrollView horizontal={true} style={{marginLeft: 15}}>
+            <ScrollView horizontal={true} style={{marginLeft: 15}} showsHorizontalScrollIndicator={false}>
               <TouchableOpacity 
                 style={styles.moreInfoInScrollTouch}
                 onPress={() => navigation.navigate('AboutProRailScreen')}>
@@ -238,9 +238,8 @@ const styles = StyleSheet.create({
   moreInfoInScrollText: {
     margin: 10,
     fontSize: 22,
-    fontWeight: 'bold',
     color: 'black',
-    fontFamily: 'LINESeedSansApp-Regular',
+    fontFamily: 'LINESeedSansApp-Bold',
     lineHeight: 30,
   },
 });
