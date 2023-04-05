@@ -3,6 +3,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, StatusBar, Platform, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const Header = (props) => {
   return (
@@ -24,7 +25,7 @@ const Header = (props) => {
           {
             props.haveCloseIcon ?
             <View>
-              <Icon name='close' color={'white'} size={20} onPress={props.function2}/>
+              <Ionicons name='md-close' color={'white'} size={25} onPress={props.function2}/>
             </View>
             :
             <View style = {[Styles.station_route_view, { backgroundColor: props.color }]}>
