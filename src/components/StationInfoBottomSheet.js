@@ -46,7 +46,7 @@ const StationInfoBottomSheet = ({ clicked, searchPhrase, setClicked, memoScale, 
         overDragResistanceFactor={10}
         handleComponent={() => <></>}
         enableOverDrag={false}
-        style={Styles.bottom_sheet}
+        style={styles.bottom_sheet}
         >
           <View style={{marginHorizontal: '5%', marginVertical: 20, marginBottom: 25}}>
             <NextStation isNearestOnly={true}/>
@@ -128,7 +128,7 @@ const StationInfoBottomSheet = ({ clicked, searchPhrase, setClicked, memoScale, 
   );
 };
 
-const Styles = StyleSheet.create({
+const styles = StyleSheet.create({
   bottom_sheet: {
     backgroundColor: '#FAFAFA',
     borderRadius: 20,
@@ -140,10 +140,7 @@ const Styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 8,
     elevation: 8,
-  }
-});
-
-const styles = StyleSheet.create({
+  },
   platformLineScrollView: {
     marginLeft: (20),
     marginTop: (5),

@@ -162,6 +162,7 @@ const AddStopScreen = ({route, navigation}) => {
         overDragResistanceFactor={10}
         handleComponent={() => <></>}
         enableOverDrag={false}
+        style={styles.bottom_sheet}
         >
         <BottomSheetFlatList
           data={itemsCode}
@@ -324,6 +325,18 @@ const styles = StyleSheet.create({
     zIndex:1,
     marginTop: -10,
     paddingHorizontal: '5%',
+  },
+  bottom_sheet: {
+    backgroundColor: '#FAFAFA',
+    borderRadius: 20,
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    elevation: 8,
   },
 });
 
