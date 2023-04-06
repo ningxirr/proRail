@@ -24,6 +24,9 @@ const AddStopScreen = ({route, navigation}) => {
   const [fullScreenMap, setFullScreenMap] = useState(false);
   const [alertText, setAlertText] = useState('');
 
+  const [selectedType, setSelectedType] = useState(null)
+  const [selectedCodeAddStop, setSelectedCodeAddStop] = useState(null)
+
   const removeItems = item => {
     const index = itemsCode.indexOf(item);
     if (index > -1) {
@@ -62,27 +65,39 @@ const AddStopScreen = ({route, navigation}) => {
       setItemsCode([]);
       setDestStation(null);
     }
-    switch(route.params?.num){
-      case 0:
-        setOriStation(route.params?.code);
-        break;
-      case 1:
-        if(itemsCode[1] !== undefined && itemsCode[2] !== undefined) setItemsCode([route.params?.code, itemsCode[1], itemsCode[2]]);
-        else if(itemsCode[1] !== undefined) setItemsCode([route.params?.code, itemsCode[1]]);
-        else setItemsCode([route.params?.code])
-        break;
-      case 2:
-        if(itemsCode[2] !== undefined) setItemsCode([itemsCode[0], route.params?.code, itemsCode[2]])
-        else setItemsCode([itemsCode[0], route.params?.code]);
-        break;
-      case 3:
-        setItemsCode([itemsCode[0], itemsCode[1], route.params?.code]);
-        break;
-      case 4:
-        setDestStation(route.params?.code);
-        break;
-      default:
-        break;
+    if(selectedCodeAddStop == null) {
+      switch(route.params?.num){
+        case 0:
+          setOriStation(route.params?.code);
+          break;
+        case 1:
+          if(itemsCode[1] !== undefined && itemsCode[2] !== undefined) setItemsCode([route.params?.code, itemsCode[1], itemsCode[2]]);
+          else if(itemsCode[1] !== undefined) setItemsCode([route.params?.code, itemsCode[1]]);
+          else setItemsCode([route.params?.code])
+          break;
+        case 2:
+          if(itemsCode[2] !== undefined) setItemsCode([itemsCode[0], route.params?.code, itemsCode[2]])
+          else setItemsCode([itemsCode[0], route.params?.code]);
+          break;
+        case 3:
+          setItemsCode([itemsCode[0], itemsCode[1], route.params?.code]);
+          break;
+        case 4:
+          setDestStation(route.params?.code);
+          break;
+        default:
+          break;
+      }
+    } else {
+      if(selectedType == 0) {
+        setOriStation(selectedCodeAddStop)
+      } else if(selectedType == 1) {
+        setItemsCode(oldArray => [...oldArray, selectedCodeAddStop]);
+      } else if(selectedType == 2) {
+        setDestStation(selectedCodeAddStop)
+      }
+      setSelectedType(null)
+      setSelectedCodeAddStop(null)
     }
   }, [route.params]);
 
@@ -134,7 +149,7 @@ const AddStopScreen = ({route, navigation}) => {
       <GestureHandlerRootView style={{flex: 1}}> 
       <View style={{backgroundColor: 'white', flex: 1}}>
         <View style={{zIndex: 1}}>
-          <Header title="Choose Direction"/>
+          <Header title="Directions"/>
         </View>
         <View style={styles.navigation_view}>
           <NextStation isNearestOnly={true}/>
@@ -146,18 +161,24 @@ const AddStopScreen = ({route, navigation}) => {
         />
         <View style={{marginTop: fullScreenMap ? 0 : -80 }}>
           <RailMap
-            cannotClicked={true}
+            cannotClicked={false}
             num={route.params?.num}
             oriStationCode={oriStation}
             destStationCode={destStation}
             itemsCode={itemsCode}
+            fromAddStop={true}
+            setSelectedType={setSelectedType}
+            setSelectedCodeAddStop={setSelectedCodeAddStop}
           />
+          {
+            console.log(selectedType + " " + selectedCodeAddStop)
+          }
         </View>
       </View>
       <BottomSheet 
         ref={bottomSheetRef} 
         index={1} 
-        snapPoints={snapPoints} 
+        snapPoints={snapPoints}
         onChange={handleSheetChange} 
         overDragResistanceFactor={10}
         handleComponent={() => <></>}

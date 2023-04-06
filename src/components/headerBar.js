@@ -7,7 +7,7 @@ const HeaderBar = (props) => {
     return (
         <View style={{marginTop: 30}}>
             <View style = {Styles.header_navbar_view}>
-                <TouchableOpacity style={{width: 25, height: 25}} onPress={props.backIconFunction}>
+                <TouchableOpacity style={{width: 25}} onPress={props.backIconFunction}>
                   <Icon name='angle-left' color={'white'} size={25} />
                 </TouchableOpacity>
                 {
