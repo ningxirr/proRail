@@ -21,7 +21,7 @@ const UserPreference = () => {
 
     const toggleSwitch = () => {
         setIsEnable(previousState => !previousState)
-        removeDataFromAsyncStorage('@name')
+        removeDataFromAsyncStorage('@regist')
     }
     
     useEffect(() => {

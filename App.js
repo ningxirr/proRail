@@ -16,7 +16,7 @@ const App = () => {
   const [routeName, setRouteName] = useState();
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getDataFromAsyncStorage('@name');
+      const data = await getDataFromAsyncStorage('@regist');
       setIsAreadyRegist(data !== null);
       setIsRender(true);
     };

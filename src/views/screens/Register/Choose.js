@@ -284,6 +284,7 @@ const ChooseScreen = ({navigation}) => {
             width={'90%'} 
             function={()=> {
               storeDataToAsyncStorage('@recommended', recommended);
+              storeDataToAsyncStorage('@regist', '1');
               navigation.navigate('BottomNavigator')
             }}/>
         </View>
