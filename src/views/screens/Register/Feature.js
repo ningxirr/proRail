@@ -9,6 +9,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 const image = require('../../../../assets/images/feature.png')
 const slideFeature1 = require('../../../../assets/images/slideFeature1.png')
 const slideFeature2 = require('../../../../assets/images/slideFeature2.png')
+const slideFeature3 = require('../../../../assets/images/slideFeature3.png')
 const screenWidth = Dimensions.get('window').width;
 
 const SLIDER_WIDTH = Dimensions.get('window').width
@@ -21,12 +22,15 @@ data = [
     {
         source: slideFeature2
     },
+    {
+      source: slideFeature3
+    },
   ]
 
 const CarouselCardItem = ({ item, index }) => {
     return (
         <View>
-            <Image source={item.source} style={styles.image}/>
+            <Image source={item.source} style={styles.image} resizeMode='contain'/>
         </View>
     )
   }
@@ -47,7 +51,7 @@ const CarouselCards = () => {
           useScrollView={true}
           // fix slide animate
         />
-        <View style={{marginTop: -30}}>
+        <View>
           <Pagination
             dotsLength={data.length}
             activeDotIndex={index}
@@ -72,7 +76,7 @@ const Feature = (props) => {
   return (
     <Fragment>
         <SafeAreaView style={{ flex:0, backgroundColor: 'white' }} edges={['right', 'left', 'top']} />
-            <View style={styles.icon_header_view}>
+            <View style={[styles.icon_header_view]}>
               <TouchableOpacity style={{width: 25, height: 25}} onPress={()=>props.navigation.goBack()}>
                 <Icon name='angle-left' color={'black'} size={25} />
               </TouchableOpacity>
@@ -85,7 +89,7 @@ const Feature = (props) => {
                 <View style={styles.image_view}>
                     <Image source={image} style={styles.image_size}/>
                 </View>
-                <View style={{backgroundColor: 'black', paddingTop: 40, marginTop: -100}}>
+                <View style={{backgroundColor: 'black', paddingTop: 20, marginTop: -100}}>
                     <CarouselCards />
                     <View style={styles.footer}>
                         <CustomButton 
@@ -134,7 +138,7 @@ const styles = StyleSheet.create({
     icon_header_view: {
       paddingTop: 5,
       paddingHorizontal: 20,
-      backgroundColor: 'white'
+      backgroundColor: 'transparent'
     },
 })
 
