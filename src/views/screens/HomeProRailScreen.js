@@ -19,6 +19,7 @@ const HomeProRailScreen = ({route, navigation}) => {
     } else {
       navigation.navigate('AddStopNavigator',{
         screen: 'ResultScreen',
+        initial: false,
         params: {
           code: [oriStation, destStation]
         },
