@@ -138,7 +138,8 @@ const styles = StyleSheet.create({
     icon_header_view: {
       paddingTop: 5,
       paddingHorizontal: 20,
-      backgroundColor: 'transparent'
+      // backgroundColor: 'transparent'
+      backgroundColor: 'white'
     },
 })
 
