@@ -8,7 +8,6 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import UserPreferenceScreen from '../screens/UserPreferenceScreen';
-import Header from '../../components/header';
 
 const Tab = createBottomTabNavigator();
 
@@ -54,7 +53,6 @@ const ButtomNavigator = (props) => {
       <Tab.Screen
         name="AddStopNavigator"
         children={() => <AddStopNavigator setNavigate={navigate => setNavigate(navigate)} routeName={props.routeName}/>}
-        // component={AddStopNavigator}
         options={{
           tabBarIcon: ({size}) => (
             navigate ? 
@@ -62,12 +60,12 @@ const ButtomNavigator = (props) => {
               <Icon name="navigate" color="white" size={size * 1.4} />
             </View> :
             <View style={styles.addBottonView}>
-              <FontAwesomeIcon name="plus" color="white" size={size * 1.4} />
+              <FontAwesomeIcon name="plus" color="white" size={size * 1.4}/>
             </View>
           ),
           tabBarStyle: { display: hide ? "none" : "flex" },
           headerShown: false,
-          tabBarHideOnKeyboard: true
+          tabBarHideOnKeyboard: true,
         }}
       />
       <Tab.Screen

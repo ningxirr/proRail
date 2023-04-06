@@ -60,8 +60,7 @@ const Style = StyleSheet.create({
         fontSize: 15,
         fontFamily: 'LINESeedSansApp-Regular',
         color: 'black',
-        marginLeft: 5,
-        width: '75%'
+        width: '55%'
     }
 })
 

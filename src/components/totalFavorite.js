@@ -9,7 +9,7 @@ const TotalFavorite = (props) => {
             <View style = {Styles.container}>
                 <View style = {Styles.total_fav_view}>
                     <View style={Styles.star_icon_view}>
-                        <Icon name='star' color='#FF5733' size={20} />
+                        <Icon name='star' color='#FF5733' size={20}/>
                     </View>
                     <Text style = {Styles.total_fav_text}>
                         Total Favorite
@@ -57,6 +57,7 @@ const Styles = StyleSheet.create({
     },
     total_fav_text: {
         color:'black', 
+        alignSelf: 'center',
         fontSize: 20, 
         fontFamily: 'LINESeedSansApp-Regular',
     },

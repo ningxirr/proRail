@@ -1,13 +1,15 @@
 "use strict";
 import React from 'react';
-import { StyleSheet, Text,  View } from 'react-native';
+import { StyleSheet, Text,  View, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const HeaderBar = (props) => {
     return (
         <View style={{marginTop: 30}}>
             <View style = {Styles.header_navbar_view}>
-                <Icon name='angle-left' color={'white'} size={25} onPress={props.backIconFunction}/>
+                <TouchableOpacity style={{width: 25, height: 25}} onPress={props.backIconFunction}>
+                  <Icon name='angle-left' color={'white'} size={25} />
+                </TouchableOpacity>
                 {
                   props.isFavorite ?
                     <Icon name='star' color={'#FF5733'} size={20} onPress={props.starIconFunction}/>:

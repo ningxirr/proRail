@@ -210,6 +210,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     height: 40,
     justifyContent: 'center',
+    paddingHorizontal: 5
   },
   letsgoView: {
     backgroundColor: 'black',

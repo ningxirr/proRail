@@ -1,6 +1,6 @@
 "use strict";
 import React, { useEffect, useState } from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, View, Animated, Text, StatusBar } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, View, Animated, Text } from 'react-native';
 import result from '../../../data/results.json';
 import HeaderBar from '../../components/headerBar'
 import Header from '../../components/Result/header';
