@@ -7,18 +7,23 @@ const TimingInfo = (props) => {
   return (
     <View style={Styles.timing_view}>
         <View style={Styles.alignment_timing_view}>
-        <Text style={Styles.frequency_text}>
-            Frequency
-        </Text>
-        <View style={Styles.freq_min_view}>
+            <Text style={Styles.frequency_text}>
+              Frequency
+            </Text>
+          {
+            props.frequency === null?
             <Text style={Styles.frequency_num_text}>
-            {/* {props.frequency} */}
-            5
-            </Text>
-            <Text style={Styles.frequency_mins_text}>
-            mins
-            </Text>
-        </View>
+              No Service
+            </Text>:
+            <View style={Styles.freq_min_view}>
+                <Text style={Styles.frequency_num_text}>
+                  {props.frequency}
+                </Text>
+                <Text style={Styles.frequency_mins_text}>
+                  mins
+                </Text>
+            </View>
+          }
         </View>
         <View style={Styles.alignment_timing_view}>
         <TouchableOpacity onPress={props.function}>
@@ -71,6 +76,7 @@ const Styles = StyleSheet.create({
     color: 'black'
   },
   freq_min_view: {
+    alignItems: 'baseline',
     flexDirection: 'row',
     justifyContent: 'space-between',
   },

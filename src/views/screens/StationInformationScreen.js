@@ -13,21 +13,79 @@ import freq from '../../../data/freq.json';
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
-const StationInfo = ({navigation, route}) => {
-  const [visible, setIsVisible] = useState(false);
-  const code = route.params.code
+const getFrequency = (code) => {
   const today = new Date()
   const day = today.getDay();
   const hour = today.getHours();
   const minute = today.getMinutes();
-  //I will add frequency later
-  if(day > 1 && day < 5){
-    
-  }
-  else{
+  const platformLineId = stationInfo[code].platform_line_id;
 
+  let frequencySet = 0;
+  let freqencyTime = [];
+  if (platformLineId === '1' || platformLineId === '2' || platformLineId === '4' || platformLineId === '5' || platformLineId === '9'){
+    if(day >= 1 && day <= 5){
+      freqencyTime = freq[platformLineId]['Mon-Fri'];
+    }
+    else{
+      freqencyTime = freq[platformLineId]['Sat-Sun'];
+    }
   }
+  else if (platformLineId === '3'){
+    if(day >= 1 && day <= 5){
+      freqencyTime = freq[platformLineId]['Mon-Fri'];
+    }
+    else if(day === 6){
+      freqencyTime = freq[platformLineId]['Sat'];
+    }
+    else{
+      freqencyTime = freq[platformLineId]['Sun'];
+    }
+  }
+  else if (platformLineId === '10' || platformLineId === '11'){
+    freqencyTime = freq[platformLineId]['Every'];
+  }
+  frequencySet = freqencyTime.filter((item) => {
+    const time = item.period_time.split('-');
+    const startMinute = time[0].includes(':') ? parseInt(time[0].trim().split(':')[1]) : parseInt(time[0].trim().split('.')[1]);
+    const startHour = time[0].includes(':') ? parseInt(time[0].trim().split(':')[0]) === 0 ? 23 : parseInt(time[0].trim().split(':')[0]) : parseInt(time[0].trim().split('.')[1]) === 0 ? 23 : parseInt(time[0].trim().split('.')[0]);
+    const endMinute = time[1].includes(':') ? parseInt(time[1].trim().split(':')[1]) === 0 ? 59 : parseInt(time[1].trim().split(':')[1]) : parseInt(time[1].trim().split('.')[1]) === 0 ? 59 : parseInt(time[1].trim().split('.')[1]);
+    const endHour = time[1].includes(':') ? endMinute !== 59 ? parseInt(time[1].trim().split(':')[0]) : parseInt(time[1].trim().split(':')[0])-1 < 0 ? 23 : parseInt(time[1].trim().split(':')[0])-1 : endMinute !== 59 ? parseInt(time[1].trim().split('.')[0]) : parseInt(time[1].trim().split('.')[0])-1 < 0 ? 23 : parseInt(time[1].trim().split('.')[0])-1;
+    if(startHour <= hour && endHour >= hour){
+      if(startHour === hour && endHour === hour){
+        if(startMinute <= minute && endMinute >= minute){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+      else if(startHour === hour){
+        if(startMinute <= minute){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+      else if(endHour === hour){
+        if(endMinute >= minute){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+      else{
+        return true;
+      }
+    }
+  });
+  return frequencySet.length === 0 ? null : frequencySet[0].period_interval;
+}
 
+const StationInfo = ({navigation, route}) => {
+  const [visible, setIsVisible] = useState(false);
+  const code = route.params.code
   return (
     <SafeAreaView style={Styles.container}>
       <View style={{backgroundColor: '#fafafa'}}>
@@ -62,7 +120,7 @@ const StationInfo = ({navigation, route}) => {
       
       <View style={Styles.description_view}>
         <TimingInfo 
-          frequency={stationInfo[code].frequency} 
+          frequency={getFrequency(code)} 
           function={() => {
             navigation.navigate('TimeTableScreen',{
               route: { 

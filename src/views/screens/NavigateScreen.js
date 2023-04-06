@@ -25,11 +25,7 @@ const Navigate = (props) => {
     else setFullScreenMap(false);
   }, []);
   /********************Geolocation********************/
-  //Check if the user has allowed the app to use the location
-  const [hasLocationPermission, setHasLocationPermission] = useState(false);
   const beginingStation = props.route.params.routes[0].path[0][0]; 
-  const [stationGPS, setStationGPS] = useState(beginingStation); //set the station code of the nearest station
-  const [stationDistance, setStationDistance] = useState(false); //set the distance between the nearest station and the user
   const [stationInterchanges, setStationInterchanges] = useState([]); //set the station code of the nearest station
 
   // filter all station interchanges (on iOS)
@@ -44,6 +40,7 @@ const Navigate = (props) => {
       for (let i = 0; i < props.route.params.routes[0].path.length; i++) {
         stopStation.push(props.route.params.routes[0].path[i][0]);
       }
+      stopStation.push(props.route.params.routes[0].path[props.route.params.routes[0].path.length-1][props.route.params.routes[0].path[props.route.params.routes[0].path.length-1].length-1])
       setStationInterchanges(stopStation);
     }
     else{
@@ -112,12 +109,7 @@ const Styles = StyleSheet.create({
     height: 100,
     marginTop: -20,
     marginTop: -20,
-    // position: 'absolute',
-    // top: 10,
-    // left: 0,
-    // right: 0,
     paddingHorizontal: '5%',
-    // marginTop: 60,
   },
   header_text:{
     color: 'white',

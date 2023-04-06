@@ -69,11 +69,11 @@ const FavoriteRoute = (props) => {
                         </View>
                     ))
                 }
-                <TouchableOpacity onPress={()=>props.navigation.navigate('AddStopNavigator')}>
+                {/* <TouchableOpacity onPress={()=>props.navigation.navigate('AddStopNavigator')}>
                   <View style={Styles.add_favorite_route_view}>
                     <Text style={Styles.add_favorite_route_text}>+ Favorite</Text>
                   </View>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             </BottomSheetScrollView>
           </BottomSheet> 
         </GestureHandlerRootView>

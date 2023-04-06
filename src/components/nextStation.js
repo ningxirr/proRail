@@ -5,14 +5,44 @@ import { getDistance, findNearest } from 'geolib';
 import Geolocation from 'react-native-geolocation-service';
 import stationInfo from '../../data/station_info'
 import stationLocation from '../../data/station_location'
-import { color } from 'react-native-reanimated';
+import { useIsFocused } from '@react-navigation/native';
+import notifee from '@notifee/react-native';
+
+async function onDisplayNotification(type, code) {
+    // Request permissions (required for iOS)
+    await notifee.requestPermission()
+    // Create a channel (required for Android)
+    const channelId = await notifee.createChannel({
+      id: 'default',
+      name: 'Default Channel',
+      vibrationPattern: [300, 500],
+    });
+    
+    // Display a notification
+    await notifee.displayNotification({
+      title: 'Navigation',
+      body: type === 0 ? `Get on the Train at ${stationInfo[code].station_name.en}` : type === 1 ? `You are at the interchange station ${stationInfo[code].station_name.en}.` : `You are at your destination (${stationInfo[code].station_name.en}).`,
+      android: {
+        channelId,
+        pressAction: {
+          id: 'default',
+        },
+        vibrationPattern: [300, 500],
+      },
+    });
+  }
+
 
 const NextStation = (props) => {
     const [stationGPS, setStationGPS] = useState(props.beginingStation === undefined ? null : props.beginingStation); //set the station code of the nearest station
     const [stationDistance, setStationDistance] = useState(false); //set the distance between the nearest station and the user
     const [hasLocationPermission, setHasLocationPermission] = useState(false);
-
+    const isFocused = useIsFocused();
     const filteredStation = props.isNearestOnly ? stationLocation : props.filteredStation;
+    let stationInterchanges = props.stationInterchanges;
+    const firstInterchangeStation = stationInterchanges !== undefined ? stationInterchanges[0] : null;
+    const lastInterchangeStation = stationInterchanges !== undefined ? stationInterchanges[stationInterchanges.length - 1] : null;
+
     useEffect(() => {
         if(Platform.OS === 'ios'){
             //Ning may be you can add new lib for ios that can know the permission here
@@ -26,30 +56,46 @@ const NextStation = (props) => {
             PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => setHasLocationPermission(response));
         }
     }, []);
-
+    
     useEffect(() => {
-        const _watchId = Geolocation.watchPosition(
+        let _watchId;
+        if (isFocused) {
+          _watchId = Geolocation.watchPosition(
             position => {
-                let nearest = findNearest(position.coords, filteredStation);
-                setStationGPS(nearest.code);
-                setStationDistance(getDistance(nearest, position.coords));
+              let nearest = findNearest(position.coords, filteredStation);
+              if (stationInterchanges !== undefined) {
+                    if(stationInterchanges.includes(nearest.code)){
+                        if(firstInterchangeStation === nearest.code){
+                            onDisplayNotification(0, nearest.code);
+                        }
+                        else if(lastInterchangeStation === nearest.code){
+                            onDisplayNotification(2, nearest.code);
+                        }
+                        stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
+                        console.log(stationInterchanges)
+                    }  
+              } 
+              setStationGPS(nearest.code);
+              setStationDistance(getDistance(nearest, position.coords));
             },
             error => {
-                console.log(error);
+              console.log(error);
             },
             {
-                enableHighAccuracy: true,
-                distanceFilter: 0,
-                interval: 10000,
-                fastestInterval: 10000,
+              enableHighAccuracy: true,
+              distanceFilter: 0,
+              interval: 10000,
+              fastestInterval: 10000,
             },
-        );
+          );
+        }
+    
         return () => {
-            if (_watchId) {
+          if (_watchId) {
             Geolocation.clearWatch(_watchId);
-            }
+          }
         };
-    }, [filteredStation]);
+      }, [isFocused, filteredStation]);
     
     const selectNavigateText = () => {
         if (props.isNearestOnly || stationDistance > 5000){
@@ -64,8 +110,8 @@ const NextStation = (props) => {
           return 'Next\nStation';
         }
       }
-
-    if(hasLocationPermission === 'denied'){
+    
+    if(hasLocationPermission === 'denied' || !isFocused){
         return null;
     }
     return (
