@@ -71,6 +71,9 @@ const NextStation = (props) => {
                         else if(lastInterchangeStation === nearest.code){
                             onDisplayNotification(2, nearest.code);
                         }
+                        else{
+                            onDisplayNotification(1, nearest.code);
+                        }
                         stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
                         console.log(stationInterchanges)
                     }  
