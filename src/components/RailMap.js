@@ -12,7 +12,7 @@ const destMarkPic = require('../../assets/images/oridestMark.png');
 const stopMarkPic = require('../../assets/images/stopMark.png');
 const {width} = Dimensions.get('window');
 
-const RailMap = ({oriStationCode, destStationCode, itemsCode, cannotClicked, num, notSelectedStation, fromAddStop, setSelectedType, setSelectedCodeAddStop}) => {
+const RailMap = ({oriStationCode, destStationCode, itemsCode, cannotClicked, num, notSelectedStation, fromAddStop, setSelectedType, setSelectedCodeAddStop, cannotSelectTypeItem}) => {
   const ratioTransform = 3.30527928;
   const [scale, setScale] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
@@ -34,8 +34,6 @@ const RailMap = ({oriStationCode, destStationCode, itemsCode, cannotClicked, num
   function handleClick(e) {
     const transLocationX = e.locationX * ratioTransform;
     const transLocationY = e.locationY * ratioTransform;
-
-    console.log(e.locationX, e.locationY);
 
     const matchingKeys = Object.keys(StationInfo).filter(key => {
       return between(key, transLocationX, transLocationY, 12);
@@ -92,6 +90,7 @@ const RailMap = ({oriStationCode, destStationCode, itemsCode, cannotClicked, num
             setModalVisible={setModalVisible}
             setSelectedType={setSelectedType}
             setSelectedCodeAddStop={setSelectedCodeAddStop}
+            cannotSelectTypeItem={cannotSelectTypeItem}
           />
         : 
         <SelectedStationModal

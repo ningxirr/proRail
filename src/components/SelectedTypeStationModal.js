@@ -5,7 +5,7 @@ import {BlurView} from '@react-native-community/blur';
 import {useNavigation} from '@react-navigation/native';
 import { color } from 'react-native-reanimated';
 
-const SelectedTypeStationModal = ({code, modalVisible, setModalVisible, num, notSelectedStation, setSelectedType, setSelectedCodeAddStop}) => {
+const SelectedTypeStationModal = ({code, modalVisible, setModalVisible, num, notSelectedStation, setSelectedType, setSelectedCodeAddStop, cannotSelectTypeItem}) => {
   const navigation = useNavigation();
   const [confirm, setConfirm] = useState(false);
   const [selected, setSelected] = useState(0);
@@ -98,20 +98,32 @@ const SelectedTypeStationModal = ({code, modalVisible, setModalVisible, num, not
                       ]}
                     >Origin</Text>
                   </TouchableOpacity>
-                  <TouchableOpacity
-                    style={[
-                      selected == 1 ? styles.type_station_active_view : styles.type_station_inactive_view, 
-                      {borderEndWidth: 0}]}
-                    onPress={() => {
-                      setSelected(1);
-                    }}
-                  >
-                    <Text
-                      style={[styles.type_station_text, 
-                        selected == 1 ? {color:'white'}: {color:'black'}
-                      ]}
-                    >Stop</Text>
-                  </TouchableOpacity>
+                  {
+                    cannotSelectTypeItem ?
+                    <View style={[styles.type_station_inactive_view, {borderEndWidth: 0}, {borderColor: '#9B9B9B'}]}>
+                      <Text 
+                        style={[styles.type_station_text, 
+                          {color: '#9B9B9B'}
+                        ]}
+                      >Stop</Text>
+                    </View>
+                    :
+                    <TouchableOpacity
+                      style={[
+                        selected == 1 ? styles.type_station_active_view : styles.type_station_inactive_view, 
+                        {borderEndWidth: 0}]}
+                      onPress={() => {
+                        setSelected(1);
+                      }}
+                    >
+                      <Text
+                        style={[styles.type_station_text, 
+                          selected == 1 ? {color:'white'}: {color:'black'}
+                        ]}
+                      >Stop</Text>
+                    </TouchableOpacity>
+                    
+                  }
                   <TouchableOpacity
                     style={[
                       selected == 2 ? styles.type_station_active_view : styles.type_station_inactive_view, 
