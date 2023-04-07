@@ -21,7 +21,7 @@ async function onDisplayNotification(type, code) {
     // Display a notification
     await notifee.displayNotification({
       title: 'Navigation',
-      body: type === 0 ? `Get on the Train at ${stationInfo[code].station_name.en}` : type === 1 ? `You are at the interchange station ${stationInfo[code].station_name.en}.` : `You are at your destination (${stationInfo[code].station_name.en}).`,
+      body: type === 0 ? `Get on the Train at ${stationInfo[code].station_name.en}` : type === 1 ? `Next Station is Interchage Station. Get on the train at ${stationInfo[code].station_name.en}.` : `You are at your destination (${stationInfo[code].station_name.en}).`,
       android: {
         channelId,
         pressAction: {
@@ -63,6 +63,7 @@ const NextStation = (props) => {
           _watchId = Geolocation.watchPosition(
             position => {
               let nearest = findNearest(position.coords, filteredStation);
+              console.log(_watchId)
               if (stationInterchanges !== undefined) {
                     if(stationInterchanges.includes(nearest.code)){
                         if(firstInterchangeStation === nearest.code){
@@ -75,7 +76,6 @@ const NextStation = (props) => {
                             onDisplayNotification(1, nearest.code);
                         }
                         stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
-                        console.log(stationInterchanges)
                     }  
               } 
               setStationGPS(nearest.code);
