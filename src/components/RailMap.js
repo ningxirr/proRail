@@ -3,6 +3,7 @@ import {Dimensions, View, Image} from 'react-native';
 import ImageZoom from 'react-native-image-pan-zoom';
 import {useState} from 'react';
 import SelectedStationModal from './SelectedStationModal';
+import SelectedTypeStationModal from './SelectedTypeStationModal';
 import StationInfo from '../../data/station_info.json';
 
 const image = require('../../assets/images/railmap2.jpg');
@@ -11,7 +12,7 @@ const destMarkPic = require('../../assets/images/oridestMark.png');
 const stopMarkPic = require('../../assets/images/stopMark.png');
 const {width} = Dimensions.get('window');
 
-const RailMap = ({oriStationCode, destStationCode, itemsCode, cannotClicked, num, notSelectedStation}) => {
+const RailMap = ({oriStationCode, destStationCode, itemsCode, cannotClicked, num, notSelectedStation, fromAddStop, setSelectedType, setSelectedCodeAddStop}) => {
   const ratioTransform = 3.30527928;
   const [scale, setScale] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
@@ -80,14 +81,27 @@ const RailMap = ({oriStationCode, destStationCode, itemsCode, cannotClicked, num
 
   return (
     <View>
-      <SelectedStationModal
+      {
+        fromAddStop ? 
+          <SelectedTypeStationModal
+            code={selectedCode}
+            num={num}
+            notSelectedStation={notSelectedStation}
+            modalVisible={modalVisible}
+            // modalVisible={true}
+            setModalVisible={setModalVisible}
+            setSelectedType={setSelectedType}
+            setSelectedCodeAddStop={setSelectedCodeAddStop}
+          />
+        : 
+        <SelectedStationModal
         code={selectedCode}
         num={num}
         notSelectedStation={notSelectedStation}
         modalVisible={modalVisible}
-        // modalVisible={true}
         setModalVisible={setModalVisible}
       />
+      }
       
       <View style={{position: 'relative'}}>
         <ImageZoom
