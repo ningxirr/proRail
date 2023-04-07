@@ -15,23 +15,31 @@ const screenHeight = Dimensions.get('window').height;
 const FavoriteRoute = (props) => {
   const [favoriteRoute, setFavaoriteRoute] = useState([]);
   const [recommended, setRecommended] = useState('');
+  const [deleteRoute, setDeleteRoute] = useState(null);
   const sheetRef = useRef(null);
   const snapPoints = useMemo(() => ["42%", "75%"], []);
 
   const handleSheetChange = useCallback((index) => {
     console.log("handleSheetChange", index);
   }, []);
-
   useFocusEffect(
     useCallback(() => {
       const fetchData = async () => {
         const favoriteRouteData = await getDataFromAsyncStorage('@favorite');
         const recommendedData = await getDataFromAsyncStorage('@recommended');
-        if(favoriteRouteData !== null) setFavaoriteRoute([...favoriteRouteData].reverse());
+        if(favoriteRouteData !== null) {
+          if(deleteRoute === null){
+            setFavaoriteRoute([...favoriteRouteData].reverse());
+          }
+          else{
+            setFavaoriteRoute([...favoriteRouteData]);
+          }
+        }
         if(recommendedData !== null) setRecommended(recommendedData[0]);
       };
       fetchData();
-    }, [])
+      setDeleteRoute(null);
+    }, [deleteRoute])
   );
 
   if(!recommended){
@@ -63,9 +71,12 @@ const FavoriteRoute = (props) => {
                     favoriteRoute.map((route, index) => (
                         <View key={index} style={Styles.all_favorite_route}>
                             <FavoriteRouteList 
+                              favoriteRoute={favoriteRoute}
+                              setFavaoriteRoute={setFavaoriteRoute}
                               route={route} 
                               navigation={props.navigation} 
-                              recommended={recommended}/>
+                              recommended={recommended}
+                              setDeleteRoute={setDeleteRoute}/>
                         </View>
                     ))
                 }
@@ -110,19 +121,20 @@ const Styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   all_favorite_route:{
-    paddingVertical: 10,
+    paddingVertical: 5,
   },
   bottom_sheet: {
+    backgroundColor: "white",
     borderRadius: 20,
     overflow: 'hidden',
     shadowColor: '#000000',
     shadowOffset: {
       width: 0,
-      height: 8,
+      height: 5,
     },
     shadowOpacity: 0.25,
-    shadowRadius: 24,
-    elevation: 10,
+    shadowRadius: 8,
+    elevation: 8,
   },
   add_favorite_route_view:{
     borderWidth: 1,

@@ -1,7 +1,10 @@
 import {Modal, View, Text, StyleSheet, Pressable} from 'react-native';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import stationInfo from '../../data/station_info.json';
+import storeDataToAsyncStorage from '../function/storeDataToAsyncStorage';
 
-const AlertModel = ({modalVisible, setModalVisible, text}) => {
+const DeleteFavoriteAlert = ({setFavaoriteRoute, favoriteRoute, modalVisible, setModalVisible, stationList}) => {
+
   return (
     <View>
       <Modal
@@ -19,13 +22,42 @@ const AlertModel = ({modalVisible, setModalVisible, text}) => {
           ]}>
           <View style={styles.modalView}>
             <View style={styles.warningView}>
-              <Text style={styles.warningText}>Warning ! </Text>
+              <Text style={styles.warningText}>Delete your favorite route</Text>
+              <View style={{marginVertical:8, borderWidth:1, borderColor: '#EBEBEB', width: '100%'}}/>
               <Text style={styles.detailText}>
-                {text}
+                Your following favorite route will be deleted.
               </Text>
             </View>
-
-            <View style={{alignItems: 'center', marginBottom: 15}}>
+            
+            <View style = {styles.next_station_view}>
+              <Text style = {styles.next_station_text}>
+                  {stationInfo[stationList[0]].station_name.en}
+              </Text>
+              <Text style = {styles.next_station_text} numberOfLines={1}>
+                  &gt; {stationInfo[stationList[stationList.length-1]].station_name.en}
+              </Text>
+              <View style={{flexDirection: 'row', flexWrap: 'wrap', marginTop: 2}}>
+              {
+                stationList.map((station, index) => (
+                    <View key={index} style= {[styles.route_view ,{backgroundColor: stationInfo[station].platform.color.path_color}]}>
+                        <Text style = {[styles.route_text]} numberOfLines={1}>
+                            {stationInfo[station].station_name.en}
+                        </Text>
+                    </View>
+                ))
+              }
+              </View>
+            </View>
+            <View style={{alignItems: 'center', marginBottom: 15, flexDirection: 'row', justifyContent: 'space-between'}}>
+              <Pressable
+                style={styles.buttonConfirm}
+                onPress={() =>{
+                  setFavaoriteRoute(favoriteRoute.filter((route) => route !== stationList.join('-')));
+                  storeDataToAsyncStorage('@favorite', favoriteRoute);
+                  setModalVisible(!modalVisible);
+                }}>
+                <Text style={styles.confirmText}>Confirm</Text>
+              </Pressable>
               <Pressable
                 style={styles.buttonClose}
                 onPress={() => setModalVisible(!modalVisible)}>
@@ -48,9 +80,8 @@ const styles = StyleSheet.create({
   modalView: {
     justifyContent: 'center',
     margin: (20),
+    padding: 16,
     backgroundColor: 'white',
-    height: (170),
-    width: (325),
     borderRadius: 10,
     shadowColor: '#000',
     shadowOffset: {
@@ -59,14 +90,26 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 4,
-    
+  },
+  buttonConfirm: {
+    backgroundColor: '#000000',
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 10,
+    width: '49%',
   },
   buttonClose: {
     borderColor: '#000000',
     borderWidth: 1,
     borderRadius: 10,
-    padding: (10),
-    width: '80%',
+    padding: 10,
+    width: '49%',
+  },
+  confirmText:{
+    textAlign: 'center',
+    fontSize: 14,
+    fontFamily: 'LINESeedSansApp-Regular',
+    color: 'white',
   },
   discardText: {
     textAlign: 'center',
@@ -75,23 +118,46 @@ const styles = StyleSheet.create({
     color: 'black',
   },
   warningText: {
-    fontFamily: 'LINESeedSansApp-Bold',
-    paddingVertical: 10,
+    fontFamily: 'LINESeedSansApp-Regular',
     color: 'black',
-    fontSize: 16
+    fontSize: 20
   },
   warningView: {
-    flex: 1,
     alignItems: 'flex-start',
-    marginHorizontal: (20),
-    marginVertical: (15),
   },
   detailText: {
     fontFamily: 'LINESeedSansApp-Regular',
     color: 'black',
     fontSize: 14,
   },
+  next_station_view: {
+    marginVertical: 8,
+    padding: 16,
+    borderRadius: 10,
+    borderColor: '#E4E4E4',
+    borderWidth: 2
+  },
+  next_station_text: {
+    color:'black', 
+    fontSize: 14, 
+    fontFamily: 'LINESeedSansApp-Bold',
+    marginVertical: 2,
+  },
+  route_view: {
+    flexDirection: 'row',
+    alignContent: 'center',
+    justifyContent: 'center',
+    margin: 1,
+    paddingHorizontal: 5,
+    paddingVertical: 2,
+    borderRadius: 5,
+  },
+  route_text: {
+    color:'#FFFFFF',
+    fontSize: 10,
+    fontFamily: 'LINESeedSansApp-Regular',
+},
 });
 
 
-export default AlertModel;
+export default DeleteFavoriteAlert;
