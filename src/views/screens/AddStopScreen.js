@@ -27,12 +27,16 @@ const AddStopScreen = ({route, navigation}) => {
   const [selectedType, setSelectedType] = useState(null)
   const [selectedCodeAddStop, setSelectedCodeAddStop] = useState(null)
 
+  const [cannotSelectTypeItem, setCannotSelectTypeItem] = useState(false)
+
   const removeItems = item => {
     const index = itemsCode.indexOf(item);
     if (index > -1) {
       const newItemsCode = [...itemsCode];
       newItemsCode.splice(index, 1);
       setItemsCode(newItemsCode);
+      setCannotSelectTypeItem(false)
+      console.log("index "+index)
     }
   };
 
@@ -93,6 +97,9 @@ const AddStopScreen = ({route, navigation}) => {
         setOriStation(selectedCodeAddStop)
       } else if(selectedType == 1) {
         setItemsCode(oldArray => [...oldArray, selectedCodeAddStop]);
+        if(itemsCode.length == 2) {
+          setCannotSelectTypeItem(true)
+        }
       } else if(selectedType == 2) {
         setDestStation(selectedCodeAddStop)
       }
@@ -138,6 +145,7 @@ const AddStopScreen = ({route, navigation}) => {
             style={{ marginLeft: 'auto', marginRight: 5 }}
             onPress={() => {
               removeItems(item);
+              setCannotSelectTypeItem(false);
             }}
           />
         </View>
@@ -169,6 +177,7 @@ const AddStopScreen = ({route, navigation}) => {
             fromAddStop={true}
             setSelectedType={setSelectedType}
             setSelectedCodeAddStop={setSelectedCodeAddStop}
+            cannotSelectTypeItem={cannotSelectTypeItem}
           />
           {
             console.log(selectedType + " " + selectedCodeAddStop)
