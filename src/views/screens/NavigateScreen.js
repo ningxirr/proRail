@@ -1,18 +1,14 @@
 "use strict";
 
 import React, { useCallback, useMemo, useRef, useEffect, useState } from 'react';
-import { SafeAreaView, StyleSheet, View, PermissionsAndroid, Text } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { getDistance, findNearest } from 'geolib';
-import Geolocation from 'react-native-geolocation-service';
 
 import NextStation from '../../components/nextStation';
 import AllRoute from '../../components/allRoute';
 import RailMap from '../../components/RailMap';
 import Header from '../../components/header';
-
-import stationInfo from '../../../data/station_info'
 import stationLocation from '../../../data/station_location'
 
 const Navigate = (props) => {

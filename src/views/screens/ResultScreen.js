@@ -23,7 +23,6 @@ const Result = (props) => {
 
     // const stationPath = ['BL37', 'RW06'];
     // const stationPath = ['BL37', 'RW06', 'BL37'];
-    console.log('resultPath ==>' + props.route.params.code)
     // const stationPath = ['S3','E11']
   let stationPath = props.route.params.code
 
@@ -152,7 +151,6 @@ const Result = (props) => {
                     favoriteRoute={favoriteRoute}/>
             </ScrollView>
         </SafeAreaView>
-       
       </SafeAreaView>
     )
   }
