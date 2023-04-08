@@ -45,7 +45,6 @@ const StationList = ({code, isSiamSukhumvit, num, notSelectedStation}) => {
               marginTop: 7,
               borderWidth: 1,
               borderColor: '#D9D9D9',
-              backgroundColor: 'white'
             }
           ]}>
               <Text style={[styles.codeText, {color: '#D9D9D9'}]}>{StationInfo[code].platform.platform}</Text>

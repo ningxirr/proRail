@@ -4,7 +4,7 @@ import React, { useCallback, useMemo, useRef, useEffect, useState } from 'react'
 import { SafeAreaView, StyleSheet, View } from 'react-native';
 import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import NextStation from '../../components/nextStation';
 import AllRoute from '../../components/allRoute';
 import RailMap from '../../components/RailMap';
@@ -77,13 +77,17 @@ const Navigate = (props) => {
             itemsCode={stationPath.slice(1, stationPath.length - 1)}
             />
         </View>
-        <View style={{
+            <View style={{
               position: 'absolute',
               bottom: 0,
               right: 0,
-              padding: 10
+              paddingHorizontal: 10,
+              marginHorizontal: 20,
+              backgroundColor: 'black',
+              borderTopLeftRadius: 10,
+              borderTopRightRadius: 10,
             }}>
-              <Ionicons name="arrow-up-circle-sharp" size={50} color="black" onPress={()=>handleSnapPress(1)}/>
+              <FontAwesome name="chevron-up" size={25} color="white" onPress={()=>handleSnapPress(1)}/>
             </View>
           <BottomSheet 
             ref={sheetRef} 

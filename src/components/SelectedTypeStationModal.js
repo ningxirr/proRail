@@ -43,6 +43,10 @@ const SelectedTypeStationModal = ({code, modalVisible, setModalVisible, num, not
     return routes[routes.length - 2].name;
   }
 
+  function hasWhiteSpace(s) {
+    return s.indexOf(' ') >= 0;
+  }
+
   return (
     <View>
       <BlurView
@@ -65,16 +69,26 @@ const SelectedTypeStationModal = ({code, modalVisible, setModalVisible, num, not
               <View style={[styles.modalView]}>
                 <View style={styles.head_station_info_view}>
                   <View style={{flex: 0.5, flexWrap: 'wrap', flexDirection: 'row'}}>
-                    <Text style={styles.station_text} ellipsizeMode='tail' numberOfLines={2}>
-                      {StationInfo[code].station_name.en}
-                    </Text>
+                    {
+                      hasWhiteSpace(StationInfo[code].station_name.en) ? 
+                      <Text style={styles.station_text} ellipsizeMode='tail' numberOfLines={2}>
+                        {StationInfo[code].station_name.en}
+                      </Text>
+                      :
+                      <Text style={styles.station_text} ellipsizeMode='tail' numberOfLines={1}>
+                        {StationInfo[code].station_name.en}
+                      </Text>
+                    }
+                    
                   </View>
                   <View style={{flex: 0.5, flexDirection: 'row', justifyContent: 'flex-end', marginRight: 10}}>
                     <View style={[styles.code_platform_view, {backgroundColor:StationInfo[code].platform.color.path_color}]}>
                       <Text style={styles.code_text}>{code}</Text>
                     </View>
                     <View style={[styles.code_platform_view, {backgroundColor:'white', borderColor: StationInfo[code].platform.color.path_color, borderWidth: 1}]}>
-                      <Text style={[styles.code_text, {color: StationInfo[code].platform.color.path_color}]}>{StationInfo[code].platform.platform}</Text>
+                      <Text style={[styles.code_text, {color: StationInfo[code].platform.color.path_color}]}>
+                        {StationInfo[code].platform.platform}
+                      </Text>
                     </View>
                   </View>
                  
@@ -212,7 +226,7 @@ const styles = StyleSheet.create({
   },
   station_text: {
     marginHorizontal: 10,
-    fontSize: 20,
+    fontSize: 19,
     fontFamily: 'LINESeedSansTHApp-Regular',
     color: '#000000',
     lineHeight: 25,
@@ -223,7 +237,6 @@ const styles = StyleSheet.create({
     marginRight: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    width: 65
   },
   code_text: {
     fontFamily: 'LINESeedSansTHApp-Regular',

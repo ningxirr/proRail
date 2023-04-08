@@ -13,11 +13,10 @@ const effort = require('../../../assets/images/icons/004-effort.png');
 const AboutProRailScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{flex:1, backgroundColor:'black'}}>
-      <View style={{backgroundColor:'white'}}>
-        <Header haveBackIcon={true} title={'About'} function={()=>navigation.goBack()}/>
-        <ScrollView contentContainerStyle={{alignItems: 'center'}}>
+      <View style={{backgroundColor:'white', position:'relative'}}>
+        <View>
+        <ScrollView contentContainerStyle={{alignItems: 'center', marginTop: 100}}>
             <Image source={firstImg} style={styles.firstImage} />
-
             <View style={styles.objectiveContainerView}>
                 <View style={{margin: 10}}>
                     <Text style={styles.objectiveHeaderText}>Objectives</Text>
@@ -62,6 +61,11 @@ const AboutProRailScreen = ({navigation}) => {
 
             <Image source={lastImg} style={styles.lastImg}/>
         </ScrollView>
+        </View>
+        
+        <View style={{position: 'absolute', width: '100%'}}>
+          <Header haveBackIcon={true} title={'About'} function={()=>navigation.goBack()} />
+        </View>
       </View>
     </SafeAreaView>
       

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef, useCallback} from 'react';
 import {SafeAreaView, View} from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import SearchBar from '../../components/SearchBar';
@@ -10,6 +10,10 @@ const ChooseDirectionScreen = ({navigation, route}) => {
   const [searchPhrase, setSearchPhrase] = useState('');
   const [clicked, setClicked] = useState(false);
   const [fullScreenMap, setFullScreenMap] = useState(false);
+  const bottomSheetRef = useRef(null);
+  const handleSnapPress = useCallback((index) => {
+    bottomSheetRef.current?.snapToIndex(index);
+  }, []);
   return (
     <SafeAreaView style={{flex:1, backgroundColor:'black'}}>
       <GestureHandlerRootView style={{flex: 1}}>
@@ -43,11 +47,13 @@ const ChooseDirectionScreen = ({navigation, route}) => {
         </View>
       </View>
       <StationInfoBottomSheet
+        bottomSheetRef={bottomSheetRef}
+        handleSnapPress={handleSnapPress}
         setFullScreenMap={fullScreenMap => setFullScreenMap(fullScreenMap)}
         clicked={clicked}
         searchPhrase={searchPhrase}
         setClicked={setClicked}
-        memoScale={["20%", "44%", "65%"]}
+        memoScale={["10%", "44%", "65%"]}
         num={route.params.num}
         notSelectedStation={route.params.notSelectedStation}
       />

@@ -1,7 +1,7 @@
 "use strict";
 
 import React, { useCallback, useMemo, useRef, useState, useEffect } from 'react';
-import { SafeAreaView, StyleSheet, Text, View,  Dimensions, ImageBackground, TouchableOpacity } from 'react-native';
+import { SafeAreaView, StyleSheet, View,  Dimensions, ImageBackground, Text } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -9,7 +9,7 @@ import TotalFavorite from '../../components/totalFavorite';
 import FavoriteRouteList from '../../components/favoriteRouteList';
 import getDataFromAsyncStorage from '../../function/getDataFromAsyncStorage';
 import Header from '../../components/header';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const screenHeight = Dimensions.get('window').height;
 
@@ -30,7 +30,7 @@ const FavoriteRoute = (props) => {
       const fetchData = async () => {
         const favoriteRouteData = await getDataFromAsyncStorage('@favorite');
         const recommendedData = await getDataFromAsyncStorage('@recommended');
-        setFavaoriteRoute([...favoriteRouteData].reverse()); 
+        if(favoriteRouteData !== null) setFavaoriteRoute([...favoriteRouteData].reverse()); 
         if(recommendedData !== null) setRecommended(recommendedData[0]);
       };
       fetchData();
@@ -50,13 +50,17 @@ const FavoriteRoute = (props) => {
           <TotalFavorite favCount={favoriteRoute.length}/>
         </View>
       </ImageBackground>
-        <View style={{
+            <View style={{
               position: 'absolute',
               bottom: 0,
               right: 0,
-              padding: 10
+              paddingHorizontal: 10,
+              marginHorizontal: 20,
+              backgroundColor: 'white',
+              borderTopLeftRadius: 10,
+              borderTopRightRadius: 10,
             }}>
-              <Ionicons name="arrow-up-circle-sharp" size={50} color="white" onPress={()=>handleSnapPress(0)}/>
+              <FontAwesome name="chevron-up" size={25} color="black" onPress={()=>handleSnapPress(0)}/>
             </View>
           <BottomSheet 
             ref={sheetRef} 
@@ -70,7 +74,11 @@ const FavoriteRoute = (props) => {
             >
             <BottomSheetScrollView contentContainerStyle={Styles.content_bottom_sheet_scroll_view}>
               { 
-                  !recommended ? null:
+                  !recommended || favoriteRoute.length === 0 ? 
+                    <View style={{alignItems: 'center', padding: 50}}>
+                      <Text style={{color: '#cfcfcf', fontSize: 30, fontFamily: 'LINESeedSansApp-Bold',}}>No favoite route </Text>
+                    </View>
+                  :
                     favoriteRoute.map((route, index) => (
                         <View key={index} style={Styles.all_favorite_route}>
                             <FavoriteRouteList 

@@ -91,7 +91,7 @@ const StationInfo = ({navigation, route}) => {
       <View style={{backgroundColor: '#fafafa'}}>
       <View style = {Styles.header_navbar_view}>
         <Header 
-          title={stationInfo[code].station_name.en.length >= 20 ? stationInfo[code].station_name.en.substring(0,20)+'...' : stationInfo[code].station_name.en} 
+          title={stationInfo[code].station_name.en}
           platform={stationInfo[code].platform.platform} 
           color={stationInfo[code].platform.color.path_color} 
           haveBackIcon={true}
@@ -143,7 +143,7 @@ const StationInfo = ({navigation, route}) => {
           } 
       </View>
     </ScrollView>
-      </View>
+  </View>
   </SafeAreaView>
   );
 };

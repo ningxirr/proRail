@@ -9,9 +9,10 @@ import AlertClearAllSelectedStation from '../../components/AlertClearAllSelected
 import RailMap from '../../components/RailMap';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import StationWithCode from '../../components/stationWithCode';
 
-const AddStopScreen = ({route, navigation}) => {
+const AddStopScreen = ({ route, navigation}) => {
   const bottomSheetRef = useRef(null);
   const snapPoints = useMemo(() => ["10%", "45%", "65%"], []);
   const handleSheetChange = useCallback((index) => {
@@ -66,6 +67,13 @@ const AddStopScreen = ({route, navigation}) => {
       });
     }
   };
+  useEffect(() => {
+    if (route.params?.directions !== undefined) {
+      setOriStation(route.params?.directions[0]);
+      setDestStation(route.params?.directions[1]);
+      setItemsCode([]);
+    }
+  }, [route.params?.directions]);
 
   useEffect(() => {
     setSelectedPostition(oriStation === null ? 0 : itemsCode.length < 3 ? 1 : 2);
@@ -152,6 +160,7 @@ const AddStopScreen = ({route, navigation}) => {
     );
   }
   return (
+    
     <SafeAreaView style={{flex: 1, backgroundColor:'black'}}>
       <GestureHandlerRootView style={{flex: 1}}> 
       <View style={{backgroundColor: 'white', flex: 1}}>
@@ -173,7 +182,6 @@ const AddStopScreen = ({route, navigation}) => {
           modalVisible={modalVisibleClearAll}
           setModalVisible={setModalVisibleClearAll}/>
         <View style={{marginTop: fullScreenMap ? 0 : -80 }}>
-          {console.log(oriStation === null ? 0 : itemsCode.length < 3 ? 1 : 2)}
           <RailMap
             cannotClicked={false}
             num={route.params?.num}
@@ -192,9 +200,13 @@ const AddStopScreen = ({route, navigation}) => {
           position: 'absolute',
           bottom: 0,
           right: 0,
-          padding: 10
+          paddingHorizontal: 10,
+          marginHorizontal: 20,
+          backgroundColor: 'black',
+          borderTopLeftRadius: 10,
+          borderTopRightRadius: 10,
         }}>
-          <Ionicons name="arrow-up-circle-sharp" size={50} color="black" onPress={()=>handleSnapPress(1)}/>
+          <FontAwesome name="chevron-up" size={25} color="white" onPress={()=>handleSnapPress(1)}/>
         </View>
       <BottomSheet 
         ref={bottomSheetRef} 
@@ -206,6 +218,7 @@ const AddStopScreen = ({route, navigation}) => {
         enableOverDrag={false}
         style={styles.bottom_sheet}
         >
+          {console.log('itemsCode'+itemsCode)}
         <BottomSheetFlatList
           data={itemsCode}
           ListHeaderComponent={startStation()}
@@ -230,7 +243,7 @@ const AddStopScreen = ({route, navigation}) => {
             });
           }}>
           {
-            oriStation === null ? 
+            oriStation === null? 
             <Text style={styles.textInChooseBox}>Origin</Text>:
             <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
                <StationWithCode code={oriStation}/>
