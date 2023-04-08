@@ -24,8 +24,8 @@ const RailMap = ({oriStationCode, destStationCode, itemsCode, cannotClicked, num
 
   function between(key, transX, transY, err) {
     const filterIn =
-      StationInfo[key].imageCoordinate.coor_x >= transX - err &&
-      StationInfo[key].imageCoordinate.coor_x <= transX + err &&
+      StationInfo[key].imageCoordinate.coor_x >= transX - err - 8 &&
+      StationInfo[key].imageCoordinate.coor_x <= transX + err + 2 &&
       StationInfo[key].imageCoordinate.coor_y >= transY - err &&
       StationInfo[key].imageCoordinate.coor_y <= transY + err;
     return filterIn;

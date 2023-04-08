@@ -31,7 +31,7 @@ const Styles = StyleSheet.create({
       textAlign: 'right'
   },
   number_text: {
-      fontSize: 40, 
+      fontSize: 36, 
       color:'black', 
       fontFamily: 'LINESeedSansApp-Bold',
       textAlign:'right'
@@ -43,7 +43,7 @@ const Styles = StyleSheet.create({
     textAlign:'right'
   },
   topic_text: {
-    fontSize: 16, 
+    fontSize: 14, 
     fontFamily: 'LINESeedSansApp-Regular',
     marginBottom: 5, 
     marginLeft: 5,

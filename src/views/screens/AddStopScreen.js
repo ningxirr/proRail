@@ -11,7 +11,7 @@ import StationWithCode from '../../components/stationWithCode';
 
 const AddStopScreen = ({route, navigation}) => {
   const bottomSheetRef = useRef(null);
-  const snapPoints = useMemo(() => ["10%", "40%", "65%"], []);
+  const snapPoints = useMemo(() => ["10%", "40%", "55%"], []);
   const handleSheetChange = useCallback((index) => {
     if(index === 0) setFullScreenMap(true);
     else setFullScreenMap(false);
@@ -106,6 +106,12 @@ const AddStopScreen = ({route, navigation}) => {
       setSelectedType(null)
       setSelectedCodeAddStop(null)
     }
+    // if(route.params.directions[0] != null) {
+    //   setOriStation(route.params.directions[0])
+    // }
+    // if(route.params.directions[1] != null) {
+    //   setDestStation(route.params.directions[1])
+    // }
   }, [route.params]);
 
   function getNotSelectedStation(index){
@@ -179,9 +185,6 @@ const AddStopScreen = ({route, navigation}) => {
             setSelectedCodeAddStop={setSelectedCodeAddStop}
             cannotSelectTypeItem={cannotSelectTypeItem}
           />
-          {
-            console.log(selectedType + " " + selectedCodeAddStop)
-          }
         </View>
       </View>
       <BottomSheet 
@@ -218,7 +221,7 @@ const AddStopScreen = ({route, navigation}) => {
             });
           }}>
           {
-            oriStation === null ? 
+            oriStation === null? 
             <Text style={styles.textInChooseBox}>Origin</Text>:
             <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
                <StationWithCode code={oriStation}/>

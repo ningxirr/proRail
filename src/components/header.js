@@ -19,7 +19,7 @@ const Header = (props) => {
         null
       }
       <View style={Styles.header_view}>
-          <Text style={Styles.header_text}>
+          <Text style={[Styles.header_text, {flex: 0.9}]} ellipsizeMode='tail' numberOfLines={1}>
               {props.title}
           </Text>
           {

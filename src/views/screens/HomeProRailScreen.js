@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, StyleSheet, ImageBackground, TouchableOpacity, ScrollView, Dimensions} from 'react-native';
+import {View, Text, StyleSheet, ImageBackground, TouchableOpacity, ScrollView, Dimensions, Image} from 'react-native';
 import NextStation from '../../components/nextStation';
 import AlertModel from '../../components/AlertModel';
 import StationWithCode from '../../components/stationWithCode'
@@ -7,6 +7,9 @@ import Entypo from 'react-native-vector-icons/Entypo';
 
 const {width, height} = Dimensions.get('window');
 const image = require('../../../assets/images/choose-direction.png');
+
+const moreInfo1 = require('../../../assets/images/moreInfo1.png');
+const moreInfo2 = require('../../../assets/images/moreInfo2.png');
 
 const HomeProRailScreen = ({route, navigation}) => {
   const [oriStation, setOriStation] = useState(null);
@@ -61,9 +64,24 @@ const HomeProRailScreen = ({route, navigation}) => {
             </View>
 
             <View style={styles.chooseDirView}>
-              <View style={{marginTop: 20}}>
-                <Text style={styles.chooseDirText}>{'Choose\nDirection'}</Text>
+              <View style={{flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: 20, alignItems: 'center'}}>
+                <View style={{marginTop: 20}}>
+                  <Text style={styles.chooseDirText}>{'Choose\nDirection'}</Text>
+                </View>
+                <TouchableOpacity 
+                  style={styles.add_stop_view}
+                  onPress={() => {
+                    console.log("oriStation " + oriStation)
+                    navigation.navigate('AddStopNavigator', {
+                      screen: 'AddStopScreen',
+                      params: {directions: [oriStation, destStation]}
+                    });
+                  }}
+                >
+                  <Text style={styles.add_stop_text}>Add Stop</Text>
+                </TouchableOpacity>
               </View>
+
               <View style={{flex: 1, justifyContent: 'center'}}>
                 <TouchableOpacity
                   style={styles.choseStTouch}
@@ -135,20 +153,25 @@ const HomeProRailScreen = ({route, navigation}) => {
         <View style={{marginBottom: 20}}>
           <View style={styles.moreInfoSecView}>
             <Text style={styles.moreInfoText}>More Information</Text>
-            <ScrollView horizontal={true} style={{marginLeft: 15}} showsHorizontalScrollIndicator={false}>
+            <ScrollView horizontal={true} style={{marginLeft: 20}} showsHorizontalScrollIndicator={false}>
               <TouchableOpacity 
                 style={styles.moreInfoInScrollTouch}
                 onPress={() => navigation.navigate('AboutProRailScreen')}>
-                <Text style={styles.moreInfoInScrollText}>
-                  {'About\nproRail'}
-                </Text>
+                  <ImageBackground source={moreInfo1} style={{height: '105%', width: '100%', justifyContent:'flex-end'}}>
+                    <Text style={styles.moreInfoInScrollText}>
+                      {'About\nproRail'}
+                    </Text>
+                  </ImageBackground>
+
               </TouchableOpacity>
               <TouchableOpacity
                 style={styles.moreInfoInScrollTouch}
                 onPress={() => navigation.navigate('BTSFullScheduleScreen')}>
-                <Text style={styles.moreInfoInScrollText}>
-                  {'BTS\nSchedule'}
-                </Text>
+                  <ImageBackground source={moreInfo2} style={{height: '105%', width: '100%', justifyContent:'flex-end'}}>
+                    <Text style={styles.moreInfoInScrollText}>
+                      {'BTS\nSchedule'}
+                    </Text>
+                  </ImageBackground>
               </TouchableOpacity>
             </ScrollView>
           </View>
@@ -173,22 +196,22 @@ const styles = StyleSheet.create({
   },
   moreInfoSecView: {
     flex: 2,
-    marginTop: 15,
+    marginTop: 10,
     justifyContent: 'center',
   },
   moreInfoInScrollTouch: {
     backgroundColor: '#F2F2F2',
-    width: 180,
-    height: 110,
+    width: 200,
+    height: 140,
     borderRadius: 10,
-    justifyContent: 'flex-end',
     marginRight: 15,
+    backgroundColor: 'black'
   },
   moreInfoText: {
     fontSize: 24,
     color: 'black',
-    marginLeft: 30,
-    marginVertical: 5,
+    marginLeft: 25,
+    marginVertical: 15,
     fontFamily: 'LINESeedSansApp-Bold',
   },
   chooseDirView: {
@@ -200,9 +223,22 @@ const styles = StyleSheet.create({
   chooseDirText: {
     fontSize: 24,
     color: 'black',
-    marginLeft: 20,
     fontFamily: 'LINESeedSansApp-Bold',
     lineHeight: 30,
+  },
+  add_stop_view: {
+    borderWidth: 1,
+    borderColor: '#1C1C1C',
+    borderRadius: 8,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  add_stop_text: {
+    fontFamily: 'LINESeedSansApp-Regular',
+    fontSize: 12,
+    color: '#1C1C1C',
+    paddingVertical: 8,
+    paddingHorizontal: 20
   },
   choseStTouch: {
     backgroundColor: '#F0F0F0',
@@ -239,8 +275,8 @@ const styles = StyleSheet.create({
   },
   moreInfoInScrollText: {
     margin: 10,
-    fontSize: 22,
-    color: 'black',
+    fontSize: 20,
+    color: 'white',
     fontFamily: 'LINESeedSansApp-Bold',
     lineHeight: 30,
   },

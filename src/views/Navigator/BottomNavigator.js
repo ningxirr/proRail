@@ -36,12 +36,12 @@ const ButtomNavigator = (props) => {
           tabBarHideOnKeyboard: true
         }}
       />
-       <Tab.Screen
+      <Tab.Screen
         name="StationInfoNavigator"
         component={StationInfoNavigator}
         options={{
           tabBarIcon: ({color, size}) => (
-            <Icon name="bus-outline" color={color} size={size} />
+            <Icon name="file-tray-full-outline" color={color} size={size} />
           ),
           headerShown: false,
           statusBar: {
