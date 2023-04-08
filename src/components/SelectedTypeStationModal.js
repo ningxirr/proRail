@@ -71,7 +71,9 @@ const SelectedTypeStationModal = ({code, modalVisible, setModalVisible, num, not
                       <Text style={styles.code_text}>{code}</Text>
                     </View>
                     <View style={[styles.code_platform_view, {backgroundColor:'white', borderColor: StationInfo[code].platform.color.path_color, borderWidth: 1}]}>
-                      <Text style={[styles.code_text, {color: StationInfo[code].platform.color.path_color}]}>{StationInfo[code].platform.platform}</Text>
+                      <Text style={[styles.code_text, {color: StationInfo[code].platform.color.path_color}]}>
+                        {StationInfo[code].platform.platform}
+                      </Text>
                     </View>
                   </View>
                  
@@ -224,7 +226,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    width: 65
+    width: 70
   },
   code_text: {
     fontFamily: 'LINESeedSansTHApp-Regular',
