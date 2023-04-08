@@ -29,6 +29,18 @@ const AddStopScreen = ({route, navigation}) => {
 
   const [cannotSelectTypeItem, setCannotSelectTypeItem] = useState(false)
 
+  const addDirectionFromHome = () => {
+    if(route.params != undefined) {
+      const { directions } = route.params;
+      if(directions[0] != undefined) {
+        setOriStation(directions[0])
+      }
+      if(directions[1] != undefined) {
+        setDestStation(directions[1])
+      }
+    }
+  } 
+  
   const removeItems = item => {
     const index = itemsCode.indexOf(item);
     if (index > -1) {
@@ -106,12 +118,7 @@ const AddStopScreen = ({route, navigation}) => {
       setSelectedType(null)
       setSelectedCodeAddStop(null)
     }
-    // if(route.params.directions[0] != null) {
-    //   setOriStation(route.params.directions[0])
-    // }
-    // if(route.params.directions[1] != null) {
-    //   setDestStation(route.params.directions[1])
-    // }
+    addDirectionFromHome()
   }, [route.params]);
 
   function getNotSelectedStation(index){
