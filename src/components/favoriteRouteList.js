@@ -1,10 +1,17 @@
 "use strict";
-import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity,} from 'react-native';
+import React, {useState} from 'react';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import stationInfo from '../../data/station_info.json';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import DeleteFavoriteAlert from './DeleteFavoriteAlert';
+
 
 const FavoriteRouteList = (props) => {
     const stationList = props.route.split('-');
+    const [modalVisible, setModalVisible] = useState(false);
+    const DeleteFavorite = () => {
+        setModalVisible(true);
+    }
     return (
         <TouchableOpacity 
             style = {Styles.container} 
@@ -16,25 +23,37 @@ const FavoriteRouteList = (props) => {
                     code: stationList
                 },
             })}}>
+            <DeleteFavoriteAlert
+                favoriteRoute={props.favoriteRoute}
+                setFavaoriteRoute={props.setFavaoriteRoute}
+                navigation={props.navigation}
+                stationList={stationList}
+                modalVisible={modalVisible}
+                setModalVisible={setModalVisible}
+                />
             <View style = {Styles.next_station_view}>
-                <Text style = {Styles.next_station_text}>
-                    {stationInfo[stationList[0]].station_name.en}
-                </Text>
-                <Text style = {Styles.next_station_text} numberOfLines={1}>
-                    &gt; {stationInfo[stationList[stationList.length-1]].station_name.en}
-                </Text>
-                <View style={{flexDirection: 'row', flexWrap: 'wrap', marginTop: 10}}>
-                {
-                    stationList.map((station, index) => (
-                        <View key={index} style= {[Styles.route_view ,{backgroundColor: stationInfo[station].platform.color.path_color}]}>
-                            <Text style = {[Styles.route_text]} numberOfLines={1}>
-                                {stationInfo[station].station_name.en}
-                            </Text>
-                        </View>
-                    ))
-                }
+                <View style={{flex:15}}>
+                    <Text style = {Styles.next_station_text}>
+                        {stationInfo[stationList[0]].station_name.en}
+                    </Text>
+                    <Text style = {Styles.next_station_text} numberOfLines={1}>
+                        &gt; {stationInfo[stationList[stationList.length-1]].station_name.en}
+                    </Text>
+                    <View style={{flexDirection: 'row', flexWrap: 'wrap', marginTop: 10}}>
+                    {
+                        stationList.map((station, index) => (
+                            <View key={index} style= {[Styles.route_view ,{backgroundColor: stationInfo[station].platform.color.path_color}]}>
+                                <Text style = {[Styles.route_text]} numberOfLines={1}>
+                                    {stationInfo[station].station_name.en}
+                                </Text>
+                            </View>
+                        ))
+                    }
+                    </View>
                 </View>
-                 
+                <TouchableOpacity style={{flex:1, alignSelf:'center'}} onPress={DeleteFavorite}>
+                    <Ionicons name="ios-close-outline" size={25} color="black" />
+                </TouchableOpacity>
             </View>
         </TouchableOpacity>
     );
@@ -53,11 +72,12 @@ const Styles = StyleSheet.create({
     next_station_view: {
         margin:'5%',
         flex: 1,
-        justifyContent: 'center',
+        flexDirection:'row',
+        // justifyContent: 'space-between',
     },
     next_station_text: {
         color:'black', 
-        fontSize: 16, 
+        fontSize: 14, 
         fontFamily: 'LINESeedSansApp-Bold',
         marginVertical: 2,
     },
@@ -73,7 +93,7 @@ const Styles = StyleSheet.create({
     },
     route_text: {
         color:'#FFFFFF',
-        fontSize: 12,
+        fontSize: 10,
         fontFamily: 'LINESeedSansApp-Regular',
     },
     station_route_view: {
