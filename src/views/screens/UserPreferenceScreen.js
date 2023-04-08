@@ -14,7 +14,6 @@ const screenWidth = Dimensions.get('window').width;
 const UserPreference = () => {
     const [isEnabled, setIsEnable] = useState(false);
     const [recommended, setRecommended] = useState(['cheapest', 'fastest', 'leastInterchanges']);
-    const [name, setName] = useState('');
     const [selectedCheapest, setSelectedCheapest] = useState(false);
     const [selectedFastest, setSelectedFastest] = useState(false);
     const [selectedLeastInterchanges, setSelectedLeastInterchanges] = useState(false);
@@ -30,10 +29,8 @@ const UserPreference = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const name = await getDataFromAsyncStorage('@name');
             const recommended = await getDataFromAsyncStorage('@recommended');
             setRecommended(recommended);
-            setName(name);
             if(recommended[0] === 'cheapest'){
                 setSelectedCheapest(true);
                 setSelectedFastest(false);
@@ -62,14 +59,9 @@ const UserPreference = () => {
             <View style={{backgroundColor:'white', flex:1}}>
             <Header title="Preference"/>
             <View style={Styles.container}>
-            <Image source={require('../../../assets/images/background.png')} style={Styles.profile_image}/>
+            <Image source={require('../../../assets/images/user.png')} style={Styles.profile_image}/>
             <View style={Styles.name_text_view}>
                 <Text style={{fontSize: 20, fontFamily: 'LINESeedSansApp-Regular', color: 'black'}}>Hello</Text>
-                {
-                    name === '' ? 
-                    <Text style={{fontSize: 20, fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>, User01</Text>:
-                    <Text style={{fontSize: 20, fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>, {name}</Text>
-                }
             </View>
             <View style={Styles.notification_view}>
                 <Text style={{fontSize: 20, fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>Alert notification</Text>
