@@ -1,11 +1,22 @@
 "use strict";
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import Animated, { FadeIn, FadeOut, FadeInDown, FadeOutDown, FadeInUp } from 'react-native-reanimated';
 import stationInfo from '../../data/station_info.json';
 import Walking from './walking';
 import BrieflyPathIcon from './brieflyPathIcon';
 import PathIcon from './pathIcon'
+
+function selectImage (platformLineID){
+    if(platformLineID === '1' || platformLineID === '2' || platformLineID === '9')
+        return require('../../assets/images/logo/bts.png');
+    else if(platformLineID === '3' || platformLineID === '4')
+        return require('../../assets/images/logo/mrt.png');
+    else if(platformLineID === '5')
+        return require('../../assets/images/logo/arl.png');
+    else if(platformLineID === '10' || platformLineID === '11')
+        return require('../../assets/images/logo/sretet.png');
+}
 
 const Route = (props) => {
 
@@ -63,10 +74,11 @@ const Route = (props) => {
                                 </Text>
                             </View>
                             <View style={Styles.price_component_view}>
+                                <Image source={selectImage(stationInfo[props.route[0]].platform_line_id)} resizeMode='contain' style={Styles.logo_image} />
                                 {
                                     props.price === null ?
                                     null:
-                                    <View>
+                                    <View style={{marginLeft: 7}}>
                                         <Text style={Styles.price_text}>
                                             {Math.ceil(props.price)}
                                         </Text>
@@ -98,10 +110,11 @@ const Route = (props) => {
                                 </Text>
                             </View>
                             <View style={Styles.price_component_view}>
+                                <Image source={selectImage(stationInfo[props.route[0]].platform_line_id)} resizeMode='contain' style={Styles.logo_image} />
                                 {
                                     props.price === null ?
                                     null:
-                                    <View>
+                                    <View style={{marginLeft: 7}}>
                                         <Text style={Styles.price_text}>
                                             {Math.ceil(props.price)}
                                         </Text>
@@ -128,7 +141,17 @@ const Route = (props) => {
                                     {stationInfo[props.route[props.route.length-1]].station_name.th}
                                 </Text>
                             </View>
-                        </Animated.View>   
+                        </Animated.View> 
+                        {/* show more signal */}
+                        {
+                            props.route.length > 2 ?
+                            <Animated.View style={{alignItems: 'center'}} entering={props.route.length === 2 ? FadeIn:FadeInDown} exiting={props.route.length === 2 ? FadeOut : FadeOutDown}> 
+                                <Text style={{textAlign: 'center', fontFamily: 'LINESeedSansTHApp-Regular', fontSize: 12, color: 'black'}}>
+                                    Show More
+                                </Text> 
+                            </Animated.View>:null
+                        }
+                        
                     </Animated.View> : 
                     /***************full***************/
                     <Animated.View style={Styles.container_view} entering={FadeIn}>
@@ -172,12 +195,13 @@ const Route = (props) => {
                                 ))
                             }
                             <View style={Styles.price_component_view}>
+                                <Image source={selectImage(stationInfo[props.route[0]].platform_line_id)} resizeMode='contain' style={Styles.logo_image} />
                                 {
                                     props.price === null ?
                                     null:
-                                    <View>
+                                    <View style={{marginLeft: 7}}>
                                         <Text style={Styles.price_text}>
-                                            {props.price}
+                                            {Math.ceil(props.price)}
                                         </Text>
                                         <Text style={Styles.price_unit_text}>
                                             THB
@@ -246,7 +270,12 @@ const Styles = StyleSheet.create({
     price_component_view: {
         position: 'absolute',
         right: 10,
-        top: 5
+        top: 5,
+        flexDirection: 'row',
+    },
+    logo_image:{
+        width: 25,
+        height: 25,
     }
 });
 
