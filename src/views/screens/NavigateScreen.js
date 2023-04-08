@@ -4,7 +4,7 @@ import React, { useCallback, useMemo, useRef, useEffect, useState } from 'react'
 import { SafeAreaView, StyleSheet, View } from 'react-native';
 import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import NextStation from '../../components/nextStation';
 import AllRoute from '../../components/allRoute';
 import RailMap from '../../components/RailMap';
@@ -12,13 +12,16 @@ import Header from '../../components/header';
 import stationLocation from '../../../data/station_location'
 
 const Navigate = (props) => {
-  /********************BottomSeet********************/
+ /********************BottomSeet********************/
   const sheetRef = useRef(null);
   const snapPoints = useMemo(() => ["10%", "40%", "70%"], []);
   const [fullScreenMap, setFullScreenMap] = useState(false);
   const handleSheetChange = useCallback((index) => {
     if(index === 0) setFullScreenMap(true);
     else setFullScreenMap(false);
+  }, []);
+  const handleSnapPress = useCallback((index) => {
+    sheetRef.current?.snapToIndex(index);
   }, []);
   /********************Geolocation********************/
   const beginingStation = props.route.params.routes[0].path[0][0]; 
@@ -49,7 +52,14 @@ const Navigate = (props) => {
     <SafeAreaView style={Styles.container}> 
     <GestureHandlerRootView style={{ flex: 1, backgroundColor:'white' }}>
         <View style={{zIndex: 1}}>
-          <Header title="Navigate" back={true} navigation={props.navigation} haveCloseIcon={true} function2={()=> props.navigation.navigate('AddStopScreen')}/>
+          <Header 
+            title="Navigate" 
+            back={true} 
+            navigation={props.navigation} 
+            haveCloseIcon={true} 
+            function2={()=> {
+              props.navigation.navigate(props.route.params.initailScreen);
+            }}/>
         </View>
         <View style={Styles.navigation_view}>
           <NextStation 
@@ -67,7 +77,14 @@ const Navigate = (props) => {
             itemsCode={stationPath.slice(1, stationPath.length - 1)}
             />
         </View>
-        
+        <View style={{
+              position: 'absolute',
+              bottom: 0,
+              right: 0,
+              padding: 10
+            }}>
+              <Ionicons name="arrow-up-circle-sharp" size={50} color="black" onPress={()=>handleSnapPress(1)}/>
+            </View>
           <BottomSheet 
             ref={sheetRef} 
             index={1} 

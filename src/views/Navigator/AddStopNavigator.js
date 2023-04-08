@@ -1,26 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import ChooseDirectionScreen from '../screens/ChooseDirectionScreen'
-import Header from '../../components/header'
 import AddStopScreen from '../screens/AddStopScreen'
 import ResultScreen from '../screens/ResultScreen'
 import NavigateScreen from '../screens/NavigateScreen'
 
 const Stack = createNativeStackNavigator();
 
-const AddStopNavigator = ({routeName, setNavigate}) => {
-  console.log(routeName)
-    const [isSet, setIsSet] = useState(false);
-    useEffect(() => {
-      if(!isSet && routeName === "NavigateScreen"){
-        setIsSet(true);
-        setNavigate(routeName === "NavigateScreen");
-      }
-      else if(routeName === "AddStopScreen"){
-        setIsSet(false);
-        setNavigate(routeName === "NavigateScreen");
-      }
-    }, [routeName]);
+const AddStopNavigator = () => {
     return (
       <Stack.Navigator>
           <Stack.Screen 

@@ -3,8 +3,7 @@ import React, {useState, useEffect} from 'react';
 import stationInfo from '../../data/station_info.json';
 import storeDataToAsyncStorage from '../function/storeDataToAsyncStorage';
 
-const DeleteFavoriteAlert = ({setFavaoriteRoute, favoriteRoute, modalVisible, setModalVisible, stationList}) => {
-
+const AlertDeleteFavoriteModel = ({setFavaoriteRoute, favoriteRoute, modalVisible, setModalVisible, stationList}) => {
   return (
     <View>
       <Modal
@@ -48,12 +47,16 @@ const DeleteFavoriteAlert = ({setFavaoriteRoute, favoriteRoute, modalVisible, se
               }
               </View>
             </View>
-            <View style={{alignItems: 'center', marginBottom: 15, flexDirection: 'row', justifyContent: 'space-between'}}>
+            <View style={{alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between'}}>
               <Pressable
                 style={styles.buttonConfirm}
                 onPress={() =>{
-                  setFavaoriteRoute(favoriteRoute.filter((route) => route !== stationList.join('-')));
-                  storeDataToAsyncStorage('@favorite', favoriteRoute);
+                  const remainingRoute = favoriteRoute.filter((route) => route !== stationList.join('-'));
+                  console.log('****************')
+                  console.log(remainingRoute)
+                  console.log('****************')
+                  setFavaoriteRoute(remainingRoute);
+                  storeDataToAsyncStorage('@favorite', [...remainingRoute].reverse());
                   setModalVisible(!modalVisible);
                 }}>
                 <Text style={styles.confirmText}>Confirm</Text>
@@ -160,4 +163,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default DeleteFavoriteAlert;
+export default AlertDeleteFavoriteModel;

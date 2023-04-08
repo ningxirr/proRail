@@ -14,17 +14,12 @@ const platformsData = Object.entries(platformLineStationsList).map(
   ([platformId, platformData]) => platformData,
 );
 
-const StationInfoBottomSheet = ({ clicked, searchPhrase, setClicked, memoScale, num, notSelectedStation, setFullScreenMap }) => {
-  const bottomSheetRef = useRef(null);
+const StationInfoBottomSheet = ({ clicked, searchPhrase, setClicked, memoScale, num, notSelectedStation, setFullScreenMap, bottomSheetRef, handleSnapPress }) => {
   const snapPoints = useMemo(() => memoScale, []);
   
   const handleSheetChange = useCallback((index) => {
     if(index === 0) setFullScreenMap(true);
     else setFullScreenMap(false);
-  }, []);
-
-  const handleSnapPress = useCallback((index) => {
-    bottomSheetRef.current?.snapToIndex(index);
   }, []);
 
   const [platformTab, setPlatformTab] = useState(0);

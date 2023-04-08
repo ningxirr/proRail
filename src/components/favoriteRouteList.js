@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import stationInfo from '../../data/station_info.json';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import DeleteFavoriteAlert from './DeleteFavoriteAlert';
+import AlertDeleteFavoriteModel from './AlertDeleteFavoriteModel';
 
 
 const FavoriteRouteList = (props) => {
@@ -16,14 +16,11 @@ const FavoriteRouteList = (props) => {
         <TouchableOpacity 
             style = {Styles.container} 
             onPress={()=>{
-                props.navigation.navigate('AddStopNavigator',{
-                screen: 'ResultScreen',
-                initial: false,
-                params: {
-                    code: stationList
-                },
+                props.navigation.navigate('ResultScreen',{
+                code: stationList,
+                initailScreen: 'FavoriteRouteScreen'
             })}}>
-            <DeleteFavoriteAlert
+            <AlertDeleteFavoriteModel
                 favoriteRoute={props.favoriteRoute}
                 setFavaoriteRoute={props.setFavaoriteRoute}
                 navigation={props.navigation}

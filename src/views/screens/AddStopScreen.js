@@ -5,29 +5,34 @@ import NextStation from '../../components/nextStation';
 import Header from '../../components/header';
 import BottomSheet, { BottomSheetFlatList } from '@gorhom/bottom-sheet';
 import AlertModel from '../../components/AlertModel';
+import AlertClearAllSelectedStation from '../../components/AlertClearAllSelectedStation';
 import RailMap from '../../components/RailMap';
 import Entypo from 'react-native-vector-icons/Entypo';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import StationWithCode from '../../components/stationWithCode';
 
 const AddStopScreen = ({route, navigation}) => {
   const bottomSheetRef = useRef(null);
-  const snapPoints = useMemo(() => ["10%", "40%", "65%"], []);
+  const snapPoints = useMemo(() => ["10%", "45%", "65%"], []);
   const handleSheetChange = useCallback((index) => {
     if(index === 0) setFullScreenMap(true);
     else setFullScreenMap(false);
+  }, []);
+  const handleSnapPress = useCallback((index) => {
+    bottomSheetRef.current?.snapToIndex(index);
   }, []);
 
   const [itemsCode, setItemsCode] = useState([]);
   const [oriStation, setOriStation] = useState(null);
   const [destStation, setDestStation] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
+  const [modalVisibleClearAll, setModalVisibleClearAll] = useState(false);
   const [fullScreenMap, setFullScreenMap] = useState(false);
   const [alertText, setAlertText] = useState('');
+  const [selectedPostition, setSelectedPostition] = useState(0);
 
   const [selectedType, setSelectedType] = useState(null)
   const [selectedCodeAddStop, setSelectedCodeAddStop] = useState(null)
-
-  const [cannotSelectTypeItem, setCannotSelectTypeItem] = useState(false)
 
   const removeItems = item => {
     const index = itemsCode.indexOf(item);
@@ -35,8 +40,6 @@ const AddStopScreen = ({route, navigation}) => {
       const newItemsCode = [...itemsCode];
       newItemsCode.splice(index, 1);
       setItemsCode(newItemsCode);
-      setCannotSelectTypeItem(false)
-      console.log("index "+index)
     }
   };
 
@@ -58,18 +61,18 @@ const AddStopScreen = ({route, navigation}) => {
         name: 'ResultScreen',
         params: {
           code: resultStations,
+          initailScreen: 'AddStopScreen'
         }
       });
     }
   };
 
   useEffect(() => {
-    if(route.params?.code === undefined){
-      setOriStation(null);
-      setItemsCode([]);
-      setDestStation(null);
-    }
-    if(selectedCodeAddStop == null) {
+    setSelectedPostition(oriStation === null ? 0 : itemsCode.length < 3 ? 1 : 2);
+  }, [oriStation, itemsCode, destStation]);
+
+  useEffect(() => {
+    if(selectedCodeAddStop === null) {
       switch(route.params?.num){
         case 0:
           setOriStation(route.params?.code);
@@ -93,14 +96,11 @@ const AddStopScreen = ({route, navigation}) => {
           break;
       }
     } else {
-      if(selectedType == 0) {
+      if(selectedType === 0) {
         setOriStation(selectedCodeAddStop)
-      } else if(selectedType == 1) {
+      } else if(selectedType === 1) {
         setItemsCode(oldArray => [...oldArray, selectedCodeAddStop]);
-        if(itemsCode.length == 2) {
-          setCannotSelectTypeItem(true)
-        }
-      } else if(selectedType == 2) {
+      } else if(selectedType === 2) {
         setDestStation(selectedCodeAddStop)
       }
       setSelectedType(null)
@@ -145,7 +145,6 @@ const AddStopScreen = ({route, navigation}) => {
             style={{ marginLeft: 'auto', marginRight: 5 }}
             onPress={() => {
               removeItems(item);
-              setCannotSelectTypeItem(false);
             }}
           />
         </View>
@@ -167,7 +166,14 @@ const AddStopScreen = ({route, navigation}) => {
           modalVisible={modalVisible}
           setModalVisible={setModalVisible}
         />
+        <AlertClearAllSelectedStation
+          setOriStation={setOriStation}
+          setItemsCode={setItemsCode}
+          setDestStation={setDestStation}
+          modalVisible={modalVisibleClearAll}
+          setModalVisible={setModalVisibleClearAll}/>
         <View style={{marginTop: fullScreenMap ? 0 : -80 }}>
+          {console.log(oriStation === null ? 0 : itemsCode.length < 3 ? 1 : 2)}
           <RailMap
             cannotClicked={false}
             num={route.params?.num}
@@ -176,14 +182,20 @@ const AddStopScreen = ({route, navigation}) => {
             itemsCode={itemsCode}
             fromAddStop={true}
             setSelectedType={setSelectedType}
+            canAddStop={itemsCode.length < 3}
+            selectedPostition={selectedPostition}
             setSelectedCodeAddStop={setSelectedCodeAddStop}
-            cannotSelectTypeItem={cannotSelectTypeItem}
           />
-          {
-            console.log(selectedType + " " + selectedCodeAddStop)
-          }
         </View>
       </View>
+      <View style={{
+          position: 'absolute',
+          bottom: 0,
+          right: 0,
+          padding: 10
+        }}>
+          <Ionicons name="arrow-up-circle-sharp" size={50} color="black" onPress={()=>handleSnapPress(1)}/>
+        </View>
       <BottomSheet 
         ref={bottomSheetRef} 
         index={1} 
@@ -285,21 +297,36 @@ const AddStopScreen = ({route, navigation}) => {
           }
         </TouchableOpacity>
 
-        <TouchableOpacity
-          style={styles.letsgoButton}
-          onPress={() => {
-            checkBeforeSubmit();
-          }}>
-          <Text style={styles.letsgoText}>
-            Let's Go
-          </Text>
-        </TouchableOpacity>
+        <View style={styles.buttonGroup}>
+          <TouchableOpacity
+            style={styles.letsgoButton}
+            onPress={() => {
+              checkBeforeSubmit();
+            }}>
+            <Text style={styles.letsgoText}>
+              Let's Go
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.deleteButton}
+            onPress={() => {
+              if(itemsCode.length > 0 || oriStation !== null || destStation !== null){
+                setModalVisibleClearAll(true);
+              }
+            }}>
+              <Ionicons name="trash-outline" size={21} color="black" />
+          </TouchableOpacity>
+        </View>
       </View>
     );
   }
 };
 
 const styles = StyleSheet.create({
+  buttonGroup:{
+    marginHorizontal: 20,
+    flexDirection: 'row',
+  },
   letsgoText: {
     color: 'white',
     fontSize: 15, 
@@ -335,11 +362,23 @@ const styles = StyleSheet.create({
   letsgoButton: {
     backgroundColor: 'black',
     borderRadius: (10),
-    marginHorizontal: (20),
     marginTop: (20),
     alignItems: 'center',
     justifyContent: 'center',
-    height: (40),
+    marginRight: 10,
+    height: (45),
+    flex: 1
+  },
+  deleteButton: {
+    backgroundColor: 'white',
+    borderWidth: 1.25,
+    borderColor: 'black',
+    borderRadius: (10),
+    marginTop: (20),
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 45,
+    width: 45,
   },
   textInChooseBox: {
     fontSize: 15,

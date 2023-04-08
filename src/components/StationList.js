@@ -82,12 +82,12 @@ const StationList = ({code, isSiamSukhumvit, num, notSelectedStation}) => {
               marginTop: 7,
               borderWidth: 1,
               borderColor: isSiamSukhumvit ? '#4CAF1D': StationInfo[code].platform.color.path_color,
-              backgroundColor: 'white'
+              backgroundColor: 'transparent'
             }
           ]}>
-              <Text style={[styles.codeText, 
-                {color: isSiamSukhumvit ? '#4CAF1D': StationInfo[code].platform.color.path_color}
-              ]}>{StationInfo[code].platform.platform}</Text>
+              <Text style={[styles.codeText, {color: isSiamSukhumvit ? '#4CAF1D': StationInfo[code].platform.color.path_color}]}>
+                {StationInfo[code].platform.platform}
+              </Text>
             </View>
         </View>
 

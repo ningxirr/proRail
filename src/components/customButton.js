@@ -4,7 +4,7 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 const CustomButton = (props) => {
     return(
-        <TouchableOpacity style = {[Styles.button, {borderColor: props.borderColor, backgroundColor: props.backgroundColor, width: props.width}]} onPress={props.function}>
+        <TouchableOpacity style = {[Styles.button, {borderColor: props.borderColor, backgroundColor: props.backgroundColor, width: props.width, height: props.height}]} onPress={props.function}>
             <Text style = {[Styles.button_text, {color: props.textColor}]}>
                 {props.text}
             </Text>

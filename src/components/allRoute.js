@@ -42,6 +42,7 @@ const AllRoute = (props) => {
 const Styles = StyleSheet.create({
     overall_component_view: {
         marginHorizontal : 25,
+        paddingBottom: 100  
     }
 });
 

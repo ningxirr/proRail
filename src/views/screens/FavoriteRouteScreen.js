@@ -9,37 +9,32 @@ import TotalFavorite from '../../components/totalFavorite';
 import FavoriteRouteList from '../../components/favoriteRouteList';
 import getDataFromAsyncStorage from '../../function/getDataFromAsyncStorage';
 import Header from '../../components/header';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const screenHeight = Dimensions.get('window').height;
 
 const FavoriteRoute = (props) => {
   const [favoriteRoute, setFavaoriteRoute] = useState([]);
   const [recommended, setRecommended] = useState('');
-  const [deleteRoute, setDeleteRoute] = useState(null);
   const sheetRef = useRef(null);
   const snapPoints = useMemo(() => ["42%", "75%"], []);
 
   const handleSheetChange = useCallback((index) => {
     console.log("handleSheetChange", index);
   }, []);
+  const handleSnapPress = useCallback((index) => {
+    sheetRef.current?.snapToIndex(index);
+  }, []);
   useFocusEffect(
     useCallback(() => {
       const fetchData = async () => {
         const favoriteRouteData = await getDataFromAsyncStorage('@favorite');
         const recommendedData = await getDataFromAsyncStorage('@recommended');
-        if(favoriteRouteData !== null) {
-          if(deleteRoute === null){
-            setFavaoriteRoute([...favoriteRouteData].reverse());
-          }
-          else{
-            setFavaoriteRoute([...favoriteRouteData]);
-          }
-        }
+        setFavaoriteRoute([...favoriteRouteData].reverse()); 
         if(recommendedData !== null) setRecommended(recommendedData[0]);
       };
       fetchData();
-      setDeleteRoute(null);
-    }, [deleteRoute])
+    }, [])
   );
 
   if(!recommended){
@@ -55,6 +50,14 @@ const FavoriteRoute = (props) => {
           <TotalFavorite favCount={favoriteRoute.length}/>
         </View>
       </ImageBackground>
+        <View style={{
+              position: 'absolute',
+              bottom: 0,
+              right: 0,
+              padding: 10
+            }}>
+              <Ionicons name="arrow-up-circle-sharp" size={50} color="white" onPress={()=>handleSnapPress(0)}/>
+            </View>
           <BottomSheet 
             ref={sheetRef} 
             index={0} 
@@ -75,16 +78,10 @@ const FavoriteRoute = (props) => {
                               setFavaoriteRoute={setFavaoriteRoute}
                               route={route} 
                               navigation={props.navigation} 
-                              recommended={recommended}
-                              setDeleteRoute={setDeleteRoute}/>
+                              recommended={recommended}/>
                         </View>
                     ))
                 }
-                {/* <TouchableOpacity onPress={()=>props.navigation.navigate('AddStopNavigator')}>
-                  <View style={Styles.add_favorite_route_view}>
-                    <Text style={Styles.add_favorite_route_text}>+ Favorite</Text>
-                  </View>
-                </TouchableOpacity> */}
             </BottomSheetScrollView>
           </BottomSheet> 
         </GestureHandlerRootView>

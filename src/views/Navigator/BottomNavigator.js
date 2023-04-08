@@ -12,12 +12,7 @@ import UserPreferenceScreen from '../screens/UserPreferenceScreen';
 const Tab = createBottomTabNavigator();
 
 const ButtomNavigator = (props) => {
-  const hide = props.routeName === "ResultScreen";
-  const [navigate, setNavigate] = useState(false);
-  useEffect(() => {
-    setNavigate(props.routeName === "NavigateScreen");
-  }, []);
-
+  const hide = props.routeName === "ResultScreen" || props.routeName === "NavigateScreen";
   return (
     <Tab.Navigator
       screenOptions={{
@@ -52,13 +47,9 @@ const ButtomNavigator = (props) => {
       />
       <Tab.Screen
         name="AddStopNavigator"
-        children={() => <AddStopNavigator setNavigate={navigate => setNavigate(navigate)} routeName={props.routeName}/>}
+        component={AddStopNavigator}
         options={{
           tabBarIcon: ({size}) => (
-            navigate ? 
-            <View style={styles.addBottonView}>
-              <Icon name="navigate" color="white" size={size * 1.4} />
-            </View> :
             <View style={styles.addBottonView}>
               <FontAwesomeIcon name="plus" color="white" size={size * 1.4}/>
             </View>
@@ -75,6 +66,7 @@ const ButtomNavigator = (props) => {
           tabBarIcon: ({color, size}) => (
             <FontAwesomeIcon name="star-o" color={color} size={size} />
           ),
+          tabBarStyle: { display: hide ? "none" : "flex" },
           headerShown: false,
           headerTransparent: true
         }}

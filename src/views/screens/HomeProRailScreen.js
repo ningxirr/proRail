@@ -17,24 +17,17 @@ const HomeProRailScreen = ({route, navigation}) => {
     if (oriStation == null || destStation == null) {
       setModalVisible(true);
     } else {
-      navigation.navigate('AddStopNavigator',{
-        screen: 'ResultScreen',
-        initial: false,
-        params: {
-          code: [oriStation, destStation]
-        },
+      navigation.navigate('ResultScreen',{
+        code: [oriStation, destStation],
+        initailScreen: 'HomeProRailScreen',
       });
     }
   }
 
   useEffect(() => {
-    if(route.params?.code === undefined){
-      setOriStation(null);
-      setDestStation(null);
-    }
-    if (route.params?.num == 0) {
+    if (route.params?.num === 0) {
       setOriStation(route.params?.code);
-    } else {
+    } else if(route.params?.num === 1) {
       setDestStation(route.params?.code);
     }
   }, [route.params]);

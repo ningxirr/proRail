@@ -4,6 +4,8 @@ import HomeProRailScreen from '../screens/HomeProRailScreen'
 import ChooseDirectionScreen from '../screens/ChooseDirectionScreen'
 import BTSFullScheduleScreen from '../screens/BTSFullScheduleScreen'
 import AboutProRailScreen from '../screens/AboutProRailScreen'
+import ResultScreen from '../screens/ResultScreen'
+import NavigateScreen from '../screens/NavigateScreen'
 
 const Stack = createNativeStackNavigator();
 
@@ -39,6 +41,23 @@ const HomeProRailNavigator = () => {
             headerTransparent: true,
           }}
         />
+         <Stack.Screen 
+            name="ResultScreen" 
+            component={ResultScreen}
+            options={{
+              headerShown: false,
+              headerTransparent: true
+            }}
+          />
+           <Stack.Screen 
+            name="NavigateScreen" 
+            component={NavigateScreen}
+            options={{
+              headerShown: false,
+              headerBackVisible: false,
+              headerTransparent: true,
+            }}
+          /> 
         <Stack.Screen 
           name="BTSFullScheduleScreen" 
           component={BTSFullScheduleScreen}

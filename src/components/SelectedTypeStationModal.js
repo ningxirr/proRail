@@ -5,10 +5,14 @@ import {BlurView} from '@react-native-community/blur';
 import {useNavigation} from '@react-navigation/native';
 import { color } from 'react-native-reanimated';
 
-const SelectedTypeStationModal = ({code, modalVisible, setModalVisible, num, notSelectedStation, setSelectedType, setSelectedCodeAddStop, cannotSelectTypeItem}) => {
+const SelectedTypeStationModal = ({code, modalVisible, setModalVisible, num, notSelectedStation, setSelectedType, canAddStop, selectedPostition, setSelectedCodeAddStop}) => {
   const navigation = useNavigation();
   const [confirm, setConfirm] = useState(false);
   const [selected, setSelected] = useState(0);
+
+  useEffect(() => {
+    setSelected(selectedPostition);
+  }, [code, num]);
 
   useEffect(() => {
     if (confirm) {
@@ -26,7 +30,6 @@ const SelectedTypeStationModal = ({code, modalVisible, setModalVisible, num, not
       setConfirm(null);
       setModalVisible(false);
     }
-    setSelected(0)
   }, [confirm]);
 
   function chooseScreenNameToNavigate() {
@@ -86,7 +89,7 @@ const SelectedTypeStationModal = ({code, modalVisible, setModalVisible, num, not
                   <TouchableOpacity
                     style={[
                       selected == 0 ? styles.type_station_active_view : styles.type_station_inactive_view, 
-                      {borderTopLeftRadius: 10, borderBottomLeftRadius: 10, borderEndWidth: 0}]
+                      {borderTopLeftRadius: 10, borderBottomLeftRadius: 10, borderEndWidth: 0, width: canAddStop ? '35%': '52.5%',}]
                     }
                     onPress={() => {
                       setSelected(0);
@@ -98,20 +101,13 @@ const SelectedTypeStationModal = ({code, modalVisible, setModalVisible, num, not
                       ]}
                     >Origin</Text>
                   </TouchableOpacity>
+                  
                   {
-                    cannotSelectTypeItem ?
-                    <View style={[styles.type_station_inactive_view, {borderEndWidth: 0}, {borderColor: '#9B9B9B'}]}>
-                      <Text 
-                        style={[styles.type_station_text, 
-                          {color: '#9B9B9B'}
-                        ]}
-                      >Stop</Text>
-                    </View>
-                    :
+                    canAddStop ?
                     <TouchableOpacity
                       style={[
                         selected == 1 ? styles.type_station_active_view : styles.type_station_inactive_view, 
-                        {borderEndWidth: 0}]}
+                        {borderEndWidth: 0, width:  '35%'}]}
                       onPress={() => {
                         setSelected(1);
                       }}
@@ -121,20 +117,23 @@ const SelectedTypeStationModal = ({code, modalVisible, setModalVisible, num, not
                           selected == 1 ? {color:'white'}: {color:'black'}
                         ]}
                       >Stop</Text>
-                    </TouchableOpacity>
-                    
+                    </TouchableOpacity>:
+                    null
                   }
+                    
+                    
+                  
                   <TouchableOpacity
                     style={[
                       selected == 2 ? styles.type_station_active_view : styles.type_station_inactive_view, 
-                    {borderTopRightRadius: 10, borderBottomRightRadius: 10}]}
+                    {borderTopRightRadius: 10, borderBottomRightRadius: 10, width: canAddStop ? '35%': '52.5%',}]}
                     onPress={() => {
                       setSelected(2);
                     }}
                   >
                     <Text
                       style={[styles.type_station_text, 
-                        selected == 2 ? {color:'white'}: {color:'black'}
+                        selected == 2 ? {color:'white'}: {color:'black'}, 
                       ]}
                     >Destination</Text>
                   </TouchableOpacity>
@@ -244,7 +243,6 @@ const styles = StyleSheet.create({
   type_station_active_view: {
     borderColor: 'black',
     borderWidth: 1,
-    width: '35%',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'black',
@@ -253,7 +251,6 @@ const styles = StyleSheet.create({
   type_station_inactive_view: {
     borderColor: 'black',
     borderWidth: 1,
-    width: '35%',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 5

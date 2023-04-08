@@ -1,7 +1,8 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import FavoriteRouteScreen from '../screens/FavoriteRouteScreen'
-import AddStopNavigator from './AddStopNavigator';
+import NavigateScreen from '../screens/NavigateScreen'
+import ResultScreen from '../screens/ResultScreen'
 
 const Stack = createNativeStackNavigator();
 
@@ -16,15 +17,23 @@ const StationInfoNavigator = () => {
             headerTransparent: true,
           }}
           />
-        {/* navigate to Result Screen */}
-        {/* <Stack.Screen 
-          name="AddStopNavigator" 
-          component={AddStopNavigator}
+         <Stack.Screen 
+            name="ResultScreen" 
+            component={ResultScreen}
+            options={{
+              headerShown: false,
+              headerTransparent: true
+            }}
+          />
+          <Stack.Screen 
+          name="NavigateScreen" 
+          component={NavigateScreen}
           options={{
             headerShown: false,
+            headerBackVisible: false,
             headerTransparent: true,
           }}
-        />  */}
+        /> 
     </Stack.Navigator>
   )
 }

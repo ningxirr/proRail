@@ -1,15 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState, useRef,useCallback} from 'react';
 import { SafeAreaView, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import SearchBar from '../../components/SearchBar';
 import Header from '../../components/header';
 import RailMap from '../../components/RailMap';
 import StationInfoBottomSheet from '../../components/StationInfoBottomSheet';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const StationInformationListScreen = () => {
   const [searchPhrase, setSearchPhrase] = useState('');
   const [clicked, setClicked] = useState(false);
   const [fullScreenMap, setFullScreenMap] = useState(false);
+  const bottomSheetRef = useRef(null);
+  const handleSnapPress = useCallback((index) => {
+    bottomSheetRef.current?.snapToIndex(index);
+  }, []);
 
   return (
     <SafeAreaView style={{flex: 1, backgroundColor:'black'}}>
@@ -34,13 +39,24 @@ const StationInformationListScreen = () => {
             />
           </View>
         </View>
+        <View style={{
+          position: 'absolute',
+          bottom: 0,
+          right: 0,
+          padding: 10
+        }}>
+          <Ionicons name="arrow-up-circle-sharp" size={50} color="black" onPress={()=>handleSnapPress(1)}/>
+        </View>
         <StationInfoBottomSheet
+          bottomSheetRef={bottomSheetRef}
+          handleSnapPress={handleSnapPress}
           setFullScreenMap={fullScreenMap => setFullScreenMap(fullScreenMap)}
           clicked={clicked}
           searchPhrase={searchPhrase}
           setClicked={setClicked}
-          memoScale={["20%", "44%", "65%"]}
+          memoScale={["10%", "44%", "65%"]}
         />
+        
       </View>
     </GestureHandlerRootView>
     </SafeAreaView>
