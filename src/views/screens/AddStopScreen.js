@@ -30,14 +30,18 @@ const AddStopScreen = ({route, navigation}) => {
   const [cannotSelectTypeItem, setCannotSelectTypeItem] = useState(false)
 
   const addDirectionFromHome = () => {
-    if(route.params != undefined) {
-      const { directions } = route.params;
-      if(directions[0] != undefined) {
-        setOriStation(directions[0])
+    if(route.params != null && route.params != undefined) {
+      if(route.params.directions != undefined ) {
+        const { directions } = route.params;
+        if(directions[0] != undefined) {
+          setOriStation(directions[0])
+
+        }
+        if(directions[1] != undefined) {
+          setDestStation(directions[1])
+        }
       }
-      if(directions[1] != undefined) {
-        setDestStation(directions[1])
-      }
+      route.params.directions = null
     }
   } 
   
@@ -166,6 +170,7 @@ const AddStopScreen = ({route, navigation}) => {
     );
   }
   return (
+    
     <SafeAreaView style={{flex: 1, backgroundColor:'black'}}>
       <GestureHandlerRootView style={{flex: 1}}> 
       <View style={{backgroundColor: 'white', flex: 1}}>

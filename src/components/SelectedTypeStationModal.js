@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
   },
   station_text: {
     marginHorizontal: 10,
-    fontSize: 20,
+    fontSize: 18,
     fontFamily: 'LINESeedSansTHApp-Regular',
     color: '#000000',
     lineHeight: 25,
@@ -226,7 +226,6 @@ const styles = StyleSheet.create({
     marginRight: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    width: 70
   },
   code_text: {
     fontFamily: 'LINESeedSansTHApp-Regular',
