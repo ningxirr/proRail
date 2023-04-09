@@ -142,7 +142,6 @@ const AddStopScreen = ({ route, navigation}) => {
             num : index+1,
             notSelectedStation: getNotSelectedStation(index)
           });
-          console.log(index)
         }}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
           <StationWithCode code={item} />
@@ -218,7 +217,6 @@ const AddStopScreen = ({ route, navigation}) => {
         enableOverDrag={false}
         style={styles.bottom_sheet}
         >
-          {console.log('itemsCode'+itemsCode)}
         <BottomSheetFlatList
           data={itemsCode}
           ListHeaderComponent={startStation()}

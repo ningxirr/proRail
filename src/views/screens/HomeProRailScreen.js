@@ -64,7 +64,6 @@ const HomeProRailScreen = ({route, navigation}) => {
                 <TouchableOpacity 
                   style={styles.add_stop_view}
                   onPress={() => {
-                    console.log("oriStation " + oriStation)
                     navigation.navigate('AddStopNavigator', {
                       screen: 'AddStopScreen',
                       params: {directions: [oriStation, destStation]}
