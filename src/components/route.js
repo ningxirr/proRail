@@ -73,11 +73,11 @@ const Route = (props) => {
                                     {stationInfo[props.route[0]].station_name.th}
                                 </Text>
                             </View>
-                            <View style={Styles.price_component_view}>
-                                <Image source={selectImage(stationInfo[props.route[0]].platform_line_id)} resizeMode='contain' style={Styles.logo_image} />
-                                {
-                                    props.price === null ?
-                                    null:
+                            {
+                                props.price === null ?
+                                null:
+                                <View style={Styles.price_component_view}>
+                                    <Image source={selectImage(stationInfo[props.route[0]].platform_line_id)} resizeMode='contain' style={Styles.logo_image} />
                                     <View style={{marginLeft: 7}}>
                                         <Text style={Styles.price_text}>
                                             {Math.ceil(props.price)}
@@ -86,9 +86,8 @@ const Route = (props) => {
                                             THB
                                         </Text>
                                     </View>
-                                }
-                                
-                            </View>
+                                </View>
+                            }
                         </View>
                     </Animated.View>:
                     briefly ?
@@ -108,12 +107,12 @@ const Route = (props) => {
                                 <Text style={Styles.briefly_path_th_text} numberOfLines={1}>
                                     {stationInfo[props.route[0]].station_name.th}
                                 </Text>
-                            </View>
-                            <View style={Styles.price_component_view}>
-                                <Image source={selectImage(stationInfo[props.route[0]].platform_line_id)} resizeMode='contain' style={Styles.logo_image} />
-                                {
-                                    props.price === null ?
-                                    null:
+                            </View>    
+                            {
+                                props.price === null ?
+                                null:
+                                <View style={Styles.price_component_view}>
+                                    <Image source={selectImage(stationInfo[props.route[0]].platform_line_id)} resizeMode='contain' style={Styles.logo_image} />
                                     <View style={{marginLeft: 7}}>
                                         <Text style={Styles.price_text}>
                                             {Math.ceil(props.price)}
@@ -122,9 +121,8 @@ const Route = (props) => {
                                             THB
                                         </Text>
                                     </View>
-                                }
-                                
-                            </View>
+                                </View>
+                            }
                         </View>
                         <Animated.View style={Styles.path_with_image_view} entering={props.route.length === 2 ? FadeIn:FadeInDown} exiting={props.route.length === 2 ? FadeOut : FadeOutDown}>
                             <View style={[Styles.path_image_view, {marginVertical: 1, transform:[{rotateX: '180deg'}]}]}>
@@ -193,11 +191,12 @@ const Route = (props) => {
                                     </View>
                                 ))
                             }
-                            <View style={Styles.price_component_view}>
-                                <Image source={selectImage(stationInfo[props.route[0]].platform_line_id)} resizeMode='contain' style={Styles.logo_image} />
-                                {
-                                    props.price === null ?
-                                    null:
+                            
+                            {
+                                props.price === null ?
+                                null:
+                                <View style={Styles.price_component_view}>
+                                    <Image source={selectImage(stationInfo[props.route[0]].platform_line_id)} resizeMode='contain' style={Styles.logo_image} />
                                     <View style={{marginLeft: 7}}>
                                         <Text style={Styles.price_text}>
                                             {Math.ceil(props.price)}
@@ -206,8 +205,9 @@ const Route = (props) => {
                                             THB
                                         </Text>
                                     </View>
-                                }
-                            </View>
+                                </View>
+                            }
+                           
                         </View>
                     
                     </Animated.View>
