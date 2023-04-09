@@ -56,11 +56,11 @@ const FavoriteRoute = (props) => {
               right: 0,
               paddingHorizontal: 10,
               marginHorizontal: 20,
-              backgroundColor: 'white',
+              backgroundColor: '#D3D3D3',
               borderTopLeftRadius: 10,
               borderTopRightRadius: 10,
             }}>
-              <FontAwesome name="chevron-up" size={25} color="black" onPress={()=>handleSnapPress(0)}/>
+              <FontAwesome name="chevron-up" size={25} color="white" onPress={()=>handleSnapPress(0)}/>
             </View>
           <BottomSheet 
             ref={sheetRef} 
@@ -101,7 +101,7 @@ const FavoriteRoute = (props) => {
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black'
+    backgroundColor: 'white'
   },
   header_view: {
     paddingVertical: 30,

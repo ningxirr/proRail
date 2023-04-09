@@ -201,11 +201,11 @@ const AddStopScreen = ({ route, navigation}) => {
           right: 0,
           paddingHorizontal: 10,
           marginHorizontal: 20,
-          backgroundColor: 'black',
+          backgroundColor: '#D3D3D3',
           borderTopLeftRadius: 10,
           borderTopRightRadius: 10,
         }}>
-          <FontAwesome name="chevron-up" size={25} color="white" onPress={()=>handleSnapPress(1)}/>
+          <FontAwesome name="chevron-up" size={20} color="white" onPress={()=>handleSnapPress(1)}/>
         </View>
       <BottomSheet 
         ref={bottomSheetRef} 

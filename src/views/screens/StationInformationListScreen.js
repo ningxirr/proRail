@@ -45,7 +45,7 @@ const StationInformationListScreen = () => {
               right: 0,
               paddingHorizontal: 10,
               marginHorizontal: 20,
-              backgroundColor: 'black',
+              backgroundColor: '#D3D3D3',
               borderTopLeftRadius: 10,
               borderTopRightRadius: 10,
             }}>
