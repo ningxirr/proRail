@@ -172,11 +172,11 @@ const Result = (props) => {
                           <View style = {HeaderStyles.main_header_view}>
                           </View>
                           <View style = {HeaderStyles.start_and_end_route_view}>
-                            <StartAndEndRoute stationName = {stationInfo[stationPath[0]].station_name.en} stationPlatform = {stationInfo[stationPath[0]].platform.platform} stationColor = {stationInfo[stationPath[0]].platform.color.path_color}/>
+                            <StartAndEndRoute stationName = {stationInfo[stationPath[0]].station_name.en} stationPlatform = {stationInfo[stationPath[0]].platform.platform} stationColor = {stationInfo[stationPath[0]].platform.color.path_color} stationPlatformLine={stationInfo[stationPath[0]].platform_line}/>
                             <Text style = {{color:'white', fontSize: 15, fontFamily: 'LINESeedSansApp-Regular'}}>
                               to
                             </Text>
-                            <StartAndEndRoute stationName = {stationInfo[stationPath[stationPath.length-1]].station_name.en} stationPlatform = {stationInfo[stationPath[stationPath.length-1]].platform.platform} stationColor = {stationInfo[stationPath[stationPath.length-1]].platform.color.path_color}/>
+                            <StartAndEndRoute stationName = {stationInfo[stationPath[stationPath.length-1]].station_name.en} stationPlatform = {stationInfo[stationPath[stationPath.length-1]].platform.platform} stationColor = {stationInfo[stationPath[stationPath.length-1]].platform.color.path_color} stationPlatformLine={stationInfo[stationPath[stationPath.length-1]].platform_line}/>
                           </View>
                         </View>
                       </View>
