@@ -1,6 +1,6 @@
 "use strict";
 import React, { useEffect, useState } from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, View, Animated, Text, ImageBackground } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, View, Animated, Text, ImageBackground, Platform } from 'react-native';
 import result from '../../../data/results.json';
 import HeaderBar from '../../components/headerBar'
 import getDataFromAsyncStorage from '../../function/getDataFromAsyncStorage';
@@ -278,7 +278,9 @@ function requestBackgroundLocationPermission() {
   // } catch (err) {
   //   console.warn(err);
   // }
-  Geolocation.requestAuthorization('always')
+  if(Platform.OS === 'ios'){
+    Geolocation.requestAuthorization('always')
+  }
 }
 
 const BreakingScreen = ({text}) =>{
