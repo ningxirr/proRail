@@ -1,6 +1,6 @@
 "use strict";
 import React, { useEffect, useState, useRef } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions, PermissionsAndroid, PermissionsIOS, Platform } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Dimensions, PermissionsAndroid, PermissionsIOS, Platform, AppState } from 'react-native';
 import { getDistance, findNearest } from 'geolib';
 import Geolocation from 'react-native-geolocation-service';
 import stationInfo from '../../data/station_info'
@@ -10,9 +10,12 @@ import notifee from '@notifee/react-native';
 import getDataFromAsyncStorage from '../function/getDataFromAsyncStorage';
 
 const NextStation = (props) => {
+    const appState = useRef(AppState.currentState);
+    const [appStateVisible, setAppStateVisible] = useState(appState.current);
+    
     const [stationGPS, setStationGPS] = useState(props.beginingStation === undefined ? null : props.beginingStation); //set the station code of the nearest station
     const [stationDistance, setStationDistance] = useState(false); //set the distance between the nearest station and the user
-    const [hasLocationPermission, setHasLocationPermission] = useState(false);
+    const [hasLocationPermission, setHasLocationPermission] = useState(null);
     const [canNoti, setCanNoti] = useState(null);
     const isFocused = useIsFocused();
     const filteredStation = props.isNearestOnly ? stationLocation : props.filteredStation;
@@ -30,24 +33,51 @@ const NextStation = (props) => {
         };
         fetchData();
         if(Platform.OS === 'ios'){
-            Geolocation.requestAuthorization('always')
-            .then((status) => status === 'granted' ? setHasLocationPermission(true) : setHasLocationPermission(false))
+            // Geolocation.requestAuthorization('always')
+            Geolocation.requestAuthorization('whenInUse')
+            .then((status) => 
+                {setHasLocationPermission(status) 
+                console.log(status)})
         }
         else if(Platform.OS === 'android'){
-            PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => {console.log('response'+response)
-                setHasLocationPermission(response)});
-            
+            PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(
+                response => {setHasLocationPermission(response)}
+            );
         }
+        // const subscription = AppState.addEventListener('change', nextAppState => {
+        //     if (
+        //       appState.current.match(/inactive|background/) &&
+        //       nextAppState === 'active'
+        //     ) {
+        //       console.log('App has come to the foreground!');
+        //     }
+      
+        //     appState.current = nextAppState;
+        //     setAppStateVisible(appState.current);
+        //     console.log('AppState----------------', appState.current);
+        //   });
+      
+        //   return () => {
+        //     subscription.remove();
+        //   };
     }, [props.beginingStation, props.lastStation]);
     
     useEffect(() => {
         let _watchId;
-        if (isFocused && canNoti !== null && hasLocationPermission) {
+        console.log("2nd useEffect")
+        if (true) {
           _watchId = Geolocation.watchPosition(
             position => {
+                // console.log("ning")
               let nearest = findNearest(position.coords, filteredStation);
-              console.log(_watchId)
-              let distance = getDistance(nearest, position.coords);
+            console.log(nearest)
+            // console.log("appState.current1 " + appState.current)
+            // if (appState.current == 'background') {
+            //     console.log('nnnnn')
+                // Geolocation.clearWatch(_watchId);
+            // }
+            // console.log("focus " + isFocused)
+            let distance = getDistance(nearest, position.coords);
               setStationGPS(nearest.code);
               setStationDistance(distance);
               if (stationInterchanges !== undefined && canNoti !== null && firstInterchangeStation !== null && lastInterchangeStation !== null) {
@@ -78,6 +108,7 @@ const NextStation = (props) => {
               distanceFilter: 0,
               interval: 10000,
               fastestInterval: 10000,
+              showsBackgroundLocationIndicator: true
             },
           );
         }

@@ -1,7 +1,7 @@
 "use strict";
 
-import React, { useCallback, useMemo, useRef, useEffect, useState } from 'react';
-import { SafeAreaView, StyleSheet, View } from 'react-native';
+import React, { useCallback, useMemo, useRef, useEffect, useState, Fragment } from 'react';
+import { StyleSheet, View } from 'react-native';
 import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -44,8 +44,9 @@ const Navigate = (props) => {
 
   const stationPath = props.route.params.stationPath;
   return (
-    <SafeAreaView style={Styles.container}> 
-    <GestureHandlerRootView style={{ flex: 1, backgroundColor:'white' }}>
+    <View style={{flex: 1, backgroundColor: 'black'}}>
+      <View style={{flex: 1, marginTop: 25}}>
+      <GestureHandlerRootView style={{ flex: 1, backgroundColor:'white' }}>
         <View style={{zIndex: 1}}>
           <Header 
             title="Navigate" 
@@ -101,14 +102,15 @@ const Navigate = (props) => {
             </BottomSheetScrollView>
           </BottomSheet> 
         </GestureHandlerRootView>
-    </SafeAreaView>
+      </View>
+    </View>
   );
 };
 
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: 'white',
   },
   header_view: {
     zIndex:1,
@@ -145,6 +147,7 @@ const Styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 8,
     elevation: 8,
+    backgroundColor: "white",
   }
 });
 
