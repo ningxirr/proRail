@@ -7,13 +7,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "539",
       "coor_y": "1394"
@@ -75,6 +74,31 @@
         "number": "4",
         "th": "ซอยคริสตจักร",
         "en": "Soi Krittajak"
+      },
+      {
+        "number": "5",
+        "th": "a",
+        "en": "a"
+      },
+      {
+        "number": "5",
+        "th": "a",
+        "en": "a"
+      },
+      {
+        "number": "6",
+        "th": "t",
+        "en": "t"
+      },
+      {
+        "number": "9",
+        "th": "เก้า",
+        "en": "Nine"
+      },
+      {
+        "number": "5",
+        "th": "ห้องน้ำ",
+        "en": "Toilet"
       }
     ],
     "map_img_id": "1ngM7w93_Sv8_8e_g-oHzXAVwGK2U0Dt2"
@@ -87,13 +111,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "539",
       "coor_y": "1343"
@@ -130,6 +153,11 @@
         "number": "4",
         "th": "วิทยาลัยเทคโนโลยีสยาม",
         "en": "Siam Technology College"
+      },
+      {
+        "number": "5",
+        "th": "r",
+        "en": "r"
       }
     ],
     "map_img_id": "1ErpiDNLQpymMBH2Jq9P0MPfKoW3Z8zdQ"
@@ -142,13 +170,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "539",
       "coor_y": "1309"
@@ -202,13 +229,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "539",
       "coor_y": "1256"
@@ -250,6 +276,11 @@
         "number": "4",
         "th": "สำนักงานเขตบางกอกน้อย,  วัดสุวรรณารามราชวรวิหาร",
         "en": "Bangkoknoi District Office, Watsuwannaram"
+      },
+      {
+        "number": "5",
+        "th": "a",
+        "en": "a"
       }
     ],
     "map_img_id": "1_nLKxwZeg3ZVbiy8avx8TL975UF2EwyR"
@@ -262,13 +293,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "539",
       "coor_y": "1206"
@@ -322,13 +352,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "539",
       "coor_y": "1151"
@@ -407,13 +436,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "559",
       "coor_y": "1096"
@@ -467,13 +495,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "585",
       "coor_y": "1067"
@@ -527,13 +554,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "618",
       "coor_y": "1035"
@@ -602,13 +628,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "670",
       "coor_y": "1025"
@@ -687,13 +712,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "737",
       "coor_y": "1016"
@@ -723,13 +747,18 @@
     "exit": [
       {
         "number": "1",
-        "th": "ถนนเทอดดำริ",
-        "en": "Tathra Road"
+        "th": "บริษัท ปูนซิเมนต์ไทย จำกัด (มหาชน)",
+        "en": "The Siam Cement PLC (SCG)"
       },
       {
         "number": "2",
-        "th": "ถนนรถไฟ",
-        "en": "Train Road"
+        "th": "สถานีรถไฟบางซื่อ",
+        "en": "Bang Sue Railway Station"
+      },
+      {
+        "number": "2",
+        "th": "สถานีกลางบางซื่ออ",
+        "en": "Bang Sue Grand Station"
       }
     ],
     "map_img_id": "1sDjIqMIVfscfY1AbOIZKftsGPITaBuRI"
@@ -742,13 +771,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "824",
       "coor_y": "1016"
@@ -807,13 +835,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "860",
       "coor_y": "976"
@@ -877,13 +904,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "860",
       "coor_y": "939"
@@ -952,13 +978,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "962",
       "coor_y": "928"
@@ -1022,13 +1047,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "1019",
       "coor_y": "949"
@@ -1092,13 +1116,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "1050",
       "coor_y": "980"
@@ -1157,13 +1180,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "1079",
       "coor_y": "1012"
@@ -1222,13 +1244,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "1099",
       "coor_y": "1044"
@@ -1292,13 +1313,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "1099",
       "coor_y": "1110"
@@ -1362,13 +1382,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "1099",
       "coor_y": "1169"
@@ -1432,13 +1451,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "1099",
       "coor_y": "1272"
@@ -1497,13 +1515,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "1099",
       "coor_y": "1341"
@@ -1567,13 +1584,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "1039",
       "coor_y": "1341"
@@ -1627,13 +1643,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "945",
       "coor_y": "1341"
@@ -1687,13 +1702,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "909",
       "coor_y": "1344"
@@ -1742,13 +1756,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "834",
       "coor_y": "1341"
@@ -1797,13 +1810,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "777",
       "coor_y": "1341"
@@ -1862,13 +1874,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "734",
       "coor_y": "1341"
@@ -1912,13 +1923,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "670",
       "coor_y": "1341"
@@ -1962,13 +1972,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "633",
       "coor_y": "1367"
@@ -2027,13 +2036,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "572",
       "coor_y": "1393"
@@ -2077,13 +2085,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "500",
       "coor_y": "1393"
@@ -2108,23 +2115,23 @@
     "exit": [
       {
         "number": "1",
-        "th": "โรงเรียนวัดนวลนรดิศ",
-        "en": "Wat Nuannoradit School"
+        "th": "วัดนวลนรดิศ, โรงเรียนวัดนวลนรดิศ, ซอยเพชรเกษม 19, ซอยเพชรเกษม 19/1",
+        "en": "Wat Nuannoradit, Wat Nuannoradit School, Soi Phet Kasem 19, Soi Phet Kasem 19/1"
       },
       {
         "number": "2",
-        "th": "โรงพยาบาลพญาไท 3",
-        "en": "Phayathai 3 Hospital"
+        "th": "ซอยเพชรเกษม 19/2, โรงพยาบาลพญาไท 3",
+        "en": "Soi Phet Kasem 19/2, Phayathai 3 Hospital"
       },
       {
         "number": "3",
-        "th": "โรงพยาบาลบางไผ่, ซอยเพชรเกษม 22",
-        "en": "โรงพยาบาลบางไผ่, ซอยเพชรเกษม 22"
+        "th": "ซอยเพชรเกษม 22, โรงพยาบาลบางไผ่, เสนีย์ บาซ่าร์",
+        "en": "Soi Phet Kasem 22, Bangphai Hospital, Saenee Bazaar"
       },
       {
         "number": "4",
-        "th": "โรงเรียนเผดิมศึกษา",
-        "en": "Phadermsuksa School"
+        "th": "ซอยเพชรเกษม 20, ซอยเพชรเกษม 22, โรงเรียนเผดิมศึกษา",
+        "en": "Soi Phet Kasem 20, Soi Phet Kasem 22, Phadermsuksa School"
       }
     ],
     "map_img_id": "1iQa1PqQNiBlEWxD7WROuXxPq0AyOY9x3"
@@ -2137,13 +2144,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "446",
       "coor_y": "1393"
@@ -2197,13 +2203,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "412",
       "coor_y": "1393"
@@ -2257,13 +2262,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "377",
       "coor_y": "1393"
@@ -2317,13 +2321,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "342",
       "coor_y": "1393"
@@ -2377,13 +2380,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#31609e",
         "path_color": "#325E9A",
         "path_light_color": "#859CBA"
       }
     },
-    "frequency": null,
     "platform_line_id": "3",
+    "platform_line": "Blue Line",
     "imageCoordinate": {
       "coor_x": "307",
       "coor_y": "1393"
@@ -2437,13 +2439,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#315d36",
-        "path_color": "#0A8B86",
+        "path_color": "#246B5B",
         "path_light_color": "#84C5C2"
       }
     },
-    "frequency": null,
     "platform_line_id": "2",
+    "platform_line": "Silom Line",
     "imageCoordinate": {
       "coor_x": "908",
       "coor_y": "1298"
@@ -2517,13 +2518,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#315d36",
-        "path_color": "#0A8B86",
+        "path_color": "#246B5B",
         "path_light_color": "#84C5C2"
       }
     },
-    "frequency": null,
     "platform_line_id": "2",
+    "platform_line": "Silom Line",
     "imageCoordinate": {
       "coor_x": "908",
       "coor_y": "1322"
@@ -2607,13 +2607,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#315d36",
-        "path_color": "#0A8B86",
+        "path_color": "#246B5B",
         "path_light_color": "#84C5C2"
       }
     },
-    "frequency": null,
     "platform_line_id": "2",
+    "platform_line": "Silom Line",
     "imageCoordinate": {
       "coor_x": "860",
       "coor_y": "1480"
@@ -2687,13 +2686,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#315d36",
-        "path_color": "#0A8B86",
+        "path_color": "#246B5B",
         "path_light_color": "#84C5C2"
       }
     },
-    "frequency": null,
     "platform_line_id": "2",
+    "platform_line": "Silom Line",
     "imageCoordinate": {
       "coor_x": "811",
       "coor_y": "1498"
@@ -2757,13 +2755,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#315d36",
-        "path_color": "#0A8B86",
+        "path_color": "#246B5B",
         "path_light_color": "#84C5C2"
       }
     },
-    "frequency": null,
     "platform_line_id": "2",
+    "platform_line": "Silom Line",
     "imageCoordinate": {
       "coor_x": "700",
       "coor_y": "1498"
@@ -2842,13 +2839,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#315d36",
-        "path_color": "#0A8B86",
+        "path_color": "#246B5B",
         "path_light_color": "#84C5C2"
       }
     },
-    "frequency": null,
     "platform_line_id": "2",
+    "platform_line": "Silom Line",
     "imageCoordinate": {
       "coor_x": "641",
       "coor_y": "1498"
@@ -2884,7 +2880,7 @@
       {
         "number": "1",
         "th": "วัดโพฺธิ์นิมิตสถิตมหาสีมาราม, ซอยเทอคไท 21",
-        "en": "โพธิ์นิมิตWat Pho Statue of Maha Sammaram, \"Soi Terdithi 21\""
+        "en": "Wat Pho Statue of Maha Sammaram, Soi Terdithi 21"
       },
       {
         "number": "2",
@@ -2912,13 +2908,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#315d36",
-        "path_color": "#0A8B86",
+        "path_color": "#246B5B",
         "path_light_color": "#84C5C2"
       }
     },
-    "frequency": null,
     "platform_line_id": "2",
+    "platform_line": "Silom Line",
     "imageCoordinate": {
       "coor_x": "833",
       "coor_y": "1268"
@@ -2997,13 +2992,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#315d36",
-        "path_color": "#0A8B86",
+        "path_color": "#246B5B",
         "path_light_color": "#84C5C2"
       }
     },
-    "frequency": null,
     "platform_line_id": "2",
+    "platform_line": "Silom Line",
     "imageCoordinate": {
       "coor_x": "894",
       "coor_y": "1268"
@@ -3112,13 +3106,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#315d36",
-        "path_color": "#0A8B86",
+        "path_color": "#246B5B",
         "path_light_color": "#84C5C2"
       }
     },
-    "frequency": null,
     "platform_line_id": "2",
+    "platform_line": "Silom Line",
     "imageCoordinate": {
       "coor_x": "592",
       "coor_y": "1498"
@@ -3182,13 +3175,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#315d36",
-        "path_color": "#0A8B86",
+        "path_color": "#246B5B",
         "path_light_color": "#84C5C2"
       }
     },
-    "frequency": null,
     "platform_line_id": "2",
+    "platform_line": "Silom Line",
     "imageCoordinate": {
       "coor_x": "517",
       "coor_y": "1460"
@@ -3257,13 +3249,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#315d36",
-        "path_color": "#0A8B86",
+        "path_color": "#246B5B",
         "path_light_color": "#84C5C2"
       }
     },
-    "frequency": null,
     "platform_line_id": "2",
+    "platform_line": "Silom Line",
     "imageCoordinate": {
       "coor_x": "468",
       "coor_y": "1393"
@@ -3309,12 +3300,12 @@
       {
         "number": "1",
         "th": "ถนนราชพฤกษ์, วัดประดู่บางจาก, โรงเรียนวัดประดู่บางจาก, ป้ายรถประจำทางไปบางแวก (บันไดเลื่อน)",
-        "en": "\"Ratchaphruek Road\", Wat Pradu Bang Chak, Watpradoobangjak School, Bus stop to Bang Waek"
+        "en": "Ratchaphruek Road, Wat Pradu Bang Chak, Watpradoobangjak School, Bus stop to Bang Waek"
       },
       {
         "number": "2",
         "th": "ถนนราชพฤกษ์, วัดประดู่บางจาก, โรงเรียนวัดประดู่บางจาก, ป้ายรถประจำทางไปบางแวก (บันไดเลื่อน)",
-        "en": "\"Ratchaphruek Road\", Watpradoobangjak, Watpradoobangjak School, Bus stop to Bang Waek"
+        "en": "Ratchaphruek Road, Watpradoobangjak, Watpradoobangjak School, Bus stop to Bang Waek"
       },
       {
         "number": "3",
@@ -3337,13 +3328,12 @@
     "platform": {
       "platform": "ARL",
       "color": {
-        "color": "#e85658",
         "path_color": "#761F21",
         "path_light_color": "#B73538"
       }
     },
-    "frequency": null,
     "platform_line_id": "5",
+    "platform_line": "Airport Rail Link",
     "imageCoordinate": {
       "coor_x": "1607",
       "coor_y": "1199"
@@ -3392,12 +3382,12 @@
     ],
     "exit": [
       {
-        "number": "0",
+        "number": "1",
         "th": "สนามบินสุวรรณภูมิ",
         "en": "Suvarnabhumi Airport"
       }
     ],
-    "map_img_id": "1IaVzaOgMG5eu57OzYyoDuDBAb0Gijg6l"
+    "map_img_id": "1bZ0Tq9FK8Te0l2h_AH-gZ5jkoXLu7L46"
   },
   "A2": {
     "station_name": {
@@ -3407,13 +3397,12 @@
     "platform": {
       "platform": "ARL",
       "color": {
-        "color": "#e85658",
         "path_color": "#761F21",
         "path_light_color": "#B73538"
       }
     },
-    "frequency": null,
     "platform_line_id": "5",
+    "platform_line": "Airport Rail Link",
     "imageCoordinate": {
       "coor_x": "1559",
       "coor_y": "1155"
@@ -3421,12 +3410,12 @@
     "facility": [],
     "exit": [
       {
-        "number": "0",
-        "th": "สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง (ต่อรถไฟเข้าสถาบันฯ), วัดลาดกระบัง (วัดสาม)",
-        "en": ""
+        "number": "1",
+        "th": "ถนนร่มเกล้า",
+        "en": "Romklao Road"
       }
     ],
-    "map_img_id": "1_hP5ukXTJiao73sjI7PbDJXCMzdymdnC"
+    "map_img_id": "1EsEoECDpxZJkbYeak9m-koziCaM08_76"
   },
   "A3": {
     "station_name": {
@@ -3436,13 +3425,12 @@
     "platform": {
       "platform": "ARL",
       "color": {
-        "color": "#e85658",
         "path_color": "#761F21",
         "path_light_color": "#B73538"
       }
     },
-    "frequency": null,
     "platform_line_id": "5",
+    "platform_line": "Airport Rail Link",
     "imageCoordinate": {
       "coor_x": "1502",
       "coor_y": "1155"
@@ -3450,12 +3438,22 @@
     "facility": [],
     "exit": [
       {
-        "number": "0",
-        "th": "โรงเรียนสุเหร่าทับช้าง, มัสยิดเนี้ยะมาตุ้ลอิสลาม (ทับช้างล่าง) และมัสยิดกามาลุ้ลอีมาน (ปากคลองทับช้าง), โรงเรียนสุเหร่าทับช้างคลองบน, มัสยิดนูรุ้บเอี๊ยะห์ซาน (ทับช้างคลองบน), หมู่บ้านนักกีฬาแหลมทอง",
-        "en": ""
+        "number": "1",
+        "th": "สถานีรถไฟ รฟทใ",
+        "en": "Railway Station"
+      },
+      {
+        "number": "2",
+        "th": "ถ.มอร์เตอร์เวย์",
+        "en": "Motorway Road"
+      },
+      {
+        "number": "3",
+        "th": "ทางเดินเชื่อมสกายวอร์ค มอเตอร์เวย์",
+        "en": "Skywalk to Motorway"
       }
     ],
-    "map_img_id": "1uj7xhVxATzhTEEhF-eQkbO7D3Lrl0ddo"
+    "map_img_id": "1Kf3gA85gnvI4I244qXtXqYqAux5elCVF"
   },
   "A4": {
     "station_name": {
@@ -3465,13 +3463,12 @@
     "platform": {
       "platform": "ARL",
       "color": {
-        "color": "#e85658",
         "path_color": "#761F21",
         "path_light_color": "#B73538"
       }
     },
-    "frequency": null,
     "platform_line_id": "5",
+    "platform_line": "Airport Rail Link",
     "imageCoordinate": {
       "coor_x": "1447",
       "coor_y": "1155"
@@ -3479,12 +3476,17 @@
     "facility": [],
     "exit": [
       {
-        "number": "0",
-        "th": "สถาบันเทคโนโลยีไทย-ญี่ปุ่น, มหาวิทยาลัยเกษมบัณทิต, โรงเรียนหัวหมาก, โรงพยาบาลสมิติเวช ศรีนครินทร์, โรงพยาบาลวิภาราม, ห้าง Max Value พัฒนาการ, มัสยิดดาริสลาม พัฒนาการ",
-        "en": ""
+        "number": "1",
+        "th": "ถ.ศรีนครินทร์, รถไฟฟ้าสายสีเหลือง",
+        "en": "Srinagarindra Road, The MRT Yellow Line"
+      },
+      {
+        "number": "2",
+        "th": "ถ.พัฒนาการ 53",
+        "en": "Phatthanakan 53 Road"
       }
     ],
-    "map_img_id": "17ho9j54yjC9-eWVqudhtQh0EabNWZNyY"
+    "map_img_id": "1F_WKAv2GtjKkO0AU3ekZhuGZ6l5d0K8V"
   },
   "A5": {
     "station_name": {
@@ -3494,13 +3496,12 @@
     "platform": {
       "platform": "ARL",
       "color": {
-        "color": "#e85658",
         "path_color": "#761F21",
         "path_light_color": "#B73538"
       }
     },
-    "frequency": null,
     "platform_line_id": "5",
+    "platform_line": "Airport Rail Link",
     "imageCoordinate": {
       "coor_x": "1324",
       "coor_y": "1155"
@@ -3508,12 +3509,22 @@
     "facility": [],
     "exit": [
       {
-        "number": "0",
-        "th": "ตลาดคลองตัน, มัสยิดคลองตัน, มัสยิดมูลนิธิเพื่อศูนย์กลางศาสนาอิสลามแห่งประเทศไทย, สถานีไฟฟ้าแรงสูงบางกะปิ, มหาวิทยาลัยรามคำแหง, มหาวิทยาลัยอัสสัมชัญ, สนามกีฬาหัวหมาก, อาคาร UM Tower, สถาบันยุวทัศน์แห่งประเทศไทย, โรงเรียนเทพลีลา, ห้างสรรพสินค้า เดอะมอลล์ รามคำแหง 2, ห้างสรรพสินค้า เดอะมอลล์ รามคำแหง 3",
-        "en": ""
+        "number": "1",
+        "th": "ถ.รามคำแหง, รถไฟฟ้าสายสีส้ม",
+        "en": "Ramkhamhaeng Road, The MRT Orange Line (East)"
+      },
+      {
+        "number": "2",
+        "th": "ท่าเรือรามหนึ่ง",
+        "en": "Ramnueng Pier"
+      },
+      {
+        "number": "3",
+        "th": "นาซ่า สตรีท",
+        "en": "Nasa Street"
       }
     ],
-    "map_img_id": "1tRDbYozIInTu3UX69ODIaLxWtYrmBsWv"
+    "map_img_id": "1yVLp3xhLckd9ILGoRH_08uXwweNSWYXH"
   },
   "A6": {
     "station_name": {
@@ -3523,13 +3534,12 @@
     "platform": {
       "platform": "ARL",
       "color": {
-        "color": "#e85658",
         "path_color": "#761F21",
         "path_light_color": "#B73538"
       }
     },
-    "frequency": null,
     "platform_line_id": "5",
+    "platform_line": "Airport Rail Link",
     "imageCoordinate": {
       "coor_x": "1099",
       "coor_y": "1150"
@@ -3558,12 +3568,17 @@
     ],
     "exit": [
       {
-        "number": "0",
-        "th": "ถนนรัชดาภิเษก (อโศก-ดินแดง), ถนนกำแพงเพชร 7 (เชื่อมจากถนนนิคมมักกะสัน ถนนนานาเหนือ และสี่แยกมิตรสัมพันธ์), ถนนจตุรทิศ (ถนนเลียบบึงมักกะสัน), ทางพิเศษเฉลิมมหานคร (ทางด่วนขั้นที่ 1), ทางพิเศษศรีรัช (ทางด่วนขั้นที่ 2), โครงการมักกะสันคอมเพล็กซ์",
-        "en": ""
+        "number": "1",
+        "th": "ถ.อโศก ดินแดง",
+        "en": "Asoke Dindaeng Road"
+      },
+      {
+        "number": "2",
+        "th": "สถานีรถไฟฟ้าใต้ดิน",
+        "en": "Skywalk to MRT"
       }
     ],
-    "map_img_id": "1SANI6PEtLlQvb8hLfP8k5dgnRXHvzcZn"
+    "map_img_id": "1KjHzSg5YG1JiDe4PMpcXs4D3KiS4sLyx"
   },
   "A7": {
     "station_name": {
@@ -3573,13 +3588,12 @@
     "platform": {
       "platform": "ARL",
       "color": {
-        "color": "#e85658",
         "path_color": "#761F21",
         "path_light_color": "#B73538"
       }
     },
-    "frequency": null,
     "platform_line_id": "5",
+    "platform_line": "Airport Rail Link",
     "imageCoordinate": {
       "coor_x": "962",
       "coor_y": "1155"
@@ -3587,12 +3601,27 @@
     "facility": [],
     "exit": [
       {
-        "number": "0",
-        "th": "อยู่ทั้งสองฝั่งของถนนราชปรารภ โดยจะมีทั้งฝั่งขาออกของถนน (ไปแยกสามเหลี่ยมดินแดง) และฝั่งขาเข้าของถนน (ไปแยกประตูน้ำ/ราชประสงค์/สยาม) ซึ่งเป็นฝั่งเดียวกันกับที่หยุดรถไฟราชปรารภ",
-        "en": ""
+        "number": "1",
+        "th": "ถ.ศรีอยุธยา",
+        "en": "Sri Ayuthaya Road"
+      },
+      {
+        "number": "2",
+        "th": "ศูนย์การค้าอินทรา, ประตูน้ำ",
+        "en": "Indra Shopping Mall, Pratunam Area"
+      },
+      {
+        "number": "3",
+        "th": "ซ.ราชปรารภ 12",
+        "en": "Soi Ratchaprarop 12"
+      },
+      {
+        "number": "4",
+        "th": "ซ.ราชปรารภ 8",
+        "en": "Soi Ratchaprarop 8"
       }
     ],
-    "map_img_id": "1OF9hSeYMQ_9Zk4DuP3m0os-ZbX75QPkL"
+    "map_img_id": "1GDFkK0rdkilLrk2bpzUbWwG0VstGo4Nl"
   },
   "A8": {
     "station_name": {
@@ -3602,13 +3631,12 @@
     "platform": {
       "platform": "ARL",
       "color": {
-        "color": "#e85658",
         "path_color": "#761F21",
         "path_light_color": "#B73538"
       }
     },
-    "frequency": null,
     "platform_line_id": "5",
+    "platform_line": "Airport Rail Link",
     "imageCoordinate": {
       "coor_x": "891",
       "coor_y": "1155"
@@ -3623,31 +3651,16 @@
     "exit": [
       {
         "number": "1",
-        "th": "อาคารพญาไทพลาซ่า, จุดหยุดรถไฟพญาไทฝั่งใต้, คอนโดบ้านปทุมวัน, ร้าน HEAP",
-        "en": "Phayathai Plaza Building, South Phayathai train stop, Baan Pathumwan, HEAP pub & restaurant"
+        "th": "สถานีรถไฟฟ้า BTS",
+        "en": "Skywalk to BTS"
       },
       {
         "number": "2",
-        "th": "ที่ทำการไปรษณีย์ราชเทวี, กรมปศุสัตว์, จุดหยุดรถไฟพญาไทฝั่งเหนือ, ป้ายรถประจำทางไปราชเทวี",
-        "en": "Ratchatewi Post Office, Department of Livestock Development, North Phayathai train stop, Bus stop to Ratchatewi"
-      },
-      {
-        "number": "3",
-        "th": "อาคารซี.พี.ทาวเวอร์ 3 (พญาไท), โรงเรียนสันติราษฎร์, สำนักงานคณะรรมการการอุดมศึกษา, ป้ายรถประจำทางไปสะพานเสาวนี-นางเลิ้ง",
-        "en": "C.P.Tower 3 (Phyathai), Santirat Witthayalai School, Samnakngan Khanakammakan Kan Udomsueksa, Bus stop to Saphan Saowa Ni Nangloeng"
-      },
-      {
-        "number": "4",
-        "th": "โรงแรมฟลอริดา, อาคารวรรณสรณ์, โรงแรมสยามซิตี้, โรงพยาบาลเดชา, วังสวนผักกาด",
-        "en": "Florida Hotel, Wannasorn Tower, The Sukosol Bangkok, Decha General Hospital"
-      },
-      {
-        "number": "5",
-        "th": "สถานี BTS พญาไท (รถไฟฟ้าเชื่อมท่าอากาศยานสุวรรณภูมิ) (ทางเดินเชื่อม)",
-        "en": "BTS Phayathai station"
+        "th": "ถ.พญาไท",
+        "en": "Phaya Thai Road"
       }
     ],
-    "map_img_id": "15L1W16h29ONRglr2jeQzOBUtEiMD4T5C"
+    "map_img_id": "1Nc8Va7iVFLs99_1aFSoDgvHDAkJBBbAZ"
   },
   "S7": {
     "station_name": {
@@ -3657,13 +3670,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#315d36",
-        "path_color": "#0A8B86",
+        "path_color": "#246B5B",
         "path_light_color": "#84C5C2"
       }
     },
-    "frequency": null,
     "platform_line_id": "2",
+    "platform_line": "Silom Line",
     "imageCoordinate": {
       "coor_x": "748",
       "coor_y": "1500"
@@ -3737,13 +3749,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "938",
       "coor_y": "1262"
@@ -3837,13 +3848,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "982",
       "coor_y": "1262"
@@ -3922,13 +3932,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1025",
       "coor_y": "1262"
@@ -4002,13 +4011,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1099",
       "coor_y": "1250"
@@ -4102,13 +4110,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1144",
       "coor_y": "1262"
@@ -4197,13 +4204,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1198",
       "coor_y": "1276"
@@ -4277,13 +4283,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1226",
       "coor_y": "1300"
@@ -4357,13 +4362,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1252",
       "coor_y": "1328"
@@ -4432,13 +4436,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1282",
       "coor_y": "1357"
@@ -4517,13 +4520,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "879",
       "coor_y": "1202"
@@ -4592,13 +4594,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "877",
       "coor_y": "1173"
@@ -4687,13 +4688,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "879",
       "coor_y": "1132"
@@ -4772,13 +4772,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "879",
       "coor_y": "1100"
@@ -4847,13 +4846,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "879",
       "coor_y": "1070"
@@ -4917,13 +4915,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "879",
       "coor_y": "1008"
@@ -4992,13 +4989,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "879",
       "coor_y": "977"
@@ -5087,13 +5083,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "879",
       "coor_y": "937"
@@ -5162,13 +5157,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1315",
       "coor_y": "1390"
@@ -5242,13 +5236,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1335",
       "coor_y": "1427"
@@ -5327,13 +5320,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1335",
       "coor_y": "1460"
@@ -5417,13 +5409,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1335",
       "coor_y": "1496"
@@ -5507,13 +5498,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1335",
       "coor_y": "1535"
@@ -5587,13 +5577,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1335",
       "coor_y": "1572"
@@ -5672,13 +5661,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1335",
       "coor_y": "1606"
@@ -5742,13 +5730,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1335",
       "coor_y": "1641"
@@ -5802,13 +5789,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1335",
       "coor_y": "1676"
@@ -5872,13 +5858,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1335",
       "coor_y": "1714"
@@ -5947,13 +5932,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1335",
       "coor_y": "1750"
@@ -6012,13 +5996,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1335",
       "coor_y": "1789"
@@ -6072,13 +6055,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1335",
       "coor_y": "1826"
@@ -6142,13 +6124,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1365",
       "coor_y": "1855"
@@ -6207,13 +6188,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "879",
       "coor_y": "870"
@@ -6272,13 +6252,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "879",
       "coor_y": "828"
@@ -6337,13 +6316,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "879",
       "coor_y": "790"
@@ -6397,13 +6375,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "879",
       "coor_y": "755"
@@ -6462,13 +6439,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "879",
       "coor_y": "715"
@@ -6532,13 +6508,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "879",
       "coor_y": "675"
@@ -6602,13 +6577,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "879",
       "coor_y": "634"
@@ -6662,13 +6636,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "879",
       "coor_y": "586"
@@ -6732,13 +6705,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1115",
       "coor_y": "430"
@@ -6787,13 +6759,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#683279",
         "path_color": "#800080",
         "path_light_color": "#DA5BDA"
       }
     },
-    "frequency": null,
     "platform_line_id": "4",
+    "platform_line": "Purple Line",
     "imageCoordinate": {
       "coor_x": "115",
       "coor_y": "675"
@@ -6852,13 +6823,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#683279",
         "path_color": "#800080",
         "path_light_color": "#DA5BDA"
       }
     },
-    "frequency": null,
     "platform_line_id": "4",
+    "platform_line": "Purple Line",
     "imageCoordinate": {
       "coor_x": "115",
       "coor_y": "712"
@@ -6917,13 +6887,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#683279",
         "path_color": "#800080",
         "path_light_color": "#DA5BDA"
       }
     },
-    "frequency": null,
     "platform_line_id": "4",
+    "platform_line": "Purple Line",
     "imageCoordinate": {
       "coor_x": "142",
       "coor_y": "736"
@@ -6982,13 +6951,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#683279",
         "path_color": "#800080",
         "path_light_color": "#DA5BDA"
       }
     },
-    "frequency": null,
     "platform_line_id": "4",
+    "platform_line": "Purple Line",
     "imageCoordinate": {
       "coor_x": "195",
       "coor_y": "736"
@@ -7047,13 +7015,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#683279",
         "path_color": "#800080",
         "path_light_color": "#DA5BDA"
       }
     },
-    "frequency": null,
     "platform_line_id": "4",
+    "platform_line": "Purple Line",
     "imageCoordinate": {
       "coor_x": "238",
       "coor_y": "736"
@@ -7112,13 +7079,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#683279",
         "path_color": "#800080",
         "path_light_color": "#DA5BDA"
       }
     },
-    "frequency": null,
     "platform_line_id": "4",
+    "platform_line": "Purple Line",
     "imageCoordinate": {
       "coor_x": "281",
       "coor_y": "736"
@@ -7177,13 +7143,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#683279",
         "path_color": "#800080",
         "path_light_color": "#DA5BDA"
       }
     },
-    "frequency": null,
     "platform_line_id": "4",
+    "platform_line": "Purple Line",
     "imageCoordinate": {
       "coor_x": "323",
       "coor_y": "736"
@@ -7247,13 +7212,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#683279",
         "path_color": "#800080",
         "path_light_color": "#DA5BDA"
       }
     },
-    "frequency": null,
     "platform_line_id": "4",
+    "platform_line": "Purple Line",
     "imageCoordinate": {
       "coor_x": "367",
       "coor_y": "736"
@@ -7307,13 +7271,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#683279",
         "path_color": "#800080",
         "path_light_color": "#DA5BDA"
       }
     },
-    "frequency": null,
     "platform_line_id": "4",
+    "platform_line": "Purple Line",
     "imageCoordinate": {
       "coor_x": "412",
       "coor_y": "736"
@@ -7372,13 +7335,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#683279",
         "path_color": "#800080",
         "path_light_color": "#DA5BDA"
       }
     },
-    "frequency": null,
     "platform_line_id": "4",
+    "platform_line": "Purple Line",
     "imageCoordinate": {
       "coor_x": "455",
       "coor_y": "736"
@@ -7437,13 +7399,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#683279",
         "path_color": "#800080",
         "path_light_color": "#DA5BDA"
       }
     },
-    "frequency": null,
     "platform_line_id": "4",
+    "platform_line": "Purple Line",
     "imageCoordinate": {
       "coor_x": "512",
       "coor_y": "737"
@@ -7502,13 +7463,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#683279",
         "path_color": "#800080",
         "path_light_color": "#DA5BDA"
       }
     },
-    "frequency": null,
     "platform_line_id": "4",
+    "platform_line": "Purple Line",
     "imageCoordinate": {
       "coor_x": "546",
       "coor_y": "813"
@@ -7572,13 +7532,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#683279",
         "path_color": "#800080",
         "path_light_color": "#DA5BDA"
       }
     },
-    "frequency": null,
     "platform_line_id": "4",
+    "platform_line": "Purple Line",
     "imageCoordinate": {
       "coor_x": "585",
       "coor_y": "852"
@@ -7637,13 +7596,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#683279",
         "path_color": "#800080",
         "path_light_color": "#DA5BDA"
       }
     },
-    "frequency": null,
     "platform_line_id": "4",
+    "platform_line": "Purple Line",
     "imageCoordinate": {
       "coor_x": "625",
       "coor_y": "893"
@@ -7702,13 +7660,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#683279",
         "path_color": "#800080",
         "path_light_color": "#DA5BDA"
       }
     },
-    "frequency": null,
     "platform_line_id": "4",
+    "platform_line": "Purple Line",
     "imageCoordinate": {
       "coor_x": "670",
       "coor_y": "952"
@@ -7772,13 +7729,12 @@
     "platform": {
       "platform": "MRT",
       "color": {
-        "color": "#683279",
         "path_color": "#800080",
         "path_light_color": "#DA5BDA"
       }
     },
-    "frequency": null,
     "platform_line_id": "4",
+    "platform_line": "Purple Line",
     "imageCoordinate": {
       "coor_x": "670",
       "coor_y": "1007"
@@ -7837,13 +7793,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#315d36",
-        "path_color": "#0A8B86",
+        "path_color": "#246B5B",
         "path_light_color": "#84C5C2"
       }
     },
-    "frequency": null,
     "platform_line_id": "2",
+    "platform_line": "Silom Line",
     "imageCoordinate": {
       "coor_x": "908",
       "coor_y": "1426"
@@ -7917,13 +7872,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1060",
       "coor_y": "430"
@@ -7977,13 +7931,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "984",
       "coor_y": "479"
@@ -8037,13 +7990,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "1011",
       "coor_y": "452"
@@ -8097,13 +8049,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "956",
       "coor_y": "505"
@@ -8152,13 +8103,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "932",
       "coor_y": "531"
@@ -8207,13 +8157,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#71B047",
         "path_color": "#4CAF1D",
         "path_light_color": "#B3EE78"
       }
     },
-    "frequency": null,
     "platform_line_id": "1",
+    "platform_line": "Sukhumvit Line",
     "imageCoordinate": {
       "coor_x": "907",
       "coor_y": "557"
@@ -8267,13 +8216,12 @@
     "platform": {
       "platform": "BTS",
       "color": {
-        "color": "#315d36",
-        "path_color": "#0A8B86",
+        "path_color": "#246B5B",
         "path_light_color": "#84C5C2"
       }
     },
-    "frequency": null,
     "platform_line_id": "2",
+    "platform_line": "Silom Line",
     "imageCoordinate": {
       "coor_x": "885",
       "coor_y": "1454"
@@ -8337,13 +8285,12 @@
     "platform": {
       "platform": "BTS-G",
       "color": {
-        "color": "#cc9933",
         "path_color": "#FFC433",
         "path_light_color": "#FFDB82"
       }
     },
-    "frequency": null,
     "platform_line_id": "9",
+    "platform_line": "Gold Line",
     "imageCoordinate": {
       "coor_x": "763",
       "coor_y": "1485"
@@ -8397,13 +8344,12 @@
     "platform": {
       "platform": "BTS-G",
       "color": {
-        "color": "#cc9933",
         "path_color": "#FFC433",
         "path_light_color": "#FFDB82"
       }
     },
-    "frequency": null,
     "platform_line_id": "9",
+    "platform_line": "Gold Line",
     "imageCoordinate": {
       "coor_x": "760",
       "coor_y": "1456"
@@ -8457,13 +8403,12 @@
     "platform": {
       "platform": "BTS-G",
       "color": {
-        "color": "#cc9933",
         "path_color": "#FFC433",
         "path_light_color": "#FFDB82"
       }
     },
-    "frequency": null,
     "platform_line_id": "9",
+    "platform_line": "Gold Line",
     "imageCoordinate": {
       "coor_x": "738",
       "coor_y": "1430"
@@ -8512,13 +8457,12 @@
     "platform": {
       "platform": "SRTET",
       "color": {
-        "color": "#d96a6a",
         "path_color": "#FA5558",
         "path_light_color": "#FF9B9D"
       }
     },
-    "frequency": null,
     "platform_line_id": "11",
+    "platform_line": "Light Red Line",
     "imageCoordinate": {
       "coor_x": "756",
       "coor_y": "1016"
@@ -8571,13 +8515,12 @@
     "platform": {
       "platform": "SRTET",
       "color": {
-        "color": "#d96a6a",
         "path_color": "#FA5558",
         "path_light_color": "#FF9B9D"
       }
     },
-    "frequency": null,
     "platform_line_id": "11",
+    "platform_line": "Light Red Line",
     "imageCoordinate": {
       "coor_x": "670",
       "coor_y": "970"
@@ -8635,13 +8578,12 @@
     "platform": {
       "platform": "SRTET",
       "color": {
-        "color": "#d96a6a",
         "path_color": "#FA5558",
         "path_light_color": "#FF9B9D"
       }
     },
-    "frequency": null,
     "platform_line_id": "11",
+    "platform_line": "Light Red Line",
     "imageCoordinate": {
       "coor_x": "465",
       "coor_y": "1109"
@@ -8704,13 +8646,12 @@
     "platform": {
       "platform": "SRTET",
       "color": {
-        "color": "#d96a6a",
         "path_color": "#FA5558",
         "path_light_color": "#FF9B9D"
       }
     },
-    "frequency": null,
     "platform_line_id": "11",
+    "platform_line": "Light Red Line",
     "imageCoordinate": {
       "coor_x": "381",
       "coor_y": "1129"
@@ -8773,13 +8714,12 @@
     "platform": {
       "platform": "SRTET",
       "color": {
-        "color": "#f01818",
         "path_color": "#DE0F19",
         "path_light_color": "#FF7D84"
       }
     },
-    "frequency": null,
     "platform_line_id": "10",
+    "platform_line": "Dark Red Line",
     "imageCoordinate": {
       "coor_x": "776",
       "coor_y": "1016"
@@ -8836,13 +8776,7 @@
         "en": "Toilets"
       }
     ],
-    "exit": [
-      {
-        "number": "1",
-        "th": "ทดสอบ",
-        "en": "ทดสอบ"
-      }
-    ],
+    "exit": [],
     "map_img_id": "1KBUVVjYm05bLZ16xXxZj_Xq6XfTeW1f4"
   },
   "RN03": {
@@ -8853,13 +8787,12 @@
     "platform": {
       "platform": "SRTET",
       "color": {
-        "color": "#f01818",
         "path_color": "#DE0F19",
         "path_light_color": "#FF7D84"
       }
     },
-    "frequency": null,
     "platform_line_id": "10",
+    "platform_line": "Dark Red Line",
     "imageCoordinate": {
       "coor_x": "776",
       "coor_y": "828"
@@ -8912,13 +8845,12 @@
     "platform": {
       "platform": "SRTET",
       "color": {
-        "color": "#f01818",
         "path_color": "#DE0F19",
         "path_light_color": "#FF7D84"
       }
     },
-    "frequency": null,
     "platform_line_id": "10",
+    "platform_line": "Dark Red Line",
     "imageCoordinate": {
       "coor_x": "776",
       "coor_y": "673"
@@ -8971,13 +8903,12 @@
     "platform": {
       "platform": "SRTET",
       "color": {
-        "color": "#f01818",
         "path_color": "#DE0F19",
         "path_light_color": "#FF7D84"
       }
     },
-    "frequency": null,
     "platform_line_id": "10",
+    "platform_line": "Dark Red Line",
     "imageCoordinate": {
       "coor_x": "776",
       "coor_y": "543"
@@ -9030,13 +8961,12 @@
     "platform": {
       "platform": "SRTET",
       "color": {
-        "color": "#f01818",
         "path_color": "#DE0F19",
         "path_light_color": "#FF7D84"
       }
     },
-    "frequency": null,
     "platform_line_id": "10",
+    "platform_line": "Dark Red Line",
     "imageCoordinate": {
       "coor_x": "776",
       "coor_y": "506"
@@ -9094,13 +9024,12 @@
     "platform": {
       "platform": "SRTET",
       "color": {
-        "color": "#f01818",
         "path_color": "#DE0F19",
         "path_light_color": "#FF7D84"
       }
     },
-    "frequency": null,
     "platform_line_id": "10",
+    "platform_line": "Dark Red Line",
     "imageCoordinate": {
       "coor_x": "776",
       "coor_y": "466"
@@ -9153,13 +9082,12 @@
     "platform": {
       "platform": "SRTET",
       "color": {
-        "color": "#f01818",
         "path_color": "#DE0F19",
         "path_light_color": "#FF7D84"
       }
     },
-    "frequency": null,
     "platform_line_id": "10",
+    "platform_line": "Dark Red Line",
     "imageCoordinate": {
       "coor_x": "776",
       "coor_y": "428"
@@ -9212,13 +9140,12 @@
     "platform": {
       "platform": "SRTET",
       "color": {
-        "color": "#f01818",
         "path_color": "#DE0F19",
         "path_light_color": "#FF7D84"
       }
     },
-    "frequency": null,
     "platform_line_id": "10",
+    "platform_line": "Dark Red Line",
     "imageCoordinate": {
       "coor_x": "776",
       "coor_y": "597"
@@ -9271,13 +9198,12 @@
     "platform": {
       "platform": "SRTET",
       "color": {
-        "color": "#f01818",
         "path_color": "#DE0F19",
         "path_light_color": "#FF7D84"
       }
     },
-    "frequency": null,
     "platform_line_id": "10",
+    "platform_line": "Dark Red Line",
     "imageCoordinate": {
       "coor_x": "776",
       "coor_y": "738"
@@ -9330,13 +9256,12 @@
     "platform": {
       "platform": "SRTET",
       "color": {
-        "color": "#f01818",
         "path_color": "#DE0F19",
         "path_light_color": "#FF7D84"
       }
     },
-    "frequency": null,
     "platform_line_id": "10",
+    "platform_line": "Dark Red Line",
     "imageCoordinate": {
       "coor_x": "776",
       "coor_y": "945"
