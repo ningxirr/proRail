@@ -45,23 +45,28 @@ const NextStation = (props) => {
             position => {
               let nearest = findNearest(position.coords, filteredStation);
               console.log(_watchId)
+              let distance = getDistance(nearest, position.coords);
+              setStationGPS(nearest.code);
+              setStationDistance(distance);
               if (stationInterchanges !== undefined && canNoti !== null && firstInterchangeStation !== null && lastInterchangeStation !== null) {
                     if(stationInterchanges.includes(nearest.code)){
                         if(firstInterchangeStation === nearest.code){
                             onDisplayNotification(0, nearest.code);
+                            stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
+                            props.setStationInterchanges(stationInterchanges);
                         }
-                        else if(lastInterchangeStation === nearest.code){
+                        else if(lastInterchangeStation === nearest.code && distance < 5000){
                             onDisplayNotification(2, nearest.code);
+                            stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
+                            props.setStationInterchanges(stationInterchanges);
                         }
-                        else{
+                        else if (distance < 5000){
                             onDisplayNotification(1, nearest.code);
+                            stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
+                            props.setStationInterchanges(stationInterchanges);
                         }
-                        stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
-                        props.setStationInterchanges(stationInterchanges);
                     }  
               } 
-              setStationGPS(nearest.code);
-              setStationDistance(getDistance(nearest, position.coords));
             },
             error => {
               console.log(error);
@@ -96,7 +101,9 @@ const NextStation = (props) => {
             // Display a notification
             await notifee.displayNotification({
             title: 'Navigation',
-            body: type === 0 ? `Get on the Train at ${stationInfo[code].station_name.en}` : type === 1 ? `Next Station is Interchage Station. Get on the train at ${stationInfo[code].station_name.en}.` : `You are at your destination (${stationInfo[code].station_name.en}).`,
+            body: type === 0 ? `Get on the Train at ${stationInfo[code].platform.platform}  ${stationInfo[code].station_name.en} (${stationInfo[code].platform_line}).` 
+                : type === 1 ? `Next Station is INTERCHANGE Station. Get on the train at ${stationInfo[code].platform.platform} ${stationInfo[code].station_name.en} (${stationInfo[code].platform_line}).` 
+                : `Next Station is your DESTINATION: ${stationInfo[code].platform.platform} ${stationInfo[code].station_name.en} (${stationInfo[code].platform_line}).`,
             android: {
                     channelId,
                     pressAction: {
@@ -160,6 +167,9 @@ const NextStation = (props) => {
                                     <Text style = {Styles.station_route_text}>
                                         {stationInfo[stationGPS].platform.platform}
                                     </Text>
+                                    <Text style = {[Styles.station_route_text, {fontSize: 10, fontFamily: 'LINESeedSansApp-Regular', marginTop: 2}]}>
+                                        ({stationInfo[stationGPS].platform_line})
+                                    </Text>
                                 </View>
                             </View>
                         }
@@ -182,7 +192,7 @@ const NextStation = (props) => {
 
 const Styles = StyleSheet.create({
     container: {
-        paddingVertical: 20,
+        paddingVertical: 15,
         paddingHorizontal: 30,
         borderRadius: 10,
         shadowOpacity: 0.15,
@@ -220,7 +230,7 @@ const Styles = StyleSheet.create({
     station_route_view: {
         borderRadius: 15,
         marginTop: 2,
-        paddingVertical: 5,
+        paddingVertical: 3,
         width: 150,
         alignSelf: 'flex-end'
     },
