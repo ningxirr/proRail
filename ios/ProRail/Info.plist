@@ -36,11 +36,11 @@
 		</dict>
 	</dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>This is the plist item for NSLocationAlwaysAndWhenInUseUsageDescription</string>
+	<string>proRail needs access to your location to provide real-time information.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>This is the plist item for NSLocationAlwaysUsageDescription</string>
+	<string>proRail needs access to your location.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This is the plist item for NSLocationWhenInUseUsageDescription</string>
+	<string>proRail needs access to your location to provide better results.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>
