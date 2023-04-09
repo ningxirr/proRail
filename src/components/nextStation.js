@@ -35,7 +35,9 @@ const NextStation = (props) => {
             requestForegroundLocationPermission()
         }
         else if(Platform.OS === 'android'){
-            PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => setHasLocationPermission(response));
+            PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => {console.log('response'+response)
+                setHasLocationPermission(response)});
+            
         }
     }, [props.beginingStation, props.lastStation]);
     
@@ -146,8 +148,8 @@ const NextStation = (props) => {
           return 'Next\nStation';
         }
       }
-    
-    if(hasLocationPermission === 'denied' || !isFocused){
+
+    if(hasLocationPermission !== 'granted' || !isFocused){
         return null;
     }
     return (
@@ -185,7 +187,7 @@ const NextStation = (props) => {
                                     <Text style = {Styles.station_route_text}>
                                         {stationInfo[stationGPS].platform.platform}
                                     </Text>
-                                    <Text style = {[Styles.station_route_text, {fontSize: 10, fontFamily: 'LINESeedSansApp-Regular', marginTop: 2}]}>
+                                    <Text style = {[Styles.station_route_text, {fontSize: 10, fontFamily: 'LINESeedSansApp-Regular', marginLeft: 5}]}>
                                         ({stationInfo[stationGPS].platform_line})
                                     </Text>
                                 </View>
@@ -210,7 +212,7 @@ const NextStation = (props) => {
 
 const Styles = StyleSheet.create({
     container: {
-        paddingVertical: 15,
+        paddingVertical: 20,
         paddingHorizontal: 30,
         borderRadius: 10,
         shadowOpacity: 0.15,
@@ -250,7 +252,9 @@ const Styles = StyleSheet.create({
         marginTop: 2,
         paddingVertical: 3,
         width: 150,
-        alignSelf: 'flex-end'
+        alignItems: 'baseline',
+        justifyContent: 'center',
+        flexDirection: 'row',
     },
     station_route_text:{
         color:'white', 

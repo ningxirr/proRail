@@ -43,7 +43,7 @@ const StationInfoBottomSheet = ({ clicked, searchPhrase, setClicked, memoScale, 
         enableOverDrag={false}
         style={styles.bottom_sheet}
         >
-          <View style={{marginHorizontal: '5%', marginVertical: 20, marginBottom: 25}}>
+          <View style={{marginHorizontal: '5%', marginVertical: 20}}>
             <NextStation isNearestOnly={true}/>
           </View>
             {
