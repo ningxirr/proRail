@@ -1,6 +1,6 @@
 "use strict";
 import React, { useEffect, useState } from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, View, Animated, Text, ImageBackground, Platform } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, View, Animated, Text, ImageBackground } from 'react-native';
 import result from '../../../data/results.json';
 import HeaderBar from '../../components/headerBar'
 import getDataFromAsyncStorage from '../../function/getDataFromAsyncStorage';
@@ -12,7 +12,6 @@ import RecommendedRoute from '../../components/recommendedRoute';
 import Choices from '../../components/Choices';
 import StartAndEndRoute from '../../components/startAndEndRoute';
 import stationInfo from '../../../data/station_info.json';
-import Geolocation from 'react-native-geolocation-service';
 
 const Result = (props) => {
     const [selectedPath, setSelectedPath] = useState('');
@@ -258,7 +257,6 @@ const Result = (props) => {
                         stationPath: stationPath,
                         initailScreen: props.route.params.initailScreen
                       })
-                      requestBackgroundLocationPermission()
                     }}/>
             </View>
         </SafeAreaView>
@@ -266,22 +264,6 @@ const Result = (props) => {
     )
   }
 };
-
-function requestBackgroundLocationPermission() {
-  // try {
-  //   const status = await PermissionsIOS.request('locationAlways');
-  //   if (status === 'authorized') {
-  //     console.log('Background location permission granted');
-  //   } else {
-  //     console.log('Background location permission denied');
-  //   }
-  // } catch (err) {
-  //   console.warn(err);
-  // }
-  if(Platform.OS === 'ios'){
-    Geolocation.requestAuthorization('always')
-  }
-}
 
 const BreakingScreen = ({text}) =>{
   return(
