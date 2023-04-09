@@ -88,7 +88,7 @@ const StationInfo = ({navigation, route}) => {
   const code = route.params.code
   return (
     <SafeAreaView style={Styles.container}>
-      <View style={{backgroundColor: '#fafafa'}}>
+      <View style={{backgroundColor: '#fafafa', flex: 1}}>
       <View style = {Styles.header_navbar_view}>
         <Header 
           title={stationInfo[code].station_name.en}
@@ -151,7 +151,7 @@ const StationInfo = ({navigation, route}) => {
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white'
+    backgroundColor: 'black'
   },
   image_view: {
     paddingTop: 50,

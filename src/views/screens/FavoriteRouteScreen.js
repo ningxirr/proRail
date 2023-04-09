@@ -101,7 +101,7 @@ const FavoriteRoute = (props) => {
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white'
+    backgroundColor: 'black'
   },
   header_view: {
     paddingVertical: 30,
