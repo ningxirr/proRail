@@ -151,7 +151,7 @@ const StationInfo = ({navigation, route}) => {
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black'
+    backgroundColor: 'white'
   },
   image_view: {
     paddingTop: 50,
