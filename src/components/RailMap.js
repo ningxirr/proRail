@@ -94,12 +94,11 @@ const RailMap = ({oriStationCode, destStationCode, itemsCode, cannotClicked, num
           />
         : 
         <SelectedStationModal
-        code={selectedCode}
-        num={num}
-        notSelectedStation={notSelectedStation}
-        modalVisible={modalVisible}
-        setModalVisible={setModalVisible}
-      />
+          code={selectedCode}
+          num={num}
+          notSelectedStation={notSelectedStation}
+          modalVisible={modalVisible}
+          setModalVisible={setModalVisible} />
       }
       
       <View style={{position: 'relative'}}>

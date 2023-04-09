@@ -34,7 +34,7 @@ const Route = (props) => {
             }
             else if(stationList.includes('W1') || stationList.includes('S1')){
                 if(type === 'light') return '#84C5C2';
-                else return '#0A8B86';
+                else return '#246B5B';
             }
         }
         return color;
@@ -49,7 +49,7 @@ const Route = (props) => {
                              props.haveToWalk ? 
                              <Walking 
                                 time={Math.ceil(props.walk)} 
-                                station={stationInfo[props.route[0]].station_name.en.length >= 23 ? stationInfo[props.route[0]].station_name.en.substring(0,23) + '...' : stationInfo[props.route[0]].station_name.en }/> : null
+                                station={stationInfo[props.route[0]].station_name.en}/> : null
                         }
                     </Animated.View> 
                 </View> : null
@@ -66,10 +66,10 @@ const Route = (props) => {
                                 />
                             </View>
                             <View>
-                                <Text style={Styles.briefly_path_en_text}>
-                                    {stationInfo[props.route[0]].station_name.en.length > 23 ? stationInfo[props.route[0]].station_name.en.substring(0,23) + '...' :stationInfo[props.route[0]].station_name.en}
+                                <Text style={Styles.briefly_path_en_text} numberOfLines={1}>
+                                    {stationInfo[props.route[0]].station_name.en}
                                 </Text>
-                                <Text style={Styles.briefly_path_th_text}>
+                                <Text style={Styles.briefly_path_th_text} numberOfLines={1}>
                                     {stationInfo[props.route[0]].station_name.th}
                                 </Text>
                             </View>
@@ -102,10 +102,10 @@ const Route = (props) => {
                                 />
                             </View>
                             <View>
-                                <Text style={Styles.briefly_path_en_text}>
-                                    {stationInfo[props.route[0]].station_name.en.length > 23 ? stationInfo[props.route[0]].station_name.en.substring(0,23)+'...' : stationInfo[props.route[0]].station_name.en}
+                                <Text style={Styles.briefly_path_en_text} numberOfLines={1}>
+                                    {stationInfo[props.route[0]].station_name.en}
                                 </Text>
-                                <Text style={Styles.briefly_path_th_text}>
+                                <Text style={Styles.briefly_path_th_text} numberOfLines={1}>
                                     {stationInfo[props.route[0]].station_name.th}
                                 </Text>
                             </View>
@@ -134,10 +134,10 @@ const Route = (props) => {
                                 />
                             </View>
                             <View>
-                                <Text style={Styles.briefly_path_en_text}>
-                                    {stationInfo[props.route[props.route.length-1]].station_name.en.length > 23 ? stationInfo[props.route[props.route.length-1]].station_name.en.substring(0,23)+'...' : stationInfo[props.route[props.route.length-1]].station_name.en}
+                                <Text style={Styles.briefly_path_en_text} numberOfLines={1}>
+                                    {stationInfo[props.route[props.route.length-1]].station_name.en}
                                 </Text>
-                                <Text style={Styles.briefly_path_th_text}>
+                                <Text style={Styles.briefly_path_th_text} numberOfLines={1}>
                                     {stationInfo[props.route[props.route.length-1]].station_name.th}
                                 </Text>
                             </View>
@@ -146,7 +146,7 @@ const Route = (props) => {
                         {
                             props.route.length > 2 ?
                             <Animated.View style={{alignItems: 'center'}} entering={props.route.length === 2 ? FadeIn:FadeInDown} exiting={props.route.length === 2 ? FadeOut : FadeOutDown}> 
-                                <Text style={{textAlign: 'center', fontFamily: 'LINESeedSansTHApp-Regular', fontSize: 12, color: 'black'}}>
+                                <Text style={{textAlign: 'center', fontFamily: 'LINESeedSansTHApp-Regular', fontSize: 12, color: 'grey'}}>
                                     Show More
                                 </Text> 
                             </Animated.View>:null
@@ -158,7 +158,6 @@ const Route = (props) => {
                         <View>
                             {
                                 props.route.map((station, index) => (
-                                    
                                     <View key={index} style={Styles.path_with_image_view}>
                                         {
                                             index === 0 || index === props.route.length-1 ? 
@@ -184,7 +183,7 @@ const Route = (props) => {
                                             </Animated.View>
                                         }
                                         <Animated.View entering={index===0 ? null: props.route.length === 2 ? FadeIn: FadeInUp} >
-                                            <Text style={Styles.briefly_path_en_text} numberOfLines={1} ellipsizeMode='tail' >
+                                            <Text style={Styles.briefly_path_en_text} numberOfLines={1}>
                                                 {stationInfo[station].station_name.en}
                                             </Text>
                                             <Text style={Styles.briefly_path_th_text}>

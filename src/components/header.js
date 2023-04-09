@@ -1,7 +1,7 @@
 "use strict";
 
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar, Platform, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 

@@ -7,11 +7,11 @@ const Walking = (props) => {
     return(   
         <View style={Styles.path_with_icon_view}>
             <MaterialIcons name='directions-walk' color={'black'} size={20} style={Styles.walking_icon}/>
-            <View style={Styles.description_text_view}>
-                <Text style={Styles.briefly_path_text}>
+            <View style={[Styles.description_text_view, {flex: 1}]}>
+                <Text style={[Styles.briefly_path_text]} numberOfLines={1}>
                     {props.time} mins to {'\t'}
                 </Text>
-                <Text style={[Styles.briefly_path_text, {fontFamily: 'LINESeedSansApp-Bold'}]}>
+                <Text style={[Styles.briefly_path_text, {fontFamily: 'LINESeedSansApp-Bold', flex: 0.9}]} numberOfLines={1}>
                     {props.station}
                 </Text>
             </View>
@@ -27,19 +27,19 @@ const Styles = StyleSheet.create({
         flexDirection: 'row',
         paddingVertical: 10,
         marginVertical: 5,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     walking_icon: {
         marginLeft: 30,
     },
     description_text_view:{
         marginLeft: 40,
-        flexDirection: 'row'
+        flexDirection: 'row',
     },  
     briefly_path_text: {
         fontSize: 15,
         color: 'black',
-        fontFamily: 'LINESeedSansApp-Regular',
+        fontFamily: 'LINESeedSansApp-Regular'
     },
 });
 
