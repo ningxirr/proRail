@@ -7,64 +7,45 @@ import stationInfo from '../../data/station_info'
 import stationLocation from '../../data/station_location'
 import { useIsFocused } from '@react-navigation/native';
 import notifee from '@notifee/react-native';
-
-async function onDisplayNotification(type, code) {
-    // Request permissions (required for iOS)
-    await notifee.requestPermission()
-    // Create a channel (required for Android)
-    const channelId = await notifee.createChannel({
-      id: 'default',
-      name: 'Default Channel',
-      vibrationPattern: [300, 500],
-    });
-    
-    // Display a notification
-    await notifee.displayNotification({
-      title: 'Navigation',
-      body: type === 0 ? `Get on the Train at ${stationInfo[code].station_name.en}` : type === 1 ? `Next Station is Interchage Station. Get on the train at ${stationInfo[code].station_name.en}.` : `You are at your destination (${stationInfo[code].station_name.en}).`,
-      android: {
-        channelId,
-        pressAction: {
-          id: 'default',
-        },
-        vibrationPattern: [300, 500],
-      },
-    });
-  }
-
+import getDataFromAsyncStorage from '../function/getDataFromAsyncStorage';
 
 const NextStation = (props) => {
     const [stationGPS, setStationGPS] = useState(props.beginingStation === undefined ? null : props.beginingStation); //set the station code of the nearest station
     const [stationDistance, setStationDistance] = useState(false); //set the distance between the nearest station and the user
     const [hasLocationPermission, setHasLocationPermission] = useState(false);
+    const [canNoti, setCanNoti] = useState(null);
     const isFocused = useIsFocused();
     const filteredStation = props.isNearestOnly ? stationLocation : props.filteredStation;
     let stationInterchanges = props.stationInterchanges;
-    const firstInterchangeStation = stationInterchanges !== undefined ? stationInterchanges[0] : null;
-    const lastInterchangeStation = stationInterchanges !== undefined ? stationInterchanges[stationInterchanges.length - 1] : null;
-
+    const [firstInterchangeStation, setFirstInterchangeStation] = useState(null);
+    const [lastInterchangeStation, setLastInterchangeStation] = useState(null);
     useEffect(() => {
+        const fetchData = async () => {
+            const data = await getDataFromAsyncStorage('@notification');
+            setCanNoti(data);
+            if(props.beginingStation !== undefined && props.lastStation !== undefined){
+                setFirstInterchangeStation(props.beginingStation);
+                setLastInterchangeStation(props.lastStation);
+            }
+        };
+        fetchData();
         if(Platform.OS === 'ios'){
-            //Ning may be you can add new lib for ios that can know the permission here
-            // Geolocation.requestAuthorization('always')
-            // setHasLocationPermission(true);
-            
             Geolocation.requestAuthorization('always')
             .then((status) => status === 'granted' ? setHasLocationPermission(true) : setHasLocationPermission(false))
         }
         else if(Platform.OS === 'android'){
             PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => setHasLocationPermission(response));
         }
-    }, []);
+    }, [props.beginingStation, props.lastStation]);
     
     useEffect(() => {
         let _watchId;
-        if (isFocused) {
+        if (isFocused && canNoti !== null && hasLocationPermission) {
           _watchId = Geolocation.watchPosition(
             position => {
               let nearest = findNearest(position.coords, filteredStation);
               console.log(_watchId)
-              if (stationInterchanges !== undefined) {
+              if (stationInterchanges !== undefined && canNoti !== null && firstInterchangeStation !== null && lastInterchangeStation !== null) {
                     if(stationInterchanges.includes(nearest.code)){
                         if(firstInterchangeStation === nearest.code){
                             onDisplayNotification(0, nearest.code);
@@ -76,6 +57,7 @@ const NextStation = (props) => {
                             onDisplayNotification(1, nearest.code);
                         }
                         stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
+                        props.setStationInterchanges(stationInterchanges);
                     }  
               } 
               setStationGPS(nearest.code);
@@ -98,8 +80,34 @@ const NextStation = (props) => {
             Geolocation.clearWatch(_watchId);
           }
         };
-      }, [isFocused, filteredStation]);
-    
+      }, [isFocused, filteredStation, canNoti, hasLocationPermission, firstInterchangeStation, lastInterchangeStation]); 
+
+    async function onDisplayNotification(type, code) {
+        if(canNoti){
+            // Request permissions (required for iOS)
+            await notifee.requestPermission()
+            // Create a channel (required for Android)
+            const channelId = await notifee.createChannel({
+            id: 'default',
+            name: 'Default Channel',
+            vibrationPattern: [300, 500],
+            });
+            
+            // Display a notification
+            await notifee.displayNotification({
+            title: 'Navigation',
+            body: type === 0 ? `Get on the Train at ${stationInfo[code].station_name.en}` : type === 1 ? `Next Station is Interchage Station. Get on the train at ${stationInfo[code].station_name.en}.` : `You are at your destination (${stationInfo[code].station_name.en}).`,
+            android: {
+                    channelId,
+                    pressAction: {
+                    id: 'default'
+                },
+                vibrationPattern: [300, 500],
+            },
+            });
+        }
+    }
+
     const selectNavigateText = () => {
         if (props.isNearestOnly || stationDistance > 5000){
             return 'Nearest\nStation';

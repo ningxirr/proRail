@@ -9,7 +9,6 @@ import removeDataFromAsyncStorage from './../../function/removeDataFromAsyncStor
 import Header from '../../components/header';
 import { ScrollView } from 'react-native-gesture-handler';
 
-const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
 const UserPreference = () => {
@@ -18,18 +17,11 @@ const UserPreference = () => {
     const [selectedCheapest, setSelectedCheapest] = useState(false);
     const [selectedFastest, setSelectedFastest] = useState(false);
     const [selectedLeastInterchanges, setSelectedLeastInterchanges] = useState(false);
-
-    const toggleSwitch = () => {
-        setIsEnable(previousState => !previousState)
-        removeDataFromAsyncStorage('@regist')
-    }
     
     useEffect(() => {
-        getDataFromAsyncStorage
-    },[])
-
-    useEffect(() => {
         const fetchData = async () => {
+            const data = await getDataFromAsyncStorage('@notification');
+            setIsEnable(data);
             const recommended = await getDataFromAsyncStorage('@recommended');
             setRecommended(recommended);
             if(recommended[0] === 'cheapest'){
@@ -70,7 +62,12 @@ const UserPreference = () => {
                     <Switch 
                         trackColor={{false: 'grey', true: 'black'}}
                         thumbColor={isEnabled ? '#fcfcfc' : '#fcfcfc'}
-                        onValueChange={toggleSwitch}
+                        onValueChange={(value) =>{
+                                setIsEnable(value);
+                                if(value) storeDataToAsyncStorage('@notification', 1);
+                                else storeDataToAsyncStorage('@notification', 0);
+                            }
+                        }
                         value={isEnabled}  
                         style={{ transform: [{scaleX: 1.0}, {scaleY: 1.0}]}}
                     />

@@ -23,14 +23,9 @@ const Navigate = (props) => {
   const handleSnapPress = useCallback((index) => {
     sheetRef.current?.snapToIndex(index);
   }, []);
-  /********************Geolocation********************/
-  const beginingStation = props.route.params.routes[0].path[0][0]; 
-  const [stationInterchanges, setStationInterchanges] = useState([]); //set the station code of the nearest station
 
-  // filter all station interchanges (on iOS)
-  // const interchangeStation = [... new Set([].concat(...props.route.params.routes).map(obj => obj.path).flat().map(subarray => subarray[subarray.length-1]))];
-  // console.log(interchangeStation)
-
+  //prepare all intercahge for notifcation
+  const [stationInterchanges, setStationInterchanges] = useState([]); 
   //filter for the latitude and longitude of the station in this path
   const filteredStation = stationLocation.filter(obj => [... new Set([].concat(...props.route.params.routes.map(obj => obj.path).flat()))].includes(obj.code));
   useEffect(() => {
@@ -64,8 +59,10 @@ const Navigate = (props) => {
         <View style={Styles.navigation_view}>
           <NextStation 
             isNearestOnly={false}
-            beginingStation={beginingStation}
+            beginingStation={stationPath[0]}
+            lastStation={stationPath[stationPath.length-1]}
             filteredStation={filteredStation}
+            setStationInterchanges={setStationInterchanges}
             stationInterchanges={stationInterchanges}/>
         </View>
         
