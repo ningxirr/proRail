@@ -1,14 +1,15 @@
-import {View, Image, StyleSheet, SafeAreaView, Animated, Dimensions } from 'react-native';
-import React from 'react';
+import {View, Image, StyleSheet, SafeAreaView, Animated, Dimensions, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
 import Header from '../../components/header';
 import {ScrollView} from 'react-native-gesture-handler';
-import GestureHandler, { PinchGestureHandler, State } from 'react-native-gesture-handler'
+import ImageView from "react-native-image-viewing";
 
 const screen = Dimensions.get('window');
 
 const image = require('../../../assets/images/ServiceTimetable.png');
 
 const BTSFullScheduleScreen = ({navigation}) => {
+  const [visible, setIsVisible] = useState(false);
   scale = new Animated.Value(1);
 
   onPinchEvent = Animated.event([{ nativeEvent: { scale: this.scale } }], {
@@ -30,23 +31,18 @@ const BTSFullScheduleScreen = ({navigation}) => {
         <ScrollView>
           <View style={{margin: (10)}}>
             <View style={styles.imageView}>
-              {/* <Image source={image} style={styles.fullPicture} /> */}
-              <PinchGestureHandler
-                onGestureEvent={this.onPinchEvent}
-                onHandlerStateChange={this.onPinchStateChange}
-              >
-                <Animated.Image
-                  source={image}
-                  style={[
-                    // styles.image,
-                    styles.fullPicture,
-                    {
-                      transform: [{ scale: this.scale }],
-                    },
-                  ]}
-                  resizeMode="contain"
+              <TouchableOpacity onPress={() => setIsVisible(true)}>
+                <Image 
+                  source={image} 
+                  style={styles.fullPicture} 
+                  resizeMode='cover'/>
+                <ImageView 
+                  images={[image]}
+                  imageIndex={0}
+                  visible={visible}
+                  onRequestClose={() => setIsVisible(false)}
                 />
-              </PinchGestureHandler>
+              </TouchableOpacity>
             </View>
           </View>
         </ScrollView>

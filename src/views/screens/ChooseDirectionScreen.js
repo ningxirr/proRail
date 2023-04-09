@@ -53,7 +53,7 @@ const ChooseDirectionScreen = ({navigation, route}) => {
         clicked={clicked}
         searchPhrase={searchPhrase}
         setClicked={setClicked}
-        memoScale={["10%", "44%", "65%"]}
+        memoScale={["10%", "44%", "75%"]}
         num={route.params.num}
         notSelectedStation={route.params.notSelectedStation}
       />

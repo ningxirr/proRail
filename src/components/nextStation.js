@@ -195,13 +195,13 @@ const Styles = StyleSheet.create({
         paddingVertical: 15,
         paddingHorizontal: 30,
         borderRadius: 10,
-        shadowOpacity: 0.15,
+        shadowOpacity: 0.08,
         shadowColor: "#000",
         shadowOffset: { //for ios
             width: 0,
-            height: 3,
+            height: 6,
         },
-        shadowRadius: 3, //for ios
+        shadowRadius: 6, //for ios
         elevation: 3, //for android
     },
     overall_next_station_view:{
