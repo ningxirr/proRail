@@ -30,32 +30,14 @@ const NextStation = (props) => {
         };
         fetchData();
         if(Platform.OS === 'ios'){
-            // Geolocation.requestAuthorization('always')
-            // .then((status) => status === 'granted' ? setHasLocationPermission(true) : setHasLocationPermission(false))
-            requestForegroundLocationPermission()
+            Geolocation.requestAuthorization('always')
+            .then((status) => status === 'granted' ? setHasLocationPermission(true) : setHasLocationPermission(false))
         }
         else if(Platform.OS === 'android'){
             PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => setHasLocationPermission(response));
         }
     }, [props.beginingStation, props.lastStation]);
     
-    function requestForegroundLocationPermission() {
-        // try {
-        //   const status = await PermissionsIOS.request('locationWhenInUse');
-        //   if (status === 'authorized') {
-        //     console.log('Foreground location permission granted');
-        //     setHasLocationPermission(true)
-        //   } else {
-        //     console.log('Foreground location permission denied');
-        //     setHasLocationPermission(false)
-        //   }
-        // } catch (err) {
-        //   console.warn(err);
-        // }
-        Geolocation.requestAuthorization('whenInUse')
-        .then((status) => status === 'granted' ? setHasLocationPermission(true) : setHasLocationPermission(false))
-    }
-
     useEffect(() => {
         let _watchId;
         if (isFocused && canNoti !== null && hasLocationPermission) {
