@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import getDataFromAsyncStorage from './src/function/getDataFromAsyncStorage';
 import BottomNavigator from './src/views/Navigator/BottomNavigator';
 import RegisterNavigator from './src/views/Navigator/RegisterNavigator';
+import SplashScreen from 'react-native-splash-screen'
 
 const Stack = createNativeStackNavigator();
 const ref = createNavigationContainerRef();
@@ -15,6 +16,7 @@ const App = () => {
   const [isRender, setIsRender] = useState(false);
   const [routeName, setRouteName] = useState();
   useEffect(() => {
+    SplashScreen.hide();
     const fetchData = async () => {
       const data = await getDataFromAsyncStorage('@regist');
       setIsAreadyRegist(data !== null);
