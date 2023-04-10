@@ -1,8 +1,9 @@
 "use strict";
 
 import React, { useCallback, useMemo, useRef, useState, useEffect } from 'react';
-import { SafeAreaView, StyleSheet, View,  Dimensions, ImageBackground, Text } from 'react-native';
+import { SafeAreaView, StyleSheet, View,  Dimensions, ImageBackground, Text, AppState } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
+import Geolocation from 'react-native-geolocation-service';
 import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import TotalFavorite from '../../components/totalFavorite';
@@ -10,6 +11,7 @@ import FavoriteRouteList from '../../components/favoriteRouteList';
 import getDataFromAsyncStorage from '../../function/getDataFromAsyncStorage';
 import Header from '../../components/header';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { useIsFocused } from '@react-navigation/native';
 
 const screenHeight = Dimensions.get('window').height;
 
@@ -36,6 +38,20 @@ const FavoriteRoute = (props) => {
       fetchData();
     }, [])
   );
+
+  const appState = useRef(AppState.currentState);
+  const isFocused = useIsFocused();
+  useEffect(() => {
+      const subscription = AppState.addEventListener('change', nextAppState => {
+          appState.current = nextAppState;
+          if (appState.current === 'background' && isFocused) {
+              Geolocation.stopObserving();
+          }
+        });
+        return () => {
+          subscription.remove();
+        };
+  }, []);
 
   if(!recommended){
     return (<View/>)

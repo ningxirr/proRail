@@ -1,12 +1,14 @@
 "use-strict"
 
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, View,  Dimensions, Image, Text, Switch, SafeAreaView  } from 'react-native';
+import React, { useState, useEffect, useRef } from 'react';
+import { StyleSheet, View,  Dimensions, Image, Text, Switch, SafeAreaView, AppState } from 'react-native';
 import CustomButton from './../../components/customButton';
+import Geolocation from 'react-native-geolocation-service';
 import getDataFromAsyncStorage from './../../function/getDataFromAsyncStorage';
 import storeDataToAsyncStorage from './../../function/storeDataToAsyncStorage';
 import Header from '../../components/header';
 import { ScrollView } from 'react-native-gesture-handler';
+import { useIsFocused } from '@react-navigation/native';
 import removeDataFromAsyncStorage from '../../function/removeDataFromAsyncStorage';
 
 const screenWidth = Dimensions.get('window').width;
@@ -17,6 +19,20 @@ const UserPreference = () => {
     const [selectedCheapest, setSelectedCheapest] = useState(false);
     const [selectedFastest, setSelectedFastest] = useState(false);
     const [selectedLeastInterchanges, setSelectedLeastInterchanges] = useState(false);
+    const appState = useRef(AppState.currentState);
+    const isFocused = useIsFocused();
+
+    useEffect(() => {
+        const subscription = AppState.addEventListener('change', nextAppState => {
+            appState.current = nextAppState;
+            if (appState.current === 'background' && isFocused) {
+                Geolocation.stopObserving();
+            }
+          });
+          return () => {
+            subscription.remove();
+          };
+    }, []);
     
     useEffect(() => {
         const fetchData = async () => {
