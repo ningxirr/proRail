@@ -28,7 +28,7 @@ const AboutProRailScreen = ({navigation}) => {
                         <Image source={diagnostic} style={{width: 45, height: 45}}/>
                     </View>
                     <View style={{flex: 6}}>
-                        <Text style={styles.objectiveDetailText}>Analyze & Recommend</Text>
+                        <Text style={styles.objectiveDetailText}>{'Recommend Preferred \nRoute'}</Text>
                     </View>
                     
                 </View>
