@@ -1,6 +1,6 @@
 "use strict";
 import React, { useEffect, useState } from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, View, Animated, Text, ImageBackground } from 'react-native';
+import { Image, ScrollView, StyleSheet, View, Animated, Text, ImageBackground } from 'react-native';
 import result from '../../../data/results.json';
 import HeaderBar from '../../components/headerBar'
 import getDataFromAsyncStorage from '../../function/getDataFromAsyncStorage';
@@ -12,6 +12,7 @@ import RecommendedRoute from '../../components/recommendedRoute';
 import Choices from '../../components/Choices';
 import StartAndEndRoute from '../../components/startAndEndRoute';
 import stationInfo from '../../../data/station_info.json';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Result = (props) => {
     const [selectedPath, setSelectedPath] = useState('');
@@ -99,10 +100,10 @@ const Result = (props) => {
   }, [stationPath])
 
   if(!selectedPath){
-    return (<BreakingScreen text={'Loading...'}/>)
+    return (<BreakingScreen text={'Loading'} loading={true}/>)
   }
   else if(cannotFindPath){
-    return (<BreakingScreen text={'ไม่พบเส้นทาง'}/>)
+    return (<BreakingScreen text={'PATH NOT FOUND'} loading={false}/>)
   }
   else {
     let routes, time, interchange, price;
@@ -264,10 +265,20 @@ const Result = (props) => {
   }
 };
 
-const BreakingScreen = ({text}) =>{
+const BreakingScreen = ({text, loading}) =>{
   return(
     <View style={{alignItems:'center', flex: 1, justifyContent: 'center'}}>
-      <Text style={{fontFamily: 'LINESeedSansTHApp-Bold', fontSize: 50}}>{text}</Text>
+      {
+        loading ? 
+          <View style={{paddingBottom: 10}}>
+            <Image source={require('../../../assets/images/icons/loading.png')} style={{height: 50, width: 50}} resizeMode='cover'/>
+          </View>
+          :
+          <View style={{paddingBottom: 10}}>
+            <MaterialCommunityIcons name="magnify-close" size={50} color="black" />
+          </View>
+      }
+      <Text style={{fontFamily: 'LINESeedSansTHApp-Regular', fontSize: 15, color: 'black'}}>{text}</Text>
     </View>
   )
 }
