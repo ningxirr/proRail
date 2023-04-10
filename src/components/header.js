@@ -25,7 +25,7 @@ const Header = (props) => {
           {
             props.haveCloseIcon ?
             <View>
-              <Ionicons name='md-close' color={'white'} size={25} onPress={props.function2}/>
+              <Ionicons name='md-close' color={props.closeBlackColor ? 'black' : 'white'} size={25} onPress={props.function2}/>
             </View>
             :
             <View style = {[Styles.station_route_view, { backgroundColor: props.color }]}>
