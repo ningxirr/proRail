@@ -57,9 +57,7 @@ const NextStation = (props) => {
         {
           _watchId = Geolocation.watchPosition(
             position => {
-                console.log("_watchId "+_watchId)
                 let nearest = findNearest(position.coords, filteredStation);
-                console.log(nearest)
                 let distance = getDistance(nearest, position.coords);
                 setStationGPS(nearest.code);
                 setStationDistance(distance);

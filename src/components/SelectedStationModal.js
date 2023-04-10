@@ -73,7 +73,6 @@ const SelectedStationModal = ({code, modalVisible, setModalVisible, num,  notSel
                       </Text>
                     </View>
                   </View>
-                  
                 </View>
                 <View style={{height: 1, backgroundColor: '#EBEBEB', paddingHorizontal: 8}}/>
 
@@ -159,7 +158,7 @@ const styles = StyleSheet.create({
   head_station_info_view: {
     flexDirection: 'row',
     alignItems:'center',
-    flex: 1
+    flex: 1.5
   },
   station_text: {
     marginHorizontal: 10,

@@ -29,12 +29,6 @@ const StationList = ({code, isSiamSukhumvit, num, notSelectedStation}) => {
   if(navigation.getState()?.routes[0].name !== 'StationInformationListScreen' && notSelectedStation.includes(code)){
     return (
     <View style={[styles.containerView, {backgroundColor: '#F8F8F8'}]}>
-      {/* <View style={[styles.codeView,{backgroundColor: '#D9D9D9'}]}>
-        <Text style={styles.codeText}>{code}</Text>
-      </View>
-      <View style={[styles.codeView,{backgroundColor: '#D9D9D9'}]}>
-        <Text style={styles.codeText}>{StationInfo[code].platform.platform}</Text>
-      </View> */}
       <View style={{flexDirection:'column'}}>
           <View
             style={[styles.codeView,{backgroundColor: '#D9D9D9'}]}>
@@ -95,7 +89,6 @@ const StationList = ({code, isSiamSukhumvit, num, notSelectedStation}) => {
             <Text style={styles.staNameEn}>
               {StationInfo[code].station_name.en}
             </Text>
-
             <Text style={styles.staNameTh}>
               {StationInfo[code].station_name.th}
             </Text>
@@ -135,12 +128,12 @@ const styles = StyleSheet.create({
     color: '#000000',
     fontSize: 15,
     fontFamily: 'LINESeedSansApp-Regular',
+    lineHeight: 20,
   },
   staNameTh: {
     color: '#B4B4B4',
     fontSize: 14,
     fontFamily: 'LINESeedSansTHApp-Regular',
-    lineHeight: 18,
   },
 });
 export default StationList;

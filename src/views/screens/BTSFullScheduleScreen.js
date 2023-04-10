@@ -27,7 +27,7 @@ const BTSFullScheduleScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{flex:1, backgroundColor: 'black'}}>
       <View style={{backgroundColor: '#FAFAFA', marginBottom: (65)}}>
-        <Header haveBackIcon={true} title={'BTS Full Schedule'} function={()=>navigation.goBack()}/>
+        <Header haveBackIcon={true} title={'BTS Schedule'} function={()=>navigation.goBack()}/>
         <ScrollView>
           <View style={{margin: (10)}}>
             <View style={styles.imageView}>
