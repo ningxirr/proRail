@@ -28,6 +28,11 @@ const AlertClearAllSelectedStation = ({ modalVisible, setModalVisible, setOriSta
             
             <View style={{alignItems: 'center', marginTop: 16, flexDirection: 'row', justifyContent: 'space-between'}}>
               <Pressable
+                style={styles.buttonClose}
+                onPress={() => setModalVisible(!modalVisible)}>
+                <Text style={styles.discardText}>Discard</Text>
+              </Pressable>
+              <Pressable
                 style={styles.buttonConfirm}
                 onPress={() =>{
                   setOriStation(null);
@@ -36,11 +41,6 @@ const AlertClearAllSelectedStation = ({ modalVisible, setModalVisible, setOriSta
                   setModalVisible(!modalVisible);
                 }}>
                 <Text style={styles.confirmText}>Confirm</Text>
-              </Pressable>
-              <Pressable
-                style={styles.buttonClose}
-                onPress={() => setModalVisible(!modalVisible)}>
-                <Text style={styles.discardText}>Discard</Text>
               </Pressable>
             </View>
           </View>
