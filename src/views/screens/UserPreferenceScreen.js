@@ -20,7 +20,7 @@ const UserPreference = () => {
     useEffect(() => {
         const fetchData = async () => {
             const data = await getDataFromAsyncStorage('@notification');
-            setIsEnable(data);
+            setIsEnable(data === 1 ? true : false);
             const recommended = await getDataFromAsyncStorage('@recommended');
             setRecommended(recommended);
             if(recommended[0] === 'cheapest'){
@@ -54,7 +54,7 @@ const UserPreference = () => {
                 <View style={Styles.container}>
                 <Image source={require('../../../assets/images/user.png')} style={Styles.profile_image}/>
                 <View style={Styles.name_text_view}>
-                    <Text style={{fontSize: 20, fontFamily: 'LINESeedSansApp-Regular', color: 'black'}}>Hello</Text>
+                    <Text style={{fontSize: 20, fontFamily: 'LINESeedSansApp-Regular', color: 'black', textAlign: 'center'}}>Hello</Text>
                 </View>
                 <View style={Styles.notification_view}>
                     <Text style={{fontSize: 20, fontFamily: 'LINESeedSansApp-Bold', color: 'black'}}>Alert notification</Text>
