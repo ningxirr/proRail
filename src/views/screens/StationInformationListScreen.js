@@ -58,7 +58,7 @@ const StationInformationListScreen = () => {
           clicked={clicked}
           searchPhrase={searchPhrase}
           setClicked={setClicked}
-          memoScale={["10%", "44%", "65%"]}
+          memoScale={["10%", "44%", "75%"]}
         />
         
       </View>

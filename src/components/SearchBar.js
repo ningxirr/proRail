@@ -44,14 +44,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     borderRadius: 15,
     alignItems: 'center',
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.08,
     shadowColor: "#000",
-    shadowOffset: {
+    shadowOffset: { //for ios
         width: 0,
-        height: 3,
+        height: 6,
     },
-    shadowRadius: 3, //for ios
-    elevation: 5, //for android
+    shadowRadius: 6, //for ios
+    elevation: 3, //for android
   },
   searchText: {
     fontSize: 15,

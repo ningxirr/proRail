@@ -14,7 +14,7 @@ import StationWithCode from '../../components/stationWithCode';
 
 const AddStopScreen = ({ route, navigation}) => {
   const bottomSheetRef = useRef(null);
-  const snapPoints = useMemo(() => ["10%", "45%", "65%"], []);
+  const snapPoints = useMemo(() => ["10%", "38%", "55%"], []);
   const handleSheetChange = useCallback((index) => {
     if(index === 0) setFullScreenMap(true);
     else setFullScreenMap(false);

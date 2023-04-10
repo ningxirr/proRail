@@ -17,7 +17,7 @@ const FavoriteRoute = (props) => {
   const [favoriteRoute, setFavaoriteRoute] = useState([]);
   const [recommended, setRecommended] = useState('');
   const sheetRef = useRef(null);
-  const snapPoints = useMemo(() => ["42%", "75%"], []);
+  const snapPoints = useMemo(() => ["30%", "65%"], []);
 
   const handleSheetChange = useCallback((index) => {
     console.log("handleSheetChange", index);
@@ -76,7 +76,7 @@ const FavoriteRoute = (props) => {
               { 
                   !recommended || favoriteRoute.length === 0 ? 
                     <View style={{alignItems: 'center', padding: 50}}>
-                      <Text style={{color: '#cfcfcf', fontSize: 30, fontFamily: 'LINESeedSansApp-Bold',}}>No favoite route </Text>
+                      <Text style={{color: '#cfcfcf', fontSize: 18, fontFamily: 'LINESeedSansApp-Regular',}}>No favoite route </Text>
                     </View>
                   :
                     favoriteRoute.map((route, index) => (
@@ -113,7 +113,7 @@ const Styles = StyleSheet.create({
   },
   navigation_view: {
     paddingHorizontal: 25,
-    marginTop: -30
+    marginTop: -20
   },
   header_text:{
     color: 'white',

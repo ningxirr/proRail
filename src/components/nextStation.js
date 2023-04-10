@@ -1,6 +1,6 @@
 "use strict";
 import React, { useEffect, useState, useRef } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions, PermissionsAndroid, PermissionsIOS, Platform } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Dimensions, PermissionsAndroid, PermissionsIOS, Platform, AppState } from 'react-native';
 import { getDistance, findNearest } from 'geolib';
 import Geolocation from 'react-native-geolocation-service';
 import stationInfo from '../../data/station_info'
@@ -10,6 +10,9 @@ import notifee from '@notifee/react-native';
 import getDataFromAsyncStorage from '../function/getDataFromAsyncStorage';
 
 const NextStation = (props) => {
+    const appState = useRef(AppState.currentState);
+    const [appStateVisible, setAppStateVisible] = useState(appState.current);
+    
     const [stationGPS, setStationGPS] = useState(props.beginingStation === undefined ? null : props.beginingStation); //set the station code of the nearest station
     const [stationDistance, setStationDistance] = useState(false); //set the distance between the nearest station and the user
     const [hasLocationPermission, setHasLocationPermission] = useState(null);
@@ -19,6 +22,17 @@ const NextStation = (props) => {
     let stationInterchanges = props.stationInterchanges;
     const [firstInterchangeStation, setFirstInterchangeStation] = useState(null);
     const [lastInterchangeStation, setLastInterchangeStation] = useState(null);
+
+    useEffect(() => {
+        const subscription = AppState.addEventListener('change', nextAppState => {
+            appState.current = nextAppState;
+            setAppStateVisible(appState.current);
+          });
+          return () => {
+            subscription.remove();
+          };
+    }, []);
+
     useEffect(() => {
         const fetchData = async () => {
             const data = await getDataFromAsyncStorage('@notification');
@@ -30,55 +44,57 @@ const NextStation = (props) => {
         };
         fetchData();
         if(Platform.OS === 'ios'){
-            Geolocation.requestAuthorization('always')
-            .then((status) => status === 'granted' ? setHasLocationPermission(true) : setHasLocationPermission(false))
+            Geolocation.requestAuthorization('whenInUse').then((status) => setHasLocationPermission(status) )
         }
         else if(Platform.OS === 'android'){
             PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => setHasLocationPermission(response));
         }
     }, [props.beginingStation, props.lastStation]);
-    
+
     useEffect(() => {
         let _watchId;
-        if (isFocused && canNoti !== null && hasLocationPermission === 'granted' ) 
+        if (isFocused && canNoti !== null && hasLocationPermission === 'granted') 
         {
           _watchId = Geolocation.watchPosition(
             position => {
-              let nearest = findNearest(position.coords, filteredStation);
-              console.log(_watchId)
-              let distance = getDistance(nearest, position.coords);
-              setStationGPS(nearest.code);
-              setStationDistance(distance);
-              if (stationInterchanges !== undefined && canNoti !== null && firstInterchangeStation !== null && lastInterchangeStation !== null) {
-                    if(stationInterchanges.includes(nearest.code)){
-                        if(firstInterchangeStation === nearest.code){
-                            onDisplayNotification(0, nearest.code);
-                            stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
-                            props.setStationInterchanges(stationInterchanges);
-                        }
-                        else if(lastInterchangeStation === nearest.code && distance < 5000){
-                            onDisplayNotification(2, nearest.code);
-                            stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
-                            props.setStationInterchanges(stationInterchanges);
-                        }
-                        else if (distance < 5000){
-                            onDisplayNotification(1, nearest.code);
-                            stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
-                            props.setStationInterchanges(stationInterchanges);
-                        }
-                    }  
-              } 
-            },
-            error => {
-              console.log(error);
-            },
-            {
-              enableHighAccuracy: true,
-              distanceFilter: 0,
-              interval: 10000,
-              fastestInterval: 10000,
-            },
-          );
+                if (appStateVisible === 'background') {
+                    Geolocation.clearWatch(_watchId);
+                }
+                let nearest = findNearest(position.coords, filteredStation);
+                let distance = getDistance(nearest, position.coords);
+                setStationGPS(nearest.code);
+                setStationDistance(distance);
+                if (stationInterchanges !== undefined && canNoti !== null && firstInterchangeStation !== null && lastInterchangeStation !== null) {
+                        if(stationInterchanges.includes(nearest.code)){
+                            if(firstInterchangeStation === nearest.code){
+                                onDisplayNotification(0, nearest.code);
+                                stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
+                                props.setStationInterchanges(stationInterchanges);
+                            }
+                            else if(lastInterchangeStation === nearest.code && distance < 5000){
+                                onDisplayNotification(2, nearest.code);
+                                stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
+                                props.setStationInterchanges(stationInterchanges);
+                            }
+                            else if (distance < 5000){
+                                onDisplayNotification(1, nearest.code);
+                                stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
+                                props.setStationInterchanges(stationInterchanges);
+                            }
+                        }  
+                } 
+                },
+                error => {
+                console.log(error);
+                },
+                {
+                enableHighAccuracy: true,
+                distanceFilter: 0,
+                interval: 10000,
+                fastestInterval: 10000,
+                showsBackgroundLocationIndicator: true
+                },
+            );
         }
     
         return () => {
@@ -86,7 +102,7 @@ const NextStation = (props) => {
             Geolocation.clearWatch(_watchId);
           }
         };
-      }, [isFocused, filteredStation, canNoti, hasLocationPermission, firstInterchangeStation, lastInterchangeStation]); 
+      }, [isFocused, filteredStation, canNoti, hasLocationPermission, firstInterchangeStation, lastInterchangeStation, appStateVisible]); 
 
     async function onDisplayNotification(type, code) {
         if(canNoti){
@@ -196,13 +212,13 @@ const Styles = StyleSheet.create({
         paddingVertical: 20,
         paddingHorizontal: 30,
         borderRadius: 10,
-        shadowOpacity: 0.15,
+        shadowOpacity: 0.08,
         shadowColor: "#000",
         shadowOffset: { //for ios
             width: 0,
-            height: 3,
+            height: 6,
         },
-        shadowRadius: 3, //for ios
+        shadowRadius: 6, //for ios
         elevation: 3, //for android
     },
     overall_next_station_view:{
