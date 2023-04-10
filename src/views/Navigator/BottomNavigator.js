@@ -20,24 +20,34 @@ const ButtomNavigator = (props) => {
         tabBarActiveTintColor: 'black',
       }}>
       <Tab.Screen
-        name="Home"
+        name="HomeProRailNavigator"
         component={HomeProRailNavigator}
         options={{
           tabBarIcon: ({color, size}) => (
             <Icon name="md-home-outline" color={color} size={size} />
           ),
+          tabBarLabel: "HOME",
+          tabBarLabelStyle: {
+            fontSize: 8,
+            fontFamily: 'LINESeedSansTHApp-Bold',
+          },
           tabBarStyle: { display: hide ? "none" : "flex" },
           headerShown: false,
           tabBarHideOnKeyboard: true,
         }}
       />
       <Tab.Screen
-        name="Info"
+        name="StationInfoNavigator"
         component={StationInfoNavigator}
         options={{
           tabBarIcon: ({color, size}) => (
             <Icon name="file-tray-full-outline" color={color} size={size} />
           ),
+          tabBarLabel: "INFO",
+          tabBarLabelStyle: {
+            fontSize: 8,
+            fontFamily: 'LINESeedSansTHApp-Bold',
+          },
           headerShown: false,
           statusBar: {
             backgroundColor: 'white',
@@ -58,28 +68,37 @@ const ButtomNavigator = (props) => {
           headerShown: false,
           tabBarHideOnKeyboard: true,
           tabBarLabel: ""
-          // tabBarButton: () => null,
         }}
       />
       <Tab.Screen
-        name="Favorite"
+        name="FavoriteNavigator"
         component={FavoriteNavigator}
         options={{
           tabBarIcon: ({color, size}) => (
             <FontAwesomeIcon name="star-o" color={color} size={size} />
           ),
+          tabBarLabel: "FAVORITE",
+          tabBarLabelStyle: {
+            fontSize: 8,
+            fontFamily: 'LINESeedSansTHApp-Bold',
+          },
           tabBarStyle: { display: hide ? "none" : "flex" },
           headerShown: false,
           headerTransparent: true,
         }}
       />
      <Tab.Screen
-        name="User"
+        name="UserPreferenceScreen"
         component={UserPreferenceScreen}
         options={{
           tabBarIcon: ({color, size}) => (
             <FontAwesomeIcon name="user-o" color={color} size={size} />
           ),
+          tabBarLabel: "USER",
+          tabBarLabelStyle: {
+            fontSize: 8,
+            fontFamily: 'LINESeedSansTHApp-Bold',
+          },
           headerShown: false,
           headerTransparent: true
         }}
