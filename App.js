@@ -15,7 +15,7 @@ const ref = createNavigationContainerRef();
 const App = () => {
   const [isAreadyRegist, setIsAreadyRegist] = useState(false);
   const [isRender, setIsRender] = useState(false);
-  const [routeName, setRouteName] = useState();
+  const [routeName, setRouteName] = useState(null);
   useEffect(() => {
     SplashScreen.hide();
     const fetchData = async () => {

@@ -1,5 +1,6 @@
-import {View, StyleSheet} from 'react-native';
-import React from 'react';
+import {View, StyleSheet, AppState} from 'react-native';
+import React, {useEffect, useRef} from 'react';
+import Geolocation from 'react-native-geolocation-service';
 import HomeProRailNavigator from './HomeProRailNavigator';
 import StationInfoNavigator from './StationInfoNavigator';
 import FavoriteNavigator from './FavoriteNavigator';
@@ -12,7 +13,22 @@ import UserPreferenceScreen from '../screens/UserPreferenceScreen';
 const Tab = createBottomTabNavigator();
 
 const ButtomNavigator = (props) => {
-  const hide = props.routeName === "ResultScreen" || props.routeName === "NavigateScreen";
+  const appState = useRef(AppState.currentState);
+  const routeName = props.routeName;
+  const hide = routeName === "ResultScreen" || routeName === "NavigateScreen";
+  console.log('routeName' +routeName)
+  useEffect(() => {
+    const subscription = AppState.addEventListener('change', nextAppState => {
+        appState.current = nextAppState;
+        if(appState.current === 'background' && routeName !== null && routeName !== 'NavigateScreen'){
+          Geolocation.stopObserving();
+        }
+      });
+      return () => {
+        subscription.remove();
+      };
+  }, [routeName]);
+
   return (
     <Tab.Navigator
       screenOptions={{

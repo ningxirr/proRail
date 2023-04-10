@@ -12,7 +12,6 @@ import getDataFromAsyncStorage from '../function/getDataFromAsyncStorage';
 const NextStation = (props) => {
     const appState = useRef(AppState.currentState);
     const [appStateVisible, setAppStateVisible] = useState(appState.current);
-    
     const [stationGPS, setStationGPS] = useState(props.beginingStation === undefined ? null : props.beginingStation); //set the station code of the nearest station
     const [stationDistance, setStationDistance] = useState(false); //set the distance between the nearest station and the user
     const [hasLocationPermission, setHasLocationPermission] = useState(null);
@@ -101,13 +100,7 @@ const NextStation = (props) => {
           }
         };
 
-      }, [isFocused, filteredStation, canNoti, hasLocationPermission, firstInterchangeStation, lastInterchangeStation]); 
-
-      useEffect(() => {
-        if (appStateVisible === 'background' && props.isNearestOnly && isFocused) {
-            Geolocation.stopObserving();
-        }
-      }, [appStateVisible])
+      }, [appStateVisible, isFocused, filteredStation, canNoti, hasLocationPermission, firstInterchangeStation, lastInterchangeStation]); 
 
     async function onDisplayNotification(type, code) {
         if(canNoti){
