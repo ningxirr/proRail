@@ -1,6 +1,6 @@
 "use strict";
 import React from 'react';
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 const RecommendedRoute = (props) => {
     return(

@@ -3,7 +3,6 @@ import React, {useEffect, useState} from 'react';
 import StationInfo from '../../data/station_info.json';
 import {BlurView} from '@react-native-community/blur';
 import {useNavigation} from '@react-navigation/native';
-import { color } from 'react-native-reanimated';
 
 const SelectedTypeStationModal = ({code, modalVisible, setModalVisible, num, notSelectedStation, setSelectedType, canAddStop, selectedPostition, setSelectedCodeAddStop}) => {
   const navigation = useNavigation();
@@ -154,22 +153,6 @@ const SelectedTypeStationModal = ({code, modalVisible, setModalVisible, num, not
                 </View>
 
                 <View style={styles.bottonsView}>
-                  {
-                    notSelectedStation !== undefined && notSelectedStation.includes(code) ? 
-                    null :
-                    <TouchableOpacity
-                      style={[styles.buttonView, {backgroundColor: '#000000'}]}
-                      onPress={() => {
-                        setConfirm(true);
-                        setSelectedCodeAddStop(code)
-                        setSelectedType(selected)
-                      }}>
-                      <Text style={[styles.bottonText, {color: '#FFFFFF'}]}>
-                        Confirm
-                      </Text>
-                    </TouchableOpacity> 
-                  }
-
                   <TouchableOpacity
                     style={[
                       styles.buttonView,
@@ -186,6 +169,22 @@ const SelectedTypeStationModal = ({code, modalVisible, setModalVisible, num, not
                       Discard
                     </Text>
                   </TouchableOpacity>
+
+                  {
+                    notSelectedStation !== undefined && notSelectedStation.includes(code) ? 
+                    null :
+                    <TouchableOpacity
+                      style={[styles.buttonView, {backgroundColor: '#000000'}]}
+                      onPress={() => {
+                        setConfirm(true);
+                        setSelectedCodeAddStop(code)
+                        setSelectedType(selected)
+                      }}>
+                      <Text style={[styles.bottonText, {color: '#FFFFFF'}]}>
+                        Confirm
+                      </Text>
+                    </TouchableOpacity> 
+                  }
                 </View>
               </View>
             </View>

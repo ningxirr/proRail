@@ -1,6 +1,6 @@
 "use strict";
 import React, { useEffect, useState, useRef } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions, PermissionsAndroid, PermissionsIOS, Platform, AppState } from 'react-native';
+import { StyleSheet, Text, View, PermissionsAndroid, PermissionsIOS, Platform, AppState } from 'react-native';
 import { getDistance, findNearest } from 'geolib';
 import Geolocation from 'react-native-geolocation-service';
 import stationInfo from '../../data/station_info'

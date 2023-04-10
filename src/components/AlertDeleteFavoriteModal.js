@@ -49,6 +49,11 @@ const AlertDeleteFavoriteModel = ({setFavaoriteRoute, favoriteRoute, modalVisibl
             </View>
             <View style={{alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between'}}>
               <Pressable
+                style={styles.buttonClose}
+                onPress={() => setModalVisible(!modalVisible)}>
+                <Text style={styles.discardText}>Discard</Text>
+              </Pressable>
+              <Pressable
                 style={styles.buttonConfirm}
                 onPress={() =>{
                   const remainingRoute = favoriteRoute.filter((route) => route !== stationList.join('-'));
@@ -61,11 +66,7 @@ const AlertDeleteFavoriteModel = ({setFavaoriteRoute, favoriteRoute, modalVisibl
                 }}>
                 <Text style={styles.confirmText}>Confirm</Text>
               </Pressable>
-              <Pressable
-                style={styles.buttonClose}
-                onPress={() => setModalVisible(!modalVisible)}>
-                <Text style={styles.discardText}>Discard</Text>
-              </Pressable>
+              
             </View>
           </View>
         </View>

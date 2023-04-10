@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import stationInfo from '../../data/station_info.json';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import AlertDeleteFavoriteModel from './AlertDeleteFavoriteModel';
+import AlertDeleteFavoriteModal from './AlertDeleteFavoriteModal';
 
 
 const FavoriteRouteList = (props) => {
@@ -20,7 +20,7 @@ const FavoriteRouteList = (props) => {
                 code: stationList,
                 initailScreen: 'FavoriteRouteScreen'
             })}}>
-            <AlertDeleteFavoriteModel
+            <AlertDeleteFavoriteModal
                 favoriteRoute={props.favoriteRoute}
                 setFavaoriteRoute={props.setFavaoriteRoute}
                 navigation={props.navigation}

@@ -93,20 +93,6 @@ const SelectedStationModal = ({code, modalVisible, setModalVisible, num,  notSel
                 </View>
 
                 <View style={styles.bottonsView}>
-                  {
-                    notSelectedStation !== undefined && notSelectedStation.includes(code) ? 
-                    null :
-                    <TouchableOpacity
-                      style={[styles.buttonView, {backgroundColor: '#000000'}]}
-                      onPress={() => {
-                        setConfirm(true);
-                      }}>
-                      <Text style={[styles.bottonText, {color: '#FFFFFF'}]}>
-                        Confirm
-                      </Text>
-                    </TouchableOpacity> 
-                  }
-
                   <TouchableOpacity
                     style={[
                       styles.buttonView,
@@ -123,6 +109,20 @@ const SelectedStationModal = ({code, modalVisible, setModalVisible, num,  notSel
                       Discard
                     </Text>
                   </TouchableOpacity>
+
+                  {
+                    notSelectedStation !== undefined && notSelectedStation.includes(code) ? 
+                    null :
+                    <TouchableOpacity
+                      style={[styles.buttonView, {backgroundColor: '#000000'}]}
+                      onPress={() => {
+                        setConfirm(true);
+                      }}>
+                      <Text style={[styles.bottonText, {color: '#FFFFFF'}]}>
+                        Confirm
+                      </Text>
+                    </TouchableOpacity> 
+                  }
                 </View>
               </View>
             </View>

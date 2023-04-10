@@ -1,4 +1,4 @@
-import React, {useMemo, useRef, useCallback, useEffect, useState} from 'react';
+import React, {useMemo, useCallback, useEffect, useState} from 'react';
 import {StyleSheet, View, ScrollView, TouchableOpacity, Text} from 'react-native';
 import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import platformLineStationInfo from '../../data/platform_line_station_info.json';

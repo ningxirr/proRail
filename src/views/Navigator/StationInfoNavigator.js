@@ -3,7 +3,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import StationInformationListScreen from '../screens/StationInformationListScreen'
 import StationInformationScreen from '../screens/StationInformationScreen'
 import TimeTableScreen from '../screens/TimeTableScreen'
-import Header from '../../components/header'
 
 const Stack = createNativeStackNavigator();
 
