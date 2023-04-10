@@ -1,6 +1,6 @@
 "use strict";
 import React, { useEffect, useState } from 'react';
-import { View, Text } from 'react-native';
+import { View, Image } from 'react-native';
 import { NavigationContainer, createNavigationContainerRef } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import getDataFromAsyncStorage from './src/function/getDataFromAsyncStorage';
@@ -29,11 +29,14 @@ const App = () => {
     }
   }, []);
   if(!isRender){
-    //Ning, You can put your beautiful animation "start page" here. This will come after splash page.
     return (
-    <View style={{alignItems:'center', flex: 1, justifyContent: 'center'}}>
-      <Text style={{fontFamily: 'LINESeedSansApp-Bold', fontSize: 50}}>Loading</Text>
-    </View>)
+      <View style={{flex: 1, backgroundColor: '#1A1A1A'}}>
+        <Image 
+          source={require('./assets/images/launch_screen.png')} 
+          resizeMode='contain' 
+          style={{alignSelf: 'center', flex:1, justifyContent: 'center', height: 210, width: 210}}/>
+      </View>
+    );
   }
   return (
     <NavigationContainer
