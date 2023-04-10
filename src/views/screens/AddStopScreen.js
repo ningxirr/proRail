@@ -4,7 +4,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import NextStation from '../../components/nextStation';
 import Header from '../../components/header';
 import BottomSheet, { BottomSheetFlatList } from '@gorhom/bottom-sheet';
-import AlertModel from '../../components/AlertModel';
+import AlertModal from '../../components/AlertModal';
 import AlertClearAllSelectedStation from '../../components/AlertClearAllSelectedStation';
 import RailMap from '../../components/RailMap';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -168,7 +168,7 @@ const AddStopScreen = ({ route, navigation}) => {
         <View style={styles.navigation_view}>
           <NextStation isNearestOnly={true}/>
         </View>
-        <AlertModel
+        <AlertModal
           text={alertText}
           modalVisible={modalVisible}
           setModalVisible={setModalVisible}

@@ -1,5 +1,4 @@
 import React from 'react';
-import {View, FlatList, ScrollView} from 'react-native';
 import BottomSheet, { BottomSheetFlatList } from "@gorhom/bottom-sheet";
 import StationList from './StationList';
 import StationInfo from '../../data/station_info.json';

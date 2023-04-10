@@ -1,5 +1,5 @@
 import {View, StyleSheet} from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import HomeProRailNavigator from './HomeProRailNavigator';
 import StationInfoNavigator from './StationInfoNavigator';
 import FavoriteNavigator from './FavoriteNavigator';
@@ -16,11 +16,11 @@ const ButtomNavigator = (props) => {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarShowLabel: false,
+        // tabBarShowLabel: false,
         tabBarActiveTintColor: 'black',
       }}>
       <Tab.Screen
-        name="HomeProRailNavigator"
+        name="Home"
         component={HomeProRailNavigator}
         options={{
           tabBarIcon: ({color, size}) => (
@@ -28,11 +28,11 @@ const ButtomNavigator = (props) => {
           ),
           tabBarStyle: { display: hide ? "none" : "flex" },
           headerShown: false,
-          tabBarHideOnKeyboard: true
+          tabBarHideOnKeyboard: true,
         }}
       />
       <Tab.Screen
-        name="StationInfoNavigator"
+        name="Info"
         component={StationInfoNavigator}
         options={{
           tabBarIcon: ({color, size}) => (
@@ -57,10 +57,12 @@ const ButtomNavigator = (props) => {
           tabBarStyle: { display: hide ? "none" : "flex" },
           headerShown: false,
           tabBarHideOnKeyboard: true,
+          tabBarLabel: ""
+          // tabBarButton: () => null,
         }}
       />
       <Tab.Screen
-        name="FavoriteNavigator"
+        name="Favorite"
         component={FavoriteNavigator}
         options={{
           tabBarIcon: ({color, size}) => (
@@ -68,11 +70,11 @@ const ButtomNavigator = (props) => {
           ),
           tabBarStyle: { display: hide ? "none" : "flex" },
           headerShown: false,
-          headerTransparent: true
+          headerTransparent: true,
         }}
       />
      <Tab.Screen
-        name="UserPreferenceScreen"
+        name="User"
         component={UserPreferenceScreen}
         options={{
           tabBarIcon: ({color, size}) => (

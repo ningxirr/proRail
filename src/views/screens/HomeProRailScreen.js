@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet, ImageBackground, TouchableOpacity, ScrollView, Dimensions, Image} from 'react-native';
 import NextStation from '../../components/nextStation';
-import AlertModel from '../../components/AlertModel';
+import AlertModal from '../../components/AlertModal';
 import StationWithCode from '../../components/stationWithCode'
 import Entypo from 'react-native-vector-icons/Entypo';
 
@@ -39,7 +39,7 @@ const HomeProRailScreen = ({route, navigation}) => {
 
   return (
     <View style={{backgroundColor: '#F5F5F5', flex: 1}}>
-      <AlertModel
+      <AlertModal
         text={`You need to select the origin \n and destination first.`}
         modalVisible={modalVisible}
         setModalVisible={setModalVisible}
@@ -68,6 +68,8 @@ const HomeProRailScreen = ({route, navigation}) => {
                       screen: 'AddStopScreen',
                       params: {directions: [oriStation, destStation]}
                     });
+                    setOriStation(null)
+                    setDestStation(null)
                   }}
                 >
                   <Text style={styles.add_stop_text}>Add Stop</Text>

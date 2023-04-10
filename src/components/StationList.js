@@ -8,7 +8,7 @@ const StationList = ({code, isSiamSukhumvit, num, notSelectedStation}) => {
   const navigation = useNavigation();
   function chooseScreenNameToNavigate() {
     const routes = navigation.getState()?.routes;
-    console.log(routes)
+    // console.log(routes)
     if (routes[0].name == 'StationInformationListScreen') {
       // EachStationInfoScreen
       return 'StationInformationScreen';

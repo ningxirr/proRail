@@ -25,15 +25,7 @@ const RegisterNavigator = () => {
             options={{
               headerShown: false
             }}
-          /> 
-        {/* <Stack.Screen 
-            name="Regist" 
-            component={Regist} 
-            header
-            options={{
-            headerShown: false
-            }}
-            /> */}
+          />
         <Stack.Screen 
             name="Choose" 
             component={Choose} 
