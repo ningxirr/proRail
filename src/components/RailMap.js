@@ -12,7 +12,7 @@ const destMarkPic = require('../../assets/images/oridestMark.png');
 const stopMarkPic = require('../../assets/images/stopMark.png');
 const {width} = Dimensions.get('window');
 
-const RailMap = ({oriStationCode, destStationCode, itemsCode, cannotClicked, num, notSelectedStation, fromAddStop, setSelectedType,canAddStop,selectedPostition, setSelectedCodeAddStop}) => {
+const RailMap = ({oriStationCode, destStationCode, itemsCode, cannotClicked, num, notSelectedStation, fromAddStop, setSelectedType, canAddStop, selectedPostition, setSelectedCodeAddStop}) => {
   const ratioTransform = 3.30527928;
   const [scale, setScale] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
