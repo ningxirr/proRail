@@ -89,6 +89,7 @@ const NextStation = (props) => {
                 distanceFilter: 0,
                 interval: 10000,
                 fastestInterval: 10000,
+                useSignificantChanges: true,
                 showsBackgroundLocationIndicator: true
                 },
             );
@@ -104,7 +105,6 @@ const NextStation = (props) => {
 
       useEffect(() => {
         if (appStateVisible === 'background' && props.isNearestOnly && isFocused) {
-            console.log("ning ")
             Geolocation.stopObserving();
         }
       }, [appStateVisible])
@@ -152,7 +152,34 @@ const NextStation = (props) => {
       }
 
     if(hasLocationPermission !== 'granted' || !isFocused){
-        return null;
+        return (
+            <View>
+            <View style = {[Styles.container, {backgroundColor: 'white'}]}>
+                <View style={Styles.overall_next_station_view}>
+                    <View style = {Styles.next_station_view}>
+                        <Text style = {Styles.next_station_text}>
+                            Nearest{'\n'}Station
+                        </Text>
+                    </View>
+                    <View style = {Styles.station_name_view}>
+                        <View>
+                            <View style={{marginBottom: 5}}>
+                                <Text style = {[Styles.station_name_text, {color:'grey'}]}>
+                                    {' '}
+                                </Text>
+                            </View>
+                            
+                            <View style = {[Styles.station_route_view, { backgroundColor: '#cfcfcf' }]}>
+                                <Text style = {Styles.station_route_text}>
+                                    {' '}
+                                </Text>
+                            </View>
+                        </View>
+                    </View>
+                </View> 
+            </View>
+        </View>
+        )
     }
     return (
         <View>
