@@ -285,6 +285,7 @@ const ChooseScreen = ({navigation}) => {
             function={()=> {
               storeDataToAsyncStorage('@recommended', recommended);
               storeDataToAsyncStorage('@regist', '1');
+              storeDataToAsyncStorage('@notification', 1);
               navigation.navigate('BottomNavigator')
             }}/>
         </View>
