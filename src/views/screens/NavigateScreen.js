@@ -64,7 +64,8 @@ const Navigate = (props) => {
             lastStation={stationPath[stationPath.length-1]}
             filteredStation={filteredStation}
             setStationInterchanges={setStationInterchanges}
-            stationInterchanges={stationInterchanges}/>
+            stationInterchanges={stationInterchanges}
+            watchLocation={true}/>
         </View>
         
         <View style={{marginTop: fullScreenMap ? 0 : -80 }}>

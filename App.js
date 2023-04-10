@@ -7,6 +7,7 @@ import getDataFromAsyncStorage from './src/function/getDataFromAsyncStorage';
 import BottomNavigator from './src/views/Navigator/BottomNavigator';
 import RegisterNavigator from './src/views/Navigator/RegisterNavigator';
 import SplashScreen from 'react-native-splash-screen'
+import { enableScreens } from 'react-native-screens';
 
 const Stack = createNativeStackNavigator();
 const ref = createNavigationContainerRef();
@@ -23,6 +24,9 @@ const App = () => {
       setIsRender(true);
     };
     fetchData();
+    if (Platform.OS === "ios") {
+      enableScreens(false);
+    }
   }, []);
   if(!isRender){
     //Ning, You can put your beautiful animation "start page" here. This will come after splash page.

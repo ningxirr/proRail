@@ -53,14 +53,13 @@ const NextStation = (props) => {
 
     useEffect(() => {
         let _watchId;
-        if (isFocused && canNoti !== null && hasLocationPermission === 'granted') 
+        if (isFocused && canNoti !== null && hasLocationPermission === 'granted' && appStateVisible !== 'background') 
         {
           _watchId = Geolocation.watchPosition(
             position => {
-                if (appStateVisible === 'background') {
-                    Geolocation.clearWatch(_watchId);
-                }
+                console.log("_watchId "+_watchId)
                 let nearest = findNearest(position.coords, filteredStation);
+                console.log(nearest)
                 let distance = getDistance(nearest, position.coords);
                 setStationGPS(nearest.code);
                 setStationDistance(distance);
@@ -96,13 +95,21 @@ const NextStation = (props) => {
                 },
             );
         }
-    
+        
         return () => {
           if (_watchId) {
             Geolocation.clearWatch(_watchId);
           }
         };
-      }, [isFocused, filteredStation, canNoti, hasLocationPermission, firstInterchangeStation, lastInterchangeStation, appStateVisible]); 
+
+      }, [isFocused, filteredStation, canNoti, hasLocationPermission, firstInterchangeStation, lastInterchangeStation]); 
+
+      useEffect(() => {
+        if (appStateVisible === 'background' && props.isNearestOnly && isFocused) {
+            console.log("ning ")
+            Geolocation.stopObserving();
+        }
+      }, [appStateVisible])
 
     async function onDisplayNotification(type, code) {
         if(canNoti){
