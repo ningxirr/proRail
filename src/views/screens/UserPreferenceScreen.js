@@ -7,6 +7,7 @@ import getDataFromAsyncStorage from './../../function/getDataFromAsyncStorage';
 import storeDataToAsyncStorage from './../../function/storeDataToAsyncStorage';
 import Header from '../../components/header';
 import { ScrollView } from 'react-native-gesture-handler';
+import removeDataFromAsyncStorage from '../../function/removeDataFromAsyncStorage';
 
 const screenWidth = Dimensions.get('window').width;
 
@@ -50,7 +51,16 @@ const UserPreference = () => {
         <SafeAreaView style={{flex:1, backgroundColor: 'black'}}>
             <ScrollView style={{backgroundColor: 'white'}} bounces={false}>
                 <View style={{backgroundColor:'white', flex:1}}>
-                <Header title="Preference"/>
+                <Header 
+                    title="Preference" 
+                    haveCloseIcon={true} 
+                    closeBlackColor={true} 
+                    function2={()=>{ 
+                        removeDataFromAsyncStorage('@notification');
+                        removeDataFromAsyncStorage('@recommended');
+                        removeDataFromAsyncStorage('@favorite');
+                        removeDataFromAsyncStorage('@regist');
+                    }}/>
                 <View style={Styles.container}>
                 <Image source={require('../../../assets/images/user.png')} style={Styles.profile_image}/>
                 <View style={Styles.name_text_view}>

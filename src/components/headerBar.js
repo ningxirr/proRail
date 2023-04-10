@@ -10,11 +10,9 @@ const HeaderBar = (props) => {
                 <TouchableOpacity style={{width: 25}} onPress={props.backIconFunction}>
                   <Icon name='angle-left' color={'white'} size={25} />
                 </TouchableOpacity>
-                {
-                  props.isFavorite ?
-                    <Icon name='star' color={'#FF5733'} size={20} onPress={props.starIconFunction}/>:
-                    <Icon name='star-o' color={'white'} size={20} onPress={props.starIconFunction}/>
-                }
+                <TouchableOpacity style={{width: 30, alignItems: 'center'}} onPress={props.starIconFunction}>
+                  <Icon name={props.isFavorite ? 'star': 'star-o' } color={props.isFavorite ? '#FF5733' : 'white'} size={20} />
+                </TouchableOpacity> 
             </View>
             <View style={Styles.header_bar_view}>
                 <Text style={Styles.header_bar_text}>

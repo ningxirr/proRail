@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
     fontSize: 36,
     flex: 1,
     color: 'white',
-    marginTop: 25,
+    marginTop: 40,
     padding: 20,
     fontFamily: 'LINESeedSansApp-Bold',
   },
@@ -253,7 +253,7 @@ const styles = StyleSheet.create({
     height: 40,
   },
   image: {
-    height: height*0.6,
+    height: height*0.65,
     width: width,
   },
   choseStText: {

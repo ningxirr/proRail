@@ -20,18 +20,6 @@ const AllStationsInfoList = () => {
   }, [platformTab]);
 
   return (
-    // <BottomSheetScrollView>
-    //       {platformsData[platformTab].platform_line[platformLineTab] ==
-    //       undefined
-    //         ? platformsData[platformTab].platform_line[0].stations.map(
-    //             (code, index) => <StationList key={index} code={code} />,
-    //           )
-    //         : platformsData[platformTab].platform_line[
-    //             platformLineTab
-    //           ].stations.map((code, index) => (
-    //             <StationList key={index} code={code} />
-    //           ))}
-    // </BottomSheetScrollView>
     <View>
       {/* shows platform */}
       <ScrollView

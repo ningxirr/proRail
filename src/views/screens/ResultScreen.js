@@ -25,9 +25,6 @@ const Result = (props) => {
     const [fastestPath, setFastestPath] = useState(null);
     const [leastInterchangesPath, setLeastInterchangesPath] = useState(null);
 
-    // const stationPath = ['BL37', 'RW06'];
-    // const stationPath = ['BL37', 'RW06', 'BL37'];
-    // const stationPath = ['S3','E11']
   let stationPath = props.route.params.code
 
   const backgroundInterpolate = animationValue.interpolate({

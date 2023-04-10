@@ -159,7 +159,6 @@ const AddStopScreen = ({ route, navigation}) => {
     );
   }
   return (
-    
     <SafeAreaView style={{flex: 1, backgroundColor:'black'}}>
       <GestureHandlerRootView style={{flex: 1}}> 
       <View style={{backgroundColor: 'white', flex: 1}}>
