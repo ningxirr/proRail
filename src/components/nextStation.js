@@ -123,7 +123,7 @@ const NextStation = (props) => {
             // Display a notification
             await notifee.displayNotification({
             title: 'Navigation',
-            body: type === 0 ? `Get on the Train at ${stationInfo[code].platform.platform}  ${stationInfo[code].station_name.en} (${stationInfo[code].platform_line}).` 
+            body: type === 0 ? `Get on the Train at ${stationInfo[code].platform.platform} ${stationInfo[code].station_name.en} (${stationInfo[code].platform_line}).` 
                 : type === 1 ? `Next Station is INTERCHANGE Station. Get on the train at ${stationInfo[code].platform.platform} ${stationInfo[code].station_name.en} (${stationInfo[code].platform_line}).` 
                 : `Next Station is your DESTINATION: ${stationInfo[code].platform.platform} ${stationInfo[code].station_name.en} (${stationInfo[code].platform_line}).`,
             android: {
@@ -255,6 +255,7 @@ const Styles = StyleSheet.create({
         paddingVertical: 3,
         width: 150,
         alignItems: 'baseline',
+        alignSelf: 'flex-end',
         justifyContent: 'center',
         flexDirection: 'row',
     },
