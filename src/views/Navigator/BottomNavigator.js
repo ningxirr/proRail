@@ -16,7 +16,6 @@ const ButtomNavigator = (props) => {
   const appState = useRef(AppState.currentState);
   const routeName = props.routeName;
   const hide = routeName === "ResultScreen" || routeName === "NavigateScreen";
-  console.log('routeName' +routeName)
   useEffect(() => {
     const subscription = AppState.addEventListener('change', nextAppState => {
         appState.current = nextAppState;
