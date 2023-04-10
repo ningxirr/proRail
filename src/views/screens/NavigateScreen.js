@@ -108,7 +108,7 @@ const Navigate = (props) => {
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: 'white',
   },
   header_view: {
     zIndex:1,

@@ -132,9 +132,9 @@ const Result = (props) => {
     }
     return (
       //Ning may be we cannot use that margintop since margintop set that night is not look nice in android
-      <SafeAreaView style={{flex: 1 }} >
+      <SafeAreaView style={{flex: 1 }}>
         <SafeAreaView style={{ position: 'absolute', top: 0, bottom: 0, left: 0, right: 0, width: '100%'}}>
-        <Animated.View style={[Styles.nav_view, backgroundStyle]}>
+          <Animated.View style={[Styles.nav_view, backgroundStyle]}>
               <HeaderBar 
                 selectedPath={selectedPath}
                 resultPathLength={selectedPath === 'cheapest' ? cheapestPath.resultPath.length : selectedPath === 'fastest' ? fastestPath.resultPath.length : leastInterchangesPath.resultPath.length}

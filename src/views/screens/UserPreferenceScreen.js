@@ -5,7 +5,6 @@ import { StyleSheet, View,  Dimensions, Image, Text, Switch, SafeAreaView  } fro
 import CustomButton from './../../components/customButton';
 import getDataFromAsyncStorage from './../../function/getDataFromAsyncStorage';
 import storeDataToAsyncStorage from './../../function/storeDataToAsyncStorage';
-import removeDataFromAsyncStorage from './../../function/removeDataFromAsyncStorage';
 import Header from '../../components/header';
 import { ScrollView } from 'react-native-gesture-handler';
 
