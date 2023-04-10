@@ -12,7 +12,7 @@ import getDataFromAsyncStorage from '../function/getDataFromAsyncStorage';
 const NextStation = (props) => {
     const [stationGPS, setStationGPS] = useState(props.beginingStation === undefined ? null : props.beginingStation); //set the station code of the nearest station
     const [stationDistance, setStationDistance] = useState(false); //set the distance between the nearest station and the user
-    const [hasLocationPermission, setHasLocationPermission] = useState(false);
+    const [hasLocationPermission, setHasLocationPermission] = useState(null);
     const [canNoti, setCanNoti] = useState(null);
     const isFocused = useIsFocused();
     const filteredStation = props.isNearestOnly ? stationLocation : props.filteredStation;
@@ -34,15 +34,14 @@ const NextStation = (props) => {
             .then((status) => status === 'granted' ? setHasLocationPermission(true) : setHasLocationPermission(false))
         }
         else if(Platform.OS === 'android'){
-            PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => {console.log('response'+response)
-                setHasLocationPermission(response)});
-            
+            PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => setHasLocationPermission(response));
         }
     }, [props.beginingStation, props.lastStation]);
     
     useEffect(() => {
         let _watchId;
-        if (isFocused && canNoti !== null && hasLocationPermission) {
+        if (isFocused && canNoti !== null && hasLocationPermission === 'granted' ) 
+        {
           _watchId = Geolocation.watchPosition(
             position => {
               let nearest = findNearest(position.coords, filteredStation);
