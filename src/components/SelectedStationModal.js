@@ -82,7 +82,7 @@ const SelectedStationModal = ({code, modalVisible, setModalVisible, num,  notSel
                       navigation.getState()?.routes[0].name === 'StationInformationListScreen' ?
                       'View This Station Information' : 
                       notSelectedStation !== undefined && notSelectedStation.includes(code) ? 
-                      'You cannot select the same station consecutively in your route.' :
+                      'You cannot select the same station \nconsecutively in your route.' :
                       navigation.getState()?.routes[0].name === 'AddStopScreen' ?
                       num === 0 ? 'Select this station as your origin.':
                       num === 4 ? 'Select this station as your destination.':
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
   modalView: {
     padding: 8,
     backgroundColor: 'white',
-    height: 180,
+    height: 200,
     width: 325,
     borderRadius: 10,
     shadowColor: '#000',
