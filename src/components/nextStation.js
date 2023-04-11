@@ -16,7 +16,7 @@ const NextStation = (props) => {
     const appState = useRef(AppState.currentState);
     const [appStateVisible, setAppStateVisible] = useState(appState.current);
     const [stationGPS, setStationGPS] = useState(props.beginingStation === undefined ? null : props.beginingStation); //set the station code of the nearest station
-    const [stationDistance, setStationDistance] = useState(false); //set the distance between the nearest station and the user
+    const [stationDistance, setStationDistance] = useState(null); //set the distance between the nearest station and the user
     const [hasLocationPermission, setHasLocationPermission] = useState(null);
     const [canNoti, setCanNoti] = useState(null);
     const isFocused = useIsFocused();
@@ -24,8 +24,11 @@ const NextStation = (props) => {
     let stationInterchanges = props.stationInterchanges;
     const [firstInterchangeStation, setFirstInterchangeStation] = useState(null);
     const [lastInterchangeStation, setLastInterchangeStation] = useState(null);
+    const [notiStation, setNotiStation] = useState(null);
+    const [navigateText, setNavigateText] = useState('Nearest\nStation');
+    const [inRoute, setInRoute] = useState(false);
 
-    useEffect(() => {
+    useEffect(() => { 
         const subscription = AppState.addEventListener('change', nextAppState => {
             appState.current = nextAppState;
             setAppStateVisible(appState.current);
@@ -39,9 +42,17 @@ const NextStation = (props) => {
         const fetchData = async () => {
             const data = await getDataFromAsyncStorage('@notification');
             setCanNoti(data);
-            if(props.beginingStation !== undefined && props.lastStation !== undefined){
+            if(props.beginingStation !== undefined 
+                && props.lastStation !== undefined 
+                && stationInterchanges !== undefined 
+                && props.beginingStation !== null 
+                && props.lastStation !== null 
+                && props.stationInterchanges !== null 
+                && props.beginingStation !== props.lastStation)
+            {
                 setFirstInterchangeStation(props.beginingStation);
                 setLastInterchangeStation(props.lastStation);
+                setNotiStation([props.beginingStation, ...stationInterchanges, props.lastStation]);
             }
         };
         fetchData();
@@ -51,7 +62,7 @@ const NextStation = (props) => {
         else if(Platform.OS === 'android'){
             PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => setHasLocationPermission(response));
         }
-    }, [props.beginingStation, props.lastStation]);
+    }, [props.beginingStation, props.lastStation, props.stationInterchanges]);
 
     useEffect(() => {
         let _watchId;
@@ -59,15 +70,13 @@ const NextStation = (props) => {
             _watchId = Geolocation.watchPosition(
             position => {
                     setLocation(position.coords);
-                    if(props.isNearestOnly){
-                        let nearest = findNearest(position.coords, stationLocation);
-                        setNearestStation(nearest.code);
-                        let distance = getDistance(nearest, position.coords);
-                        setStationDistance(distance);
-                    }
+                    let nearest = findNearest(position.coords, stationLocation);
+                    let distance = getDistance(nearest, position.coords);
+                    setNearestStation(nearest.code);
+                    setStationDistance(distance);
                 },
                 error => {
-                console.log(error);
+                    console.log(error);
                 },
                 {
                     enableHighAccuracy: true,
@@ -86,42 +95,61 @@ const NextStation = (props) => {
     }, [appStateVisible, hasLocationPermission]); 
 
     useEffect(() => {
-        if (isFocused && canNoti !== null && hasLocationPermission === 'granted' && appStateVisible !== 'background' && location !== null && filteredStation !== undefined) {
-            if(props.isNearestOnly){
-                setStationGPS(nearestStation);
-            }
-            else{
-                let nearest = findNearest(location, filteredStation);
-                let distance = getDistance(nearest, location);
-                setStationGPS(nearest.code);
-                setStationDistance(distance);
-                if (stationInterchanges !== undefined && canNoti !== null && firstInterchangeStation !== null && lastInterchangeStation !== null) {
-                        if(stationInterchanges.includes(nearest.code)){
-                            if(lastInterchangeStation === nearest.code && distance < 5000){
-                                onDisplayNotification(2, nearest.code);
-                                stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
-                                props.setStationInterchanges(stationInterchanges);
+        if (nearestStation !== null 
+            && isFocused 
+            && canNoti !== null 
+            && hasLocationPermission === 'granted' 
+            && appStateVisible !== 'background' 
+            && location !== null 
+            && filteredStation !== undefined) 
+            {
+                if(props.isNearestOnly || filteredStation.find((x) => x.code === nearestStation) === undefined){
+                    setStationGPS(nearestStation);
+                    setInRoute(false);
+                }
+                else {
+                    let nearest = findNearest(location, filteredStation);
+                    let distance = getDistance(nearest, location);
+                    setStationGPS(nearest.code);
+                    setStationDistance(distance);
+                    setInRoute(true);
+                    if (notiStation !== null && canNoti !== null && firstInterchangeStation !== null && lastInterchangeStation !== null && distance < 5000) {
+                        if(notiStation.includes(nearest.code) && notiStation.length > 0){
+                            if(firstInterchangeStation === nearestStation && notiStation.includes(firstInterchangeStation)){
+                                onDisplayNotification(0, firstInterchangeStation);
+                                setNotiStation(notiStation.filter((item) => item !== firstInterchangeStation));
                             }
-                            else if (distance < 5000 && firstInterchangeStation !== nearest.code){
+                            else if(lastInterchangeStation === nearest.code && notiStation.includes(lastInterchangeStation)){
+                                onDisplayNotification(2, nearest.code);
+                                setNotiStation(notiStation.filter((item) => item !== lastInterchangeStation));
+                            }
+                            else {
                                 onDisplayNotification(1, nearest.code);
-                                stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
-                                props.setStationInterchanges(stationInterchanges);
+                                setNotiStation(notiStation.filter((item) => item !== nearest.code));
                             }
                         }
-                } 
-            }
+                    } 
+                }
         }
-    }, [location, appStateVisible, isFocused, hasLocationPermission, nearestStation, firstInterchangeStation, lastInterchangeStation]);
+    }, [location, appStateVisible, isFocused, hasLocationPermission, nearestStation, firstInterchangeStation, lastInterchangeStation, notiStation]);
 
     useEffect(() => {
-        if (stationInterchanges !== undefined && canNoti !== null && firstInterchangeStation !== null && lastInterchangeStation !== null) {
-            if(stationInterchanges.includes(firstInterchangeStation)){
-                onDisplayNotification(0, firstInterchangeStation);
-                stationInterchanges = stationInterchanges.filter((item) => item !== firstInterchangeStation);
-                props.setStationInterchanges(stationInterchanges);
-            }
+        if (props.isNearestOnly || !inRoute){
+            setNavigateText('Nearest\nStation');
         }
-    }, [firstInterchangeStation, canNoti, lastInterchangeStation]);
+        else if (props.beginingStation !== null
+            && stationInterchanges !== null
+            && props.lastInterchangeStation !== null
+            && [props.beginingStation, ...stationInterchanges, props.lastStation].length !== 0) {
+          if (stationGPS === props.beginingStation) setNavigateText('Get on \nthe train at');
+          else if (stationDistance < 100 && props.stationInterchanges.includes(stationGPS)) setNavigateText('Next Station\nInterchange at');
+          else setNavigateText('Next\nStation');
+        }
+        else {
+            setNavigateText('Next\nStation');
+        }
+    }, [stationGPS, stationDistance, props.isNearestOnly, props.stationInterchanges, props.beginingStation]);
+
 
     async function onDisplayNotification(type, code) {
         if(canNoti){
@@ -151,20 +179,6 @@ const NextStation = (props) => {
         }
     }
 
-    const selectNavigateText = () => {
-        if (props.isNearestOnly || stationDistance > 5000){
-            return 'Nearest\nStation';
-        }
-        else if (props.stationInterchanges.length !== 0) {
-          if (stationGPS === props.beginingStation) return 'Get on \nthe train at';
-          else if (stationDistance < 100 && props.stationInterchanges.includes(stationGPS)) return 'Interchange\nat';
-          else return 'Next\nStation';
-        }
-        else {
-          return 'Next\nStation';
-        }
-      }
-
     if(hasLocationPermission !== 'granted'){
         return null;
     }
@@ -174,7 +188,7 @@ const NextStation = (props) => {
                 <View style={Styles.overall_next_station_view}>
                     <View style = {Styles.next_station_view}>
                         <Text style = {Styles.next_station_text}>
-                            {selectNavigateText()}
+                            {navigateText}
                         </Text>
                     </View>
                     <View style = {Styles.station_name_view}>
@@ -213,7 +227,7 @@ const NextStation = (props) => {
                     </View>
                 </View> 
                 {
-                    !props.isNearestOnly && stationDistance > 5000 &&
+                    !props.isNearestOnly && !inRoute &&
                     <View style={Styles.description_view}>
                         <Text style={Styles.description_text}>
                             {'You are out of the route'}

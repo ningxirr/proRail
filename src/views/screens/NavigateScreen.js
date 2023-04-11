@@ -25,17 +25,17 @@ const Navigate = (props) => {
   }, []);
 
   //prepare all intercahge for notifcation
-  const [stationInterchanges, setStationInterchanges] = useState([]); 
+  const [stationInterchanges, setStationInterchanges] = useState(null); 
   //filter for the latitude and longitude of the station in this path
   const filteredStation = stationLocation.filter(obj => [... new Set([].concat(...props.route.params.routes.map(obj => obj.path).flat()))].includes(obj.code));
   useEffect(() => {
     if(props.route.params.routes.length === 1) {
-      let stopStation = [];
+      let interchangeStation = [];
       for (let i = 0; i < props.route.params.routes[0].path.length; i++) {
-        stopStation.push(props.route.params.routes[0].path[i][0]);
+        interchangeStation.push(props.route.params.routes[0].path[i][props.route.params.routes[0].path[i].length-1]);
       }
-      stopStation.push(props.route.params.routes[0].path[props.route.params.routes[0].path.length-1][props.route.params.routes[0].path[props.route.params.routes[0].path.length-1].length-1])
-      setStationInterchanges(stopStation);
+      interchangeStation.pop();
+      setStationInterchanges(interchangeStation);
     }
     else{
       setStationInterchanges([]);
@@ -43,6 +43,8 @@ const Navigate = (props) => {
   }, [props.route.params.routes])
 
   const stationPath = props.route.params.stationPath;
+
+  if(stationInterchanges === null) return null;
   return (
     <View style={{flex: 1, backgroundColor: 'black'}}>
       <View style={{flex: 1, marginTop: 25}}>
@@ -60,11 +62,11 @@ const Navigate = (props) => {
         <View style={Styles.navigation_view}>
           <NextStation 
             isNearestOnly={false}
-            beginingStation={stationPath[0]}
-            lastStation={stationPath[stationPath.length-1]}
+            beginingStation={props.route.params.routes.length === 1 ? stationPath[0] : null}
+            lastStation={props.route.params.routes.length === 1 ? stationPath[stationPath.length-1] : null}
             filteredStation={filteredStation}
             setStationInterchanges={setStationInterchanges}
-            stationInterchanges={stationInterchanges}
+            stationInterchanges={props.route.params.routes.length === 1 ? stationInterchanges : null}
             watchLocation={true}/>
         </View>
         
