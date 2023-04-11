@@ -51,6 +51,14 @@ const NextStation = (props) => {
     }, [props.beginingStation, props.lastStation]);
 
     useEffect(() => {
+        if (stationInterchanges !== undefined && canNoti !== null && firstInterchangeStation !== null && lastInterchangeStation !== null) {
+            if(stationInterchanges.includes(firstInterchangeStation)){
+                onDisplayNotification(0, firstInterchangeStation);
+                console.log("firstInterchangeStation: " + firstInterchangeStation)
+                stationInterchanges = stationInterchanges.filter((item) => item !== firstInterchangeStation);
+                props.setStationInterchanges(stationInterchanges);
+            }
+        }
         let _watchId;
         if (isFocused && canNoti !== null && hasLocationPermission === 'granted' && appStateVisible !== 'background') 
         {
@@ -62,17 +70,12 @@ const NextStation = (props) => {
                 setStationDistance(distance);
                 if (stationInterchanges !== undefined && canNoti !== null && firstInterchangeStation !== null && lastInterchangeStation !== null) {
                         if(stationInterchanges.includes(nearest.code)){
-                            if(firstInterchangeStation === nearest.code){
-                                onDisplayNotification(0, nearest.code);
-                                stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
-                                props.setStationInterchanges(stationInterchanges);
-                            }
-                            else if(lastInterchangeStation === nearest.code && distance < 5000){
+                            if(lastInterchangeStation === nearest.code && distance < 5000){
                                 onDisplayNotification(2, nearest.code);
                                 stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
                                 props.setStationInterchanges(stationInterchanges);
                             }
-                            else if (distance < 5000){
+                            else if (distance < 5000 && firstInterchangeStation !== nearest.code){
                                 onDisplayNotification(1, nearest.code);
                                 stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
                                 props.setStationInterchanges(stationInterchanges);
@@ -84,12 +87,11 @@ const NextStation = (props) => {
                 console.log(error);
                 },
                 {
-                enableHighAccuracy: true,
-                distanceFilter: 0,
-                interval: 10000,
-                fastestInterval: 10000,
-                useSignificantChanges: true,
-                showsBackgroundLocationIndicator: true
+                    enableHighAccuracy: true,
+                    distanceFilter: 0,
+                    interval: 10000,
+                    fastestInterval: 10000,
+                    showsBackgroundLocationIndicator: true
                 },
             );
         }
