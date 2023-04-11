@@ -58,7 +58,6 @@ const NextStation = (props) => {
         if(location === null && hasLocationPermission === 'granted' && appStateVisible !== 'background'){
             _watchId = Geolocation.watchPosition(
             position => {
-                    console.log(_watchId)
                     setLocation(position.coords);
                     if(props.isNearestOnly){
                         let nearest = findNearest(position.coords, stationLocation);
@@ -89,11 +88,9 @@ const NextStation = (props) => {
     useEffect(() => {
         if (isFocused && canNoti !== null && hasLocationPermission === 'granted' && appStateVisible !== 'background' && location !== null && filteredStation !== undefined) {
             if(props.isNearestOnly){
-                console.log('nearest')
                 setStationGPS(nearestStation);
             }
             else{
-                console.log('not nearest')
                 let nearest = findNearest(location, filteredStation);
                 let distance = getDistance(nearest, location);
                 setStationGPS(nearest.code);
@@ -120,7 +117,6 @@ const NextStation = (props) => {
         if (stationInterchanges !== undefined && canNoti !== null && firstInterchangeStation !== null && lastInterchangeStation !== null) {
             if(stationInterchanges.includes(firstInterchangeStation)){
                 onDisplayNotification(0, firstInterchangeStation);
-                console.log("firstInterchangeStation: " + firstInterchangeStation)
                 stationInterchanges = stationInterchanges.filter((item) => item !== firstInterchangeStation);
                 props.setStationInterchanges(stationInterchanges);
             }
@@ -169,35 +165,8 @@ const NextStation = (props) => {
         }
       }
 
-    if(hasLocationPermission !== 'granted' || !isFocused){
-        return (
-            <View>
-            <View style = {[Styles.container, {backgroundColor: 'white'}]}>
-                <View style={Styles.overall_next_station_view}>
-                    <View style = {Styles.next_station_view}>
-                        <Text style = {Styles.next_station_text}>
-                            Nearest{'\n'}Station
-                        </Text>
-                    </View>
-                    <View style = {Styles.station_name_view}>
-                        <View>
-                            <View style={{marginBottom: 5}}>
-                                <Text style = {[Styles.station_name_text, {color:'grey'}]}>
-                                    {' '}
-                                </Text>
-                            </View>
-                            
-                            <View style = {[Styles.station_route_view, { backgroundColor: '#cfcfcf' }]}>
-                                <Text style = {Styles.station_route_text}>
-                                    {' '}
-                                </Text>
-                            </View>
-                        </View>
-                    </View>
-                </View> 
-            </View>
-        </View>
-        )
+    if(hasLocationPermission !== 'granted'){
+        return null;
     }
     return (
         <View>
