@@ -8,6 +8,7 @@ import BottomNavigator from './src/views/Navigator/BottomNavigator';
 import RegisterNavigator from './src/views/Navigator/RegisterNavigator';
 import SplashScreen from 'react-native-splash-screen'
 import { enableScreens } from 'react-native-screens';
+import { LocationProvider } from './src/context/LocationContext';
 
 const Stack = createNativeStackNavigator();
 const ref = createNavigationContainerRef();
@@ -39,7 +40,8 @@ const App = () => {
     );
   }
   return (
-    <NavigationContainer
+    <LocationProvider>
+      <NavigationContainer
       ref={ref}
       onReady={() => {
         setRouteName(ref.getCurrentRoute().name)
@@ -64,7 +66,8 @@ const App = () => {
             {() => <BottomNavigator routeName={routeName} />}
           </Stack.Screen>
         </Stack.Navigator> 
-    </NavigationContainer>
+      </NavigationContainer>
+    </LocationProvider>
   );
 }
 

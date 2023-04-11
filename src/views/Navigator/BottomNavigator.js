@@ -9,10 +9,13 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import UserPreferenceScreen from '../screens/UserPreferenceScreen';
+import { LocationContext } from '../../context/LocationContext';
 
 const Tab = createBottomTabNavigator();
 
 const ButtomNavigator = (props) => {
+  const { location, setLocation } = React.useContext(LocationContext);
+  const { nearestStation, setNearestStation } = React.useContext(LocationContext);
   const appState = useRef(AppState.currentState);
   const routeName = props.routeName;
   const hide = routeName === "ResultScreen" || routeName === "NavigateScreen";
@@ -20,6 +23,8 @@ const ButtomNavigator = (props) => {
     const subscription = AppState.addEventListener('change', nextAppState => {
         appState.current = nextAppState;
         if(appState.current === 'background' && routeName !== null && routeName !== 'NavigateScreen'){
+          setLocation(null);
+          setNearestStation(null);
           Geolocation.stopObserving();
         }
       });
