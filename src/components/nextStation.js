@@ -107,11 +107,11 @@ const NextStation = (props) => {
                                 stationInterchanges = stationInterchanges.filter((item) => item !== nearest.code);
                                 props.setStationInterchanges(stationInterchanges);
                             }
-                        }  
+                        }
                 } 
             }
         }
-    }, [location, appStateVisible, isFocused, hasLocationPermission]);
+    }, [location, appStateVisible, isFocused, hasLocationPermission, nearestStation, firstInterchangeStation, lastInterchangeStation]);
 
     useEffect(() => {
         if (stationInterchanges !== undefined && canNoti !== null && firstInterchangeStation !== null && lastInterchangeStation !== null) {
@@ -121,7 +121,7 @@ const NextStation = (props) => {
                 props.setStationInterchanges(stationInterchanges);
             }
         }
-    }, [firstInterchangeStation, canNoti, firstInterchangeStation, lastInterchangeStation]);
+    }, [firstInterchangeStation, canNoti, lastInterchangeStation]);
 
     async function onDisplayNotification(type, code) {
         if(canNoti){
