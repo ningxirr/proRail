@@ -47,7 +47,7 @@ const Navigate = (props) => {
   if(stationInterchanges === null) return null;
   return (
     <View style={{flex: 1, backgroundColor: 'black'}}>
-      <View style={{flex: 1, marginTop: 25}}>
+      <View style={{flex: 1, marginTop: 40}}>
       <GestureHandlerRootView style={{ flex: 1, backgroundColor:'white' }}>
         <View style={{zIndex: 1}}>
           <Header 

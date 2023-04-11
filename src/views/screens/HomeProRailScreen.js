@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
     flex: 1,
     color: 'white',
     marginTop: 20,
-    padding: 20,
+    padding: 25,
     fontFamily: 'LINESeedSansApp-Bold',
   },
   centerSecView: {

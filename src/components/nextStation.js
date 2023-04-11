@@ -263,7 +263,7 @@ const Styles = StyleSheet.create({
     },
     next_station_text: {
         color:'black', 
-        fontSize: 20, 
+        fontSize: 19, 
         fontFamily: 'LINESeedSansApp-Bold',
     },
     station_name_view: {
@@ -281,7 +281,7 @@ const Styles = StyleSheet.create({
         borderRadius: 15,
         marginTop: 2,
         paddingVertical: 3,
-        width: 150,
+        width: 145,
         alignItems: 'baseline',
         alignSelf: 'flex-end',
         justifyContent: 'center',
