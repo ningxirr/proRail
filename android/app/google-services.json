@@ -8,46 +8,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:667402206768:android:02ae915581234f9788f7f5",
+        "mobilesdk_app_id": "1:667402206768:android:fe17b17878959dad88f7f5",
         "android_client_info": {
           "package_name": "com.prorail"
         }
       },
       "oauth_client": [
         {
-          "client_id": "667402206768-jvsm2q3m1vup3f8brkgs4mufcjki1pcf.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCuEAaIKYqMAXxDv0sFAp9vaHgFQ4G6Gtg"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "667402206768-jvsm2q3m1vup3f8brkgs4mufcjki1pcf.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:667402206768:android:0d454fa545ce42ae88f7f5",
-        "android_client_info": {
-          "package_name": "com.seniorproject.prorail"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "667402206768-kgnfu6sd4i90d6ldf2hmrpvjer7itkma.apps.googleusercontent.com",
+          "client_id": "667402206768-lm7f8oh96qo41uvegg5ec7bav4rui008.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.seniorproject.prorail",
+            "package_name": "com.prorail",
             "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
           }
         },
@@ -67,6 +38,13 @@
             {
               "client_id": "667402206768-jvsm2q3m1vup3f8brkgs4mufcjki1pcf.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "667402206768-do9se632pv23j991p80cjhqj1r92kjb5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.ProRail"
+              }
             }
           ]
         }
